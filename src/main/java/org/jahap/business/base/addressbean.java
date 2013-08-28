@@ -73,6 +73,12 @@ public class addressbean extends DatabaseOperations implements address_i {
         return allrecordlist;
     }
     
+    public List<Address>getCurrentAddress(){
+        List<Address>hh=new ArrayList<Address>();
+        hh.add(allrecordlist.get(currentRecordNumber));
+        return hh;
+    
+    }
     
     
     //---------------------------------
@@ -403,5 +409,7 @@ public class addressbean extends DatabaseOperations implements address_i {
     public void setResCollection(Collection<Res> resCollection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+  
 
 }

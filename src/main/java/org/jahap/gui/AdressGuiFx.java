@@ -13,7 +13,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
+import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.base.addressbean;
+import org.jahap.entities.Address;
+import org.jahap.sreport.addressreports;
 
  
 /*
@@ -141,7 +144,14 @@ public class AdressGuiFx implements Initializable {
     }
 
     @FXML
-    private void printAdress(ActionEvent event) {
+    private void printAdress(ActionEvent event) throws JRException {
+        List<Address> adl= new ArrayList<Address>();
+        adl=addresses.getCurrentAddress();
+        
+        addressreports ARP = new addressreports();
+        ARP.singleAdressReport(adl);
+        
+        
     }
 
    
