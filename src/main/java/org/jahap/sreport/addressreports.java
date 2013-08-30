@@ -26,12 +26,14 @@ import org.jahap.entities.Address;
 public class addressreports {
     
     public void singleAdressReport(List<Address>adlist) throws JRException{
-          
+          addressDataSource adSource=new addressDataSource(adlist);
+        
+        
           HashMap<String, String> parameter =
                 new HashMap<String, String>();
           parameter.put("aParameter", "Hallo Welt");
-          Collection<Address> hjhj=adlist;
-          JRBeanCollectionDataSource hhh=new JRBeanCollectionDataSource(hjhj,true);
+          //Collection<Address> hjhj=adlist;
+          //JRBeanCollectionDataSource hhh=new JRBeanCollectionDataSource(hjhj,true);
            
         
 			
@@ -40,7 +42,7 @@ public class addressreports {
                     
                          
                         try {
-            jp = JasperFillManager.fillReport("C:\\wiki\\jahapfx\\jahap\\src\\main\\resources\\reports\\address.jasper", new HashMap(), hhh);
+            jp = JasperFillManager.fillReport("C:\\wiki\\jahapfx\\jahap\\src\\main\\resources\\reports\\address.jasper", new HashMap(), adSource);
             
         } catch (JRException jRException) {
         }
