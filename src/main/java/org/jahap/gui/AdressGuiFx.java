@@ -3,16 +3,21 @@
  * and open the template in the editor.
  */
 package org.jahap.gui;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.base.addressbean;
 import org.jahap.entities.Address;
@@ -101,7 +106,21 @@ public class AdressGuiFx implements Initializable {
     }
 
     @FXML
-    private void searchAdress(ActionEvent event) {
+    private void searchAdress(ActionEvent event) throws IOException {
+        
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/ListDialogAddress.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+     
+
+        
+        stage.setScene(scene);
+        stage.show();
     }
 
     @FXML

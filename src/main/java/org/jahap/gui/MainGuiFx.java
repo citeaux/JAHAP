@@ -11,6 +11,7 @@ package org.jahap.gui;
 
 
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -54,21 +55,20 @@ public class MainGuiFx implements Initializable {
    
 
     @FXML
-    private void newAddress(ActionEvent event) throws IOException {
+    private void newAddress(ActionEvent event) throws IOException,InvocationTargetException {
      
         Stage stage = new Stage();
-        String fxmlFile = "/fxml/AdressGuiFx.fxml";
+        String fxmlFile = "/fxml/AddressList.fxml";
        
         FXMLLoader loader = new FXMLLoader();
-        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
-
+      
         
-        Scene scene = new Scene(page);
-     
-
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setScene(scene);
+            stage.show();
         
-        stage.setScene(scene);
-        stage.show();
         
     }
 
