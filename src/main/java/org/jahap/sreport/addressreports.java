@@ -69,6 +69,50 @@ public class addressreports {
         
     } 
     
+     public void multiAdressReport(List<Address>adlist) throws JRException{
+          addressDataSource adSource=new addressDataSource(adlist);
+        
+        
+          HashMap<String, String> parameter =
+                new HashMap<String, String>();
+          parameter.put("aParameter", "Hallo Welt");
+          //Collection<Address> hjhj=adlist;
+          //JRBeanCollectionDataSource hhh=new JRBeanCollectionDataSource(hjhj,true);
+           
+        
+			
+			JasperPrint jp= new JasperPrint();
+			              
+                    
+                         
+                        try {
+            jp = JasperFillManager.fillReport("C:\\wiki\\jahapfx\\jahap\\src\\main\\resources\\reports\\addressList.jasper", new HashMap(), adSource);
+            
+        } catch (JRException jRException) {
+        }
+                        
+                        
+                         
+                
+                          
+                          
+               
+			
+                    
+			
+    
+      
+    
+      //jhjh.getContentPane().add(viewer);
+       
+       System.out.println("Hallo");
+              
+                        
+               JasperViewer.viewReport(jp,false);
+        
+        
+    } 
+    
     
     
  }

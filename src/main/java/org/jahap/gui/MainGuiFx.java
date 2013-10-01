@@ -52,13 +52,21 @@ public class MainGuiFx implements Initializable {
         second.show();
     }
 */
+    @FXML
+    private MenuItem AdressSearch;
+    @FXML
+    private MenuItem Rates;
+    @FXML
+    private MenuItem Articles;
+    @FXML
+    private MenuItem Exit;
    
 
     @FXML
     private void newAddress(ActionEvent event) throws IOException,InvocationTargetException {
      
         Stage stage = new Stage();
-        String fxmlFile = "/fxml/AddressList.fxml";
+        String fxmlFile = "/fxml/AdressGuiFx.fxml";
        
         FXMLLoader loader = new FXMLLoader();
       
@@ -74,9 +82,24 @@ public class MainGuiFx implements Initializable {
 
     public void initialize(URL url, ResourceBundle rb) {
        
-    }
+    } 
 
-   
-    
+    @FXML
+    private void AdressSearch(ActionEvent event) throws IOException,InvocationTargetException {
+     
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/AddressList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setScene(scene);
+            stage.show();
+        
+        
+    }
     
 }

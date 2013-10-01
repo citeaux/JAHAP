@@ -109,7 +109,7 @@ public class AdressGuiFx implements Initializable {
     private void searchAdress(ActionEvent event) throws IOException {
         
         Stage stage = new Stage();
-        String fxmlFile = "/fxml/ListDialogAddress.fxml";
+        String fxmlFile = "/fxml/AddressList.fxml";
        
         FXMLLoader loader = new FXMLLoader();
         AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));

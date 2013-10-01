@@ -5,8 +5,11 @@
 package org.jahap.gui;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -22,9 +25,11 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
+import net.sf.jasperreports.engine.JRException;
 import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.jahap.business.base.addressbean;
 import org.jahap.entities.Address;
+import org.jahap.sreport.addressreports;
 
 
 /**
@@ -36,9 +41,13 @@ public class ListDialogAddressController implements Initializable {
     private addressbean addresses;
     private List searchlistAddresses; // All Records of 
     @FXML
-    private Button printButton;
+    private Button PrintButton;
      @FXML
-     private TableView<Address>dataTable;
+     private TableView dataTable;
+    @FXML
+    private Button Ok;
+    @FXML
+    private Button Cancel;
     
     
     /**
@@ -49,13 +58,12 @@ public class ListDialogAddressController implements Initializable {
         addresses = new addressbean();
         searchlistAddresses=addresses.SearchForAddress("*");
         ObservableList<Address> data= FXCollections.observableList(searchlistAddresses);
-        dataTable = new TableView<Address>(data);
-        //
-        //dataTable.setItems(data);
-      dataTable.setItems(data);
+        
+     
+        
         
        //----------------------------------- Christian Name  ----------------------- 
-        
+    
         TableColumn<Address,String> firstNameCol = new TableColumn<Address,String>("First Name");
       firstNameCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Address, String> p) {
@@ -63,16 +71,20 @@ public class ListDialogAddressController implements Initializable {
      }
      
              
-      });
+      });  
+        
+      TableColumn<Address, String> col1 = new TableColumn<Address, String>("Name");        
+    col1.setCellValueFactory(new PropertyValueFactory<Address, String>("Name"));  
+        
       
       
-      dataTable.getColumns().add(firstNameCol);
-       
+      //dataTable.getColumns().add(firstNameCol);
+       dataTable.getColumns().add(col1);
       
       //------------------------------------- Name --------------------------------
       
        TableColumn<Address,String> NameCol = new TableColumn<Address,String>("Name");
-      firstNameCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
+      NameCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Address, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getName());
      }
@@ -85,8 +97,8 @@ public class ListDialogAddressController implements Initializable {
        //---------------------------------- Street --------------------------------
         
          TableColumn<Address,String> StreetCol = new TableColumn<Address,String>("Street");
-      firstNameCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Address, String> p) {
+      StreetCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(TableColumn.CellDataFeatures<Address, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getStreet());
      }
      
@@ -97,7 +109,7 @@ public class ListDialogAddressController implements Initializable {
         //---------------------------------- City --------------------------------
         
          TableColumn<Address,String>CityCol = new TableColumn<Address,String>("City");
-      firstNameCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
+      CityCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Address, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getCity());
      }
@@ -109,7 +121,7 @@ public class ListDialogAddressController implements Initializable {
            //---------------------------------- ZipCode --------------------------------
         
          TableColumn<Address,String>ZipCol = new TableColumn<Address,String>("Zip Code");
-      firstNameCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
+      ZipCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Address, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getZipcode());
      }
@@ -122,7 +134,7 @@ public class ListDialogAddressController implements Initializable {
          //---------------------------------- Phone --------------------------------
         
          TableColumn<Address,String>PhoneCol = new TableColumn<Address,String>("Phone Col");
-      firstNameCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
+      PhoneCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Address, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getPhone());
      }
@@ -131,14 +143,33 @@ public class ListDialogAddressController implements Initializable {
       });
        dataTable.getColumns().add(PhoneCol);
         
-    
+    dataTable.setItems(data);
        
        
     }    
 
     @FXML
-    private void printReport(ActionEvent event) {
+    private void PrintReport(ActionEvent event) {
         
-        dataTable.getColumns().get(0).setText("www");
+         List<Address> adl= new ArrayList<Address>();
+        adl=searchlistAddresses;
+        
+        addressreports ARP = new addressreports();
+        try {
+            ARP.multiAdressReport(adl);
+        } catch (JRException ex) {
+            Logger.getLogger(ListDialogAddressController.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
+
+    @FXML
+    private void OkAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void CancelAction(ActionEvent event) {
+    }
+    
+    
+    
 }
