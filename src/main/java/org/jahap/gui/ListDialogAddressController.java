@@ -48,16 +48,28 @@ public class ListDialogAddressController implements Initializable {
     private Button Ok;
     @FXML
     private Button Cancel;
+    private long id=0;
     
+    AddressSearchResult searchresult;
     
     /**
      * Initializes the controller class.
      */
-    
-    public void initialize(URL url, ResourceBundle rb) {
-        addresses = new addressbean();
+    public void init(AddressSearchResult searchresults){
+         addresses = new addressbean();
+         searchresult=searchresults;
         searchlistAddresses=addresses.SearchForAddress("*");
         ObservableList<Address> data= FXCollections.observableList(searchlistAddresses);
+        
+        // -----------------  id
+        TableColumn<Address,String> IdCol = new TableColumn<Address,String>("Id");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Address, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Address, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getId());
+     }
+     
+             
+      });  
         
      
         
@@ -144,6 +156,10 @@ public class ListDialogAddressController implements Initializable {
        dataTable.getColumns().add(PhoneCol);
         
     dataTable.setItems(data);
+    }
+    
+    public void initialize(URL url, ResourceBundle rb) {
+       
        
        
     }    
@@ -169,7 +185,14 @@ public class ListDialogAddressController implements Initializable {
     @FXML
     private void CancelAction(ActionEvent event) {
     }
-    
+
+    @FXML
+    private void MouseClicked(MouseEvent event) {
+        
+    Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
+    id=ad.getId();
+    }
+       
     
     
 }

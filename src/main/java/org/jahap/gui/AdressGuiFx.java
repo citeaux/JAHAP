@@ -27,7 +27,7 @@ import org.jahap.sreport.addressreports;
 /*
  * @author russ
  */
-public class AdressGuiFx implements Initializable {
+public class AdressGuiFx implements Initializable, AddressSearchResultListener {
     @FXML
     private Button Save;
     @FXML
@@ -60,7 +60,9 @@ public class AdressGuiFx implements Initializable {
  
      public static addressbean addresses;
      private List<TextField> textfields;
-   
+     private AddressSearchResult searchresults;
+     private long addressid=0;
+     
     @FXML
     private Button printAdress;
     @FXML
@@ -79,7 +81,10 @@ public class AdressGuiFx implements Initializable {
           textfields.add(name_fxtextfield);
           
           
-        addresses = new addressbean(); 
+        addresses = new addressbean();
+        searchresults= new AddressSearchResult();
+       searchresults.addIDListener(this);
+        
     }
 
     @FXML
@@ -120,7 +125,11 @@ public class AdressGuiFx implements Initializable {
 
         
         stage.setScene(scene);
-        stage.show();
+        ListDialogAddressController controller= loader.<ListDialogAddressController>getController();
+       controller.init(searchresults);
+       
+        
+        stage.showAndWait();
     }
 
     @FXML
@@ -173,6 +182,23 @@ public class AdressGuiFx implements Initializable {
         
     }
 
+       public  void idinfo(AddressSearchResultEvent e) {
+          
+                 //JOptionPane.showMessageDialog(null,e.getDbRecordId()+ e.getTableNameofSource() );
+          if (e.getTableNameofSource()=="Address"){
+              this.addressid=e.getDbRecordId();
+              FillWithSelectedData();
+              
+              
+             
+              
+          }
+              
+         
+          
+        
+        
+    }
    
 
 }
