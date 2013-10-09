@@ -4,6 +4,7 @@
  */
 package org.jahap.gui;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -30,14 +31,18 @@ import org.eclipse.persistence.internal.helper.DatabaseTable;
 import org.jahap.business.base.addressbean;
 import org.jahap.entities.Address;
 import org.jahap.sreport.addressreports;
-
+import javafx.application.Platform;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
  *
  * @author russ
  */
-public class ListDialogAddressController implements Initializable {
+public class ListDialogAddressController implements Initializable{
     private addressbean addresses;
     private List searchlistAddresses; // All Records of 
     @FXML
@@ -49,15 +54,16 @@ public class ListDialogAddressController implements Initializable {
     @FXML
     private Button Cancel;
     private long id=0;
+    private boolean isOverwievDialog=false;
     
     AddressSearchResult searchresult;
     
-    /**
-     * Initializes the controller class.
-     */
-    public void init(AddressSearchResult searchresults){
-         addresses = new addressbean();
-         searchresult=searchresults;
+    
+    
+    
+    
+    private void initTable(){
+        addresses = new addressbean();
         searchlistAddresses=addresses.SearchForAddress("*");
         ObservableList<Address> data= FXCollections.observableList(searchlistAddresses);
         
@@ -158,9 +164,21 @@ public class ListDialogAddressController implements Initializable {
     dataTable.setItems(data);
     }
     
+    
+    
+    /**
+     * Initializes the controller class. Call from a Address Dialog,
+     * Sets selected Address ID in Oberver
+     */
+    public void init(AddressSearchResult searchresults){
+         isOverwievDialog=true;
+         searchresult=searchresults;
+        initTable();
+    }
+    
     public void initialize(URL url, ResourceBundle rb) {
        
-       
+       initTable();
        
     }    
 
@@ -179,7 +197,31 @@ public class ListDialogAddressController implements Initializable {
     }
 
     @FXML
-    private void OkAction(ActionEvent event) {
+    private void OkAction(ActionEvent event) throws IOException {
+        if(isOverwievDialog=false){
+        Stage stage = (Stage) Ok.getScene().getWindow();
+        stage.close();
+        }
+        
+        if(isOverwievDialog=true){
+             Stage stage = new Stage();
+        String fxmlFile = "/fxml/AdressGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+     
+
+        
+        stage.setScene(scene);
+        AdressGuiFx controller= loader.<AdressGuiFx>getController();
+       controller.init(id);
+       
+        
+        stage.showAndWait();
+        }
     }
 
     @FXML
@@ -189,8 +231,16 @@ public class ListDialogAddressController implements Initializable {
     @FXML
     private void MouseClicked(MouseEvent event) {
         
+        
+    
+        
     Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
     id=ad.getId();
+    if (isOverwievDialog=false){ searchresult.setDbRecordId(id, "Address");}
+    }
+
+    public void idinfo(AddressSearchResultEvent e) {
+        
     }
        
     

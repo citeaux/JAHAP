@@ -86,6 +86,16 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
        searchresults.addIDListener(this);
         
     }
+    
+    public void init(long id){
+        addresses = new addressbean();
+        addresses.setDataRecordId(id);
+                      
+              FillWithSelectedData();
+        
+        
+        
+    }
 
     @FXML
     private void save(ActionEvent event) {
@@ -187,6 +197,8 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
                  //JOptionPane.showMessageDialog(null,e.getDbRecordId()+ e.getTableNameofSource() );
           if (e.getTableNameofSource()=="Address"){
               this.addressid=e.getDbRecordId();
+              addresses.setDataRecordId(addressid);
+                      
               FillWithSelectedData();
               
               

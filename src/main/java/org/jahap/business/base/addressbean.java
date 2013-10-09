@@ -196,15 +196,20 @@ public class addressbean extends DatabaseOperations implements address_i {
      * @param id
      */
     public void  setDataRecordId(Long id){
-        int inl=0;
+       int inl=-1;
         
-        do 
-                {
+        try {
+            do {
+                
+                
+                
+                inl++;
+            } while (allrecordlist.get(inl).getId() != id && allrecordlist.size() - 1 > inl);
+            currentRecordNumber=inl;
+        } catch (Exception e) {
+            e.printStackTrace();  
             
-                currentRecordNumber=inl;
-           
-           inl++;
-       }while(allrecordlist.get(currentRecordNumber).getId()!=id);
+        }
        
    }
    
@@ -214,17 +219,20 @@ public class addressbean extends DatabaseOperations implements address_i {
      * @return
      */
     public Address getDataRecord(long id){
-       int inl=0;
+       int inl=-1;
         
-        do 
-                {
-            
-                currentRecordNumber=inl;
-           
-           inl++;
-       }while(allrecordlist.get(currentRecordNumber).getId()!=id);
-       
-      return  allrecordlist.get(currentRecordNumber);
+        try {
+            do {
+                
+                
+                
+                inl++;
+            } while (allrecordlist.get(inl).getId() != id && allrecordlist.size() - 1 > inl);
+            currentRecordNumber = inl;
+        } catch (Exception e) {
+            e.printStackTrace();  
+        }
+        return allrecordlist.get(currentRecordNumber);
    }
    
     
