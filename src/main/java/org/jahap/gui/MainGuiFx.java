@@ -57,8 +57,6 @@ public class MainGuiFx implements Initializable {
     @FXML
     private MenuItem Rates;
     @FXML
-    private MenuItem Articles;
-    @FXML
     private MenuItem Exit;
    
 
@@ -98,6 +96,24 @@ public class MainGuiFx implements Initializable {
             Scene scene = new Scene(page);
             stage.setScene(scene);
             stage.show();
+        
+        
+    }
+
+    @FXML
+    private void OpenRatesSearch(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/RatesList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setScene(scene);
+            stage.show();
+        
         
         
     }

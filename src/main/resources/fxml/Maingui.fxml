@@ -54,8 +54,7 @@
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#newAddress" text="New Address" fx:id="newAddress" />
                     <MenuItem mnemonicParsing="false" onAction="#AdressSearch" text="Search for Address" fx:id="AdressSearch" />
-                    <MenuItem mnemonicParsing="false" text="Rates" fx:id="Rates" />
-                    <MenuItem mnemonicParsing="false" text="Articles" fx:id="Articles" />
+                    <MenuItem mnemonicParsing="false" onAction="#OpenRatesSearch" text="Rates" fx:id="Rates" />
                     <MenuItem mnemonicParsing="false" text="Close" fx:id="Exit" />
                   </items>
                 </Menu>

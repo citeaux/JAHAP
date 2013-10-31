@@ -53,10 +53,9 @@
                 <Menu mnemonicParsing="false" text="Base Data">
                   <items>
                     <MenuItem mnemonicParsing="false" onAction="#newAddress" text="New Address" fx:id="newAddress" />
-                    <MenuItem mnemonicParsing="false" text="Search for Address" fx:id="AdressSearch" />
+                    <MenuItem mnemonicParsing="false" onAction="#AdressSearch" text="Search for Address" fx:id="AdressSearch" />
                     <MenuItem mnemonicParsing="false" text="Rates" fx:id="Rates" />
-                    <MenuItem mnemonicParsing="false" text="Articles" fx:id="Articles" />
-                    <MenuItem mnemonicParsing="false" text="Close" />
+                    <MenuItem mnemonicParsing="false" text="Close" fx:id="Exit" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="FO">
