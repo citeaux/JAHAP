@@ -26,27 +26,18 @@
               <content>
                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
-                    <Label layoutX="123.0" layoutY="48.0" text="Name:" />
-                    <Label layoutX="63.0" layoutY="84.0" text="Christian name:" />
-                    <Label layoutX="123.0" layoutY="116.0" text="Street:" />
-                    <Label layoutX="102.0" layoutY="150.0" text="Zip Code:" />
-                    <Label layoutX="137.0" layoutY="183.0" text="City:" />
-                    <Label layoutX="99.0" layoutY="217.0" text="Phone no:" />
-                    <Label layoutX="125.0" layoutY="249.0" text="Email:" />
-                    <TextField id="name" fx:id="name_fxtextfield" layoutX="171.0" layoutY="48.0" prefWidth="200.0" />
+                    <Label layoutX="94.0" layoutY="48.0" text="Rate Code:" />
+                    <Label layoutX="92.0" layoutY="84.0" text="Rate name:" />
+                    <Label layoutX="140.0" layoutY="119.0" text="Vat:" />
+                    <Label layoutX="59.0" layoutY="150.0" prefWidth="105.0" text="Rate Base Price:" />
+                    <TextField id="name" fx:id="name_fxtextfield" layoutX="172.0" layoutY="48.0" prefWidth="87.0" />
                     <TextField id="christianname" fx:id="christianname_fxtextfield" layoutX="171.0" layoutY="81.0" prefWidth="200.0" />
-                    <TextField fx:id="street_fxtextfield" layoutX="172.0" layoutY="113.0" prefWidth="200.0" />
-                    <TextField fx:id="zipcode_fxtextfield" layoutX="172.0" layoutY="147.0" prefWidth="67.0" />
-                    <TextField fx:id="city_fxtextfield" layoutX="172.0" layoutY="180.0" prefWidth="200.0" />
-                    <TextField fx:id="phoneno_fxtextfield" layoutX="172.0" layoutY="214.0" prefWidth="200.0" />
-                    <TextField fx:id="email_fxtextfield" layoutX="172.0" layoutY="246.0" prefWidth="200.0" />
+                    <TextField fx:id="zipcode_fxtextfield" layoutX="172.0" layoutY="147.0" prefWidth="100.0" />
+                    <TextField layoutX="172.0" layoutY="116.0" prefWidth="100.0" />
+                    <TextField layoutX="172.0" layoutY="181.0" prefWidth="100.0" />
+                    <Label layoutX="47.0" layoutY="184.0" text="Revenue Account:" />
                   </children>
                 </AnchorPane>
-              </content>
-            </Tab>
-            <Tab text="Reservations">
-              <content>
-                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
           </tabs>
@@ -56,7 +47,6 @@
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_RIGHT">
           <children>
             <Button fx:id="Save" mnemonicParsing="false" onAction="#save" prefHeight="36.0" prefWidth="100.0" text="Save" />
-            <Button id="new" fx:id="newadress" mnemonicParsing="false" onAction="#newadress" prefHeight="36.0" prefWidth="100.0" text="New" />
             <Button fx:id="search" mnemonicParsing="false" onAction="#searchAdress" prefHeight="36.0" prefWidth="100.0" text="Search" />
             <Button id="search" fx:id="printAdress" mnemonicParsing="false" onAction="#printAdress" prefHeight="36.0" prefWidth="100.0" text="Print" />
           </children>

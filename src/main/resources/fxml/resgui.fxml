@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="748.0" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <BorderPane prefHeight="533.0" prefWidth="748.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <bottom>
+        <TabPane prefHeight="320.0" prefWidth="748.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER_RIGHT">
+          <tabs>
+            <Tab text="Orderer">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Label layoutX="73.0" layoutY="20.0" text="Name:" />
+                    <Label layoutX="44.0" layoutY="57.0" text="First name:" />
+                    <Label layoutX="73.0" layoutY="90.0" text="Street:" />
+                    <Label layoutX="52.0" layoutY="120.0" text="Zip Code:" />
+                    <Label layoutX="87.0" layoutY="151.0" text="City:" />
+                    <Label layoutX="59.0" layoutY="189.0" text="Country:" />
+                    <TextField layoutX="123.0" layoutY="20.0" prefWidth="200.0" />
+                    <TextField layoutX="123.0" layoutY="54.0" prefWidth="200.0" />
+                    <TextField layoutX="123.0" layoutY="87.0" prefWidth="200.0" />
+                    <TextField layoutX="123.0" layoutY="117.0" prefWidth="72.0" />
+                    <TextField layoutX="123.0" layoutY="151.0" prefWidth="200.0" />
+                    <TextField layoutX="123.0" layoutY="186.0" prefWidth="200.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Guest">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TextField layoutX="108.0" layoutY="47.0" prefWidth="200.0" />
+                    <TextField layoutX="108.0" layoutY="174.0" prefWidth="200.0" />
+                    <Label layoutX="66.0" layoutY="148.0" text="City:" />
+                    <Label layoutX="52.0" layoutY="14.0" text="Name:" />
+                    <Label layoutX="23.0" layoutY="47.0" text="First name:" />
+                    <Label layoutX="52.0" layoutY="84.0" text="Street:" />
+                    <Label layoutX="31.0" layoutY="114.0" text="Zip Code:" />
+                    <Label layoutX="39.0" layoutY="180.0" text="Country:" />
+                    <TextField layoutX="108.0" layoutY="145.0" prefWidth="200.0" />
+                    <TextField layoutX="108.0" layoutY="81.0" prefWidth="200.0" />
+                    <TextField layoutX="108.0" layoutY="114.0" prefWidth="72.0" />
+                    <TextField layoutX="108.0" layoutY="14.0" prefWidth="200.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Guest-&gt;Room">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <TextField layoutX="102.0" layoutY="43.0" prefWidth="200.0" />
+                    <Label layoutX="52.0" layoutY="46.0" text="Room:" />
+                    <Button layoutX="311.0" layoutY="43.0" mnemonicParsing="false" text="Search for room" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Guest-&gt;Account">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Label layoutX="44.0" layoutY="42.0" text="Account No:" />
+                    <Label layoutX="71.0" layoutY="74.0" text="Balance:" />
+                    <TextField layoutX="132.0" layoutY="39.0" prefWidth="200.0" />
+                    <TextField layoutX="132.0" layoutY="71.0" prefWidth="200.0" />
+                    <Button layoutX="339.0" layoutY="39.0" mnemonicParsing="false" prefWidth="123.0" text="Open Account" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </Tab>
+            <Tab text="Res-&gt;Details">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </Tab>
+          </tabs>
+          <BorderPane.margin>
+            <Insets />
+          </BorderPane.margin>
+        </TabPane>
+      </bottom>
+      <center>
+        <Pane prefHeight="200.0" prefWidth="200.0">
+          <children>
+            <Label layoutX="143.0" layoutY="63.0" prefHeight="39.0" prefWidth="105.00009999999747" text="Orderer">
+              <font>
+                <Font size="30.0" fx:id="x1" />
+              </font>
+            </Label>
+            <Label font="$x1" layoutX="380.0" layoutY="63.0" prefHeight="39.0" prefWidth="105.00009999999747" text="Resno" />
+            <Label layoutX="224.0" layoutY="20.0" text="Arrival - Departure">
+              <font>
+                <Font size="20.0" />
+              </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="20.0" text="ResState" />
+            <Label font="$x1" layoutX="563.0" layoutY="63.0" prefWidth="54.9998779296875" text="PAX" />
+          </children>
+        </Pane>
+      </center>
+      <right>
+        <VBox prefHeight="485.0" prefWidth="105.0">
+          <children>
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="Save" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="Exit" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="Print" />
+            <Button mnemonicParsing="false" prefHeight="39.0" prefWidth="105.0" text="Search" />
+          </children>
+        </VBox>
+      </right>
+      <top>
+        <ToolBar prefHeight="48.0" prefWidth="748.0" />
+      </top>
+    </BorderPane>
+  </children>
+</AnchorPane>

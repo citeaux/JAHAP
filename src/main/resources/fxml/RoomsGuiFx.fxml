@@ -26,16 +26,12 @@
               <content>
                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
-                    <Label layoutX="94.0" layoutY="48.0" text="Rate Code:" />
-                    <Label layoutX="92.0" layoutY="84.0" text="Rate name:" />
-                    <Label layoutX="140.0" layoutY="119.0" text="Vat:" />
-                    <Label layoutX="59.0" layoutY="150.0" prefWidth="105.0" text="Rate Base Price:" />
+                    <Label layoutX="82.0" layoutY="48.0" text="Room Code:" />
+                    <Label layoutX="80.0" layoutY="84.0" text="Room name:" />
+                    <Label layoutX="97.0" layoutY="118.0" prefHeight="22.999908447265625" text="Category:" />
                     <TextField id="name" fx:id="name_fxtextfield" layoutX="172.0" layoutY="48.0" prefWidth="87.0" />
                     <TextField id="christianname" fx:id="christianname_fxtextfield" layoutX="171.0" layoutY="81.0" prefWidth="200.0" />
-                    <TextField fx:id="zipcode_fxtextfield" layoutX="172.0" layoutY="147.0" prefWidth="100.0" />
                     <TextField layoutX="172.0" layoutY="116.0" prefWidth="100.0" />
-                    <TextField layoutX="172.0" layoutY="181.0" prefWidth="100.0" />
-                    <Label layoutX="47.0" layoutY="184.0" text="Revenue Account:" />
                   </children>
                 </AnchorPane>
               </content>
