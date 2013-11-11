@@ -40,24 +40,16 @@ public class MainGuiFx implements Initializable {
     @FXML
     private MenuItem newAddress;
 
- /*
-    @FXML
-    void newAddress(ActionEvent event) throws IOException {
-        Stage second=new Stage();
-      Parent root = FXMLLoader.load(getClass().getResource("AdressGuiFx.fxml"));
-        
-        Scene scene = new Scene(root);
-        
-        second.setScene(scene);
-        second.show();
-    }
-*/
+
+ 
     @FXML
     private MenuItem AdressSearch;
     @FXML
     private MenuItem Rates;
     @FXML
     private MenuItem Exit;
+    @FXML
+    private MenuItem Rooms;
    
 
     @FXML
@@ -70,8 +62,9 @@ public class MainGuiFx implements Initializable {
       
         
            AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
-      
+         
             Scene scene = new Scene(page);
+            stage.setTitle("Adresses");
             stage.setScene(scene);
             stage.show();
         
@@ -92,9 +85,11 @@ public class MainGuiFx implements Initializable {
       
         
            AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
-      
+            
             Scene scene = new Scene(page);
+      
             stage.setScene(scene);
+            stage.setTitle("Adresses");
             stage.show();
         
         
@@ -111,10 +106,29 @@ public class MainGuiFx implements Initializable {
            AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
       
             Scene scene = new Scene(page);
+            stage.setTitle("Rates");
             stage.setScene(scene);
             stage.show();
         
         
+        
+    }
+
+    @FXML
+    private void RoomsSearch(ActionEvent event) throws IOException {
+        
+         Stage stage = new Stage();
+        String fxmlFile = "/fxml/RoomList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setTitle("Rooms");
+            stage.setScene(scene);
+            stage.show();
         
     }
     
