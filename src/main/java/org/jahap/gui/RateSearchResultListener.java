@@ -11,5 +11,5 @@ import java.util.EventListener;
  * @author russ
  */
 interface RateSearchResultListener extends EventListener{
-    void idinfo(AddressSearchResultEvent e);
+    void idinfo(RateSearchResultEvent e);
 }

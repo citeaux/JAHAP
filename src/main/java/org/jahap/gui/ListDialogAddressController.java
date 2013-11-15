@@ -91,13 +91,13 @@ public class ListDialogAddressController implements Initializable{
              
       });  
         
-      TableColumn<Address, String> col1 = new TableColumn<Address, String>("Name");        
-    col1.setCellValueFactory(new PropertyValueFactory<Address, String>("Name"));  
+      //TableColumn<Address, String> col1 = new TableColumn<Address, String>("Name");        
+    //col1.setCellValueFactory(new PropertyValueFactory<Address, String>("Name"));  
         
       
       
-      //dataTable.getColumns().add(firstNameCol);
-       dataTable.getColumns().add(col1);
+      dataTable.getColumns().add(firstNameCol);
+       //dataTable.getColumns().add(col1);
       
       //------------------------------------- Name --------------------------------
       

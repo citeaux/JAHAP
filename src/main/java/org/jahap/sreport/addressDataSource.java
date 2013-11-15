@@ -11,6 +11,7 @@ import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRField;
 import org.jahap.entities.Address;
 
+
 /**
  *
  * @author russ
@@ -27,6 +28,8 @@ public class addressDataSource implements JRDataSource{
    private int counter=-1;
     
    private HashMap<String,Integer> fieldNumber= new HashMap<String, Integer>();
+
+   
     
    
    

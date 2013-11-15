@@ -97,7 +97,7 @@ public class MainGuiFx implements Initializable {
 
     @FXML
     private void OpenRatesSearch(ActionEvent event) throws IOException {
-        Stage stage = new Stage();
+        Stage tage = new Stage();
         String fxmlFile = "/fxml/RatesList.fxml";
        
         FXMLLoader loader = new FXMLLoader();
@@ -105,10 +105,10 @@ public class MainGuiFx implements Initializable {
         
            AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
       
-            Scene scene = new Scene(page);
-            stage.setTitle("Rates");
-            stage.setScene(scene);
-            stage.show();
+            Scene tene = new Scene(page);
+            tage.setTitle("Rates");
+            tage.setScene(tene);
+            tage.show();
         
         
         

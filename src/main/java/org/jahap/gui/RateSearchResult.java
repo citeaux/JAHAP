@@ -25,27 +25,27 @@ public class RateSearchResult {
         //
         this.TableNameofSource=TableNameofSource;
         this.DbRecordId=DataRecordId;
-        notifyId(new AddressSearchResultEvent(this,DataRecordId,TableNameofSource));
+        notifyId(new RateSearchResultEvent(this,DataRecordId,TableNameofSource));
     }
     
     private EventListenerList listeners = new  EventListenerList();
     
     
-    public void addIDListener( AddressSearchResultListener listener )
+    public void addIDListener( RateSearchResultListener listener )
   {
-    listeners.add( AddressSearchResultListener.class, listener );
+    listeners.add( RateSearchResultListener.class, listener );
   }
 
-  public void removeIDListener( AddressSearchResultListener listener )
+  public void removeIDListener( RateSearchResultListener listener )
   {
-    listeners.remove( AddressSearchResultListener.class, listener );
+    listeners.remove( RateSearchResultListener.class, listener );
   }
 
   
 
     
-    protected synchronized void notifyId(AddressSearchResultEvent event){
-        for ( AddressSearchResultListener l : listeners.getListeners( AddressSearchResultListener.class ) )
+    protected synchronized void notifyId(RateSearchResultEvent event){
+        for ( RateSearchResultListener l : listeners.getListeners( RateSearchResultListener.class ) )
       l.idinfo( event );
 
     }
