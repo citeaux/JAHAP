@@ -28,17 +28,19 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import net.sf.jasperreports.engine.JRException;
-import org.jahap.business.base.ratesbean;
-import org.jahap.entities.Address;
-import org.jahap.entities.Rates;
+
+import org.jahap.business.base.roomsbean;
+
+import org.jahap.entities.Rooms;
 import org.jahap.sreport.ratereports;
+import org.jahap.sreport.roomreports;
 
 /**
  * FXML Controller class
  *
  * @author russ
  */
-public class RateListController implements Initializable {
+public class RoomListController implements Initializable {
     @FXML
     private Button PrintButton;
     @FXML
@@ -47,24 +49,24 @@ public class RateListController implements Initializable {
     private Button Ok;
     @FXML
     private Button Cancel;
-    private ratesbean rates;
-    private List RatesSearchResult;
+    private roomsbean rooms;
+    private List RoomsSearchResult;
     private long id=0;
     /**
      * Initializes the controller class.
      */
     
-    RateSearchResult searchresult;
+    RoomSearchResult searchresult;
     
     private void initTable(){
-        rates= new ratesbean();
-        RatesSearchResult= rates.SearchForAddress("*");
-        ObservableList<Rates> data= FXCollections.observableList(RatesSearchResult);
+        rooms= new roomsbean();
+        RoomsSearchResult= rooms.SearchForRooms("*");
+        ObservableList<Rooms> data= FXCollections.observableList(RoomsSearchResult);
         
         // -----------------  id
-        TableColumn<Rates,String> IdCol = new TableColumn<Rates,String>("Id");
-      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Rates, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rates, String> p) {
+        TableColumn<Rooms,String> IdCol = new TableColumn<Rooms,String>("Id");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getId());
      }
      
@@ -74,9 +76,9 @@ public class RateListController implements Initializable {
       //dataTable.getColumns().add(IdCol);
       
       // -----------------  Code
-        TableColumn<Rates,String> CodeCol = new TableColumn<Rates,String>("Code");
-      CodeCol.setCellValueFactory(new Callback<CellDataFeatures<Rates, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rates, String> p) {
+        TableColumn<Rooms,String> CodeCol = new TableColumn<Rooms,String>("Code");
+      CodeCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getCode());
      }
      
@@ -86,9 +88,9 @@ public class RateListController implements Initializable {
       dataTable.getColumns().add(CodeCol);
       
        // -----------------  Name
-        TableColumn<Rates,String> NameCol = new TableColumn<Rates,String>("Name");
-      NameCol.setCellValueFactory(new Callback<CellDataFeatures<Rates, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rates, String> p) {
+        TableColumn<Rooms,String> NameCol = new TableColumn<Rooms,String>("Name");
+      NameCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getName());
      }
      
@@ -97,30 +99,18 @@ public class RateListController implements Initializable {
       
       dataTable.getColumns().add(NameCol);
       
-       // -----------------  Price
-        TableColumn<Rates,String> PriceCol = new TableColumn<Rates,String>("Price");
-      PriceCol.setCellValueFactory(new Callback<CellDataFeatures<Rates, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rates, String> p) {
-         return new ReadOnlyObjectWrapper(String.valueOf(p.getValue().getPrice()));
+       // -----------------  Category
+        TableColumn<Rooms,String> CatCol = new TableColumn<Rooms,String>("Category");
+      CatCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getCategory());
      }
      
       
              
       });  
       
-      dataTable.getColumns().add(PriceCol);
-      
-       // -----------------  RevAccount
-        TableColumn<Rates,String> RevAccCol = new TableColumn<Rates,String>("Account");
-      RevAccCol.setCellValueFactory(new Callback<CellDataFeatures<Rates, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rates, String> p) {
-         return new ReadOnlyObjectWrapper(String.valueOf(p.getValue().getRevaccount()));
-     }
-     
-             
-      });  
-      
-      dataTable.getColumns().add(RevAccCol);
+      dataTable.getColumns().add(CatCol);
         
        dataTable.setItems(data);
             
@@ -134,29 +124,31 @@ public class RateListController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         initTable();
    }    
-
+ 
     @FXML
     private void PrintReport(ActionEvent event) throws JRException {
-        List<Rates> jj=new ArrayList<Rates>();
-        jj=rates.SearchForAddress("*");
-        ratereports hh=new ratereports() ;
-        hh.multiRateReport(jj);
+        List<Rooms> jj=new ArrayList<Rooms>();
+        jj=rooms.SearchForRooms("*");
+        roomreports hh=new roomreports() ;
+       hh.multiRoomReport(jj);
         
     }
-
+    
+    
+    
     @FXML
     private void MouseClicked(MouseEvent event) {
-        Rates ad=(Rates) dataTable.getSelectionModel().getSelectedItem();
+        Rooms ad=(Rooms) dataTable.getSelectionModel().getSelectedItem();
     id=ad.getId();
-      searchresult.setDbRecordId(id, "Rates");
+      searchresult.setDbRecordId(id, "Rooms");
         
         
-    }
+    } 
 
     @FXML
     private void OkAction(ActionEvent event) throws IOException {
         Stage stage = new Stage();
-        String fxmlFile = "/fxml/RateGuiFx.fxml";
+        String fxmlFile = "/fxml/RoomsGuiFx.fxml";
        
         FXMLLoader loader = new FXMLLoader();
         AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
@@ -167,7 +159,7 @@ public class RateListController implements Initializable {
 
         
         stage.setScene(scene);
-        RateGuiFx controller= loader.<RateGuiFx>getController();
+        RoomGuiFx controller= loader.<RoomGuiFx>getController();
        controller.init(id);
        
         

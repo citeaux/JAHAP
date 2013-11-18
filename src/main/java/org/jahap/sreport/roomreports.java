@@ -17,17 +17,18 @@ import net.sf.jasperreports.engine.query.JRJpaQueryExecuterFactory;
 import net.sf.jasperreports.swing.JRViewer;
 import net.sf.jasperreports.view.JasperViewer;
 
-import org.jahap.entities.Rates;
+
+import org.jahap.entities.Rooms;
 
 
 /**
  *
  * @author russ
  */
-public class ratereports {
+public class roomreports {
     
-    public void singleRateReport(List<Rates>adlist) throws JRException{
-          ratesDataSource adSource=new ratesDataSource(adlist);
+    public void singleRoomReport(List<Rooms>adlist) throws JRException{
+          roomsDataSource adSource=new roomsDataSource(adlist);
         
         
           HashMap<String, String> parameter =
@@ -43,7 +44,7 @@ public class ratereports {
                     
                          
                         try {
-            jp = JasperFillManager.fillReport("C:\\Users\\russ\\Documents\\NetBeansProjects\\jahap\\src\\main\\resources\\reports\\rate.jasper", new HashMap(), adSource);
+            jp = JasperFillManager.fillReport("C:\\Users\\russ\\Documents\\NetBeansProjects\\jahap\\src\\main\\resources\\reports\\room.jasper", new HashMap(), adSource);
             
         } catch (JRException jRException) {
         }
@@ -70,8 +71,8 @@ public class ratereports {
         
     } 
     
-     public void multiRateReport(List<Rates>adlist) throws JRException{
-          ratesDataSource adSource=new ratesDataSource(adlist);
+     public void multiRoomReport(List<Rooms>adlist) throws JRException{
+          roomsDataSource adSource=new roomsDataSource(adlist);
         
         
           HashMap<String, String> parameter =
@@ -87,7 +88,7 @@ public class ratereports {
                     
                          
                         try {
-            jp = JasperFillManager.fillReport("C:\\Users\\russ\\Documents\\NetBeansProjects\\jahap\\src\\main\\resources\\reports\\ratesList.jasper", new HashMap(), adSource);
+            jp = JasperFillManager.fillReport("C:\\Users\\russ\\Documents\\NetBeansProjects\\jahap\\src\\main\\resources\\reports\\roomsList.jasper", new HashMap(), adSource);
             
         } catch (JRException jRException) {
         }

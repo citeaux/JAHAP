@@ -7,8 +7,7 @@
 		<![CDATA[]]>
 	</queryString>
 	<field name="name" class="java.lang.String"/>
-	<field name="price" class="java.lang.Double"/>
-	<field name="revaccount" class="java.lang.Long"/>
+	<field name="category" class="java.lang.String"/>
 	<field name="code" class="java.lang.String"/>
 	<background>
 		<band splitType="Stretch"/>
@@ -26,7 +25,7 @@
 				<textElement>
 					<font size="15"/>
 				</textElement>
-				<text><![CDATA[Rate:]]></text>
+				<text><![CDATA[Room:]]></text>
 			</staticText>
 			<textField>
 				<reportElement uuid="bc2ae14a-2308-484c-ae9f-339db3cffe81" x="100" y="6" width="100" height="20"/>
@@ -36,16 +35,6 @@
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement uuid="546fa942-5acf-4bf2-b3da-de9c9a844959" x="100" y="36" width="100" height="20"/>
-				<textElement/>
-				<text><![CDATA[revaccount]]></text>
-			</staticText>
-			<staticText>
-				<reportElement uuid="6c3305b0-0c80-4b84-82aa-b65ecf3f62ee" x="200" y="36" width="100" height="20"/>
-				<textElement/>
-				<text><![CDATA[price]]></text>
-			</staticText>
-			<staticText>
 				<reportElement uuid="f444c4fe-94fd-47cf-b210-cc671fbd9bcc" x="0" y="36" width="100" height="20"/>
 				<textElement/>
 				<text><![CDATA[code]]></text>
@@ -53,24 +42,24 @@
 			<line>
 				<reportElement uuid="b78035e3-45ca-4397-9b09-90d53f61a670" x="0" y="26" width="478" height="1"/>
 			</line>
+			<staticText>
+				<reportElement uuid="8db78717-4484-4550-99e4-fae2217485b9" x="100" y="36" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[category]]></text>
+			</staticText>
 		</band>
 	</columnHeader>
 	<detail>
 		<band height="29" splitType="Stretch">
 			<textField>
-				<reportElement uuid="0bd94d56-e27a-4227-9a8f-10bb32e69099" x="100" y="0" width="100" height="20"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{revaccount}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement uuid="8d464d8a-4fdd-4b6d-abd5-88b754be65b0" x="200" y="0" width="100" height="20"/>
-				<textElement/>
-				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
-			</textField>
-			<textField>
 				<reportElement uuid="a043a98f-8c31-46cf-a15c-278c6fa109d6" x="0" y="0" width="100" height="20"/>
 				<textElement/>
 				<textFieldExpression><![CDATA[$F{code}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="2d4b4f88-40fa-4a82-9e46-064bb735c15e" x="100" y="0" width="100" height="20"/>
+				<textElement/>
+				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>
