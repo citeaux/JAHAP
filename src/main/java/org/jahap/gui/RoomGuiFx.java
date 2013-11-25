@@ -112,9 +112,7 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
         
     }
 
-    public void idinfo(RateSearchResultEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    
 
     private void FillWithSelectedData() {
         roomname_fxtextfield.setText(rooms.getName());

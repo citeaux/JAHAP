@@ -54,10 +54,10 @@ public class ListDialogAddressController implements Initializable{
     @FXML
     private Button Cancel;
     private long id=0;
-    private boolean isOverwievDialog=false;
+    private boolean isOverviewDialog=false;
     
     AddressSearchResult searchresult;
-    
+    InterResSearchResult ResSearchresult;
     
     
     
@@ -170,11 +170,18 @@ public class ListDialogAddressController implements Initializable{
      * Initializes the controller class. Call from a Address Dialog,
      * Sets selected Address ID in Oberver
      */
-    public void init(AddressSearchResult searchresults){
-         isOverwievDialog=true;
+    public void init(AddressSearchResult searchresults,AdressGuiFx zi){
+         isOverviewDialog=true;
          searchresult=searchresults;
         initTable();
     }
+    
+    public void init(AddressSearchResult searchresults,ResguiController zi){
+         isOverviewDialog=true;
+         searchresult=searchresults;
+        initTable();
+    }
+    
     
     public void initialize(URL url, ResourceBundle rb) {
        
@@ -198,13 +205,32 @@ public class ListDialogAddressController implements Initializable{
 
     @FXML
     private void OkAction(ActionEvent event) throws IOException {
-        if(isOverwievDialog=false){
+        if(isOverviewDialog=false){
         Stage stage = (Stage) Ok.getScene().getWindow();
         stage.close();
         }
+        if(isOverviewDialog=true){
+            
+        }
         
-        if(isOverwievDialog=true){
-             Stage stage = new Stage();
+    }
+
+    @FXML
+    private void CancelAction(ActionEvent event) {
+    }
+
+    @FXML
+    private void MouseClicked(MouseEvent event) throws IOException {
+        
+        
+    
+        
+    Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
+    id=ad.getId();
+    if (isOverviewDialog=false){ searchresult.setDbRecordId(id, "Address");}
+    
+    if (event.getClickCount()==2){
+        Stage stage = new Stage();
         String fxmlFile = "/fxml/AdressGuiFx.fxml";
        
         FXMLLoader loader = new FXMLLoader();
@@ -221,28 +247,18 @@ public class ListDialogAddressController implements Initializable{
        
         
         stage.showAndWait();
-        }
-    }
-
-    @FXML
-    private void CancelAction(ActionEvent event) {
-    }
-
-    @FXML
-    private void MouseClicked(MouseEvent event) {
         
         
+    }
     
-        
-    Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
-    id=ad.getId();
-    if (isOverwievDialog=false){ searchresult.setDbRecordId(id, "Address");}
+    
     }
 
     public void idinfo(AddressSearchResultEvent e) {
         
     }
-       
+
+    
     
     
 }

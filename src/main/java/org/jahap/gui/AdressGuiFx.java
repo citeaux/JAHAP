@@ -83,6 +83,9 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
           
         addresses = new addressbean();
         searchresults= new AddressSearchResult();
+        
+        
+        
        searchresults.addIDListener(this);
         
     }
@@ -136,7 +139,7 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         
         stage.setScene(scene);
         ListDialogAddressController controller= loader.<ListDialogAddressController>getController();
-       controller.init(searchresults);
+       controller.init(searchresults,this);
        
         
         stage.showAndWait();
@@ -211,6 +214,8 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         
         
     }
+
+   
    
 
 }
