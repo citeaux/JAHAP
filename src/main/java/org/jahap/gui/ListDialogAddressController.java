@@ -56,9 +56,9 @@ public class ListDialogAddressController implements Initializable{
     private long id=0;
     private boolean isOverviewDialog=false;
     
-    AddressSearchResult searchresult;
-    InterResSearchResult ResSearchresult;
-    
+    private AddressSearchResult searchresult;
+    private InterResSearchResult ResSearchresult;
+    private String guisource;
     
     
     
@@ -176,9 +176,10 @@ public class ListDialogAddressController implements Initializable{
         initTable();
     }
     
-    public void init(AddressSearchResult searchresults,ResguiController zi){
+    public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource){
          isOverviewDialog=true;
-         searchresult=searchresults;
+         this.ResSearchresult=ResSearchresults;
+         this.guisource=guisource;
         initTable();
     }
     
@@ -210,7 +211,9 @@ public class ListDialogAddressController implements Initializable{
         stage.close();
         }
         if(isOverviewDialog=true){
-            
+             Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
+                id=ad.getId();
+            ResSearchresult.setDbRecordId(id,guisource);
         }
         
     }

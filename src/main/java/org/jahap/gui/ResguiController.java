@@ -4,16 +4,22 @@
  */
 package org.jahap.gui;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
+import javafx.stage.Stage;
+import org.jahap.business.base.addressbean;
 import org.jahap.business.res.resbean;
 
 /**
@@ -98,9 +104,10 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private Button Toolbox_ForewardRecord_fxbutton;
     @FXML
     private Button Toolbox_LastRecord_fxbutton;
-
-    private resbean res;    
     
+    private InterResSearchResult ressearchresult;
+    private resbean res;    
+    private addressbean address;
     /**
      * Initializes the controller class.
      */
@@ -110,7 +117,24 @@ public class ResguiController implements Initializable, InterResSearchResultList
     }    
 
     @FXML
-    private void Search_Orderer(ActionEvent event) {
+    private void Search_Orderer(ActionEvent event) throws IOException {
+         Stage stage = new Stage();
+        String fxmlFile = "/fxml/AddressList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        ListDialogAddressController controller= loader.<ListDialogAddressController>getController();
+       controller.init(ressearchresult,this,"orderaddress");
+       
+        
+        stage.showAndWait();
         
         
     }
@@ -174,7 +198,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
     public void init(long id){
         res = new resbean();
         res.setDataRecordId(id);
-                      
+                      ressearchresult.addIDListener(this);
               FillWithSelectedData();
         
         
@@ -191,19 +215,11 @@ public class ResguiController implements Initializable, InterResSearchResultList
         DASH_ResState_fxtxt.setText("Definitv"); //DEV : State implemnetation
         
         // init Order infos
-        Orderer_Name_fxtxtfield.setText(res.getAddresses().getName());
-        Orderer_FirstName_fxtxtfield.setText(res.getAddresses().getChristianname());
-        Orderer_Street_fxtxtfield.setText(res.getAddresses().getStreet());
-        Orderer_ZipCode_fxtxtfield.setText(res.getAddresses().getZipcode());
-        Orderer_City_fxtxtfield.setText(res.getAddresses().getCity());
+        fillOrderer();
         
         //DEV :Init Guest infos
-        Guest_Name_fxtxtfield.setText("xxxxx");
-        Guest_firstName_fxtxtfield.setText("xxx");
-        Guest_Street_fxtxtfield.setText("xxx");
-        Guest_ZipCode_fxtxtfield.setText("xxx");
-        Guest_City_fxtxtfield.setText("xxx");
-        
+       
+        fillGuest();
         //Res
         
         Room_Code_fxtxtfield.setText("xxx");
@@ -214,9 +230,50 @@ public class ResguiController implements Initializable, InterResSearchResultList
         
     }
 
-    public void idinfo(InterResSearchResultEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    private void fillOrderer(){
+         Orderer_Name_fxtxtfield.setText(res.getAddresses().getName());
+        Orderer_FirstName_fxtxtfield.setText(res.getAddresses().getChristianname());
+        Orderer_Street_fxtxtfield.setText(res.getAddresses().getStreet());
+        Orderer_ZipCode_fxtxtfield.setText(res.getAddresses().getZipcode());
+        Orderer_City_fxtxtfield.setText(res.getAddresses().getCity());
     }
     
+    private void fillOrderer(long addressid){
+        
+         Orderer_Name_fxtxtfield.setText(address.getDataRecord(addressid).getName());
+        Orderer_FirstName_fxtxtfield.setText(address.getDataRecord(addressid).getChristianname());
+        Orderer_Street_fxtxtfield.setText(address.getDataRecord(addressid).getStreet());
+        Orderer_ZipCode_fxtxtfield.setText(address.getDataRecord(addressid).getZipcode());
+        Orderer_City_fxtxtfield.setText(address.getDataRecord(addressid).getCity());
+        
+    }
+    
+    
+    private void fillGuest(){
+         Guest_Name_fxtxtfield.setText("xxxxx");
+        Guest_firstName_fxtxtfield.setText("xxx");
+        Guest_Street_fxtxtfield.setText("xxx");
+        Guest_ZipCode_fxtxtfield.setText("xxx");
+        Guest_City_fxtxtfield.setText("xxx");
+    }
+    
+    private void fillGuest(long addressid){
+         Guest_Name_fxtxtfield.setText(address.getDataRecord(addressid).getName());
+        Guest_firstName_fxtxtfield.setText(address.getDataRecord(addressid).getChristianname());
+        Guest_Street_fxtxtfield.setText(address.getDataRecord(addressid).getStreet());
+        Guest_ZipCode_fxtxtfield.setText(address.getDataRecord(addressid).getZipcode());
+        Guest_City_fxtxtfield.setText(address.getDataRecord(addressid).getCity());
+    }
+    
+    
+    public void idinfo(InterResSearchResultEvent e) {
+     if(e.getTableNameofSource()=="orderaddress"){
+         fillOrderer(e.getDbRecordId());
+     }   
+     
+     if(e.getTableNameofSource()=="guestaddress"){
+           fillGuest(e.getDbRecordId());
+     }
+    }
     
 }

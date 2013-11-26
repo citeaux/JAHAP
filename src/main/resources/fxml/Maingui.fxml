@@ -64,7 +64,7 @@
                     <MenuItem mnemonicParsing="false" text="Check-In" />
                     <MenuItem mnemonicParsing="false" text="Check-Out" />
                     <MenuItem mnemonicParsing="false" text="Reservation" />
-                    <MenuItem mnemonicParsing="false" text="Search for Reservation" />
+                    <MenuItem mnemonicParsing="false" onAction="#FO_SearchForReservation" text="Search for Reservation" fx:id="FO_SearchForReservation_fxmenuitem" />
                     <MenuItem mnemonicParsing="false" text="Guest Account" />
                     <MenuItem mnemonicParsing="false" text="Day Close" />
                   </items>

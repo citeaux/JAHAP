@@ -132,7 +132,7 @@
             <Button fx:id="Exit_fxbutton" mnemonicParsing="false" onAction="#Exit" prefHeight="39.0" prefWidth="105.0" text="Exit" />
             <Button fx:id="Print_fxbutton" mnemonicParsing="false" onAction="#Print" prefHeight="39.0" prefWidth="105.0" text="Print" />
             <Button fx:id="Search_fxbutton" mnemonicParsing="false" onAction="#Search" prefHeight="39.0" prefWidth="105.0" text="Search" />
-            <Button id="Search_fxbutton" fx:id="New_fxbutton" mnemonicParsing="false" onAction="#New" prefHeight="39.0" prefWidth="105.0" text="New" />
+            <Button id="Search_fxbutton" fx:id="New_fxbutton" mnemonicParsing="false" onAction="#Search" prefHeight="39.0" prefWidth="105.0" text="New" />
           </children>
         </VBox>
       </right>
@@ -152,7 +152,6 @@
             </ChoiceBox>
             <Button id="Toolbox_FirstRecord_fxButton" fx:id="Toolbox_ForewardRecord_fxbutton" minWidth="29.0" mnemonicParsing="false" onAction="#Toolbox_ForewardRecord" prefWidth="43.0" text="&gt;" />
             <Button id="Toolbox_FirstRecord_fxButton" fx:id="Toolbox_LastRecord_fxbutton" minWidth="29.0" mnemonicParsing="false" onAction="#Toolbox_LastRecord" prefWidth="43.0" text="&gt;|" />
-            <ToggleButton mnemonicParsing="false" text="?" />
           </items>
         </ToolBar>
       </top>
