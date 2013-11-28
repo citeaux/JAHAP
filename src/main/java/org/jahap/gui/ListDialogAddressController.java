@@ -206,14 +206,16 @@ public class ListDialogAddressController implements Initializable{
 
     @FXML
     private void OkAction(ActionEvent event) throws IOException {
-        if(isOverviewDialog=false){
+        if(isOverviewDialog==false){
         Stage stage = (Stage) Ok.getScene().getWindow();
         stage.close();
         }
-        if(isOverviewDialog=true){
+        if(isOverviewDialog==true){
              Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
                 id=ad.getId();
             ResSearchresult.setDbRecordId(id,guisource);
+            Stage stage = (Stage) Ok.getScene().getWindow();
+        stage.close();
         }
         
     }
@@ -230,7 +232,7 @@ public class ListDialogAddressController implements Initializable{
         
     Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
     id=ad.getId();
-    if (isOverviewDialog=false){ searchresult.setDbRecordId(id, "Address");}
+    if (isOverviewDialog==false){ searchresult.setDbRecordId(id, "Address");}
     
     if (event.getClickCount()==2){
         Stage stage = new Stage();

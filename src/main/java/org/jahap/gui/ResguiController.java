@@ -108,6 +108,10 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private InterResSearchResult ressearchresult;
     private resbean res;    
     private addressbean address;
+    @FXML
+    private Font x3;
+    @FXML
+    private Button New_fxbutton;
     /**
      * Initializes the controller class.
      */
@@ -197,6 +201,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
     
     public void init(long id){
         res = new resbean();
+        ressearchresult=new InterResSearchResult();
         res.setDataRecordId(id);
                       ressearchresult.addIDListener(this);
               FillWithSelectedData();
@@ -274,6 +279,10 @@ public class ResguiController implements Initializable, InterResSearchResultList
      if(e.getTableNameofSource()=="guestaddress"){
            fillGuest(e.getDbRecordId());
      }
+    }
+
+    @FXML
+    private void New(ActionEvent event) {
     }
     
 }

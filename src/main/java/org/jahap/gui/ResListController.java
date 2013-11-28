@@ -46,18 +46,18 @@ public class ResListController implements Initializable {
     @FXML
     private Button Cancel;
     private resbean res;
-    private List ResSearchResult;
+    private List DialogResSearchResult;
     private long id=0;
     /**
      * Initializes the controller class.
      */
     
-    RateSearchResult searchresult;
+    ResSearchResult searchresult;
     
     private void initTable(){
         res= new resbean();
-        ResSearchResult= res.SearchForReservations("*");
-        ObservableList<Res> data= FXCollections.observableList(ResSearchResult);
+        DialogResSearchResult= res.SearchForReservations("*");
+        ObservableList<Res> data= FXCollections.observableList(DialogResSearchResult);
         
         // -----------------  id
         TableColumn<Res,String> IdCol = new TableColumn<Res,String>("Id");
@@ -133,6 +133,7 @@ public class ResListController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+       
         initTable();
    }    
 
@@ -146,17 +147,17 @@ public class ResListController implements Initializable {
     }
 
     @FXML
-    private void MouseClicked(MouseEvent event) {
-        Res ad=(Res) dataTable.getSelectionModel().getSelectedItem();
-    id=ad.getId();
-      searchresult.setDbRecordId(id, "Res");
+    private void MouseClicked(MouseEvent event) throws IOException {
+        
+       if(event.getClickCount()==1){
+         Res ad=(Res) dataTable.getSelectionModel().getSelectedItem();
+         id=ad.getId();  
+       } 
         
         
-    }
-
-    @FXML
-    private void OkAction(ActionEvent event) throws IOException {
-        Stage stage = new Stage();
+     
+        if (event.getClickCount()==2){
+             Stage stage = new Stage();
         String fxmlFile = "/fxml/resgui.fxml";
        
         FXMLLoader loader = new FXMLLoader();
@@ -168,12 +169,17 @@ public class ResListController implements Initializable {
 
         
         stage.setScene(scene);
-        ResguiController controller= loader.<ResguiController>getController();
-       controller.init(id);
+      ResguiController controller;
+      controller = loader.<ResguiController>getController();
+      controller.init(id);
        
         
         stage.showAndWait();
-        
+    }
+    }
+
+    @FXML
+    private void OkAction(ActionEvent event){
     }
 
     @FXML
