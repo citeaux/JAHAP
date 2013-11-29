@@ -83,9 +83,16 @@
                 </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Res-&gt;Details">
+            <Tab text="Res-&gt;Pricing">
               <content>
-                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Label layoutX="23.0" layoutY="14.0" text="Rate:" />
+                    <TextField id="PRICE_No_fxtxtfield" fx:id="RATE_Name_fxtxtfield" layoutX="65.0" layoutY="14.0" prefWidth="200.0" />
+                    <Button id="RATE_Search_fxtxtfield" fx:id="RATE_Search_fxbutton" layoutX="278.0" layoutY="14.0" mnemonicParsing="false" onAction="#SearchForRate" text="Search for rate" />
+                    <Button id="RATE_Name_fxtxtfield" fx:id="RATE_Details_fxtxtfield" layoutX="278.0" layoutY="48.0" mnemonicParsing="false" onAction="#RateDetails" prefWidth="123.0" text="Details" />
+                  </children>
+                </AnchorPane>
               </content>
             </Tab>
           </tabs>

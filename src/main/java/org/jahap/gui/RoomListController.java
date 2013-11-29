@@ -52,11 +52,15 @@ public class RoomListController implements Initializable {
     private roomsbean rooms;
     private List RoomsSearchResult;
     private long id=0;
+    private boolean isOverviewDialog=false;
     /**
      * Initializes the controller class.
      */
     
-    RoomSearchResult searchresult;
+    private RoomSearchResult searchresult;
+    private InterResSearchResult ResSearchresult;
+    private String guisource;
+    
     
     private void initTable(){
         rooms= new roomsbean();
@@ -124,6 +128,15 @@ public class RoomListController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         initTable();
    }    
+    
+    public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource){
+        //RoomSearchResult searchresult
+          searchresult= new RoomSearchResult();
+        isOverviewDialog=true;
+         this.ResSearchresult=ResSearchresults;
+         this.guisource=guisource;
+        initTable();
+    }
  
     @FXML
     private void PrintReport(ActionEvent event) throws JRException {
@@ -137,18 +150,20 @@ public class RoomListController implements Initializable {
     
     
     @FXML
-    private void MouseClicked(MouseEvent event) {
-        Rooms ad=(Rooms) dataTable.getSelectionModel().getSelectedItem();
-    id=ad.getId();
-      searchresult.setDbRecordId(id, "Rooms");
-        
-        
-    } 
-
-    @FXML
-    private void OkAction(ActionEvent event) throws IOException {
-        Stage stage = new Stage();
-        String fxmlFile = "/fxml/RoomsGuiFx.fxml";
+    private void MouseClicked(MouseEvent event) throws IOException {
+     
+       if(event.getClickCount()==1){ 
+                Rooms ad=(Rooms) dataTable.getSelectionModel().getSelectedItem();
+                id=ad.getId();
+                searchresult.setDbRecordId(id, "Rooms");
+       }
+       
+       if(event.getClickCount()==2){
+           Rooms ad=(Rooms) dataTable.getSelectionModel().getSelectedItem();
+             id=ad.getId();
+             searchresult.setDbRecordId(id, "Rooms");
+             Stage stage = new Stage();
+             String fxmlFile = "/fxml/RoomsGuiFx.fxml";
        
         FXMLLoader loader = new FXMLLoader();
         AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
@@ -164,7 +179,31 @@ public class RoomListController implements Initializable {
        
         
         stage.showAndWait();
+      
+      
+       }
+       
         
+    } 
+
+    @FXML
+    private void OkAction(ActionEvent event) throws IOException {
+        if(isOverviewDialog==false){
+            Stage stage = (Stage) Ok.getScene().getWindow();
+            stage.close();
+        }
+        
+       if(isOverviewDialog==true){
+           Rooms ad=(Rooms) dataTable.getSelectionModel().getSelectedItem();
+    id=ad.getId();
+    
+          try {
+                ResSearchresult.setDbRecordId(id, guisource);
+            } catch (Exception e) {
+            }
+            Stage stage = (Stage) Ok.getScene().getWindow();
+        stage.close();
+       }
     }
 
     @FXML

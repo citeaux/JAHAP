@@ -213,7 +213,10 @@ public class ListDialogAddressController implements Initializable{
         if(isOverviewDialog==true){
              Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
                 id=ad.getId();
-            ResSearchresult.setDbRecordId(id,guisource);
+            try {
+                ResSearchresult.setDbRecordId(id, guisource);
+            } catch (Exception e) {
+            }
             Stage stage = (Stage) Ok.getScene().getWindow();
         stage.close();
         }

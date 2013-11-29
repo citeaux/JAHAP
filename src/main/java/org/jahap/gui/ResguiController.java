@@ -20,7 +20,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import org.jahap.business.base.addressbean;
+import org.jahap.business.base.roomsbean;
+import org.jahap.business.res.occbean;
 import org.jahap.business.res.resbean;
+import org.jahap.entities.Occ;
 
 /**
  * FXML Controller class
@@ -106,7 +109,9 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private Button Toolbox_LastRecord_fxbutton;
     
     private InterResSearchResult ressearchresult;
-    private resbean res;    
+    private resbean res;   
+    private occbean occ;
+    private roomsbean room;
     private addressbean address;
     @FXML
     private Font x3;
@@ -148,7 +153,25 @@ public class ResguiController implements Initializable, InterResSearchResultList
     }
 
     @FXML
-    private void Search_Guest(ActionEvent event) {
+    private void Search_Guest(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/AddressList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        ListDialogAddressController controller= loader.<ListDialogAddressController>getController();
+       controller.init(ressearchresult,this,"guestaddress");
+       
+        
+        stage.showAndWait();
+        
     }
 
     @FXML
@@ -156,7 +179,24 @@ public class ResguiController implements Initializable, InterResSearchResultList
     }
 
     @FXML
-    private void Search_room(ActionEvent event) {
+    private void Search_room(ActionEvent event) throws IOException {
+         Stage stage = new Stage();
+        String fxmlFile = "/fxml/RoomList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        RoomListController controller= loader.<RoomListController>getController();
+       controller.init(ressearchresult,this,"rooms");
+       
+        
+        stage.showAndWait();
     }
 
     @FXML
@@ -193,6 +233,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private void Toolbox_ForewardRecord(ActionEvent event) {
         res.nextRecordForeward();
         FillWithSelectedData();
+        
     }
 
     @FXML
@@ -201,6 +242,9 @@ public class ResguiController implements Initializable, InterResSearchResultList
     
     public void init(long id){
         res = new resbean();
+        address=new addressbean();
+        occ=new occbean();
+        room=new roomsbean();
         ressearchresult=new InterResSearchResult();
         res.setDataRecordId(id);
                       ressearchresult.addIDListener(this);
@@ -226,8 +270,9 @@ public class ResguiController implements Initializable, InterResSearchResultList
        
         fillGuest();
         //Res
-        
-        Room_Code_fxtxtfield.setText("xxx");
+        Occ gh=new Occ();
+        gh=occ.SearchForOccforRes(res.GetCurrentRes()).get(0);
+        Room_Code_fxtxtfield.setText(gh.getRoom().getCode()+" "+gh.getRoom().getName());
         
         // ACC
         ACC_Balance_fxtxtfield.setText("677");
@@ -270,6 +315,11 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Guest_City_fxtxtfield.setText(address.getDataRecord(addressid).getCity());
     }
     
+    private void fillRoom(long roomid){
+        
+        Room_Code_fxtxtfield.setText(room.getDataRecord(roomid).getCode()+ " " + room.getDataRecord(roomid).getName());
+    }
+    
     
     public void idinfo(InterResSearchResultEvent e) {
      if(e.getTableNameofSource()=="orderaddress"){
@@ -279,6 +329,10 @@ public class ResguiController implements Initializable, InterResSearchResultList
      if(e.getTableNameofSource()=="guestaddress"){
            fillGuest(e.getDbRecordId());
      }
+     if(e.getTableNameofSource()=="rooms"){
+           fillRoom(e.getDbRecordId());
+     }
+     
     }
 
     @FXML
