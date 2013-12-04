@@ -132,7 +132,9 @@ public class RateListController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        searchresult= new RateSearchResult();
         initTable();
+        
    }    
 
     @FXML

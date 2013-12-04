@@ -126,6 +126,7 @@ public class RoomListController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        searchresult= new RoomSearchResult();
         initTable();
    }    
     
@@ -151,17 +152,13 @@ public class RoomListController implements Initializable {
     
     @FXML
     private void MouseClicked(MouseEvent event) throws IOException {
+               
      
-       if(event.getClickCount()==1){ 
                 Rooms ad=(Rooms) dataTable.getSelectionModel().getSelectedItem();
                 id=ad.getId();
-                searchresult.setDbRecordId(id, "Rooms");
-       }
+       if(isOverviewDialog==false){searchresult.setDbRecordId(id, "Rooms");}
        
        if(event.getClickCount()==2){
-           Rooms ad=(Rooms) dataTable.getSelectionModel().getSelectedItem();
-             id=ad.getId();
-             searchresult.setDbRecordId(id, "Rooms");
              Stage stage = new Stage();
              String fxmlFile = "/fxml/RoomsGuiFx.fxml";
        

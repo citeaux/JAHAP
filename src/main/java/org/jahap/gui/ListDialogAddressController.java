@@ -172,12 +172,14 @@ public class ListDialogAddressController implements Initializable{
      */
     public void init(AddressSearchResult searchresults,AdressGuiFx zi){
          isOverviewDialog=true;
+         searchresult= new AddressSearchResult();
          searchresult=searchresults;
         initTable();
     }
     
     public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource){
          isOverviewDialog=true;
+         
          this.ResSearchresult=ResSearchresults;
          this.guisource=guisource;
         initTable();
@@ -185,7 +187,7 @@ public class ListDialogAddressController implements Initializable{
     
     
     public void initialize(URL url, ResourceBundle rb) {
-       
+       searchresult= new AddressSearchResult();
        initTable();
        
     }    
@@ -259,14 +261,12 @@ public class ListDialogAddressController implements Initializable{
         
     }
     
-    
+       }
     }
 
-    public void idinfo(AddressSearchResultEvent e) {
-        
-    }
+   
+
 
     
     
-    
-}
+
