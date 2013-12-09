@@ -55,6 +55,7 @@ public class ListDialogAddressController implements Initializable{
     private Button Cancel;
     private long id=0;
     private boolean isOverviewDialog=false;
+   
     
     private AddressSearchResult searchresult;
     private InterResSearchResult ResSearchresult;

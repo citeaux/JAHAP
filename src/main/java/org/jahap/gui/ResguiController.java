@@ -27,6 +27,10 @@ import org.jahap.business.res.resbean;
 import org.jahap.entities.Occ;
 import extfx.scene.control.*;
 import extfx.util.*;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import javax.swing.JOptionPane;
 
 /**
  * FXML Controller class
@@ -137,6 +141,8 @@ public class ResguiController implements Initializable, InterResSearchResultList
     /**
      * Initializes the controller class.
      */
+     private long roomid=0;
+     private long addressid=0;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -222,6 +228,85 @@ public class ResguiController implements Initializable, InterResSearchResultList
 
     @FXML
     private void Save(ActionEvent event) {
+       // only for changing Res
+        Date SaveFromDate=occ.getArrivaldate();
+        Date SaveToDate=occ.getDeparturedate();
+        long SaveRoomId=occ.getRoom().getId();
+        long SaveAddressId=occ.getResguest().getId();
+      
+         res.setAddresses(address.getDataRecord(addressid));  // Set Addressrecord
+                      
+
+                     
+
+                      
+                      
+                    
+        
+        
+        
+        if(datapickerFrom.getValue()!=occ.getArrivaldate()){
+           
+            occ.setArrivaldate(datapickerFrom.getValue());
+        
+        }
+        if(datapickerTo.getValue()!=occ.getDeparturedate()){
+          
+            occ.setDeparturedate(datapickerTo.getValue());
+        }
+        if(roomid!=occ.getRoom().getId()){
+            
+            occ.setRoom(room.getDataRecord(roomid));
+        
+        }
+        if(addressid!=occ.getResguest().getId()){
+            
+            occ.setResguest(address.getDataRecord(addressid));
+        
+        }
+         List<String>overlaps=new ArrayList<String>();  
+         overlaps=occ.CheckForOverlappingReservations();  
+         if(overlaps==null){
+             occ.saveRecord();
+             System.out.println("Ok");
+         }
+         
+          if(overlaps!=null){
+                        if(overlaps.size()>=1){
+                            String Test=overlaps.get(1);
+                            int i;
+                            for (i=0;i==overlaps.size();i++){
+                               Test=Test+ ", " +overlaps.get(i);
+                            }
+                            
+                           int iol=  JOptionPane.showOptionDialog(null, Test, "Rooms is Occupied by",JOptionPane.YES_NO_OPTION, JOptionPane.ERROR_MESSAGE,null,new String[]{"create Reservation","drop Reservation","Cancel"},"Cancel");
+                            
+                               switch(iol ){
+                                   case 0:{
+                                      
+                                        res.setArrivaldate(occ.getArrivaldate().toString());
+                                        res.setDeparturedate(occ.getDeparturedate().toString());
+                                        res.saveRecord();
+                                       System.out.println("res adjusted");
+                                       
+                                   }
+                                   case 1:{
+                                       System.out.println("res removed");
+                                       occ.setArrivaldate(SaveFromDate);
+                                       occ.setDeparturedate(SaveToDate);
+                                       occ.setRoom(room.getDataRecord(SaveRoomId));
+                                       occ.setResguest(address.getDataRecord(SaveAddressId));
+                                       res.setArrivaldate(occ.getArrivaldate().toString());
+                                        res.setDeparturedate(occ.getDeparturedate().toString());
+                                         occ.saveRecord();
+                                         res.saveRecord();
+                                   }
+                                   case 2:{
+                                        System.out.println("res");
+                                   }
+                               }
+                        }
+               }
     }
 
     @FXML
@@ -293,8 +378,9 @@ public class ResguiController implements Initializable, InterResSearchResultList
         //Res
         Occ gh=new Occ();
         gh=occ.SearchForOccforRes(res.GetCurrentRes()).get(0);
+        roomid=occ.getRoom().getId();
         Room_Code_fxtxtfield.setText(gh.getRoom().getCode()+" "+gh.getRoom().getName());
-        
+        fillDates();
         // ACC
         ACC_Balance_fxtxtfield.setText("677");
         ACC_No_fxtxtfield.setText("009080");
@@ -307,6 +393,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Orderer_Street_fxtxtfield.setText(res.getAddresses().getStreet());
         Orderer_ZipCode_fxtxtfield.setText(res.getAddresses().getZipcode());
         Orderer_City_fxtxtfield.setText(res.getAddresses().getCity());
+        addressid=res.getAddresses().getId();
     }
     
     private void fillOrderer(long addressid){
@@ -316,7 +403,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Orderer_Street_fxtxtfield.setText(address.getDataRecord(addressid).getStreet());
         Orderer_ZipCode_fxtxtfield.setText(address.getDataRecord(addressid).getZipcode());
         Orderer_City_fxtxtfield.setText(address.getDataRecord(addressid).getCity());
-        
+        addressid=res.getAddresses().getId();
     }
     
     
@@ -339,10 +426,16 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private void fillRoom(long roomid){
         
         Room_Code_fxtxtfield.setText(room.getDataRecord(roomid).getCode()+ " " + room.getDataRecord(roomid).getName());
+        this.roomid=roomid;
     }
     
      private void fillRate(long rateid){
         RATE_Name_fxtxtfield.setText(rate.getDataRecord(rateid).getCode()+ " " + rate.getDataRecord(rateid).getName());
+     }
+     
+     private void fillDates(){
+         datapickerFrom.setValue(occ.getArrivaldate());
+         datapickerTo.setValue(occ.getDeparturedate());
      }
     
     public void idinfo(InterResSearchResultEvent e) {
