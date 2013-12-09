@@ -51,7 +51,7 @@ public class ResListController implements Initializable {
     /**
      * Initializes the controller class.
      */
-    
+    private boolean isOverviewDialog=false;
     ResSearchResult searchresult;
     
     private void initTable(){
@@ -133,7 +133,7 @@ public class ResListController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
+        searchresult=new ResSearchResult();
         initTable();
    }    
 
@@ -149,11 +149,11 @@ public class ResListController implements Initializable {
     @FXML
     private void MouseClicked(MouseEvent event) throws IOException {
         
-       if(event.getClickCount()==1){
+       
          Res ad=(Res) dataTable.getSelectionModel().getSelectedItem();
          id=ad.getId();  
-       } 
-        
+         System.out.println("---->"+event.getClickCount());
+         if (isOverviewDialog==false){ searchresult.setDbRecordId(id, "res");}
         
      
         if (event.getClickCount()==2){

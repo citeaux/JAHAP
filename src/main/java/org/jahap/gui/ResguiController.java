@@ -20,10 +20,13 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import org.jahap.business.base.addressbean;
+import org.jahap.business.base.ratesbean;
 import org.jahap.business.base.roomsbean;
 import org.jahap.business.res.occbean;
 import org.jahap.business.res.resbean;
 import org.jahap.entities.Occ;
+import extfx.scene.control.*;
+import extfx.util.*;
 
 /**
  * FXML Controller class
@@ -31,6 +34,11 @@ import org.jahap.entities.Occ;
  * @author russ
  */
 public class ResguiController implements Initializable, InterResSearchResultListener {
+    private CalendarView clview;
+    @FXML
+    private DatePicker datapickerFrom;
+    @FXML
+    private DatePicker datapickerTo;
     @FXML
     private Label DASH_ResOrderer_txt;
     @FXML
@@ -109,7 +117,8 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private Button Toolbox_LastRecord_fxbutton;
     
     private InterResSearchResult ressearchresult;
-    private resbean res;   
+    private resbean res;
+    private ratesbean rate;
     private occbean occ;
     private roomsbean room;
     private addressbean address;
@@ -117,6 +126,14 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private Font x3;
     @FXML
     private Button New_fxbutton;
+    @FXML
+    private TextField RATE_Name_fxtxtfield;
+    @FXML
+    private Button RATE_Search_fxbutton;
+    @FXML
+    private Button RATE_Details_fxtxtfield;
+    @FXML
+    private Label DASH_ResNewCreated_fxtxt;
     /**
      * Initializes the controller class.
      */
@@ -127,7 +144,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
 
     @FXML
     private void Search_Orderer(ActionEvent event) throws IOException {
-         Stage stage = new Stage();
+        Stage stage = new Stage();
         String fxmlFile = "/fxml/AddressList.fxml";
        
         FXMLLoader loader = new FXMLLoader();
@@ -241,10 +258,14 @@ public class ResguiController implements Initializable, InterResSearchResultList
     }
     
     public void init(long id){
+
+        
+        
         res = new resbean();
         address=new addressbean();
         occ=new occbean();
         room=new roomsbean();
+        rate=new ratesbean();
         ressearchresult=new InterResSearchResult();
         res.setDataRecordId(id);
                       ressearchresult.addIDListener(this);
@@ -320,6 +341,9 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Room_Code_fxtxtfield.setText(room.getDataRecord(roomid).getCode()+ " " + room.getDataRecord(roomid).getName());
     }
     
+     private void fillRate(long rateid){
+        RATE_Name_fxtxtfield.setText(rate.getDataRecord(rateid).getCode()+ " " + rate.getDataRecord(rateid).getName());
+     }
     
     public void idinfo(InterResSearchResultEvent e) {
      if(e.getTableNameofSource()=="orderaddress"){
@@ -333,10 +357,49 @@ public class ResguiController implements Initializable, InterResSearchResultList
            fillRoom(e.getDbRecordId());
      }
      
+     if(e.getTableNameofSource()=="rate"){
+           fillRate(e.getDbRecordId());
+     }
+     
+     
     }
 
     @FXML
     private void New(ActionEvent event) {
+    }
+
+    @FXML
+    private void SearchForRate(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/RatesList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        RateListController controller= loader.<RateListController>getController();
+       controller.init(ressearchresult,this,"rate");
+       
+        
+        stage.showAndWait();
+    }
+
+    @FXML
+    private void RateDetails(ActionEvent event) {
+    }
+
+    @FXML
+    private void Action_From_Date(ActionEvent event) {
+       
+    }
+
+    @FXML
+    private void Action_To_Date(ActionEvent event) {
     }
     
 }

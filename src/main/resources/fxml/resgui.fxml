@@ -8,6 +8,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 <?import javafx.scene.text.*?>
+<?import extfx.scene.control.*?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="748.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.jahap.gui.ResguiController">
   <children>
@@ -59,13 +60,19 @@
                 </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Guest-&gt;Room">
+            <Tab text="Guest-&gt;Room,Date">
               <content>
                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
                     <TextField id="Guest_Name_fxtxtfield" fx:id="Room_Code_fxtxtfield" layoutX="102.0" layoutY="43.0" prefWidth="200.0" />
                     <Label layoutX="52.0" layoutY="46.0" text="Room:" />
                     <Button id="Room_Name_fxtxtfield" fx:id="Room_Search_fxbutton" layoutX="311.0" layoutY="43.0" mnemonicParsing="false" onAction="#Search_room" text="Search for room" />
+                    <Label layoutX="49.0" layoutY="86.0" text="Arrival:" />
+                    <Label layoutX="25.0" layoutY="115.0" text="Departure:" />
+                   
+                    <DatePicker id="datapickerFrom" fx:id="datapickerFrom" layoutX="102.0" layoutY="86.0" prefWidth="120.0"  onAction="#Action_From_Date"  />
+                    
+                    <DatePicker id="datapickerTo" fx:id="datapickerTo" layoutX="102.0" layoutY="115.0" prefWidth="120.0" onAction="#Action_To_Date"/>
                   </children>
                 </AnchorPane>
               </content>
@@ -129,6 +136,11 @@
               </font>
             </Label>
             <Label id="DASH_ResNo_fxtxt" font="$x3" layoutX="563.0" layoutY="47.0" prefHeight="39.0" prefWidth="63.999977929684974" text="Pax" />
+            <Label id="DASH_ResDeparture_fxtxt" fx:id="DASH_ResNewCreated_fxtxt" layoutX="563.0" layoutY="24.0" text="NEW" textFill="#ff3333" visible="false">
+              <font>
+                <Font size="16.0" />
+              </font>
+            </Label>
           </children>
         </Pane>
       </center>

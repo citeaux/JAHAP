@@ -50,10 +50,12 @@ public class RateListController implements Initializable {
     private ratesbean rates;
     private List RatesSearchResult;
     private long id=0;
+    private InterResSearchResult ResSearchresult;
+    private String guisource;
     /**
      * Initializes the controller class.
      */
-    
+    private boolean isOverviewDialog=false;
     RateSearchResult searchresult;
     
     private void initTable(){
@@ -128,6 +130,15 @@ public class RateListController implements Initializable {
     
     }
     
+    public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource){
+        //RoomSearchResult searchresult
+          searchresult= new RateSearchResult();
+        isOverviewDialog=true;
+         this.ResSearchresult=ResSearchresults;
+         this.guisource=guisource;
+        initTable();
+    }
+    
     
     
     @Override
@@ -147,17 +158,12 @@ public class RateListController implements Initializable {
     }
 
     @FXML
-    private void MouseClicked(MouseEvent event) {
+    private void MouseClicked(MouseEvent event) throws IOException {
         Rates ad=(Rates) dataTable.getSelectionModel().getSelectedItem();
     id=ad.getId();
       searchresult.setDbRecordId(id, "Rates");
-        
-        
-    }
-
-    @FXML
-    private void OkAction(ActionEvent event) throws IOException {
-        Stage stage = new Stage();
+        if(event.getClickCount()==2){
+       Stage stage = new Stage();
         String fxmlFile = "/fxml/RateGuiFx.fxml";
        
         FXMLLoader loader = new FXMLLoader();
@@ -174,6 +180,28 @@ public class RateListController implements Initializable {
        
         
         stage.showAndWait();
+        
+        }
+    }
+
+    @FXML
+    private void OkAction(ActionEvent event) throws IOException {
+        if(isOverviewDialog==false){
+            Stage stage = (Stage) Ok.getScene().getWindow();
+            stage.close();
+        }
+        
+       if(isOverviewDialog==true){
+           Rates ad=(Rates) dataTable.getSelectionModel().getSelectedItem();
+    id=ad.getId();
+    
+          try {
+                ResSearchresult.setDbRecordId(id, guisource);
+            } catch (Exception e) {
+            }
+            Stage stage = (Stage) Ok.getScene().getWindow();
+        stage.close();
+       }
         
     }
 
