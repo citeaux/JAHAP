@@ -232,7 +232,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Date SaveFromDate=occ.getArrivaldate();
         Date SaveToDate=occ.getDeparturedate();
         long SaveRoomId=occ.getRoom().getId();
-        long SaveAddressId=occ.getResguest().getId();
+        long SaveAddressId=occ.getGuest().getId();
       
          res.setAddresses(address.getDataRecord(addressid));  // Set Addressrecord
                       
@@ -259,15 +259,15 @@ public class ResguiController implements Initializable, InterResSearchResultList
             occ.setRoom(room.getDataRecord(roomid));
         
         }
-        if(addressid!=occ.getResguest().getId()){
+        if(addressid!=occ.getGuest().getId()){
             
-            occ.setResguest(address.getDataRecord(addressid));
+            occ.setGuest(address.getDataRecord(addressid));
         
         }
          List<String>overlaps=new ArrayList<String>();  
          overlaps=occ.CheckForOverlappingReservations();  
          if(overlaps==null){
-             occ.saveRecord();
+             overlaps=occ.saveRecord(true);
              System.out.println("Ok");
          }
          
@@ -295,14 +295,15 @@ public class ResguiController implements Initializable, InterResSearchResultList
                                        occ.setArrivaldate(SaveFromDate);
                                        occ.setDeparturedate(SaveToDate);
                                        occ.setRoom(room.getDataRecord(SaveRoomId));
-                                       occ.setResguest(address.getDataRecord(SaveAddressId));
+                                       occ.setGuest(address.getDataRecord(SaveAddressId));
                                        res.setArrivaldate(occ.getArrivaldate().toString());
                                         res.setDeparturedate(occ.getDeparturedate().toString());
-                                         occ.saveRecord();
+                                         overlaps=occ.saveRecord(true);
                                          res.saveRecord();
                                    }
                                    case 2:{
                                         System.out.println("res");
+                                        
                                    }
                                }
                         }
@@ -408,11 +409,11 @@ public class ResguiController implements Initializable, InterResSearchResultList
     
     
     private void fillGuest(){
-         Guest_Name_fxtxtfield.setText("xxxxx");
-        Guest_firstName_fxtxtfield.setText("xxx");
-        Guest_Street_fxtxtfield.setText("xxx");
-        Guest_ZipCode_fxtxtfield.setText("xxx");
-        Guest_City_fxtxtfield.setText("xxx");
+         Guest_Name_fxtxtfield.setText(occ.getGuest().getName());
+        Guest_firstName_fxtxtfield.setText(occ.getGuest().getChristianname());
+        Guest_Street_fxtxtfield.setText(occ.getGuest().getStreet());
+        Guest_ZipCode_fxtxtfield.setText(occ.getGuest().getZipcode());
+        Guest_City_fxtxtfield.setText(occ.getGuest().getCity());
     }
     
     private void fillGuest(long addressid){
