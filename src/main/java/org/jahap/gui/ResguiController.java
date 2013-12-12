@@ -142,7 +142,8 @@ public class ResguiController implements Initializable, InterResSearchResultList
      * Initializes the controller class.
      */
      private long roomid=0;
-     private long addressid=0;
+     private long ordererid=0;
+     private long guestid=0;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -234,7 +235,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         long SaveRoomId=occ.getRoom().getId();
         long SaveAddressId=occ.getGuest().getId();
       
-         res.setAddresses(address.getDataRecord(addressid));  // Set Addressrecord
+         res.setAddresses(address.getDataRecord(ordererid));  // Set Addressrecord
                       
 
                      
@@ -259,9 +260,9 @@ public class ResguiController implements Initializable, InterResSearchResultList
             occ.setRoom(room.getDataRecord(roomid));
         
         }
-        if(addressid!=occ.getGuest().getId()){
+        if(guestid!=occ.getGuest().getId()){
             
-            occ.setGuest(address.getDataRecord(addressid));
+            occ.setGuest(address.getDataRecord(guestid));
         
         }
          List<String>overlaps=new ArrayList<String>();  
@@ -394,7 +395,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Orderer_Street_fxtxtfield.setText(res.getAddresses().getStreet());
         Orderer_ZipCode_fxtxtfield.setText(res.getAddresses().getZipcode());
         Orderer_City_fxtxtfield.setText(res.getAddresses().getCity());
-        addressid=res.getAddresses().getId();
+        ordererid=res.getAddresses().getId();
     }
     
     private void fillOrderer(long addressid){
@@ -404,7 +405,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Orderer_Street_fxtxtfield.setText(address.getDataRecord(addressid).getStreet());
         Orderer_ZipCode_fxtxtfield.setText(address.getDataRecord(addressid).getZipcode());
         Orderer_City_fxtxtfield.setText(address.getDataRecord(addressid).getCity());
-        addressid=res.getAddresses().getId();
+        ordererid=addressid;
     }
     
     
@@ -414,6 +415,8 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Guest_Street_fxtxtfield.setText(occ.getGuest().getStreet());
         Guest_ZipCode_fxtxtfield.setText(occ.getGuest().getZipcode());
         Guest_City_fxtxtfield.setText(occ.getGuest().getCity());
+        ordererid=occ.getGuest().getId();
+              
     }
     
     private void fillGuest(long addressid){
@@ -422,6 +425,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Guest_Street_fxtxtfield.setText(address.getDataRecord(addressid).getStreet());
         Guest_ZipCode_fxtxtfield.setText(address.getDataRecord(addressid).getZipcode());
         Guest_City_fxtxtfield.setText(address.getDataRecord(addressid).getCity());
+       guestid=addressid;
     }
     
     private void fillRoom(long roomid){
