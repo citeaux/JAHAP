@@ -31,6 +31,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
+import org.jahap.business.acc.accountsbean;
 
 /**
  * FXML Controller class
@@ -126,6 +127,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private occbean occ;
     private roomsbean room;
     private addressbean address;
+    private accountsbean accs;
     @FXML
     private Font x3;
     @FXML
@@ -354,6 +356,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         occ=new occbean();
         room=new roomsbean();
         rate=new ratesbean();
+        accs=new accountsbean();
         ressearchresult=new InterResSearchResult();
         res.setDataRecordId(id);
                       ressearchresult.addIDListener(this);
@@ -386,9 +389,12 @@ public class ResguiController implements Initializable, InterResSearchResultList
         //RATE_Name_fxtxtfield.setText(occ.get);
         fillDates();
         // ACC
-        ACC_Balance_fxtxtfield.setText("677");
-        ACC_No_fxtxtfield.setText("009080");
         
+        
+        ACC_Balance_fxtxtfield.setText("33");
+        ACC_No_fxtxtfield.setText(res.getAccount().getId().toString());
+        
+       
     }
 
     private void fillOrderer(){
