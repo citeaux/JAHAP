@@ -269,6 +269,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
          overlaps=occ.CheckForOverlappingReservations();  
          if(overlaps==null){
              overlaps=occ.saveRecord(true);
+             res.saveRecord();
              System.out.println("Ok");
          }
          
@@ -382,6 +383,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         gh=occ.SearchForOccforRes(res.GetCurrentRes()).get(0);
         roomid=occ.getRoom().getId();
         Room_Code_fxtxtfield.setText(gh.getRoom().getCode()+" "+gh.getRoom().getName());
+        //RATE_Name_fxtxtfield.setText(occ.get);
         fillDates();
         // ACC
         ACC_Balance_fxtxtfield.setText("677");
@@ -415,7 +417,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Guest_Street_fxtxtfield.setText(occ.getGuest().getStreet());
         Guest_ZipCode_fxtxtfield.setText(occ.getGuest().getZipcode());
         Guest_City_fxtxtfield.setText(occ.getGuest().getCity());
-        ordererid=occ.getGuest().getId();
+        guestid=occ.getGuest().getId();
               
     }
     
@@ -437,6 +439,8 @@ public class ResguiController implements Initializable, InterResSearchResultList
      private void fillRate(long rateid){
         RATE_Name_fxtxtfield.setText(rate.getDataRecord(rateid).getCode()+ " " + rate.getDataRecord(rateid).getName());
      }
+     
+     
      
      private void fillDates(){
          datapickerFrom.setValue(occ.getArrivaldate());
