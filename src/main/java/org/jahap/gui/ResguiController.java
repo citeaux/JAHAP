@@ -32,6 +32,8 @@ import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
 import org.jahap.business.acc.accountsbean;
+import org.jahap.business.acc.cscbean;
+import org.jahap.entities.Accounts;
 
 /**
  * FXML Controller class
@@ -128,6 +130,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private roomsbean room;
     private addressbean address;
     private accountsbean accs;
+    private cscbean cscs;
     @FXML
     private Font x3;
     @FXML
@@ -146,6 +149,8 @@ public class ResguiController implements Initializable, InterResSearchResultList
      private long roomid=0;
      private long ordererid=0;
      private long guestid=0;
+     private long rateid=0;
+     private long accountid=0;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -267,11 +272,18 @@ public class ResguiController implements Initializable, InterResSearchResultList
             occ.setGuest(address.getDataRecord(guestid));
         
         }
+        
+        if(rateid!=cscs.getRate().getId()){
+             cscs.setRate(rate.getDataRecord(rateid));
+        }
+        
+        
          List<String>overlaps=new ArrayList<String>();  
          overlaps=occ.CheckForOverlappingReservations();  
          if(overlaps==null){
              overlaps=occ.saveRecord(true);
              res.saveRecord();
+             cscs.saveRecord();
              System.out.println("Ok");
          }
          
@@ -291,6 +303,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
                                         res.setArrivaldate(occ.getArrivaldate().toString());
                                         res.setDeparturedate(occ.getDeparturedate().toString());
                                         res.saveRecord();
+                                        cscs.saveRecord();
                                        System.out.println("res adjusted");
                                        
                                    }
@@ -304,6 +317,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
                                         res.setDeparturedate(occ.getDeparturedate().toString());
                                          overlaps=occ.saveRecord(true);
                                          res.saveRecord();
+                                         cscs.saveRecord();
                                    }
                                    case 2:{
                                         System.out.println("res");
@@ -357,6 +371,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         room=new roomsbean();
         rate=new ratesbean();
         accs=new accountsbean();
+        cscs=new cscbean();
         ressearchresult=new InterResSearchResult();
         res.setDataRecordId(id);
                       ressearchresult.addIDListener(this);
@@ -386,14 +401,23 @@ public class ResguiController implements Initializable, InterResSearchResultList
         gh=occ.SearchForOccforRes(res.GetCurrentRes()).get(0);
         roomid=occ.getRoom().getId();
         Room_Code_fxtxtfield.setText(gh.getRoom().getCode()+" "+gh.getRoom().getName());
-        //RATE_Name_fxtxtfield.setText(occ.get);
+        
+        //RATE_Name_fxtxtfield.setText(;
         fillDates();
+        
+       
         // ACC
         
         
         ACC_Balance_fxtxtfield.setText("33");
-        ACC_No_fxtxtfield.setText(res.getAccount().getId().toString());
-        
+        accs.moveToRecordwithRes(res.GetCurrentRes());
+        Accounts hhf=new Accounts();
+        hhf=accs.getAccount();
+        cscs.moveToRecordwithAccount(accs.getAccount());
+        RATE_Name_fxtxtfield.setText(cscs.getRate().getCode() + "  " + cscs.getRate().getName());
+        ACC_No_fxtxtfield.setText(accs.getId().toString() + " " + accs.getAddress().getName() );
+        this.rateid=cscs.getRate().getId();
+        this.accountid=accs.getId();
        
     }
 
@@ -444,6 +468,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
     
      private void fillRate(long rateid){
         RATE_Name_fxtxtfield.setText(rate.getDataRecord(rateid).getCode()+ " " + rate.getDataRecord(rateid).getName());
+        this.rateid=rateid;
      }
      
      
