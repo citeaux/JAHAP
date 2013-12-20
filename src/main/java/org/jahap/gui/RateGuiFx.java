@@ -12,6 +12,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
 import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.base.addressbean;
@@ -53,6 +54,8 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
     private List<TextField> textfields;
     private RateSearchResult searchresults;
     private long ratesid=0;
+    @FXML
+    private CheckBox OvernightRate_fxCheckBox;
     
     
     /**
@@ -129,6 +132,7 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
         ratecode_fxtextfield.setText(rates.getCode());
         RateRevAccount_fxtextfield.setText( String.valueOf(rates.getRevaccount()));
         RateBasePrice_fxtextfield.setText(String.valueOf(rates.getPrice()));
+        OvernightRate_fxCheckBox.setSelected(rates.getOvernight());
         
     }
     

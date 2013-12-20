@@ -180,7 +180,28 @@ public class ResguiController implements Initializable, InterResSearchResultList
     }
 
     @FXML
-    private void Details_Orderer(ActionEvent event) {
+    private void Details_Orderer(ActionEvent event) throws IOException {
+           Stage stage = new Stage();
+        String fxmlFile = "/fxml/AdressGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        AdressGuiFx controller= loader.<AdressGuiFx>getController();
+       controller.init(ordererid);
+       
+        
+        stage.showAndWait();
+        
+        
+        
+        
     }
 
     @FXML
@@ -206,7 +227,26 @@ public class ResguiController implements Initializable, InterResSearchResultList
     }
 
     @FXML
-    private void Details_guest(ActionEvent event) {
+    private void Details_guest(ActionEvent event) throws IOException {
+        
+         Stage stage = new Stage();
+        String fxmlFile = "/fxml/AdressGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        AdressGuiFx controller= loader.<AdressGuiFx>getController();
+       controller.init(guestid);
+       
+        
+        stage.showAndWait();
+        
     }
 
     @FXML
@@ -523,7 +563,26 @@ public class ResguiController implements Initializable, InterResSearchResultList
     }
 
     @FXML
-    private void RateDetails(ActionEvent event) {
+    private void RateDetails(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/RateGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        RateGuiFx controller= loader.<RateGuiFx>getController();
+       controller.init(rateid);
+       
+        
+        stage.showAndWait();
+        
+        
     }
 
     @FXML

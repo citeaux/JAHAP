@@ -36,6 +36,8 @@
                     <TextField fx:id="ratevat_fxtextfield" layoutX="172.0" layoutY="116.0" prefWidth="100.0" />
                     <TextField fx:id="RateRevAccount_fxtextfield" layoutX="172.0" layoutY="181.0" prefWidth="100.0" />
                     <Label layoutX="47.0" layoutY="184.0" text="Revenue Account:" />
+                    <CheckBox fx:id="OvernightRate_fxCheckBox" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="172.0" layoutY="220.0" mnemonicParsing="false" text="" textAlignment="RIGHT" />
+                    <Label layoutX="66.0" layoutY="220.0" text="Overnight Rate" />
                   </children>
                 </AnchorPane>
               </content>
