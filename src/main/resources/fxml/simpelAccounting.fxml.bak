@@ -34,20 +34,11 @@
             <Button fx:id="addArticle" mnemonicParsing="false" onAction="#addArticle" prefHeight="34.0" prefWidth="124.0" text="Add Article" />
             <Button fx:id="cancleArticle" mnemonicParsing="false" onAction="#cancleArticle" prefHeight="34.0" prefWidth="124.0" text="Cancel Article" />
             <Button fx:id="editArticle" mnemonicParsing="false" onAction="#editArticle" prefHeight="34.0" prefWidth="124.0" text="Edit Article" />
-            <Button fx:id="editRates" mnemonicParsing="false" onAction="#editRates" prefHeight="34.0" prefWidth="124.0" text="Edit Rates">
-              <tooltip>
-                <Tooltip text="Edit rates which are charged during the stay." />
-              </tooltip>
-            </Button>
+            <Button fx:id="editRates" mnemonicParsing="false" onAction="#editRates" prefHeight="34.0" prefWidth="124.0" text="Edit Rates" />
             <Button fx:id="addPayment" mnemonicParsing="false" onAction="#addPayment" prefHeight="34.0" prefWidth="124.0" text="Add Payment" />
             <Button fx:id="printOverview" mnemonicParsing="false" onAction="#printOverview" prefHeight="34.0" prefWidth="124.0" text="Print Overview" />
             <Button fx:id="createInvoice" mnemonicParsing="false" onAction="#createInvoice" prefHeight="34.0" prefWidth="124.0" text="Create Invoice" />
             <Button fx:id="closeAccount" mnemonicParsing="false" onAction="#closeAccount" prefHeight="34.0" prefWidth="124.0" text="Close Account" />
-            <Button id="closeAccount" fx:id="AdvancedChargeRates" mnemonicParsing="false" onAction="#AdvancedChargeRates" prefHeight="34.0" prefWidth="124.0" text="Charge Rates">
-              <tooltip>
-                <Tooltip text="Charge Rate in advance" />
-              </tooltip>
-            </Button>
           </children>
         </VBox>
       </right>
