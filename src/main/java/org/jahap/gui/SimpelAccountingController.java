@@ -11,6 +11,8 @@ import java.util.List;
 import java.util.ResourceBundle;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -22,6 +24,7 @@ import javafx.scene.control.TextField;
 import javafx.util.Callback;
 import org.jahap.business.acc.accountsbean;
 import org.jahap.entities.AccountPosition;
+import org.jahap.entities.Accounts;
 
 /**
  * FXML Controller class
@@ -66,6 +69,7 @@ public class SimpelAccountingController implements Initializable {
     private List<viewAccountPositons> accview;
     private  accountsbean acc;
     private List<AccountPosition> accpos;
+    
     /**
      * Initializes the controller class.
      */
@@ -73,17 +77,31 @@ public class SimpelAccountingController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    void init(long id){
+        acc=new accountsbean();
+        acc.getDataRecord(id);
+        initTable();
+    }
+    
 
     private void initTable(){
         // (id) -- date -- cService  -- cAmount -- dService -- dAmount
-    acc=new accountsbean();
-    accpos=new ArrayList<AccountPosition>();
+    
+    //accpos=new ArrayList<AccountPosition>();
     accview=new ArrayList<viewAccountPositons>();
     viewAccountPositons bz;
                     for(Iterator<AccountPosition> iAccPos=acc.getAccountPositionCollection().iterator();iAccPos.hasNext();){
-                           bz=new viewAccountPositons();
-                           bz.setRatedate(iAccPos.next().getRatedate());  
-                           bz.setDebit(iAccPos.next().getDebit());
+                        try {
+                            bz = new viewAccountPositons();
+                            bz.setRatedate(iAccPos.next().getRatedate());                            
+                            bz.setDebit(iAccPos.next().getDebit());
+                            
+                        } catch (Exception e) {
+                        }
+                       bz = new viewAccountPositons();
+                            bz.setRatedate(iAccPos.next().getRatedate());                            
+                            bz.setDebit(iAccPos.next().getDebit());
 
                             // ############### Split Credit Row  #####################      
                            if(iAccPos.next().getDebit()==false){
@@ -99,10 +117,13 @@ public class SimpelAccountingController implements Initializable {
                                   bz.setdRateid(iAccPos.next().getId());
 
                            } 
+                        accview.add(bz);
                     }
+                    
+                    ObservableList<viewAccountPositons> data= FXCollections.observableList(accview);
         
              // #################  ID       
-             id_Account_tablefx  = new TableColumn<viewAccountPositons, String>("id");
+             //id_Account_tablefx  = new TableColumn<viewAccountPositons, String>("id");
              id_Account_tablefx.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
              public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
                  return new ReadOnlyObjectWrapper(p.getValue().getId());
@@ -114,18 +135,18 @@ public class SimpelAccountingController implements Initializable {
      
              // ############### Date
              
-             date_Account_tablefx  = new TableColumn<viewAccountPositons, String>("Date");
+             //date_Account_tablefx  = new TableColumn<viewAccountPositons, String>("Date");
              date_Account_tablefx.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
              public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
                  return new ReadOnlyObjectWrapper(p.getValue().getRatedate());
              }       
              });
 
-             Account_tablefx.getColumns().add(date_Account_tablefx);
+             //Account_tablefx.getColumns().add(date_Account_tablefx);
              
              // ################ cPosname
              
-              cService_Account_tablefxColumn  = new TableColumn<viewAccountPositons, String>("cPosition");
+             // cService_Account_tablefxColumn  = new TableColumn<viewAccountPositons, String>("cPosition");
              cService_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
              public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
                  return new ReadOnlyObjectWrapper(p.getValue().getcPositionname());
@@ -133,9 +154,39 @@ public class SimpelAccountingController implements Initializable {
              });
               
              cService_Account_tablefxColumn.setStyle("-fx-background-color:red");
-             Account_tablefx.getColumns().add(date_Account_tablefx);
+             //Account_tablefx.getColumns().add(date_Account_tablefx);
              
+             // #############cPrice
+             cAmount_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
+                 return new ReadOnlyObjectWrapper(p.getValue().getcAmount());
+             }       
+             });
+              
+             cAmount_Account_tablefxColumn.setStyle("-fx-background-color:red");
+             //Account_tablefx.getColumns().add(date_Account_tablefx);
              
+             // ##############dPosname
+              dService_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
+                 return new ReadOnlyObjectWrapper(p.getValue().getdPositionname());
+             }       
+             });
+              
+             
+             //Account_tablefx.getColumns().add(date_Account_tablefx);
+             
+             // #################dAmount 
+              dAmount_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
+                 return new ReadOnlyObjectWrapper(p.getValue().getdAmount());
+             }       
+             });
+              
+             
+             //Account_tablefx.getColumns().add(date_Account_tablefx);
+              
+              Account_tablefx.setItems(data);
      
      
     }

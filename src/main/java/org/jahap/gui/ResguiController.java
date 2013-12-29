@@ -271,7 +271,26 @@ public class ResguiController implements Initializable, InterResSearchResultList
     }
 
     @FXML
-    private void Open_Account(ActionEvent event) {
+    private void Open_Account(ActionEvent event) throws IOException {
+         Stage stage = new Stage();
+        String fxmlFile = "/fxml/simpelAccounting.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        SimpelAccountingController controller= loader.<SimpelAccountingController>getController();
+       controller.init(accountid);
+       
+        
+        stage.showAndWait();
+        
+        
     }
 
     @FXML
