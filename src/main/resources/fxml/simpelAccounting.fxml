@@ -12,7 +12,11 @@
       <bottom>
         <Pane prefHeight="105.0" prefWidth="723.0">
           <children>
-            <TextField fx:id="balance_fxtextbox" layoutX="400.0" layoutY="14.0" prefWidth="200.0" />
+            <TextField fx:id="balance_fxtextbox" layoutX="400.0" layoutY="14.0" prefWidth="200.0">
+              <tooltip>
+                <Tooltip text="Balance info" fx:id="balance_textbox_fxtooltip" />
+              </tooltip>
+            </TextField>
             <Label layoutX="342.0" layoutY="17.0" text="Balance" />
           </children>
         </Pane>
