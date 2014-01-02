@@ -51,6 +51,7 @@ public class RateListController implements Initializable {
     private List RatesSearchResult;
     private long id=0;
     private InterResSearchResult ResSearchresult;
+    private InterAccSearchResult AccSearchresult;
     private String guisource;
     /**
      * Initializes the controller class.
@@ -139,6 +140,15 @@ public class RateListController implements Initializable {
         initTable();
     }
     
+    public void init(InterAccSearchResult AccSearchresults,SimpelAccountingController zi,String guisource){
+        //RoomSearchResult searchresult
+          searchresult= new RateSearchResult();
+        isOverviewDialog=true;
+         this.AccSearchresult=AccSearchresults;
+         this.guisource=guisource;
+        initTable();
+    }
+    
     
     
     @Override
@@ -194,11 +204,18 @@ public class RateListController implements Initializable {
        if(isOverviewDialog==true){
            Rates ad=(Rates) dataTable.getSelectionModel().getSelectedItem();
     id=ad.getId();
-    
+        if(ResSearchresult!=null){
           try {
                 ResSearchresult.setDbRecordId(id, guisource);
             } catch (Exception e) {
             }
+        }if(AccSearchresult!=null){
+            try {
+                AccSearchresult.setDbRecordId(id, guisource);
+            } catch (Exception e) {
+            }
+        }
+        
             Stage stage = (Stage) Ok.getScene().getWindow();
         stage.close();
        }
