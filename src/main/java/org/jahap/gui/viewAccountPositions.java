@@ -15,7 +15,7 @@ import org.joda.time.format.DateTimeFormatter;
  *
  * @author russ
  */
-public class viewAccountPositons {
+public class viewAccountPositions {
 
    
     
@@ -24,13 +24,18 @@ public class viewAccountPositons {
      private long id;
      private Date ratedate;
      private String rateDateString;
-
-   
+      
+     private double cPrice;
+     private double dPrice;
+     
+     private String cPriceString;
+     private String dPriceString;
+     
      private long cRateid;
      private long dRateid;
      private String cPositionname;
      private String dPositionname;
-
+     
    
      private String cAmountString;
      private String dAmountString;
@@ -38,7 +43,7 @@ public class viewAccountPositons {
      private double dAmount;
     private  DateFormat df ;
      
-      public viewAccountPositons() {
+      public viewAccountPositions() {
     df = new SimpleDateFormat("MM.dd.yyyy");
     }
     
@@ -135,6 +140,44 @@ public class viewAccountPositons {
         return dAmount;
     }
 
+    public double getcPrice() {
+        return cPrice;
+    }
+
+    public void setcPrice(double cPrice) {
+        this.cPrice = cPrice;
+        if(cPrice!=0){
+            this.cPriceString=String.valueOf(cPrice);
+        }
+    }
+
+    public double getdPrice() {
+        return dPrice;
+    }
+
+    public void setdPrice(double dPrice) {
+        this.dPrice = dPrice;
+        if(dPrice!=0){
+            this.dPriceString=String.valueOf(dPrice);
+        }
+    }
+
+    public String getcPriceString() {
+        return cPriceString;
+    }
+
+    public void setcPriceString(String cPriceString) {
+        this.cPriceString = cPriceString;
+    }
+
+    public String getdPriceString() {
+        return dPriceString;
+    }
+
+    public void setdPriceString(String dPriceString) {
+        this.dPriceString = dPriceString;
+    }
+   
     public void setdAmount(double dAmount) {
         this.dAmount = dAmount;
         if(dAmount!=0){

@@ -272,6 +272,9 @@ public class ResguiController implements Initializable, InterResSearchResultList
 
     @FXML
     private void Open_Account(ActionEvent event) throws IOException {
+        
+      
+        
          Stage stage = new Stage();
         String fxmlFile = "/fxml/simpelAccounting.fxml";
        

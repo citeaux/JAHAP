@@ -61,7 +61,7 @@ public class RateListController implements Initializable {
     
     private void initTable(){
         rates= new ratesbean();
-        RatesSearchResult= rates.SearchForAddress("*");
+        RatesSearchResult= rates.SearchForRate("*");
         ObservableList<Rates> data= FXCollections.observableList(RatesSearchResult);
         
         // -----------------  id
@@ -161,7 +161,7 @@ public class RateListController implements Initializable {
     @FXML
     private void PrintReport(ActionEvent event) throws JRException {
         List<Rates> jj=new ArrayList<Rates>();
-        jj=rates.SearchForAddress("*");
+        jj=rates.SearchForRate("*");
         ratereports hh=new ratereports() ;
         hh.multiRateReport(jj);
         

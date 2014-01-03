@@ -4,6 +4,8 @@
  */
 package org.jahap.gui;
 
+import com.google.common.eventbus.EventBus;
+import com.google.common.eventbus.Subscribe;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -41,17 +43,17 @@ import org.jahap.entities.Accounts;
 public class SimpelAccountingController implements Initializable, InterAccSearchResultListener {
     @FXML
     private TableView Account_tablefx;
-        private TableColumn<viewAccountPositons, String> id_Account_tablefx;
+        private TableColumn<viewAccountPositions, String> id_Account_tablefx;
     @FXML
-    private TableColumn<viewAccountPositons, String> date_Account_tablefx;
+    private TableColumn<viewAccountPositions, String> date_Account_tablefx;
     @FXML
-    private TableColumn<viewAccountPositons, String> cService_Account_tablefxColumn;
+    private TableColumn<viewAccountPositions, String> cService_Account_tablefxColumn;
     @FXML
-    private TableColumn<viewAccountPositons, String> cAmount_Account_tablefxColumn;
+    private TableColumn<viewAccountPositions, String> cAmount_Account_tablefxColumn;
     @FXML
-    private TableColumn<viewAccountPositons, String> dService_Account_tablefxColumn;
+    private TableColumn<viewAccountPositions, String> dService_Account_tablefxColumn;
     @FXML
-    private TableColumn<viewAccountPositons, String> dAmount_Account_tablefxColumn;
+    private TableColumn<viewAccountPositions, String> dAmount_Account_tablefxColumn;
     @FXML
     private TextField balance_fxtextbox;
     @FXML
@@ -72,14 +74,19 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private Button closeAccount;
     @FXML
     private Button AdvancedChargeRates;
-    private List<viewAccountPositons> accview;
+    private List<viewAccountPositions> accview;
     private InterAccSearchResult accsearchresult;
     private  accountsbean acc;
     private ratesbean rates;
     private List<AccountPosition> accpos;
     private long rateid=0;
+    private ObservableList<viewAccountPositions> data;
     @FXML
     private Tooltip balance_textbox_fxtooltip;
+    @FXML
+    private TableColumn<viewAccountPositions, String> cPrice_Account_tablefxColumn;
+    @FXML
+    private TableColumn<viewAccountPositions, String> dPrice_Account_tablefxColumn;
     
     /**
      * Initializes the controller class.
@@ -90,8 +97,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     }    
     
     void init(long id){
+        EventBus eventbus=new EventBus("Position"); 
+        eventbus.register(this);
         acc=new accountsbean();
         rates= new ratesbean();
+        accsearchresult = new InterAccSearchResult();
+        accsearchresult.addIDListener(this);
         acc.getDataRecord(id);
         initTable();
         double t=acc.getBalance();
@@ -106,13 +117,13 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         // (id) -- date -- cService  -- cAmount -- dService -- dAmount
     
     //accpos=new ArrayList<AccountPosition>();
-    accview=new ArrayList<viewAccountPositons>();
+    accview=new ArrayList<viewAccountPositions>();
    
     AccountPosition zw=new AccountPosition();
-    viewAccountPositons bz;
+    viewAccountPositions bz;
                     for(Iterator<AccountPosition> iAccPos=acc.getAccountPositionCollection().iterator();iAccPos.hasNext();){
                         
-                            bz = new viewAccountPositons();
+                            bz = new viewAccountPositions();
                             zw=iAccPos.next();
                             bz.setRatedate(zw.getRatedate());                            
                             bz.setDebit(zw.getDebit());
@@ -125,6 +136,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                   bz.setcAmount(zw.getAmount());
                                   bz.setcPositionname(zw.getPositionname());
                                   bz.setcRateid(zw.getRate().getId());
+                                  bz.setcPrice(zw.getPrice());
 
                            } 
 
@@ -132,17 +144,18 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                   bz.setdAmount(zw.getAmount());
                                   bz.setdPositionname(zw.getPositionname());
                                   bz.setdRateid(zw.getRate().getId());
+                                  bz.setdPrice(zw.getPrice());
 
                            } 
                         accview.add(bz);
                     }
                     
-                    ObservableList<viewAccountPositons> data= FXCollections.observableList(accview);
-        
+                     data= FXCollections.observableList(accview);
+                  
              // #################  ID       
-             id_Account_tablefx  = new TableColumn<viewAccountPositons, String>("id");
-             id_Account_tablefx.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
-             public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
+             id_Account_tablefx  = new TableColumn<viewAccountPositions, String>("id");
+             id_Account_tablefx.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositions, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositions, String> p) {
                  return new ReadOnlyObjectWrapper(p.getValue().getId());
              }       
              });
@@ -153,8 +166,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
              // ############### Date
              
              //date_Account_tablefx  = new TableColumn<viewAccountPositons, String>("Date");
-             date_Account_tablefx.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
-             public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
+             date_Account_tablefx.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositions, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositions, String> p) {
                  return new ReadOnlyObjectWrapper(p.getValue().getRateDateString());
              }       
              });
@@ -164,8 +177,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
              // ################ cPosname
              
              // cService_Account_tablefxColumn  = new TableColumn<viewAccountPositons, String>("cPosition");
-             cService_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
-             public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
+             cService_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositions, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositions, String> p) {
                  return new ReadOnlyObjectWrapper(p.getValue().getcPositionname());
              }       
              });
@@ -174,19 +187,29 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
              
              //Account_tablefx.getColumns().add(date_Account_tablefx);
              
-             // #############cPrice
-             cAmount_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
-             public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
+             // #############cAmount
+             cAmount_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositions, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositions, String> p) {
                  return new ReadOnlyObjectWrapper(p.getValue().getcAmountString());
              }       
              });
               
              cAmount_Account_tablefxColumn.setStyle("-fx-background-color:red");
+             
+              // #############cPrice
+             cPrice_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositions, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositions, String> p) {
+                 return new ReadOnlyObjectWrapper(p.getValue().getcPriceString());
+             }       
+             });
+              
+             cAmount_Account_tablefxColumn.setStyle("-fx-background-color:red");
+             
              //Account_tablefx.getColumns().add(date_Account_tablefx);
              
              // ##############dPosname
-              dService_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
-             public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
+              dService_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositions, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositions, String> p) {
                  return new ReadOnlyObjectWrapper(p.getValue().getdPositionname());
              }       
              });
@@ -195,17 +218,27 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
              //Account_tablefx.getColumns().add(date_Account_tablefx);
              
              // #################dAmount 
-              dAmount_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositons, String>, ObservableValue<String>>() {
-             public ObservableValue<String> call(CellDataFeatures<viewAccountPositons, String> p) {
+              dAmount_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositions, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositions, String> p) {
                  return new ReadOnlyObjectWrapper(p.getValue().getdAmountString());
              }       
              });
+              
+              
+                // #############dPrice
+             dPrice_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositions, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositions, String> p) {
+                 return new ReadOnlyObjectWrapper(p.getValue().getdPriceString());
+             }       
+             });
+              
+             cAmount_Account_tablefxColumn.setStyle("-fx-background-color:red"); 
               
              
              //Account_tablefx.getColumns().add(date_Account_tablefx);
               
               Account_tablefx.setItems(data);
-     
+               
      
     }
     @FXML
@@ -236,9 +269,37 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     }
 
     @FXML
-    private void editArticle(ActionEvent event) {
-    }
+    private void editArticle(ActionEvent event) throws IOException {
+        
+          viewAccountPositions jh= (viewAccountPositions) Account_tablefx.getSelectionModel().getSelectedItem();
+          
+          
+          
+         Stage stage = new Stage();
+        String fxmlFile = "/fxml/RatesList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
 
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        RateListController controller= loader.<RateListController>getController();
+       controller.init(accsearchresult,this,"rate");
+       
+        
+        stage.showAndWait();
+        
+    }
+    
+    @Subscribe
+    public void listenForPositionEdit(EditPositionEvent event){
+          System.out.print(event.getPosition().getcPositionname());
+    }
+    
     @FXML
     private void editRates(ActionEvent event) {
     }
@@ -267,12 +328,19 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
          if(e.getTableNameofSource()=="rate"){
            System.out.println("Rate" + String.valueOf(e.getDbRecordId()));
            
-           viewAccountPositons ml=new viewAccountPositons();
+           viewAccountPositions ml=new viewAccountPositions();
            ml.setdRateid(e.getDbRecordId());
            ml.setcAmount(1);
-           ml.setcAmountString("1");
-           ml.setcPositionname(rates.getDataRecord(e.getDbRecordId()).getName());
            
-     }
+           ml.setcPositionname(rates.getDataRecord(e.getDbRecordId()).getName());
+           ml.setcPrice(rates.getPrice());
+           accview.add(ml);
+           data.add(ml);
+           data.remove(ml);
+           acc.addPosition(rates.getDataRecord(ml.getId()),1,rates.getDataRecord(ml.getId()).getPrice(),rates.getDataRecord(ml.getId()).getName());
+             balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
+        balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
+                 String.valueOf(acc.getSumofDebitsPos()));
     }
+}
 }
