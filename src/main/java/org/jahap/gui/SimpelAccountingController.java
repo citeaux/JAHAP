@@ -87,7 +87,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private TableColumn<viewAccountPositions, String> cPrice_Account_tablefxColumn;
     @FXML
     private TableColumn<viewAccountPositions, String> dPrice_Account_tablefxColumn;
-    
+    private EventBus eventbus;
     /**
      * Initializes the controller class.
      */
@@ -97,8 +97,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     }    
     
     void init(long id){
-        EventBus eventbus=new EventBus("Position"); 
-        eventbus.register(this);
+         eventbus=new EventBus("Position"); 
+          eventbus.register(this);
         acc=new accountsbean();
         rates= new ratesbean();
         accsearchresult = new InterAccSearchResult();
@@ -127,7 +127,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                             zw=iAccPos.next();
                             bz.setRatedate(zw.getRatedate());                            
                             bz.setDebit(zw.getDebit());
-                            
+                            bz.setId(zw.getId());
                      
                       
 
@@ -276,7 +276,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
           
           
          Stage stage = new Stage();
-        String fxmlFile = "/fxml/RatesList.fxml";
+        String fxmlFile = "/fxml/EditPositionFx.fxml";
        
         FXMLLoader loader = new FXMLLoader();
         AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
@@ -287,8 +287,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 
         
         stage.setScene(scene);
-        RateListController controller= loader.<RateListController>getController();
-       controller.init(accsearchresult,this,"rate");
+        EditPositionFx controller= loader.<EditPositionFx>getController();
+       controller.init(eventbus, jh);
        
         
         stage.showAndWait();
@@ -297,7 +297,24 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     @Subscribe
     public void listenForPositionEdit(EditPositionEvent event){
-          System.out.print(event.getPosition().getcPositionname());
+        int ik=0;
+        
+        for(ik=0;accview.get(ik).getId()!=event.getPosition().getId();){
+             ik++;
+        }
+        
+        accview.set(ik, event.getPosition());
+            
+          data.add(event.getPosition());
+          data.remove(event.getPosition());
+        
+          System.out.println(event.getPosition().getcPositionname());
+          acc.adjustPosition(event.getPosition().getId(),event.getPosition().getAccountPosition());
+          
+          balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
+        balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
+                 String.valueOf(acc.getSumofDebitsPos()));
+          
     }
     
     @FXML

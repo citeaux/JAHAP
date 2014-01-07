@@ -17,6 +17,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Stage;
 import org.jahap.business.base.ratesbean;
 import org.jahap.entities.Rates;
 
@@ -103,10 +104,26 @@ public class EditPositionFx implements Initializable {
 
     @FXML
     private void OK(ActionEvent event) {
-       
+        if(viewPosition.isDebit()==false){
+            viewPosition.setcPositionname(PositionName_fxtextfield.getText());
+            viewPosition.setcAmount(Integer.parseInt(amount_fxtextfield.getText()));
+            viewPosition.setcPrice(Double.parseDouble(Price_fxtextfield.getText()));
+        }if(viewPosition.isDebit()==true){
+             viewPosition.setdPositionname(PositionName_fxtextfield.getText());
+            viewPosition.setdAmount(Integer.parseInt(amount_fxtextfield.getText()));
+            viewPosition.setdPrice(Double.parseDouble(Price_fxtextfield.getText()));
+        }
         
-        eventbus.post(viewPosition);
         
+        
+        EditPositionEvent hl=new EditPositionEvent(viewPosition);
+        
+        
+        
+        eventbus.post(hl);
+        
+         Stage stage = (Stage) ok.getScene().getWindow();
+        stage.close();
     }
 
     @FXML

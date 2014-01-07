@@ -8,6 +8,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
+import org.jahap.business.base.ratesbean;
+import org.jahap.entities.AccountPosition;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
@@ -39,8 +41,8 @@ public class viewAccountPositions {
    
      private String cAmountString;
      private String dAmountString;
-     private double cAmount;
-     private double dAmount;
+     private int cAmount;
+     private int dAmount;
     private  DateFormat df ;
      
       public viewAccountPositions() {
@@ -124,19 +126,19 @@ public class viewAccountPositions {
         this.dPositionname = dPositionname;
     }
 
-    public double getcAmount() {
+    public int getcAmount() {
         return cAmount;
         
     }
 
-    public void setcAmount(double cAmount) {
+    public void setcAmount(int cAmount) {
         this.cAmount = cAmount;
         if(cAmount!=0){
             this.cAmountString=String.valueOf(cAmount);
         }
     }
 
-    public double getdAmount() {
+    public int getdAmount() {
         return dAmount;
     }
 
@@ -178,7 +180,7 @@ public class viewAccountPositions {
         this.dPriceString = dPriceString;
     }
    
-    public void setdAmount(double dAmount) {
+    public void setdAmount(int dAmount) {
         this.dAmount = dAmount;
         if(dAmount!=0){
             this.dAmountString=String.valueOf(dAmount);
@@ -201,4 +203,24 @@ public class viewAccountPositions {
     public void setdAmountString(String dAmountString) {
         this.dAmountString = dAmountString;
     }
+    
+    public AccountPosition getAccountPosition(){
+        AccountPosition pos=new AccountPosition();
+        pos.setBilled(this.billed);
+        pos.setDebit(this.debit);
+       ratesbean jj=new ratesbean();
+        
+        if(this.debit==false){
+             pos.setAmount(this.cAmount);
+             pos.setPositionname(this.cPositionname);
+             pos.setPrice(this.cPrice);
+             pos.setRate(jj.getDataRecord(this.cRateid));
+        }if(this.debit==true){pos.setAmount(this.dAmount);
+             pos.setPositionname(this.dPositionname);
+             pos.setPrice(this.dPrice);
+             pos.setRate(jj.getDataRecord(this.dRateid));
+        }
+        return pos;
+    }
+    
 }
