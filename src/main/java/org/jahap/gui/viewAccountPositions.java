@@ -37,7 +37,8 @@ public class viewAccountPositions {
      private long dRateid;
      private String cPositionname;
      private String dPositionname;
-     
+     private String cTotal;
+     private String dTotal;
    
      private String cAmountString;
      private String dAmountString;
@@ -100,7 +101,31 @@ public class viewAccountPositions {
 
     public void setcRateid(long cRateid) {
         this.cRateid = cRateid;
+        this.id=cRateid;
+        
+        
+        
+        
     }
+
+    public String getcTotal() {
+        if(this.cAmount!=0 && this.cPrice!=0){
+           this.cTotal=String.valueOf(this.cAmount*this.cPrice);
+        }          
+        return cTotal;
+    }
+
+   
+
+    public String getdTotal() {
+        
+        if(this.dAmount!=0 && this.dPrice!=0){
+        this.dTotal=String.valueOf(this.dAmount*this.dPrice);
+        }
+        return dTotal;
+    }
+
+   
 
     public long getdRateid() {
         return dRateid;
@@ -108,6 +133,7 @@ public class viewAccountPositions {
 
     public void setdRateid(long dRateid) {
         this.dRateid = dRateid;
+        this.id=dRateid;
     }
 
     public String getcPositionname() {

@@ -88,6 +88,10 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     @FXML
     private TableColumn<viewAccountPositions, String> dPrice_Account_tablefxColumn;
     private EventBus eventbus;
+    @FXML
+    private TableColumn<viewAccountPositions, String> cTotal_Account_tablefxColumn;
+    @FXML
+    private TableColumn<viewAccountPositions, String> dTotal_Account_tablefxColumn;
     /**
      * Initializes the controller class.
      */
@@ -137,6 +141,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                   bz.setcPositionname(zw.getPositionname());
                                   bz.setcRateid(zw.getRate().getId());
                                   bz.setcPrice(zw.getPrice());
+                                  
 
                            } 
 
@@ -173,6 +178,31 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
              });
              
              //Account_tablefx.getColumns().add(date_Account_tablefx);
+             
+              // ################ cTotal
+             
+             // cService_Account_tablefxColumn  = new TableColumn<viewAccountPositons, String>("cPosition");
+             cTotal_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositions, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositions, String> p) {
+                 return new ReadOnlyObjectWrapper(p.getValue().getcTotal());
+             }       
+             });
+              
+             cTotal_Account_tablefxColumn.setStyle("-fx-background-color:red");
+             
+             
+             // ################ dTotal
+             
+             // cService_Account_tablefxColumn  = new TableColumn<viewAccountPositons, String>("cPosition");
+             dTotal_Account_tablefxColumn.setCellValueFactory(new Callback<CellDataFeatures<viewAccountPositions, String>, ObservableValue<String>>() {
+             public ObservableValue<String> call(CellDataFeatures<viewAccountPositions, String> p) {
+                 return new ReadOnlyObjectWrapper(p.getValue().getdTotal());
+             }       
+             });
+              
+            
+             
+             
              
              // ################ cPosname
              
@@ -266,6 +296,25 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 
     @FXML
     private void cancleArticle(ActionEvent event) {
+        viewAccountPositions jh= (viewAccountPositions) Account_tablefx.getSelectionModel().getSelectedItem();
+        
+        
+        viewAccountPositions ml=new viewAccountPositions();
+        if(jh.isDebit()==false){   
+           ml.setDebit(true);
+           ml.setdRateid(jh.getcRateid());
+           ml.setdAmount(jh.getcAmount());
+    
+           ml.setdPositionname(jh.getcPositionname());
+           ml.setdPrice(jh.getcPrice());
+           accview.add(ml);
+           data.add(ml);
+           data.remove(ml);
+           acc.cancelPosition(rates.getDataRecord(ml.getId()),1,rates.getDataRecord(ml.getId()).getPrice(),rates.getDataRecord(ml.getId()).getName());
+             balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
+        balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
+                 String.valueOf(acc.getSumofDebitsPos()));
+        }
     }
 
     @FXML
@@ -346,8 +395,11 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
            System.out.println("Rate" + String.valueOf(e.getDbRecordId()));
            
            viewAccountPositions ml=new viewAccountPositions();
-           ml.setdRateid(e.getDbRecordId());
+           
+           ml.setDebit(false);
+           ml.setcRateid(e.getDbRecordId());
            ml.setcAmount(1);
+           ml.setcRateid(e.getDbRecordId());
            
            ml.setcPositionname(rates.getDataRecord(e.getDbRecordId()).getName());
            ml.setcPrice(rates.getPrice());
