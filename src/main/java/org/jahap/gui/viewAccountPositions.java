@@ -26,7 +26,8 @@ public class viewAccountPositions {
      private long id;
      private Date ratedate;
      private String rateDateString;
-      
+     private boolean canceled=false;
+     private long  canceledposition;
      private double cPrice;
      private double dPrice;
      
@@ -166,6 +167,22 @@ public class viewAccountPositions {
 
     public int getdAmount() {
         return dAmount;
+    }
+
+    public boolean isCanceled() {
+        return canceled;
+    }
+
+    public void setCanceled(boolean canceled) {
+        this.canceled = canceled;
+    }
+
+    public long getCanceledposition() {
+        return canceledposition;
+    }
+
+    public void setCanceledposition(long canceledposition) {
+        this.canceledposition = canceledposition;
     }
 
     public double getcPrice() {
