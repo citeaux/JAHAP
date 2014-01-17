@@ -8,11 +8,15 @@ import com.google.common.eventbus.EventBus;
 import com.google.common.eventbus.Subscribe;
 import java.io.IOException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -44,6 +48,10 @@ import org.jahap.entities.Accounts;
  * @author russ
  */
 public class SimpelAccountingController implements Initializable, InterAccSearchResultListener {
+
+    
+    
+    
     @FXML
     private TableView Account_tablefx;
 //    @FXML
@@ -120,7 +128,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private List<AccountPosition> accpos;
     private long rateid=0;
     private ObservableList<viewAccountPositions> data;
-     private ObservableList<viewAccountPositionsProperty> datam;
+    final ObservableList<viewAccountPositionsProperty> datam=FXCollections.observableArrayList();;
     @FXML
     private Tooltip balance_textbox_fxtooltip;
     private  ObservableList<viewAccountPositionsProperty> haku = FXCollections.observableArrayList();
@@ -346,7 +354,140 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
               // (id) -- date -- cService  -- cAmount -- dService -- dAmount
     
     //accpos=new ArrayList<AccountPosition>();
-        List<viewAccountPositionsProperty> accview=new ArrayList<viewAccountPositionsProperty>();
+       
+                    
+                     
+                             
+                             
+                             
+                             
+                           
+                      
+                  
+             // #################  ID       
+             //id_Account_tablefx  = new TableColumn<viewAccountPositionsProperty, String>("id");
+             //id_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("id"));
+                     
+                  
+             
+      
+
+             //Account_tablefx.getColumns().add(id_Account_tablefx);
+     
+     
+             // ############### Date
+             
+             //date_Account_tablefx  = new TableColumn<viewAccountPositons, String>("Date");
+             
+             
+             
+              // ############### Date
+                
+            // date_Account_tablefx  = new TableColumn<viewAccountPositionsProperty, String>("Date");
+             
+             
+             // date_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("rateDateString"));
+                             
+             
+
+           
+          
+ 
+             
+              // ################ cTotal
+             
+             //cTotal_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cTotal");
+            // cTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cTotal"));
+            
+              
+             //cTotal_Account_tablefxColumn.setStyle("-fx-background-color:red");
+            
+             
+             // ################ dTotal
+             
+             //dTotal_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cPosition");
+             //dTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dtotal"));
+           
+              
+            
+             
+             
+             
+             // ################ cPosname
+             
+             //cService_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cPosition");
+             cService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cpositionname"));
+              //Account_tablefx.getColumns().add(cService_Account_tablefxColumn);
+               cService_Account_tablefxColumn .setCellFactory(new Callback<TableColumn<viewAccountPositionsProperty, String>, TableCell<viewAccountPositionsProperty, String>>() {
+                  @Override
+                  public TableCell<viewAccountPositionsProperty, String> call(TableColumn<viewAccountPositionsProperty, String> param) {
+                      return new TableCell<viewAccountPositionsProperty, String>() {
+
+                         @Override
+                         public void updateItem(String item, boolean empty) {
+                              super.updateItem(item, empty);
+
+
+                               setTextFill(Color.RED);
+
+                                setText(item);
+
+                          }
+                      };
+                  }
+                });  
+              
+             //cService_Account_tablefxColumn.setStyle("-fx-background-color:red");
+             
+             //Account_tablefx.getColumns().add(date_Account_tablefx);
+             
+             // #############cAmount
+             //cAmount_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cAmount");
+             cAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("camountstring"));
+             
+              
+             //cAmount_Account_tablefxColumn.setStyle("-fx-background-color:red");
+             
+              // #############cPrice
+             //cPrice_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cPrice");
+             cPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("camountstring"));
+             
+              
+             //cAmount_Account_tablefxColumn.setStyle("-fx-background-color:red");
+             
+             //Account_tablefx.getColumns().add(date_Account_tablefx);
+             
+             // ##############dPosname
+             //dService_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cPositionsname");
+              //dService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dpositionname"));
+             
+              
+             
+             //Account_tablefx.getColumns().add(date_Account_tablefx);
+             
+             // #################dAmount
+             //dAmount_Account_tablefxColumn = new TableColumn<viewAccountPositionsProperty, String>("cAmount");
+              //dAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("damountstring"));
+             
+              
+              
+                // #############dPrice
+              //dPrice_Account_tablefxColumn = new TableColumn<viewAccountPositionsProperty, String>("cPrice");
+             //dPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dpricestring"));
+             
+              
+             //cAmount_Account_tablefxColumn.setStyle("-fx-background-color:red"); 
+              
+             
+             //Account_tablefx.getColumns().add(date_Account_tablefx);
+              
+             
+              
+              
+  
+             
+             
+           List<viewAccountPositionsProperty> accview=new ArrayList<viewAccountPositionsProperty>();
    
     AccountPosition zw=new AccountPosition();
    
@@ -365,7 +506,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                             // ############### Split Credit Row  #####################      
                            if(zw.getDebit()==false){
                                   bz.setcAmount(zw.getAmount());
-                                  bz.setcPositionname(zw.getPositionname());
+                                  bz.setCpositionname(zw.getPositionname());
                                   bz.setcRateid(zw.getRate().getId());
                                   bz.setcPrice(zw.getPrice());
                                   
@@ -374,140 +515,19 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 
                             if(zw.getDebit()==true){
                                   bz.setdAmount(zw.getAmount());
-                                  bz.setdPositionname(zw.getPositionname());
+                                  bz.setDpositionname(zw.getPositionname());
                                   bz.setdRateid(zw.getRate().getId());
-                                  bz.setdPrice(zw.getPrice());
+                                  bz.setDprice(zw.getPrice());
 
                            } 
-                        accview.add(bz);
-                        haku.add(bz);
-                    }
-                    
-                     
-                             
-                             
-                             
-                             
-                           
-                      
-                  
-             // #################  ID       
-             id_Account_tablefx  = new TableColumn<viewAccountPositionsProperty, String>("id");
-             id_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("id"));
-                     
-                  
+                            
+                            
+                       // accview.add(bz);
+                        datam.add(bz);
+                    }   
              
-      
-
-             //Account_tablefx.getColumns().add(id_Account_tablefx);
-     
-     
-             // ############### Date
-             
-             //date_Account_tablefx  = new TableColumn<viewAccountPositons, String>("Date");
-             
-             
-             
-              // ############### Date
-                
-             //date_Account_tablefx  = new TableColumn<viewAccountPositions, String>("Date");
-             
-             
-              date_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("rateDateString"));
-                             
-                
-            
-           
-          // Account_tablefx.getColumns().add(date_Account_tablefx);
- 
-             
-              // ################ cTotal
-             
-             // cService_Account_tablefxColumn  = new TableColumn<viewAccountPositons, String>("cPosition");
-             cTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cTotal"));
-            
-              
-             //cTotal_Account_tablefxColumn.setStyle("-fx-background-color:red");
-             
-             
-             // ################ dTotal
-             
-             // cService_Account_tablefxColumn  = new TableColumn<viewAccountPositons, String>("cPosition");
-             dTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dTotal"));
-           
-              
-            
-             
-             
-             
-             // ################ cPosname
-             
-             // cService_Account_tablefxColumn  = new TableColumn<viewAccountPositons, String>("cPosition");
-             cService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cPositionname"));
-            
-              
-             //cService_Account_tablefxColumn.setStyle("-fx-background-color:red");
-             
-             //Account_tablefx.getColumns().add(date_Account_tablefx);
-             
-             // #############cAmount
-             cAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cAmountString"));
-             
-              
-             //cAmount_Account_tablefxColumn.setStyle("-fx-background-color:red");
-             
-              // #############cPrice
-             cPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cAmountString"));
-             
-              
-             //cAmount_Account_tablefxColumn.setStyle("-fx-background-color:red");
-             
-             //Account_tablefx.getColumns().add(date_Account_tablefx);
-             
-             // ##############dPosname
-              dService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dPositionname"));
-             
-              
-             
-             //Account_tablefx.getColumns().add(date_Account_tablefx);
-             
-             // #################dAmount 
-              dAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dAmountString"));
-             
-              
-              
-                // #############dPrice
-             dPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dPriceString"));
-             
-              
-             //cAmount_Account_tablefxColumn.setStyle("-fx-background-color:red"); 
-              
-             
-             //Account_tablefx.getColumns().add(date_Account_tablefx);
-              
-             
-              
-              
-                //date_Account_tablefx .setCellFactory(new Callback<TableColumn<viewAccountPositions, String>, TableCell<viewAccountPositions, String>>() {
-//  @Override
-//  public TableCell call(TableColumn param) {
-//      return new TableCell() {
-//
-//         @Override
-//          protected void updateItem(Object item, boolean empty) {
-//              super.updateItem(item, empty);
-//
-//              
-//               setTextFill(Color.RED);
-//                
-//                setText(item.toString());
-//              
-//          }
-//      };
-//  }
-//});
   
-        Account_tablefx.setItems(haku);
+        Account_tablefx.setItems(datam);
         
         
     }

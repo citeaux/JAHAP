@@ -8,7 +8,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
-import javafx.beans.property.SimpleStringProperty;
+import javafx.beans.property.*;
 import org.jahap.business.base.ratesbean;
 import org.jahap.entities.AccountPosition;
 import org.joda.time.format.DateTimeFormat;
@@ -18,7 +18,7 @@ import org.joda.time.format.DateTimeFormatter;
  *
  * @author russ
  */
-public class viewAccountPositionsProperty {
+public  class viewAccountPositionsProperty {
 
    
     
@@ -26,24 +26,24 @@ public class viewAccountPositionsProperty {
      private boolean debit=false;
      private long id;
      private Date ratedate;
-     private SimpleStringProperty rateDateString= new SimpleStringProperty() ;
+     private final SimpleStringProperty rateDateString= new SimpleStringProperty() ;
      private boolean canceled=false;
      private long  canceledposition;
      private double cPrice;
      private double dPrice;
      
-     private SimpleStringProperty cPriceString = new SimpleStringProperty();
-     private SimpleStringProperty dPriceString = new SimpleStringProperty();
+     private final SimpleStringProperty cpricestring = new SimpleStringProperty();
+     private final SimpleStringProperty dpricestring = new SimpleStringProperty();
      
      private long cRateid;
      private long dRateid;
-     private SimpleStringProperty cPositionname=new SimpleStringProperty();
-     private SimpleStringProperty dPositionname= new SimpleStringProperty();
-     private SimpleStringProperty cTotal = new SimpleStringProperty();
-     private SimpleStringProperty dTotal = new SimpleStringProperty();
+     private final SimpleStringProperty cpositionname=new SimpleStringProperty();
+     private final SimpleStringProperty dpositionname= new SimpleStringProperty();
+     private final SimpleStringProperty ctotal = new SimpleStringProperty();
+     private final SimpleStringProperty dtotal = new SimpleStringProperty();
    
-     private SimpleStringProperty cAmountString = new SimpleStringProperty();
-     private SimpleStringProperty dAmountString = new SimpleStringProperty();
+     private final SimpleStringProperty camountstring = new SimpleStringProperty();
+     private final SimpleStringProperty damountstring = new SimpleStringProperty();
      private int cAmount;
      private int dAmount;
     private  DateFormat df ;
@@ -58,6 +58,10 @@ public class viewAccountPositionsProperty {
 
      public String getRateDateString() {
         return rateDateString.get();
+    }
+     
+    public SimpleStringProperty getRateDateStringProperty(){
+        return rateDateString;
     }
 
     public void setRateDateString(String rateDateString) {
@@ -110,24 +114,33 @@ public class viewAccountPositionsProperty {
         
     }
 
-    public String getcTotal() {
+    public String getCtotal() {
         if(this.cAmount!=0 && this.cPrice!=0){
-           this.cTotal.set(String.valueOf(this.cAmount*this.cPrice));
+           this.ctotal.set(String.valueOf(this.cAmount*this.cPrice));
         }          
-        return cTotal.get();
+        return ctotal.get();
     }
 
+    public SimpleStringProperty ctotalProperty(){
+        return ctotal;
+    }
+    
    
 
-    public String getdTotal() {
+    public String getDtotal() {
         
         if(this.dAmount!=0 && this.dPrice!=0){
-        this.dTotal.set(String.valueOf(this.dAmount*this.dPrice));
+        this.dtotal.set(String.valueOf(this.dAmount*this.dPrice));
         }
-        return dTotal.get();
+        return dtotal.get();
     }
 
-   
+   public SimpleStringProperty dtotalProperty() {
+        
+        
+        return dtotal;
+    }
+    
 
     public long getdRateid() {
         return dRateid;
@@ -138,20 +151,30 @@ public class viewAccountPositionsProperty {
         this.id=dRateid;
     }
 
-    public String getcPositionname() {
-        return cPositionname.get();
+    public String getCpositionname() {
+        return cpositionname.get();
+    }
+    
+    public SimpleStringProperty cpositionnameProperty() {
+        return cpositionname;
+    
+    }
+    
+
+    public void setCpositionname(String cPositionname) {
+        this.cpositionname.set(cPositionname);
     }
 
-    public void setcPositionname(String cPositionname) {
-        this.cPositionname.set(cPositionname);
+    public String getDpositionname() {
+        return dpositionname.get();
     }
 
-    public String getdPositionname() {
-        return dPositionname.get();
+    public SimpleStringProperty dpositionnameProperty() {
+        return dpositionname;
     }
-
-    public void setdPositionname(String dPositionname) {
-        this.dPositionname.set(dPositionname);
+    
+    public void setDpositionname(String dPositionname) {
+        this.dpositionname.set(dPositionname);
     }
 
     public int getcAmount() {
@@ -162,7 +185,7 @@ public class viewAccountPositionsProperty {
     public void setcAmount(int cAmount) {
         this.cAmount = cAmount;
         if(cAmount!=0){
-            this.cAmountString.set(String.valueOf(cAmount));
+            this.camountstring.set(String.valueOf(cAmount));
         }
     }
 
@@ -193,7 +216,7 @@ public class viewAccountPositionsProperty {
     public void setcPrice(double cPrice) {
         this.cPrice = cPrice;
         if(cPrice!=0){
-            this.cPriceString.set(String.valueOf(cPrice));
+            this.cpricestring.set(String.valueOf(cPrice));
         }
     }
 
@@ -201,51 +224,67 @@ public class viewAccountPositionsProperty {
         return dPrice;
     }
 
-    public void setdPrice(double dPrice) {
+    public void setDprice(double dPrice) {
         this.dPrice = dPrice;
         if(dPrice!=0){
-            this.dPriceString.set(String.valueOf(dPrice));
+            this.dpricestring.set(String.valueOf(dPrice));
         }
     }
 
-    public String getcPriceString() {
-        return cPriceString.get();
+    public String getCpricestring() {
+        return cpricestring.get();
+    }
+    
+    public SimpleStringProperty cpricestringProperty() {
+        return cpricestring;
     }
 
-    public void setcPriceString(String cPriceString) {
-        this.cPriceString.set(cPriceString);
+    public void setCpricestring(String cPriceString) {
+        this.cpricestring.set(cPriceString);
     }
 
-    public String getdPriceString() {
-        return dPriceString.get();
+    public String getDpriceString() {
+        return dpricestring.get();
     }
 
-    public void setdPriceString(String dPriceString) {
-        this.dPriceString.set(dPriceString);
+    public SimpleStringProperty dpricestringProperty() {
+        return dpricestring;
+    }
+    
+    public void setDpricestring(String dPriceString) {
+        this.dpricestring.set(dPriceString);
     }
    
     public void setdAmount(int dAmount) {
         this.dAmount = dAmount;
         if(dAmount!=0){
-            this.dAmountString.set(String.valueOf(dAmount));
+            this.damountstring.set(String.valueOf(dAmount));
         }
         
     }
     
-     public String getcAmountString() {
-        return cAmountString.get();
+     public String getCamountstring() {
+        return camountstring.get();
     }
 
-    public void setcAmountString(String cAmountString) {
-        this.cAmountString.set(cAmountString);
+      public SimpleStringProperty camountstringProperty() {
+        return camountstring;
+    }
+     
+    public void setCamountstring(String cAmountString) {
+        this.camountstring.set(cAmountString);
     }
 
-    public String getdAmountString() {
-        return dAmountString.get();
+    public String getDamountString() {
+        return damountstring.get();
+    }
+    
+    public SimpleStringProperty damountstringProprty() {
+        return damountstring;
     }
 
-    public void setdAmountString(String dAmountString) {
-        this.dAmountString.set(dAmountString);
+    public void setDamountstring(String dAmountString) {
+        this.damountstring.set(dAmountString);
     }
     
     public AccountPosition getAccountPosition(){
@@ -256,11 +295,11 @@ public class viewAccountPositionsProperty {
         
         if(this.debit==false){
              pos.setAmount(this.cAmount);
-             pos.setPositionname(this.cPositionname.get());
+             pos.setPositionname(this.cpositionname.get());
              pos.setPrice(this.cPrice);
              pos.setRate(jj.getDataRecord(this.cRateid));
         }if(this.debit==true){pos.setAmount(this.dAmount);
-             pos.setPositionname(this.dPositionname.get());
+             pos.setPositionname(this.dpositionname.get());
              pos.setPrice(this.dPrice);
              pos.setRate(jj.getDataRecord(this.dRateid));
         }
