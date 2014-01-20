@@ -224,7 +224,7 @@ public  class viewAccountPositionsProperty {
         return dPrice;
     }
 
-    public void setDprice(double dPrice) {
+    public void setdPrice(double dPrice) {
         this.dPrice = dPrice;
         if(dPrice!=0){
             this.dpricestring.set(String.valueOf(dPrice));
@@ -243,7 +243,7 @@ public  class viewAccountPositionsProperty {
         this.cpricestring.set(cPriceString);
     }
 
-    public String getDpriceString() {
+    public String getDpricestring() {
         return dpricestring.get();
     }
 
@@ -275,7 +275,7 @@ public  class viewAccountPositionsProperty {
         this.camountstring.set(cAmountString);
     }
 
-    public String getDamountString() {
+    public String getDamountstring() {
         return damountstring.get();
     }
     
