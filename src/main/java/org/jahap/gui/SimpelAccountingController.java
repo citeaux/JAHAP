@@ -11,6 +11,7 @@ import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
@@ -19,6 +20,7 @@ import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
+import javafx.collections.ListChangeListener;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -50,7 +52,7 @@ import org.jahap.entities.Accounts;
  *
  * @author russ
  */
-public class SimpelAccountingController implements Initializable, InterAccSearchResultListener {
+public class SimpelAccountingController implements Initializable, InterAccSearchResultListener{
 
     
     
@@ -78,10 +80,6 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 //    private TableColumn<viewAccountPositions, String> cTotal_Account_tablefxColumn;
 //    @FXML
 //    private TableColumn<viewAccountPositions, String> dTotal_Account_tablefxColumn;
-    
-    
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String> id_Account_tablefx;
     @FXML
     private TableColumn<viewAccountPositionsProperty, String> date_Account_tablefx;
     @FXML
@@ -114,8 +112,6 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private Button editArticle;
     @FXML
     private Button editRates;
-    @FXML
-    private Button addPayment;
     @FXML
     private Button printOverview;
     @FXML
@@ -188,6 +184,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                             bz.setRatedate(zw.getRatedate());                            
                             bz.setDebit(zw.getDebit());
                             bz.setId(zw.getId());
+                            bz.setBilled(zw.getBilled());
+                            bz.setCanceled(zw.isCanceled());
                      
                       
 
@@ -245,7 +243,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                               super.updateItem(item, empty);
                               
                                int tl=getIndex();
-//                               if(datam.get(tl).isDebit()==true){
+
                                if(tl<=haku.size()-1){
                                  if(datam.get(tl).isDebit()==true){
                                  
@@ -259,7 +257,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                  }
                                  if(datam.get(tl).isBilled()==true){
                                  setTextFill(Color.GREY);
-                                    tol.setText("This position is billed");
+                                    String texttip=new String();
+                                    texttip="This position is billed";
+                                      if(datam.get(tl).isCanceled()==true){
+                                         texttip= texttip + " and canceled";
+                                      }
+                                    tol.setText(texttip);
                                     Tooltip.install(this, tol);
                                  }
                                  setText(item);
@@ -280,6 +283,35 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
               // #############cAmount
              
              cAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("camountstring"));
+             cAmount_Account_tablefxColumn.setCellFactory(new Callback<TableColumn<viewAccountPositionsProperty, String>, TableCell<viewAccountPositionsProperty, String>>() {
+                  @Override
+              public TableCell<viewAccountPositionsProperty, String> call(TableColumn<viewAccountPositionsProperty, String> param) {
+                      return new TableCell<viewAccountPositionsProperty, String>() {
+                                 
+                         @Override
+                         public void updateItem(String item, boolean empty) {
+                             
+                             
+                              super.updateItem(item, empty);
+                              
+                               int tl=getIndex();
+
+                                if(tl<=haku.size()-1){
+                                 if(datam.get(tl).isBilled()==true){
+                                 setTextFill(Color.GREY);
+                                    String texttip=new String();
+                                    texttip="This position is billed";
+                                     
+                                 }
+                                 setText(item);
+                             
+                         } 
+                          
+                         }
+                      };
+                  }
+                });  
+             
         
              // ################ cPosname
              
@@ -287,9 +319,10 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
              cService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cpositionname"));
            
              
+             
               // #############cPrice
             
-             cPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("camountstring"));
+             cPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cpricestring"));
               // ################ cTotal
              
              cTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("ctotal"));
@@ -368,20 +401,30 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 
     @FXML
     private void cancleArticle(ActionEvent event) {
-        viewAccountPositions jh= (viewAccountPositions) Account_tablefx.getSelectionModel().getSelectedItem();
+        Calendar cal  = Calendar.getInstance();
+         
+        
+        viewAccountPositionsProperty jh= (viewAccountPositionsProperty) Account_tablefx.getSelectionModel().getSelectedItem();
+        for(int io=0;io<=datam.size()-1;io++){
+            if(datam.get(io).getId()==jh.getId()){
+                datam.get(io).setCanceled(true);
+            }
+        }
         
         
-        viewAccountPositions ml=new viewAccountPositions();
-        if(jh.isDebit()==false){   
+        viewAccountPositionsProperty ml=new viewAccountPositionsProperty();
+        if(jh.isDebit()==false && jh.isCanceled()==false){   
            ml.setDebit(true);
            ml.setdRateid(jh.getcRateid());
            ml.setdAmount(jh.getcAmount());
-    
-           ml.setdPositionname(jh.getcPositionname());
+           ml.setCanceledposition(jh.getId());
+           ml.setDpositionname(jh.getCpositionname());
            ml.setdPrice(jh.getcPrice());
-           accview.add(ml);
-           data.add(ml);
-           data.remove(ml);
+           
+           ml.setRatedate(cal.getTime());
+           
+           datam.add(ml);
+           datam.remove(ml);
            acc.cancelPosition(rates.getDataRecord(ml.getId()),ml.getcAmount(),ml.getId(),rates.getDataRecord(ml.getId()).getPrice(),rates.getDataRecord(ml.getId()).getName());
              balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
         balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
@@ -392,10 +435,10 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     @FXML
     private void editArticle(ActionEvent event) throws IOException {
 ////////////        
-          viewAccountPositions jh= (viewAccountPositions) Account_tablefx.getSelectionModel().getSelectedItem();
+          viewAccountPositionsProperty jh= (viewAccountPositionsProperty) Account_tablefx.getSelectionModel().getSelectedItem();
           
           
-          
+          if(jh.isCanceled()==false && jh.getCanceledposition()!=0){
          Stage stage = new Stage();
         String fxmlFile = "/fxml/EditPositionFx.fxml";
        
@@ -413,37 +456,37 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
        
         
         stage.showAndWait();
-        
+          }
     }
+    
+    
     
     @Subscribe
     public void listenForPositionEdit(EditPositionEvent event){
         int ik=0;
         
-        for(ik=0;accview.get(ik).getId()!=event.getPosition().getId();){
+        for(ik=0;datam.get(ik).getId()!=event.getPosition().getId();){
              ik++;
         }
         
-        accview.set(ik, event.getPosition());
+      
             
-          data.add(event.getPosition());
-          data.remove(event.getPosition());
-        
-          System.out.println(event.getPosition().getcPositionname());
+          datam.add(event.getPosition());
+          datam.remove(event.getPosition());
+         
+          System.out.println(event.getPosition().getCpositionname());
           acc.adjustPosition(event.getPosition().getId(),event.getPosition().getAccountPosition());
           
           balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
         balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
                  String.valueOf(acc.getSumofDebitsPos()));
-          
+          System.err.println("After");
     }
+    
+    
     
     @FXML
     private void editRates(ActionEvent event) {
-    }
-
-    @FXML
-    private void addPayment(ActionEvent event) {
     }
 
     @FXML
@@ -466,22 +509,24 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
          if(e.getTableNameofSource()=="rate"){
            System.out.println("Rate" + String.valueOf(e.getDbRecordId()));
            
-           viewAccountPositions ml=new viewAccountPositions();
+           viewAccountPositionsProperty ml=new viewAccountPositionsProperty();
            
            ml.setDebit(false);
            ml.setcRateid(e.getDbRecordId());
            ml.setcAmount(1);
            ml.setcRateid(e.getDbRecordId());
            
-           ml.setcPositionname(rates.getDataRecord(e.getDbRecordId()).getName());
+           ml.setCpositionname(rates.getDataRecord(e.getDbRecordId()).getName());
            ml.setcPrice(rates.getPrice());
-           accview.add(ml);
-           data.add(ml);
-           data.remove(ml);
+           datam.add(ml);
+           datam.add(ml);
+           datam.remove(ml);
            acc.addPosition(rates.getDataRecord(ml.getId()),1,rates.getDataRecord(ml.getId()).getPrice(),rates.getDataRecord(ml.getId()).getName());
              balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
         balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
                  String.valueOf(acc.getSumofDebitsPos()));
     }
 }
+
+       
 }

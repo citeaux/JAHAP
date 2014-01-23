@@ -186,6 +186,7 @@ public  class viewAccountPositionsProperty {
         this.cAmount = cAmount;
         if(cAmount!=0){
             this.camountstring.set(String.valueOf(cAmount));
+            this.ctotal.set(String.valueOf(cAmount*cPrice));
         }
     }
 
@@ -259,6 +260,7 @@ public  class viewAccountPositionsProperty {
         this.dAmount = dAmount;
         if(dAmount!=0){
             this.damountstring.set(String.valueOf(dAmount));
+            this.dtotal.set(String.valueOf(dAmount*dPrice));
         }
         
     }

@@ -9,13 +9,13 @@ package org.jahap.gui;
  * @author russ
  */
 public class EditPositionEvent {
-    private final viewAccountPositions position;
+    private final viewAccountPositionsProperty position;
     
-    public EditPositionEvent(viewAccountPositions position){
+    public EditPositionEvent(viewAccountPositionsProperty position){
         this.position=position;
     }
     
-    public viewAccountPositions getPosition(){
+    public viewAccountPositionsProperty getPosition(){
          return position;
     }
 }

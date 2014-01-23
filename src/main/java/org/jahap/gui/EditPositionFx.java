@@ -39,8 +39,7 @@ public class EditPositionFx implements Initializable {
     private Button oneRecordForward_fxbutton;
     @FXML
     private Button lastRecord_fxbutton;
-    @FXML
-    private Button ok;
+        private Button ok;
     @FXML
     private Button cancel;
     private InterAccSearchResult accm;
@@ -51,8 +50,10 @@ public class EditPositionFx implements Initializable {
     private TextField rate_fxtextbox;
     @FXML
     private Button search_fxbutton;
-    private viewAccountPositions viewPosition;
+    private viewAccountPositionsProperty viewPosition;
    private  EventBus eventbus;
+    @FXML
+    private Button OK_editposition_fxbutton;
     /**
      * Initializes the controller class.
      */
@@ -61,7 +62,7 @@ public class EditPositionFx implements Initializable {
         // TODO
     }    
     
-    void init(EventBus eventbus, viewAccountPositions jm){
+    void init(EventBus eventbus, viewAccountPositionsProperty jm){
          this.eventbus=eventbus;
          
          
@@ -69,17 +70,17 @@ public class EditPositionFx implements Initializable {
          rbean=new ratesbean();
          viewPosition=jm;
          if(jm.isDebit()!=true){
-         Price_fxtextfield.setText(jm.getcPriceString());
-         amount_fxtextfield.setText(jm.getcAmountString());
-         PositionName_fxtextfield.setText(jm.getcPositionname());
-         rate_fxtextbox.setText(jm.getcPositionname());
+         Price_fxtextfield.setText(jm.getCpricestring());
+         amount_fxtextfield.setText(jm.getCamountstring());
+         PositionName_fxtextfield.setText(jm.getCpositionname());
+         rate_fxtextbox.setText(jm.getCpositionname());
          }
          
          if(jm.isDebit()!=false){
-         Price_fxtextfield.setText(jm.getdPriceString());
-         amount_fxtextfield.setText(jm.getdAmountString());
-         PositionName_fxtextfield.setText(jm.getdPositionname());
-         rate_fxtextbox.setText(jm.getdPositionname());
+         Price_fxtextfield.setText(jm.getDpricestring());
+         amount_fxtextfield.setText(jm.getDamountstring());
+         PositionName_fxtextfield.setText(jm.getDpositionname());
+         rate_fxtextbox.setText(jm.getDpositionname());
          }
          
          
@@ -102,29 +103,7 @@ public class EditPositionFx implements Initializable {
     private void goLastRecord(ActionEvent event) {
     }
 
-    @FXML
-    private void OK(ActionEvent event) {
-        if(viewPosition.isDebit()==false){
-            viewPosition.setcPositionname(PositionName_fxtextfield.getText());
-            viewPosition.setcAmount(Integer.parseInt(amount_fxtextfield.getText()));
-            viewPosition.setcPrice(Double.parseDouble(Price_fxtextfield.getText()));
-        }if(viewPosition.isDebit()==true){
-             viewPosition.setdPositionname(PositionName_fxtextfield.getText());
-            viewPosition.setdAmount(Integer.parseInt(amount_fxtextfield.getText()));
-            viewPosition.setdPrice(Double.parseDouble(Price_fxtextfield.getText()));
-        }
-        
-        
-        
-        EditPositionEvent hl=new EditPositionEvent(viewPosition);
-        
-        
-        
-        eventbus.post(hl);
-        
-         Stage stage = (Stage) ok.getScene().getWindow();
-        stage.close();
-    }
+      
 
     @FXML
     private void Cancel(ActionEvent event) {
@@ -136,5 +115,30 @@ public class EditPositionFx implements Initializable {
 
     @FXML
     private void detailsofrate(MouseEvent event) {
+    }
+
+    @FXML
+    private void OK_editposition(ActionEvent event) {
+         if(viewPosition.isDebit()==false){
+            viewPosition.setCpositionname(PositionName_fxtextfield.getText());
+            viewPosition.setcAmount(Integer.parseInt(amount_fxtextfield.getText()));
+            viewPosition.setcPrice(Double.parseDouble(Price_fxtextfield.getText()));
+        }if(viewPosition.isDebit()==true){
+             viewPosition.setDpositionname(PositionName_fxtextfield.getText());
+            viewPosition.setdAmount(Integer.parseInt(amount_fxtextfield.getText()));
+            viewPosition.setdPrice(Double.parseDouble(Price_fxtextfield.getText()));
+        }
+        
+        
+        
+       // EditPositionEvent hl=new EditPositionEvent(viewPosition);
+        
+        
+        
+        eventbus.post(viewPosition);
+       
+         Stage jimbo= (Stage) OK_editposition_fxbutton.getScene().getWindow();
+         
+        jimbo.close();
     }
 }

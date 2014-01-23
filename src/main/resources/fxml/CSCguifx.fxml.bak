@@ -2,12 +2,11 @@
 
 <?import java.lang.*?>
 <?import java.util.*?>
-<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="719.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.jahap.gui.EditPositionFx">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="719.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.jahap.gui.RateGuiFx">
   <children>
     <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <bottom>
@@ -27,16 +26,18 @@
               <content>
                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
-                    <Label layoutX="107.0" layoutY="77.0" text="Amount:" />
-                    <Label layoutX="131.0" layoutY="115.0" text="Rate:" />
-                    <Label layoutX="126.0" layoutY="175.0" prefWidth="40.0" text="Price:" />
-                    <TextField id="name" fx:id="amount_fxtextfield" layoutX="172.0" layoutY="77.0" prefWidth="87.0" />
-                    <TextField id="zipcode_fxtextfield" fx:id="Price_fxtextfield" layoutX="172.0" layoutY="173.0" prefWidth="100.0" />
-                    <Label layoutX="45.0" layoutY="146.0" text="Name on Account:" />
-                    <TextField id="_fxtextfield" fx:id="PositionName_fxtextfield" layoutX="172.0" layoutY="146.0" prefWidth="200.0" />
-                    <TextField fx:id="rate_fxtextbox" layoutX="172.0" layoutY="112.0" prefWidth="200.0" />
-                    <Button fx:id="search_fxbutton" layoutX="381.0" layoutY="112.0" mnemonicParsing="false" onDragDetected="#searchforrate" text="Search" />
-                    <Button layoutX="460.0" layoutY="113.0" mnemonicParsing="false" onDragDetected="#detailsofrate" text="Details" />
+                    <Label layoutX="94.0" layoutY="48.0" text="Rate Code:" />
+                    <Label layoutX="92.0" layoutY="84.0" text="Rate name:" />
+                    <Label layoutX="140.0" layoutY="119.0" text="Vat:" />
+                    <Label layoutX="59.0" layoutY="150.0" prefWidth="105.0" text="Rate Base Price:" />
+                    <TextField id="name" fx:id="ratecode_fxtextfield" layoutX="172.0" layoutY="48.0" prefWidth="87.0" />
+                    <TextField id="christianname" fx:id="ratename_fxtextfield" layoutX="171.0" layoutY="81.0" prefWidth="200.0" />
+                    <TextField id="zipcode_fxtextfield" fx:id="RateBasePrice_fxtextfield" layoutX="172.0" layoutY="147.0" prefWidth="100.0" />
+                    <TextField fx:id="ratevat_fxtextfield" layoutX="172.0" layoutY="116.0" prefWidth="100.0" />
+                    <TextField fx:id="RateRevAccount_fxtextfield" layoutX="172.0" layoutY="181.0" prefWidth="100.0" />
+                    <Label layoutX="47.0" layoutY="184.0" text="Revenue Account:" />
+                    <CheckBox fx:id="OvernightRate_fxCheckBox" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="172.0" layoutY="220.0" mnemonicParsing="false" text="" textAlignment="RIGHT" />
+                    <Label layoutX="66.0" layoutY="220.0" text="Overnight Rate" />
                   </children>
                 </AnchorPane>
               </content>
@@ -47,8 +48,8 @@
       <right>
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_RIGHT">
           <children>
-            <Button id="search" fx:id="ok" mnemonicParsing="false" onAction="#OK_editposition" prefHeight="36.0" prefWidth="100.0" text="OK" />
-            <Button id="search" fx:id="cancel" mnemonicParsing="false" onAction="#Cancel" prefHeight="36.0" prefWidth="100.0" text="CANCEL" />
+            <Button fx:id="search" mnemonicParsing="false" onAction="#searchAdress" prefHeight="36.0" prefWidth="100.0" text="Search" />
+            <Button id="search" fx:id="printAdress" mnemonicParsing="false" onAction="#printAdress" prefHeight="36.0" prefWidth="100.0" text="Print" />
           </children>
         </VBox>
       </right>
