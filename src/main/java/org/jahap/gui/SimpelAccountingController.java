@@ -177,41 +177,40 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
        
                     AccountPosition zw=new AccountPosition();
                       viewAccountPositionsProperty bz;
-                    for(Iterator<AccountPosition> iAccPos=acc.getAccountPositionCollection().iterator();iAccPos.hasNext();){
-                        
-                            bz = new viewAccountPositionsProperty();
-                            zw=iAccPos.next();
-                            bz.setRatedate(zw.getRatedate());                            
-                            bz.setDebit(zw.getDebit());
-                            bz.setId(zw.getId());
-                            bz.setBilled(zw.getBilled());
-                            bz.setCanceled(zw.isCanceled());
-                     
-                      
+               try {
+            for (Iterator<AccountPosition> iAccPos = acc.getAccountPositionCollection().iterator(); iAccPos.hasNext();) {
+                
+                bz = new viewAccountPositionsProperty();
+                zw = iAccPos.next();
+                bz.setRatedate(zw.getRatedate());                
+                bz.setDebit(zw.getDebit());
+                bz.setId(zw.getId());
+                bz.setBilled(zw.getBilled());
+                bz.setCanceled(zw.isCanceled());
 
-                            // ############### Split Credit Row  #####################      
-                           if(zw.getDebit()==false){
-                                  bz.setcAmount(zw.getAmount());
-                                  bz.setCpositionname(zw.getPositionname());
-                                  bz.setcRateid(zw.getRate().getId());
-                                  bz.setcPrice(zw.getPrice());
-                                  
+                // ############### Split Credit Row  #####################      
+                if (zw.getDebit() == false) {
+                    bz.setcAmount(zw.getAmount());
+                    bz.setCpositionname(zw.getPositionname());
+                    bz.setcRateid(zw.getRate().getId());
+                    bz.setcPrice(zw.getPrice());
+                    
+                }                
+                
+                if (zw.getDebit() == true) {
+                    bz.setdAmount(zw.getAmount());
+                    bz.setDpositionname(zw.getPositionname());
+                    bz.setdRateid(zw.getRate().getId());
+                    bz.setdPrice(zw.getPrice());
+                    
+                }
 
-                           } 
-
-                            if(zw.getDebit()==true){
-                                  bz.setdAmount(zw.getAmount());
-                                  bz.setDpositionname(zw.getPositionname());
-                                  bz.setdRateid(zw.getRate().getId());
-                                  bz.setdPrice(zw.getPrice());
-
-                           } 
-                            
-                            
-                       // accview.add(bz);
-                        datam.add(bz);
-                        haku.add(bz);
-                    }   
+                // accview.add(bz);
+                datam.add(bz);
+                haku.add(bz);
+            }            
+        } catch (Exception e) {
+        }
                              
                              
                              
