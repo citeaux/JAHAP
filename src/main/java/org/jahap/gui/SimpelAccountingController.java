@@ -59,27 +59,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     @FXML
     private TableView Account_tablefx;
-//    @FXML
-//    private TableColumn<viewAccountPositions, String> id_Account_tablefx;
-//    @FXML
-//    private TableColumn<viewAccountPositions, String> date_Account_tablefx;
-//    @FXML
-//    private TableColumn<viewAccountPositions, String> cService_Account_tablefxColumn;
-//    @FXML
-//    private TableColumn<viewAccountPositions, String> cAmount_Account_tablefxColumn;
-//    @FXML
-//    private TableColumn<viewAccountPositions, String> dService_Account_tablefxColumn;
-//    @FXML
-//    private TableColumn<viewAccountPositions, String> dAmount_Account_tablefxColumn;
-//    @FXML
-//    private TableColumn<viewAccountPositions, String> cPrice_Account_tablefxColumn;
-//    @FXML
-//    private TableColumn<viewAccountPositions, String> dPrice_Account_tablefxColumn;
-//    private EventBus eventbus;
-//    @FXML
-//    private TableColumn<viewAccountPositions, String> cTotal_Account_tablefxColumn;
-//    @FXML
-//    private TableColumn<viewAccountPositions, String> dTotal_Account_tablefxColumn;
+
     @FXML
     private TableColumn<viewAccountPositionsProperty, String> date_Account_tablefx;
     @FXML
