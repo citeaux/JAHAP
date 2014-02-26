@@ -59,7 +59,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     @FXML
     private TableView Account_tablefx;
-
+    @FXML
+    private TableColumn<viewAccountPositionsProperty, String>id_Account_tablefx;                                                   
     @FXML
     private TableColumn<viewAccountPositionsProperty, String> date_Account_tablefx;
     @FXML
@@ -199,8 +200,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                       
                   
              // #################  ID       
-             //id_Account_tablefx  = new TableColumn<viewAccountPositionsProperty, String>("id");
-             //id_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("id"));
+            id_Account_tablefx  = new TableColumn<viewAccountPositionsProperty, String>("idx");
+             id_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("idx"));
                      
            
             
@@ -384,11 +385,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
          
         
         viewAccountPositionsProperty jh= (viewAccountPositionsProperty) Account_tablefx.getSelectionModel().getSelectedItem();
-        for(int io=0;io<=datam.size()-1;io++){
-            if(datam.get(io).getId()==jh.getId()){
-                datam.get(io).setCanceled(true);
-            }
-        }
+        
         
         
         viewAccountPositionsProperty ml=new viewAccountPositionsProperty();
@@ -402,13 +399,21 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
            
            ml.setRatedate(cal.getTime());
            
+           for(int io=0;io<=datam.size()-1;io++){
+            if(datam.get(io).getId()==jh.getId()){
+                datam.get(io).setCanceled(true);
+            }
+        }
+           
            datam.add(ml);
            datam.remove(ml);
-           acc.cancelPosition(rates.getDataRecord(ml.getId()),ml.getcAmount(),ml.getId(),rates.getDataRecord(ml.getId()).getPrice(),rates.getDataRecord(ml.getId()).getName());
+           acc.cancelPosition(rates.getDataRecord(ml.getcRateid()),ml.getcAmount(),ml.getId(),rates.getDataRecord(ml.getId()).getPrice(),rates.getDataRecord(ml.getId()).getName());
              balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
         balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
                  String.valueOf(acc.getSumofDebitsPos()));
         }
+        
+        
     }
 
     @FXML

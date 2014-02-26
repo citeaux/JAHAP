@@ -1,6 +1,9 @@
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
+ *//*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
 package org.jahap.gui;
 
@@ -25,6 +28,9 @@ public  class viewAccountPositionsProperty {
      private boolean billed=false;
      private boolean debit=false;
      private long id;
+     private final SimpleStringProperty idx= new SimpleStringProperty();
+     private long rateId; 
+
      private Date ratedate;
      private final SimpleStringProperty rateDateString= new SimpleStringProperty() ;
      private boolean canceled=false;
@@ -59,6 +65,16 @@ public  class viewAccountPositionsProperty {
      public String getRateDateString() {
         return rateDateString.get();
     }
+
+    public long getRateId() {
+        return rateId;
+    }
+
+    public void setRateId(long rateId) {
+        this.rateId = rateId;
+    }
+     
+     
      
     public SimpleStringProperty getRateDateStringProperty(){
         return rateDateString;
@@ -67,6 +83,18 @@ public  class viewAccountPositionsProperty {
     public void setRateDateString(String rateDateString) {
         this.rateDateString.set(rateDateString);
         
+    }
+
+    public void setIdx(String idx){
+        this.idx.set(idx);
+    }
+    
+    public SimpleStringProperty getIdxProperty(){
+        return idx;
+    }
+    
+    public String getIdx(){
+        return idx.get();
     }
     
     public void setBilled(boolean billed) {
@@ -82,10 +110,12 @@ public  class viewAccountPositionsProperty {
     }
 
     public long getId() {
+       
         return id;
     }
 
     public void setId(long id) {
+        idx.set(String.valueOf(id));
         this.id = id;
     }
 
@@ -107,7 +137,7 @@ public  class viewAccountPositionsProperty {
 
     public void setcRateid(long cRateid) {
         this.cRateid = cRateid;
-        this.id=cRateid;
+        this.rateId=cRateid;
         
         
         
@@ -148,7 +178,7 @@ public  class viewAccountPositionsProperty {
 
     public void setdRateid(long dRateid) {
         this.dRateid = dRateid;
-        this.id=dRateid;
+        this.rateId=dRateid;
     }
 
     public String getCpositionname() {
