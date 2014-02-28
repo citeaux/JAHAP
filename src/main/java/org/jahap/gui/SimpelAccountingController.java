@@ -406,8 +406,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         }
            
            datam.add(ml);
-           datam.remove(ml);
-           acc.cancelPosition(rates.getDataRecord(ml.getcRateid()),ml.getcAmount(),ml.getId(),rates.getDataRecord(ml.getId()).getPrice(),rates.getDataRecord(ml.getId()).getName());
+           //datam.remove(ml);
+           acc.cancelPosition(rates.getDataRecord(ml.getcRateid()),ml.getcAmount(),ml.getId(),ml.getcPrice(),ml.getCpositionname());
              balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
         balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
                  String.valueOf(acc.getSumofDebitsPos()));
