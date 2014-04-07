@@ -46,6 +46,7 @@ import org.jahap.business.acc.accountsbean;
 import org.jahap.business.base.ratesbean;
 import org.jahap.entities.AccountPosition;
 import org.jahap.entities.Accounts;
+import org.jahap.entities.Rates;
 
 /**
  * FXML Controller class
@@ -499,13 +500,13 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
            ml.setcRateid(e.getDbRecordId());
            ml.setcAmount(1);
            ml.setcRateid(e.getDbRecordId());
-           
-           ml.setCpositionname(rates.getDataRecord(e.getDbRecordId()).getName());
+           Rates rate=rates.getDataRecord(e.getDbRecordId());
+           ml.setCpositionname(rate.getName());
            ml.setcPrice(rates.getPrice());
            datam.add(ml);
            datam.add(ml);
            datam.remove(ml);
-           acc.addPosition(rates.getDataRecord(ml.getId()),1,rates.getDataRecord(ml.getId()).getPrice(),rates.getDataRecord(ml.getId()).getName());
+           acc.addPosition(rate,1,rate.getPrice(),rate.getName());
              balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
         balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
                  String.valueOf(acc.getSumofDebitsPos()));
