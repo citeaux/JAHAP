@@ -127,10 +127,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         // TODO
     }    
     
-    void init(long id){
-        
-         eventbus=new EventBus("Position"); 
-          eventbus.register(this);
+    void init(long id, EventBus even){
+        this.eventbus=even;
+         //eventbus=new EventBus("Position"); 
+          //eventbus.register(SimpelAccountingController.this);
+          
+                 
         acc=new accountsbean();
         rates= new ratesbean();
         accsearchresult = new InterAccSearchResult();
@@ -227,17 +229,17 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 
                                if(tl<=haku.size()-1){
                                  if(datam.get(tl).isDebit()==true){
-                                 
-                                 setStyle("-fx-font-style: italic;");
+                                 // DEV: Stylshert implement
+                                 // setStyle("-fx-font-style: italic;");
                                  
                                  }
                                  if(datam.get(tl).isCanceled()==true){
-                                 setTextFill(Color.RED);
+                                  setTextFill(Color.RED);
                                    tol.setText("This position is canceled");
                                     Tooltip.install(this, tol);
                                  }
                                  if(datam.get(tl).isBilled()==true){
-                                 setTextFill(Color.GREY);
+                                    setTextFill(Color.GREY);
                                     String texttip=new String();
                                     texttip="This position is billed";
                                       if(datam.get(tl).isCanceled()==true){
@@ -407,8 +409,11 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         }
            
            datam.add(ml);
+           
+           Rates rate;
+           rate = rates.getDataRecord(ml.getcRateid());
            //datam.remove(ml);
-           acc.cancelPosition(rates.getDataRecord(ml.getcRateid()),ml.getcAmount(),ml.getId(),ml.getcPrice(),ml.getCpositionname());
+           acc.cancelPosition(rate,ml.getcAmount(),ml.getId(),ml.getcPrice(),ml.getDpositionname());
              balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
         balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
                  String.valueOf(acc.getSumofDebitsPos()));
@@ -423,7 +428,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
           viewAccountPositionsProperty jh= (viewAccountPositionsProperty) Account_tablefx.getSelectionModel().getSelectedItem();
           
           
-          if(jh.isCanceled()==false && jh.getCanceledposition()!=0){
+          if(jh.isCanceled()==false && jh.getCanceledposition()==0){
          Stage stage = new Stage();
         String fxmlFile = "/fxml/EditPositionFx.fxml";
        

@@ -4,6 +4,7 @@
  */
 package org.jahap.gui;
 
+import com.google.common.eventbus.EventBus;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -143,6 +144,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private Button RATE_Details_fxtxtfield;
     @FXML
     private Label DASH_ResNewCreated_fxtxt;
+    private EventBus eventbus;
     /**
      * Initializes the controller class.
      */
@@ -273,7 +275,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
     @FXML
     private void Open_Account(ActionEvent event) throws IOException {
         
-      
+        eventbus=new EventBus("Position"); 
         
          Stage stage = new Stage();
         String fxmlFile = "/fxml/simpelAccounting.fxml";
@@ -288,9 +290,9 @@ public class ResguiController implements Initializable, InterResSearchResultList
         
         stage.setScene(scene);
         SimpelAccountingController controller= loader.<SimpelAccountingController>getController();
-       controller.init(accountid);
+       controller.init(accountid,eventbus);
        
-        
+        eventbus.register(controller);
         stage.showAndWait();
         
         
