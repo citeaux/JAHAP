@@ -15,7 +15,7 @@ public class InterAccSearchResultEvent extends EventObject{
     
     private long DbRecordId;
 
-   
+    private Object EvObj;
     private String TableNameofSource;
     
     
@@ -28,13 +28,23 @@ public class InterAccSearchResultEvent extends EventObject{
     }
     
     
-    public InterAccSearchResultEvent(Object source, long DataRecordId, String TableNameofSource ){
+    public void setEventObject(Object EvObj){
+          this.EvObj=EvObj;
+    }
+    
+    public Object getEventObject(){
+        return this.EvObj;
+    }
+    
+    public InterAccSearchResultEvent(Object source, long DataRecordId, String TableNameofSource, Object EvObj ){
         super(source);
         this.DbRecordId=DataRecordId;
         this.TableNameofSource=TableNameofSource;
+        this.EvObj=EvObj;
     }
     
-    
+     
+        
     
     
 }

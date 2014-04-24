@@ -51,7 +51,9 @@ public class EditPositionFx implements Initializable {
     @FXML
     private Button search_fxbutton;
     private viewAccountPositionsProperty viewPosition;
-   private  EventBus eventbus;
+   
+    private InterAccSearchResult AccSearchresult;
+     private String guisource;
     @FXML
     private Button OK_editposition_fxbutton;
     /**
@@ -62,11 +64,11 @@ public class EditPositionFx implements Initializable {
         // TODO
     }    
     
-    void init(EventBus eventbus, viewAccountPositionsProperty jm){
-         this.eventbus=eventbus;
+    void init(InterAccSearchResult AccSearchresults,SimpelAccountingController zi,String guisource, viewAccountPositionsProperty jm){
          
          
-         
+         this.guisource=guisource;
+         this.AccSearchresult=AccSearchresults;
          rbean=new ratesbean();
          viewPosition=jm;
          if(jm.isDebit()!=true){
@@ -129,13 +131,17 @@ public class EditPositionFx implements Initializable {
             viewPosition.setdPrice(Double.parseDouble(Price_fxtextfield.getText()));
         }
         
-        
-        
+        AccSearchresult.setEventObj(viewPosition);
+        try {
+            AccSearchresult.setDbRecordId(1, guisource);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
        // EditPositionEvent hl=new EditPositionEvent(viewPosition);
         
         
         
-        eventbus.post(viewPosition);
+        
        
          Stage jimbo= (Stage) OK_editposition_fxbutton.getScene().getWindow();
          

@@ -14,7 +14,7 @@ import javax.swing.table.TableModel;
 public class InterAccSearchResult {
     private long DbRecordId;
     private String TableNameofSource;
-
+    private Object EventObj;
    
     public long getDbRecordId() {
         return DbRecordId;
@@ -25,8 +25,18 @@ public class InterAccSearchResult {
         //
         this.TableNameofSource=TableNameofSource;
         this.DbRecordId=DataRecordId;
-        notifyId(new InterAccSearchResultEvent(this,DataRecordId,TableNameofSource));
+        notifyId(new InterAccSearchResultEvent(this,DataRecordId,TableNameofSource,EventObj));
     }
+
+    public Object getEventObj() {
+        return EventObj;
+    }
+
+    public void setEventObj(Object EventObj) {
+        this.EventObj = EventObj;
+    }
+    
+    
     
     private EventListenerList listeners = new  EventListenerList();
     

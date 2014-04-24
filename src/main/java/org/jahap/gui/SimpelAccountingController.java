@@ -442,36 +442,17 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         
         stage.setScene(scene);
         EditPositionFx controller= loader.<EditPositionFx>getController();
-       controller.init(eventbus, jh);
-       
-        
+       controller.init(accsearchresult,this,"edit",jh);
+      
+        // accsearchresult,this,"rate"
         stage.showAndWait();
           }
     }
     
     
     
-    @Subscribe
-    public void listenForPositionEdit(EditPositionEvent event){
-        int ik=0;
-        
-        for(ik=0;datam.get(ik).getId()!=event.getPosition().getId();){
-             ik++;
-        }
-        
-      
-            
-          datam.add(event.getPosition());
-          datam.remove(event.getPosition());
-         
-          System.out.println(event.getPosition().getCpositionname());
-          acc.adjustPosition(event.getPosition().getId(),event.getPosition().getAccountPosition());
-          
-          balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
-        balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
-                 String.valueOf(acc.getSumofDebitsPos()));
-          System.err.println("After");
-    }
+    //@Subscribe
+   
     
     
     
@@ -515,7 +496,28 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
              balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
         balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
                  String.valueOf(acc.getSumofDebitsPos()));
-    }
+       }
+       if(e.getTableNameofSource()=="edit"){
+                   int ik=0;
+                 viewAccountPositionsProperty view=(viewAccountPositionsProperty)e.getEventObject(); 
+              
+                for(ik=0;datam.get(ik).getId()!=view.getId();){
+                     ik++;
+                }
+
+
+
+                  datam.add(view);
+                  datam.remove(view);
+
+                  System.out.println(view.getCpositionname());
+                  acc.adjustPosition(view.getId(),view.getAccountPosition());
+
+                  balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
+                balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
+                         String.valueOf(acc.getSumofDebitsPos()));
+                  System.err.println("After");
+       }
 }
 
        
