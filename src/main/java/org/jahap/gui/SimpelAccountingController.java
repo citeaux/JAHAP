@@ -102,13 +102,13 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private Button closeAccount;
     @FXML
     private Button AdvancedChargeRates;
-    private List<viewAccountPositions> accview;
+    //private List<viewAccountPositions> accview;
     private InterAccSearchResult accsearchresult;
     private  accountsbean acc;
     private ratesbean rates;
     private List<AccountPosition> accpos;
     private long rateid=0;
-    private ObservableList<viewAccountPositions> data;
+    //private ObservableList<viewAccountPositions> data;
     final ObservableList<viewAccountPositionsProperty> datam=FXCollections.observableArrayList();;
     @FXML
     private Tooltip balance_textbox_fxtooltip;

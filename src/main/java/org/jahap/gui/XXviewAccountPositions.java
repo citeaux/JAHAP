@@ -1,6 +1,9 @@
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
+ *//*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
  */
 package org.jahap.gui;
 
@@ -17,7 +20,7 @@ import org.joda.time.format.DateTimeFormatter;
  *
  * @author russ
  */
-public class viewAccountPositions {
+public class XXviewAccountPositions {
 
    
     
@@ -47,7 +50,7 @@ public class viewAccountPositions {
      private int dAmount;
     private  DateFormat df ;
      
-      public viewAccountPositions() {
+      public XXviewAccountPositions() {
     df = new SimpleDateFormat("MM.dd.yyyy");
     }
     

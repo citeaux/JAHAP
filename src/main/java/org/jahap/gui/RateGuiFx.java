@@ -14,6 +14,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.TextField;
+import javafx.scene.control.TitledPane;
 import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.base.addressbean;
 import org.jahap.business.base.ratesbean;
@@ -27,24 +28,11 @@ import org.jahap.sreport.ratereports;
  * @author russ
  */
 public class RateGuiFx implements Initializable, RateSearchResultListener {
-    @FXML
-    private TextField ratecode_fxtextfield;
-    @FXML
-    private TextField ratename_fxtextfield;
-    @FXML
-    private TextField RateBasePrice_fxtextfield;
-    @FXML
-    private TextField ratevat_fxtextfield;
-    @FXML
-    private TextField RateRevAccount_fxtextfield;
-    @FXML
-    private Button firstRecord_fxbutton;
-    @FXML
-    private Button oneRecordBackward_fxbutton;
-    @FXML
-    private Button oneRecordForward_fxbutton;
-    @FXML
-    private Button lastRecord_fxbutton;
+        private TextField ratecode_fxtextfield;
+        private TextField ratename_fxtextfield;
+        private TextField RateBasePrice_fxtextfield;
+        private TextField ratevat_fxtextfield;
+        private TextField RateRevAccount_fxtextfield;
     @FXML
     private Button search;
     @FXML
@@ -54,8 +42,9 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
     private List<TextField> textfields;
     private RateSearchResult searchresults;
     private long ratesid=0;
+        private CheckBox OvernightRate_fxCheckBox;
     @FXML
-    private CheckBox OvernightRate_fxCheckBox;
+    private TitledPane x1;
     
     
     /**
@@ -76,27 +65,19 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
          
     }    
 
-    @FXML
-    private void goFirstRecord(ActionEvent event) {
-    }
 
-    @FXML
-    private void goOneRecordBackward(ActionEvent event) {
+        private void goOneRecordBackward(ActionEvent event) {
         rates.nextRecordBackward();
         FillWithSelectedData();
         
         
     }
 
-    @FXML
-    private void goOneRecordForward(ActionEvent event) {
+        private void goOneRecordForward(ActionEvent event) {
         rates.nextRecordForeward();
         FillWithSelectedData();
     }
 
-    @FXML
-    private void goLastRecord(ActionEvent event) {
-    }
 
     @FXML
     private void searchAdress(ActionEvent event) {
