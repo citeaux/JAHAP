@@ -37,7 +37,7 @@ public class viewCSCpositionProperty {
      private final SimpleStringProperty priceCsC = new SimpleStringProperty();
      private final SimpleStringProperty overnightCsC = new SimpleStringProperty();
      private final SimpleStringProperty rateidCsC = new SimpleStringProperty();
-     
+     private final SimpleStringProperty totalCsC = new SimpleStringProperty();
        private  DateFormat df ;
        
      public viewCSCpositionProperty() {
@@ -144,5 +144,11 @@ public class viewCSCpositionProperty {
      public final  String getRateidCsC(){return rateidCsC.get();}
     public final void setRateidCsC(String value){rateidCsC.set(value);}
     public SimpleStringProperty rateidCsCProperty() {return rateidCsC;}
+    
+    public final  String getTotalCsC(){
+        totalCsC.set(String.valueOf(amount*price));        
+        return rateidCsC.get();}
+    public final void setTotalCsC(String value){rateidCsC.set(value);}
+    public SimpleStringProperty totalCsCProperty() {return rateidCsC;}
     
 }

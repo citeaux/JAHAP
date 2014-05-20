@@ -457,7 +457,25 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     
     @FXML
-    private void editRates(ActionEvent event) {
+    private void editRates(ActionEvent event) throws IOException {
+        
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/CscGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        CscGuiFx controller= loader.<CscGuiFx>getController();
+       controller.init(acc.getAccount().getId());
+      
+        // accsearchresult,this,"rate"
+        stage.showAndWait();
     }
 
     @FXML
