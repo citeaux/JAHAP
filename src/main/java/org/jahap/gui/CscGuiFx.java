@@ -19,13 +19,17 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
 import org.jahap.business.acc.accountsbean;
 import org.jahap.business.acc.cscbean;
+import org.jahap.business.res.occbean;
 import org.jahap.entities.Csc;
+import org.jahap.entities.Occ;
 
 /**
  * FXML Controller class
@@ -35,8 +39,7 @@ import org.jahap.entities.Csc;
 public class CscGuiFx implements Initializable {
     @FXML
     private TitledPane x1;
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String>id_csc_tablefx;  
+        private TableColumn<viewAccountPositionsProperty, String>id_csc_tablefx;  
     @FXML
     private TableColumn<viewCSCpositionProperty, String> overnight_csc_tablefx;
     @FXML
@@ -66,10 +69,20 @@ public class CscGuiFx implements Initializable {
     private List<Csc> cscpos;
     private  accountsbean acc;
     final ObservableList<viewCSCpositionProperty> datam=FXCollections.observableArrayList();;
-    @FXML
-    private Tooltip balance_textbox_fxtooltip;
     private List<viewCSCpositionProperty> haku = new ArrayList<viewCSCpositionProperty>();
-    
+    @FXML
+    private TableView  csc_fxview;
+    @FXML
+    private TextField resfrom_Textfield;
+    @FXML
+    private TextField resto_Textfield;
+    @FXML
+    private TextField room_Textfield;
+    @FXML
+    private TextField guest_Textfield;
+    private occbean occ;
+    @FXML
+    private TitledPane x2;
     /**
      * Initializes the controller class.
      */
@@ -82,7 +95,15 @@ public class CscGuiFx implements Initializable {
     void init(long id){
          acc=new accountsbean();
         acc.getDataRecord(id);
+        occ = new occbean();
+        List<Occ> occlist=new ArrayList<Occ>();
         inittable();
+        occlist=occ.SearchForOccforRes(acc.getReservation());
+        resfrom_Textfield.setText(acc.getReservation().getArrivaldate());
+        resto_Textfield.setText(acc.getReservation().getDeparturedate());
+        guest_Textfield.setText(acc.getAddress().getName());
+        room_Textfield.setText(occlist.get(1).getRoom().getCode());
+        
     }
     
     void inittable(){
@@ -93,11 +114,13 @@ public class CscGuiFx implements Initializable {
              kl = new viewCSCpositionProperty();
              zw= iCscPos.next();
              kl.setAmount(zw.getAmount());
+             kl.setPrice(zw.getPrice());
              kl.setFrom(zw.getFromdate());
              kl.setTo(zw.getTodate());
              kl.setOvernight(zw.getRate().getOvernight());
              kl.setRateId(zw.getRate().getId());
-            datam.add(kl) ;
+             kl.setService(zw.getService());
+             datam.add(kl) ;
         }
         
         
@@ -113,7 +136,17 @@ public class CscGuiFx implements Initializable {
                   @Override
                   public TableCell<viewCSCpositionProperty, String> call(TableColumn<viewCSCpositionProperty, String> param) {
                       return new TableCell<viewCSCpositionProperty, String>() {
-//                                 
+//                         @Override
+                         public void updateItem(String item, boolean empty) {
+                             
+                             
+                              super.updateItem(item, empty);
+                              
+                              
+                                setText(item);
+                               
+                          
+                         }           
 
                          
                           
@@ -129,7 +162,17 @@ public class CscGuiFx implements Initializable {
                   public TableCell<viewCSCpositionProperty, String> call(TableColumn<viewCSCpositionProperty, String> param) {
                       return new TableCell<viewCSCpositionProperty, String>() {
 //                                 
-                         
+                         @Override
+                         public void updateItem(String item, boolean empty) {
+                             
+                             
+                              super.updateItem(item, empty);
+                              
+                              
+                               setText(item);
+                               
+                          
+                         }   
                          
                           
                          
@@ -146,7 +189,17 @@ public class CscGuiFx implements Initializable {
                       return new TableCell<viewCSCpositionProperty, String>() {
 //                          }
                          
-                         
+                         @Override
+                         public void updateItem(String item, boolean empty) {
+                             
+                             
+                              super.updateItem(item, empty);
+                              
+                              setText(item);
+
+                               
+                          
+                         }   
                           
                          
                       };
@@ -163,7 +216,17 @@ public class CscGuiFx implements Initializable {
                   public TableCell<viewCSCpositionProperty, String> call(TableColumn<viewCSCpositionProperty, String> param) {
                       return new TableCell<viewCSCpositionProperty, String>() {
 //                                 
-//                       
+//                       @Override
+                         public void updateItem(String item, boolean empty) {
+                             
+                             
+                              super.updateItem(item, empty);
+                              
+                               setText(item);
+
+                               
+                          
+                         }   
                          
                           
                          
@@ -179,7 +242,18 @@ public class CscGuiFx implements Initializable {
                   @Override
                   public TableCell<viewCSCpositionProperty, String> call(TableColumn<viewCSCpositionProperty, String> param) {
                       return new TableCell<viewCSCpositionProperty, String>() {
-//                                 
+//                                
+                          @Override
+                         public void updateItem(String item, boolean empty) {
+                             
+                             
+                              super.updateItem(item, empty);
+                              
+                              setText(item);
+
+                               
+                          
+                         }   
 
                          
                           
@@ -197,7 +271,17 @@ public class CscGuiFx implements Initializable {
                   public TableCell<viewCSCpositionProperty, String> call(TableColumn<viewCSCpositionProperty, String> param) {
                       return new TableCell<viewCSCpositionProperty, String>() {
 //                                 
+                    @Override
+                         public void updateItem(String item, boolean empty) {
+                             
+                             
+                              super.updateItem(item, empty);
+                              
+                               setText(item);
 
+                               
+                          
+                         }   
                          
                           
                          
@@ -215,14 +299,24 @@ public class CscGuiFx implements Initializable {
                       return new TableCell<viewCSCpositionProperty, String>() {
 //                                 
 
-                         
+                       @Override
+                         public void updateItem(String item, boolean empty) {
+                             
+                             
+                              super.updateItem(item, empty);
+                              
+                              setText(item);
+
+                               
+                          
+                         }     
                           
                          
                       };
                   }
                 });  
              
-             
+             csc_fxview.setItems(datam);
     }
     
 

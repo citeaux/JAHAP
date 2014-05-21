@@ -22,9 +22,9 @@ import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
 import org.jahap.business.acc.accountsbean;
-import org.jahap.business.res.resbean;
+
 import org.jahap.entities.Accounts;
-import org.jahap.entities.Res;
+
 
 /**
  * FXML Controller class
@@ -42,83 +42,79 @@ public class AccListController implements Initializable {
     private Button Cancel;
     private accountsbean accbean;
     private List DialogResSearchResult;
-    private long id=0;
-    private boolean isOverviewDialog=false;
+
+    
     /**
      * Initializes the controller class.
      */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
-        //searchresult=new ResSearchResult();
-        initTable();
-    }    
+     
 
-        private void initTable(){
+      private void initTable(){
         accbean= new accountsbean();
         DialogResSearchResult= accbean.SearchForAcc("*");
         ObservableList<Accounts> data= FXCollections.observableList(DialogResSearchResult);
         
         // -----------------  id
-        TableColumn<Accounts,String> IdCol = new TableColumn<Accounts,String>("Id");
-      IdCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(TableColumn.CellDataFeatures<Accounts, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getId());
-     }
-     
-             
-      });  
+//        TableColumn<Accounts,String> IdCol = new TableColumn<Accounts,String>("Id");
+//      IdCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
+//     public ObservableValue<String> call(TableColumn.CellDataFeatures<Accounts, String> p) {
+//         return new ReadOnlyObjectWrapper(p.getValue().getId());
+//     }
+//     
+//             
+//      });  
       
-      //dataTable.getColumns().add(IdCol);
+//      dataTable.getColumns().add(IdCol);
       
        // -----------------  Arrival
-        TableColumn<Accounts,String> ResNoCol = new TableColumn<Accounts,String>("Res No");
-      ResNoCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(TableColumn.CellDataFeatures<Accounts, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getReservation().getResno());
-     }
-     
-             
-      });  
+//        TableColumn<Accounts,String> ResNoCol = new TableColumn<Accounts,String>("Res No");
+//      ResNoCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
+//     public ObservableValue<String> call(TableColumn.CellDataFeatures<Accounts, String> p) {
+//         return new ReadOnlyObjectWrapper(p.getValue().getReservation().getResno());
+//     }
+//     
+//             
+//      });  
       
-      dataTable.getColumns().add(ResNoCol);
-      
-      
-      // -----------------  Check in Date
-        TableColumn<Accounts,String> ArrDateCol = new TableColumn<Accounts,String>("Check in");
-      ArrDateCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(TableColumn.CellDataFeatures<Accounts, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getCheckindate());
-     }
-     
-             
-      });  
-      
-      dataTable.getColumns().add(ArrDateCol);
-      
+//      dataTable.getColumns().add(ResNoCol);
+//      
+//      
+//      // -----------------  Check in Date
+//        TableColumn<Accounts,String> ArrDateCol = new TableColumn<Accounts,String>("Check in");
+//      ArrDateCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
+//     public ObservableValue<String> call(TableColumn.CellDataFeatures<Accounts, String> p) {
+//         return new ReadOnlyObjectWrapper(p.getValue().getCheckindate());
+//     }
+//     
+//             
+//      });  
+//      
+//      dataTable.getColumns().add(ArrDateCol);
+//      
        // -----------------  Name
-        TableColumn<Accounts,String> NameCol = new TableColumn<Accounts,String>("Name");
-      NameCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
+        TableColumn<Accounts,String> NaCol = new TableColumn<Accounts,String>("Name");
+      NaCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(TableColumn.CellDataFeatures<Accounts, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getAddress().getName());
      }
      
              
       });  
+//      
+      dataTable.getColumns().add(NaCol);
+//      
+//       // -----------------  Christianname
+//        TableColumn<Accounts,String> CNameCol = new TableColumn<Accounts,String>("First name");
+//      CNameCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
+//     public ObservableValue<String> call(TableColumn.CellDataFeatures<Accounts, String> p) {
+//         return new ReadOnlyObjectWrapper(p.getValue().getAddress().getChristianname());
+//     }
+//     
+//      
+//             
+//      });  
       
-      dataTable.getColumns().add(NameCol);
-      
-       // -----------------  Christianname
-        TableColumn<Accounts,String> CNameCol = new TableColumn<Accounts,String>("First name");
-      CNameCol.setCellValueFactory(new Callback<TableColumn.CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(TableColumn.CellDataFeatures<Accounts, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getAddress().getChristianname());
-     }
-     
-      
-             
-      });  
-      
-      dataTable.getColumns().add(CNameCol);
+//      dataTable.getColumns().add(CNameCol);
       
       
         
@@ -143,5 +139,11 @@ public class AccListController implements Initializable {
     @FXML
     private void CancelAction(ActionEvent event) {
     }
+     
+     @Override
+    public void initialize(URL url, ResourceBundle rb) {
+        //searchresult=new ResSearchResult();
+    initTable();
+    }  
     
 }

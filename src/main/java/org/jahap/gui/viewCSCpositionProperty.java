@@ -85,7 +85,7 @@ public class viewCSCpositionProperty {
         this.to = to;
        
         if(to!=null){
-            this.fromDate.set(df.format(to));
+            this.toDate.set(df.format(to));
         }
     }
 

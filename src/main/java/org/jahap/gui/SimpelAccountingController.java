@@ -191,7 +191,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 
                 // accview.add(bz);
                 datam.add(bz);
-                haku.add(bz);
+               haku.add(bz);
             }            
         } catch (Exception e) {
         }

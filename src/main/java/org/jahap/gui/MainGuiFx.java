@@ -52,6 +52,12 @@ public class MainGuiFx implements Initializable {
     private MenuItem Rooms;
     @FXML
     private MenuItem FO_SearchForReservation_fxmenuitem;
+    @FXML
+    private MenuItem searchForGuestAccount_fxmenuitem;
+    @FXML
+    private MenuItem DayClose_fxmenuitem;
+    @FXML
+    private MenuItem occplan_fxmenuitem;
    
 
     @FXML
@@ -150,6 +156,31 @@ public class MainGuiFx implements Initializable {
             stage.setScene(scene);
             stage.show();
         
+    }
+
+    @FXML
+    private void searchForGuestAccount(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/AccList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setTitle("Accounts");
+            stage.setScene(scene);
+            stage.show();
+        
+    }
+
+    @FXML
+    private void DayClose(ActionEvent event) {
+    }
+
+    @FXML
+    private void occplan(ActionEvent event) {
     }
     
 }
