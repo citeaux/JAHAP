@@ -81,6 +81,7 @@ public class MainGuiFx implements Initializable {
 
     public void initialize(URL url, ResourceBundle rb) {
        
+         System.out.print(com.sun.javafx.runtime.VersionInfo.getVersion());
     } 
 
     @FXML

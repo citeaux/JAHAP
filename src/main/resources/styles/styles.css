@@ -20,7 +20,9 @@
 }
 
 /* Component specific styles */
-
+.table-view{
+     
+}
 
 .main-panel {
     -fx-background-image: url("../images/background.jpg");
