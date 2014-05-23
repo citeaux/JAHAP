@@ -53,20 +53,22 @@ public class AccListController implements Initializable {
     
        private void initTable(){
        accbean  = new accountsbean();
-        accList = accbean.SearchForAcc("*");
-        ObservableList<Accounts> data= FXCollections.observableList(accList);
+        accList = accbean.getAccOverview("*");
+        ObservableList data= FXCollections.observableList(accList);
         
-        // -----------------  id
-        TableColumn<Accounts,String> IdCol = new TableColumn<Accounts,String>("Id");
-      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Accounts, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Accounts, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getAddress().getName());
-     }
-     
-             
-      });  
-      
-      dataTable.getColumns().add(IdCol);
+        
+        
+//        // -----------------  id
+//        TableColumn<accClass,String> IdCol = new TableColumn<accClass,String>("Id");
+//      IdCol.setCellValueFactory(new Callback<CellDataFeatures<accClass, String>, ObservableValue<String>>() {
+//     public ObservableValue<String> call(CellDataFeatures<accClass, String> p) {
+//         return new ReadOnlyObjectWrapper(p.getValue());
+//     }
+//     
+//             
+//      });  
+//      
+//      dataTable.getColumns().add(IdCol);
       
      
        dataTable.setItems(data);
