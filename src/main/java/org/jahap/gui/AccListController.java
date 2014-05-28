@@ -6,6 +6,7 @@
 
 package org.jahap.gui;
 
+import com.lowagie.text.pdf.hyphenation.TernaryTree;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -57,7 +58,8 @@ public class AccListController implements Initializable {
     @FXML
     private Button Cancel;
     
-    
+    private ObservableList<String> data;
+     
     public static final String key1="Name";
     
     private  accountsbean accbean;
@@ -66,7 +68,11 @@ public class AccListController implements Initializable {
        private void initTable(){
        accbean  = new accountsbean();
         accList = accbean.getAccOverview("*");
-  ObservableList data= accbean.getAccOverview("*");
+  
+//        http://blog.ngopal.com.np/2011/10/19/dyanmic-tableview-data-from-database/
+        for( Iterator<SimpleList> i=accList.iterator();accList.iterator().hasNext();){
+               data.add()        
+                       }
         
         
         
