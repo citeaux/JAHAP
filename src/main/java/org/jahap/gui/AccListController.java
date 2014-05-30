@@ -52,13 +52,13 @@ public class AccListController implements Initializable {
     @FXML
     private Button PrintButton;
     @FXML
-    private TableView<SimpleList> dataTable;
+    private TableView<String> dataTable;
     @FXML
     private Button Ok;
     @FXML
     private Button Cancel;
     
-    private ObservableList<String> data;
+   
      
     public static final String key1="Name";
     
@@ -69,69 +69,79 @@ public class AccListController implements Initializable {
        accbean  = new accountsbean();
         accList = accbean.getAccOverview("*");
   
+        
+        
+         for(int i=0 ; i<3; i++){
+	                //We are using non property style for making dynamic table
+	                final int j = i;               
+	                TableColumn col = new TableColumn(accList.get(0).getColName(j));
+	                col.setCellValueFactory(new Callback<CellDataFeatures<ObservableList,String>,ObservableValue<String>>(){                   
+	                    public ObservableValue<String> call(CellDataFeatures<ObservableList, String> param) {                                                                                             
+	                        return new SimpleStringProperty(param.getValue().get(j).toString());                       
+	                    }                   
+	                });
+	                
+	                dataTable.getColumns().addAll(col);
+	                System.out.println("Column ["+i+"] ");
+	            }
+        
 //        http://blog.ngopal.com.np/2011/10/19/dyanmic-tableview-data-from-database/
-        for( Iterator<SimpleList> i=accList.iterator();accList.iterator().hasNext();){
-               data.add()        
-                       }
-        
-        
-        
-//         -----------------  id
-//        
-//        TableColumn<Map, String> IdCol = new TableColumn<>("Name");
-//        
-//        IdCol.setCellFactory(new MapValueFactory(key1));
-//       
-//        dataTable.getColumns().setAll(IdCol);
-//        
-//       
-//            Callback<TableColumn<Map, String>, TableCell<Map, String>>
-//            cellFactoryForMap = new Callback<TableColumn<Map, String>,
-//                TableCell<Map, String>>() {
-//                    @Override
-//                    public TableCell call(TableColumn p) {
-//                        return new TextFieldTableCell(new StringConverter() {
-//                            @Override
-//                            public String toString(Object t) {
-//                                return t.toString();
-//                            }
-//                            @Override
-//                            public Object fromString(String string) {
-//                                return string;
-//                            }                                    
-//                        });
-//                    }
-//        };
-//        
-//            IdCol.setCellFactory(cellFactoryForMap);
-        
-        TableColumn  IdCol = new TableColumn("Id");
-      IdCol.setCellValueFactory(new Callback<CellDataFeatures<ObservableList, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<ObservableList, String> p) {
-         return new SimpleStringProperty(p.getValue().get(j).toString());
-     }
-     
+         
+         for(int o=0;o<4;o++){
+          ObservableList<String> data=FXCollections.observableArrayList();
              
-      });  
+             try {
+                 for (Iterator<SimpleList> i = accList.iterator(); accList.iterator().hasNext();) {
+                     data.add(i.next().getCellValue(o).toString());
+                      System.out.println("Row [1] added "+ data );
+                 }
+             } catch (Exception e) {
+                 
+                 System.err.println(e.toString());
+                 System.err.println("************");
+             }
+        
+             try {
+                 dataTable.setItems(data);
+             } catch (Exception e) {
+                 System.err.println(e.toString());
+                 System.err.println("************");
+             }
+        
+                 
+        
+         }          
+        
+         
+        
+        
+//        TableColumn  IdCol = new TableColumn("Id");
+//      IdCol.setCellValueFactory(new Callback<CellDataFeatures<ObservableList, String>, ObservableValue<String>>() {
+//     public ObservableValue<String> call(CellDataFeatures<ObservableList, String> p) {
+//         return new SimpleStringProperty(p.getValue().get(0).toString());
+//     }
+//     
+//             
+//      });  
+//      
+//      dataTable.getColumns().addAll(IdCol);
+//      
+//      
+//      
+//      
+//      TableColumn  fromCol = new TableColumn("From");
+//      IdCol.setCellValueFactory(new Callback<CellDataFeatures<ObservableList, String>, ObservableValue<String>>() {
+//     public ObservableValue<String> call(CellDataFeatures<ObservableList, String> p) {
+//         return new SimpleStringProperty(p.getValue().get(1).toString());
+//     }
+//     
+//             
+//      });  
+//      
+//      dataTable.getColumns().addAll(fromCol);
       
-      dataTable.getColumns().add(IdCol);
       
       
-      
-      
-     
-      
-      
-       TableColumn<SimpleList,String> fromDate = new TableColumn<SimpleList,String>("From");
-      IdCol.setCellValueFactory(new Callback<CellDataFeatures<SimpleList, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<SimpleList, String> k) {
-         return new ReadOnlyObjectWrapper(k.getValue().getCellValue(1));
-     }
-     
-             
-      });  
-      fromDate.setMinWidth(100);
-      dataTable.getColumns().add(fromDate);
 //      
 //      
 //      
@@ -158,7 +168,7 @@ public class AccListController implements Initializable {
 //      name.setMinWidth(200);
 //      dataTable.getColumns().add(name);
       
-    dataTable.setItems(data);
+    
             
     
     
