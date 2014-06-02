@@ -32,6 +32,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.MapValueFactory;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
@@ -57,8 +58,12 @@ public class AccListController implements Initializable {
     private Button Ok;
     @FXML
     private Button Cancel;
+    @FXML
+    private TableColumn  IdCol;
+    @FXML
+    private TableColumn  depdate;
     
-   
+    private ObservableList cc;
      
     public static final String key1="Name";
     
@@ -66,63 +71,64 @@ public class AccListController implements Initializable {
       private List<SimpleList> accList;
     
        private void initTable(){
-       accbean  = new accountsbean();
-        accList = accbean.getAccOverview("*");
+       
+        
+       
   
         
-        
-         for(int i=0 ; i<3; i++){
-	                //We are using non property style for making dynamic table
-	                final int j = i;               
-	                TableColumn col = new TableColumn(accList.get(0).getColName(j));
-	                col.setCellValueFactory(new Callback<CellDataFeatures<ObservableList,String>,ObservableValue<String>>(){                   
-	                    public ObservableValue<String> call(CellDataFeatures<ObservableList, String> param) {                                                                                             
-	                        return new SimpleStringProperty(param.getValue().get(j).toString());                       
-	                    }                   
-	                });
-	                
-	                dataTable.getColumns().addAll(col);
-	                System.out.println("Column ["+i+"] ");
-	            }
-        
-//        http://blog.ngopal.com.np/2011/10/19/dyanmic-tableview-data-from-database/
-         
-         for(int o=0;o<4;o++){
-          ObservableList<String> data=FXCollections.observableArrayList();
-             
-             try {
-                 for (Iterator<SimpleList> i = accList.iterator(); accList.iterator().hasNext();) {
-                     data.add(i.next().getCellValue(o).toString());
-                      System.out.println("Row [1] added "+ data );
-                 }
-             } catch (Exception e) {
-                 
-                 System.err.println(e.toString());
-                 System.err.println("************");
-             }
-        
-             try {
-                 dataTable.setItems(data);
-             } catch (Exception e) {
-                 System.err.println(e.toString());
-                 System.err.println("************");
-             }
-        
-                 
-        
-         }          
-        
-         
-        
-        
-//        TableColumn  IdCol = new TableColumn("Id");
-//      IdCol.setCellValueFactory(new Callback<CellDataFeatures<ObservableList, String>, ObservableValue<String>>() {
-//     public ObservableValue<String> call(CellDataFeatures<ObservableList, String> p) {
-//         return new SimpleStringProperty(p.getValue().get(0).toString());
-//     }
-//     
+//        
+//         for(int i=0 ; i<3; i++){
+//	                //We are using non property style for making dynamic table
+//	                final int j = i;               
+//	                TableColumn col = new TableColumn(accList.get(0).getColName(j));
+//	                col.setCellValueFactory(new Callback<CellDataFeatures<ObservableList,String>,ObservableValue<String>>(){                   
+//	                    public ObservableValue<String> call(CellDataFeatures<ObservableList, String> param) {                                                                                             
+//	                        return new SimpleStringProperty(param.getValue().get(j).toString());                       
+//	                    }                   
+//	                });
+//	                
+//	                dataTable.getColumns().addAll(col);
+//	                System.out.println("Column ["+i+"] ");
+//	            }
+//        
+////        http://blog.ngopal.com.np/2011/10/19/dyanmic-tableview-data-from-database/
+//         
+//         for(int o=0;o<4;o++){
+//          ObservableList<String> data=FXCollections.observableArrayList();
 //             
-//      });  
+//             try {
+//                 for (Iterator<SimpleList> i = accList.iterator(); accList.iterator().hasNext();) {
+//                     data.add(i.next().getCellValue(o).toString());
+//                      System.out.println("Row [1] added "+ data );
+//                 }
+//             } catch (Exception e) {
+//                 
+//                 System.err.println(e.toString());
+//                 System.err.println("************");
+//             }
+//        
+//             try {
+//                 dataTable.setItems(data);
+//             } catch (Exception e) {
+//                 System.err.println(e.toString());
+//                 System.err.println("************");
+//             }
+//        
+//                 
+//        
+//         }          
+//        
+         
+        
+//        IdCol.setCellValueFactory(new PropertyValueFactory("id"));
+//        
+//        dataTable.getColumns().add(IdCol);
+        
+        depdate.setCellValueFactory(new PropertyValueFactory("departuredate"));
+        
+        
+            
+        
 //      
 //      dataTable.getColumns().addAll(IdCol);
 //      
@@ -198,6 +204,14 @@ public class AccListController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+       
+         
+        
+        
+         accbean  = new accountsbean();
+       this.cc=dataTable.getItems();
+       
+        this.dataTable.setItems(accbean.getAccOverview(this.cc));
         initTable();
     }    
 
