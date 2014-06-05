@@ -2,6 +2,10 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
+ *//*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 
 package org.jahap.gui;
@@ -41,6 +45,7 @@ import javafx.util.Callback;
 import javafx.util.StringConverter;
 import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.acc.accountsbean;
+import org.jahap.business.acc.AccountInfo;
 import org.jahap.entities.Accounts;
 import org.jahap.entities.SimpleList;
 
@@ -53,149 +58,78 @@ public class AccListController implements Initializable {
     @FXML
     private Button PrintButton;
     @FXML
-    private TableView<String> dataTable;
+    private TableView  dataTable;
     @FXML
     private Button Ok;
     @FXML
     private Button Cancel;
-    @FXML
-    private TableColumn  IdCol;
-    @FXML
-    private TableColumn  depdate;
+     private  List ll;
     
-    private ObservableList cc;
+  
      
-    public static final String key1="Name";
+ 
     
     private  accountsbean accbean;
-      private List<SimpleList> accList;
+
     
        private void initTable(){
        
         
-       
-  
-        
-//        
-//         for(int i=0 ; i<3; i++){
-//	                //We are using non property style for making dynamic table
-//	                final int j = i;               
-//	                TableColumn col = new TableColumn(accList.get(0).getColName(j));
-//	                col.setCellValueFactory(new Callback<CellDataFeatures<ObservableList,String>,ObservableValue<String>>(){                   
-//	                    public ObservableValue<String> call(CellDataFeatures<ObservableList, String> param) {                                                                                             
-//	                        return new SimpleStringProperty(param.getValue().get(j).toString());                       
-//	                    }                   
-//	                });
-//	                
-//	                dataTable.getColumns().addAll(col);
-//	                System.out.println("Column ["+i+"] ");
-//	            }
-//        
-////        http://blog.ngopal.com.np/2011/10/19/dyanmic-tableview-data-from-database/
-//         
-//         for(int o=0;o<4;o++){
-//          ObservableList<String> data=FXCollections.observableArrayList();
-//             
-//             try {
-//                 for (Iterator<SimpleList> i = accList.iterator(); accList.iterator().hasNext();) {
-//                     data.add(i.next().getCellValue(o).toString());
-//                      System.out.println("Row [1] added "+ data );
-//                 }
-//             } catch (Exception e) {
-//                 
-//                 System.err.println(e.toString());
-//                 System.err.println("************");
-//             }
-//        
-//             try {
-//                 dataTable.setItems(data);
-//             } catch (Exception e) {
-//                 System.err.println(e.toString());
-//                 System.err.println("************");
-//             }
-//        
-//                 
-//        
-//         }          
-//        
-         
-        
-//        IdCol.setCellValueFactory(new PropertyValueFactory("id"));
-//        
-//        dataTable.getColumns().add(IdCol);
-        
-        depdate.setCellValueFactory(new PropertyValueFactory("departuredate"));
-        
-        
-            
-        
-//      
-//      dataTable.getColumns().addAll(IdCol);
-//      
-//      
-//      
-//      
-//      TableColumn  fromCol = new TableColumn("From");
-//      IdCol.setCellValueFactory(new Callback<CellDataFeatures<ObservableList, String>, ObservableValue<String>>() {
-//     public ObservableValue<String> call(CellDataFeatures<ObservableList, String> p) {
-//         return new SimpleStringProperty(p.getValue().get(1).toString());
-//     }
-//     
-//             
-//      });  
-//      
-//      dataTable.getColumns().addAll(fromCol);
+        accbean  = new accountsbean();
       
+        ll=accbean.getAccOverview();
+       ObservableList<AccountInfo> cc=FXCollections.observableList(ll);
+   
+        
+        // -----------------  id
+        TableColumn<AccountInfo,String> IdCol = new TableColumn<AccountInfo,String>("id");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<AccountInfo, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getId());
+     }
+     
+             
+      });  
       
-      
-//      
-//      
-//      
-//       TableColumn<SimpleList,String> toDate = new TableColumn<SimpleList,String>("To");
-//      IdCol.setCellValueFactory(new Callback<CellDataFeatures<SimpleList, String>, ObservableValue<String>>() {
-//     public ObservableValue<String> call(CellDataFeatures<SimpleList, String> p) {
-//         return new ReadOnlyObjectWrapper(p.getValue().getCellValue(2));
-//     }
-//     
-//             
-//      });  
-//      toDate.setMinWidth(100);
-//      dataTable.getColumns().add(toDate);
-//      
-//      
-//         TableColumn<SimpleList,String> name = new TableColumn<SimpleList,String>("Name");
-//      IdCol.setCellValueFactory(new Callback<CellDataFeatures<SimpleList, String>, ObservableValue<String>>() {
-//     public ObservableValue<String> call(CellDataFeatures<SimpleList, String> p) {
-//         return new ReadOnlyObjectWrapper(p.getValue().getCellValue(3));
-//     }
-//     
-//             
-//      });  
-//      name.setMinWidth(200);
-//      dataTable.getColumns().add(name);
-      
+      //dataTable.getColumns().add(IdCol);
     
-            
-    
-    
-    }
+      TableColumn<AccountInfo,String> arrival = new TableColumn<AccountInfo,String>("Arrivaldate");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<AccountInfo, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getArrivaldate());
+     }
+     
+             
+      });  
       
-     private ObservableList<Map> generateDataInMap(List<SimpleList> gg) {
-        int max = 10;
-        ObservableList<Map> allData = FXCollections.observableArrayList();
-        for (int i = -1; gg.size()<=i;i++ ) {
-            Map<String, String> dataRow = new HashMap<>();
- 
-            String value1 = gg.get(i).getCellValue(3);
-            
- 
-            dataRow.put(key1, value1);
-           
- 
-            allData.add(dataRow);
-        }
-        return allData;
-    } 
+      dataTable.getColumns().add(arrival);
+      
+       TableColumn<AccountInfo,String> departure = new TableColumn<AccountInfo,String>("departuredate");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<AccountInfo, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getDeparturedate());
+     }
+     
+             
+      });  
+      
+      dataTable.getColumns().add(departure);
+      
+       TableColumn<AccountInfo,String> name = new TableColumn<AccountInfo,String>("name");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<AccountInfo, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getName());
+     }
+     
+             
+      });  
+      
+      dataTable.getColumns().add(name);
+      
+      
+      
+      dataTable.setItems(cc);
+  }  
     
        
       
@@ -208,10 +142,9 @@ public class AccListController implements Initializable {
          
         
         
-         accbean  = new accountsbean();
-       this.cc=dataTable.getItems();
+        
        
-        this.dataTable.setItems(accbean.getAccOverview(this.cc));
+        
         initTable();
     }    
 
