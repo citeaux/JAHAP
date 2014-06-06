@@ -22,9 +22,9 @@
         </Pane>
       </bottom>
       <center>
-        <TabPane prefHeight="200.0" prefWidth="200.0" rotateGraphic="false" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="20.0" tabMinHeight="20.0">
+        <TabPane fx:id="AccountTab" prefHeight="200.0" prefWidth="200.0" rotateGraphic="false" side="BOTTOM" tabClosingPolicy="UNAVAILABLE" tabMaxHeight="20.0" tabMinHeight="20.0">
           <tabs>
-            <Tab text="Account">
+            <Tab fx:id="Account" text="Account">
               <content>
                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
@@ -45,11 +45,7 @@
                 </AnchorPane>
               </content>
             </Tab>
-            <Tab text="Bill">
-              <content>
-                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
-              </content>
-            </Tab>
+            
           </tabs>
         </TabPane>
       </center>

@@ -50,6 +50,9 @@ public  class viewAccountPositionsProperty {
    
      private final SimpleStringProperty camountstring = new SimpleStringProperty();
      private final SimpleStringProperty damountstring = new SimpleStringProperty();
+     private final SimpleStringProperty billnostring = new SimpleStringProperty();
+     
+     private long billno;
      private int cAmount;
      private int dAmount;
     private  DateFormat df ;
@@ -318,11 +321,33 @@ public  class viewAccountPositionsProperty {
     public void setDamountstring(String dAmountString) {
         this.damountstring.set(dAmountString);
     }
+
+    public long getBillno() {
+        return billno;
+        
+    }
+
+    public void setBillno(long billno) {
+        this.billno = billno;
+        this.billnostring.set(String.valueOf(billno));
+    }
+    
+      public SimpleStringProperty billnostringProprty() {
+        return damountstring;
+    }
+
+    public void setBillnostring(String billnoString) {
+        this.damountstring.set(billnoString);
+    }
+    
+    
+    
     
     public AccountPosition getAccountPosition(){
         AccountPosition pos=new AccountPosition();
         pos.setBilled(this.billed);
         pos.setDebit(this.debit);
+        pos.getBill().setBillno(billno);
        ratesbean jj=new ratesbean();
         
         if(this.debit==false){

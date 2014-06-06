@@ -10,6 +10,7 @@
 
 package org.jahap.gui;
 
+import com.google.common.eventbus.EventBus;
 import com.lowagie.text.pdf.hyphenation.TernaryTree;
 import java.io.IOException;
 import java.net.URL;
@@ -47,7 +48,7 @@ import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.acc.accountsbean;
 import org.jahap.business.acc.AccountInfo;
 import org.jahap.entities.Accounts;
-import org.jahap.entities.SimpleList;
+
 
 /**
  * FXML Controller class
@@ -81,7 +82,7 @@ public class AccListController implements Initializable {
        ObservableList<AccountInfo> cc=FXCollections.observableList(ll);
    
         
-        // -----------------  id
+//         -----------------  id
         TableColumn<AccountInfo,String> IdCol = new TableColumn<AccountInfo,String>("id");
       IdCol.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<AccountInfo, String> p) {
@@ -91,10 +92,10 @@ public class AccListController implements Initializable {
              
       });  
       
-      //dataTable.getColumns().add(IdCol);
+//     dataTable.getColumns().add(IdCol);
     
       TableColumn<AccountInfo,String> arrival = new TableColumn<AccountInfo,String>("Arrivaldate");
-      IdCol.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
+      arrival.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<AccountInfo, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getArrivaldate());
      }
@@ -105,7 +106,7 @@ public class AccListController implements Initializable {
       dataTable.getColumns().add(arrival);
       
        TableColumn<AccountInfo,String> departure = new TableColumn<AccountInfo,String>("departuredate");
-      IdCol.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
+      departure.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<AccountInfo, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getDeparturedate());
      }
@@ -116,7 +117,7 @@ public class AccListController implements Initializable {
       dataTable.getColumns().add(departure);
       
        TableColumn<AccountInfo,String> name = new TableColumn<AccountInfo,String>("name");
-      IdCol.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
+      name.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<AccountInfo, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getName());
      }
@@ -126,6 +127,17 @@ public class AccListController implements Initializable {
       
       dataTable.getColumns().add(name);
       
+      
+        TableColumn<AccountInfo,String> balance = new TableColumn<AccountInfo,String>("Balance");
+      balance.setCellValueFactory(new Callback<CellDataFeatures<AccountInfo, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<AccountInfo, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getBalance());
+     }
+     
+             
+      });  
+      
+      dataTable.getColumns().add(balance);
       
       
       dataTable.setItems(cc);
@@ -153,7 +165,28 @@ public class AccListController implements Initializable {
     }
 
     @FXML
-    private void MouseClicked(MouseEvent event) {
+    private void MouseClicked(MouseEvent event) throws IOException {
+        AccountInfo Ai=(AccountInfo) dataTable.getSelectionModel().getSelectedItem();
+        int id;
+        id= Integer.valueOf(Ai.getId());
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/simpelAccounting.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        SimpelAccountingController controller= loader.<SimpelAccountingController>getController();
+       controller.init(id);
+       
+      
+        stage.showAndWait();
+        
     }
 
     @FXML

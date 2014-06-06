@@ -275,7 +275,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
     @FXML
     private void Open_Account(ActionEvent event) throws IOException {
         
-        eventbus=new EventBus("Position"); 
+
         
          Stage stage = new Stage();
         String fxmlFile = "/fxml/simpelAccounting.fxml";
@@ -290,9 +290,9 @@ public class ResguiController implements Initializable, InterResSearchResultList
         
         stage.setScene(scene);
         SimpelAccountingController controller= loader.<SimpelAccountingController>getController();
-       controller.init(accountid,eventbus);
+       controller.init(accountid);
        
-        eventbus.register(controller);
+       
         stage.showAndWait();
         
         
