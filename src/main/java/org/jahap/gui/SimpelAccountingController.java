@@ -64,27 +64,28 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     @FXML
     private TableView Account_tablefx;
-        private TableColumn<viewAccountPositionsProperty, String>id_Account_tablefx;                                                   
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String> date_Account_tablefx;
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String> cService_Account_tablefxColumn;
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String> cAmount_Account_tablefxColumn;
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String> dService_Account_tablefxColumn;
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String> dAmount_Account_tablefxColumn;
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String> cPrice_Account_tablefxColumn;
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String> dPrice_Account_tablefxColumn;
-    private EventBus eventbus;
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String> cTotal_Account_tablefxColumn;
-    @FXML
-    private TableColumn<viewAccountPositionsProperty, String> dTotal_Account_tablefxColumn;
     
+    @FXML
+         private TableColumn<viewAccountPositionsProperty, String>id_Account_tablefx;                                                   
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> date_Account_tablefx;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> cService_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> cAmount_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> dService_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> dAmount_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> cPrice_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> dPrice_Account_tablefxColumn;
+        private EventBus eventbus;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> cTotal_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> dTotal_Account_tablefxColumn;
     
     
     @FXML
@@ -112,7 +113,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private List<AccountPosition> accpos;
     private long rateid=0;
     //private ObservableList<viewAccountPositions> data;
-    final ObservableList<viewAccountPositionsProperty> datam=FXCollections.observableArrayList();;
+    final ObservableList<viewAccountPositionsProperty> datam=FXCollections.observableArrayList();
     @FXML
     private Tooltip balance_textbox_fxtooltip;
   
@@ -120,8 +121,250 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private Tab Account;
     
     
+    
     private List<AccountViewer> accViewList;
+    
+    private class BillTabs{
+        
+        @FXML
+         private TableColumn<viewAccountPositionsProperty, String>id_Account_tablefx;                                                   
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> date_Account_tablefx;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> cService_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> cAmount_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> dService_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> dAmount_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> cPrice_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> dPrice_Account_tablefxColumn;
+        private EventBus eventbus;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> cTotal_Account_tablefxColumn;
+        @FXML
+        private TableColumn<viewAccountPositionsProperty, String> dTotal_Account_tablefxColumn;
+        
+        
+         private ObservableList<viewAccountPositionsProperty> datamk=FXCollections.observableArrayList();
+         private long billno;
+         private Tab billtab;
+        private TableView ggk;
+         
+          
+         
+        public BillTabs(long billno) {
+           ggk = new TableView();
+             ggk.setPrefHeight(501);
+             ggk.setPrefWidth(829);
+             this.setBillno(billno);
+             
+             billtab = new Tab();
+            billtab.setText(String.valueOf(billno));
+            billtab.setContent(ggk);
+        }     
+
+        public TableView getGgk() {
+            return ggk;
+        }
+
+        public void setGgk(TableView ggk) {
+            this.ggk = ggk;
+        }
+             
+        
+        
+        public long getBillno() {
+            return billno;
+        }
+
+        public void setBillno(long billno) {
+            this.billno = billno;
+        }
+
+        public Tab getBilltab() {
+            return billtab;
+        }
+
+        public void setBilltab(Tab billtab) {
+            this.billtab = billtab;
+        }
+        
+        public void addPosition(viewAccountPositionsProperty jj){
+            datamk.add(jj);
+        }
+        
+        public ObservableList<viewAccountPositionsProperty>getList(){
+            return datamk;
+        }
+        
+        public void createTabel(){
+            buildTable(this.ggk);
+        }
+        
+        
+          private void buildTable(TableView ko){
+              // #################  ID       
+            this.id_Account_tablefx  = new TableColumn<viewAccountPositionsProperty, String>("idx");
+             this.id_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("idx"));
+                     
+           
+            
+             
+             
+              // ############### Date
+                
+                 
+             this.date_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("rateDateString"));
+             this.date_Account_tablefx .setCellFactory(new Callback<TableColumn<viewAccountPositionsProperty, String>, TableCell<viewAccountPositionsProperty, String>>() {
+                  @Override
+                  public TableCell<viewAccountPositionsProperty, String> call(TableColumn<viewAccountPositionsProperty, String> param) {
+                      return new TableCell<viewAccountPositionsProperty, String>() {
+                                 
+                         @Override
+                         public void updateItem(String item, boolean empty) {
+                             Tooltip tol=new Tooltip("Info");
+                             
+                              super.updateItem(item, empty);
+                              
+                               int tl=getIndex();
+
+                               if(tl<=datam.size()-1){
+                                 if(datam.get(tl).isDebit()==true){
+                                 // DEV: Stylshert implement
+                                 // setStyle("-fx-font-style: italic;");
+                                 
+                                 }
+                                 if(datam.get(tl).isCanceled()==true){
+                                  setTextFill(Color.RED);
+                                   tol.setText("This position is canceled");
+                                    Tooltip.install(this, tol);
+                                 }
+                                 if(datam.get(tl).isBilled()==true){
+                                    setTextFill(Color.GREY);
+                                    String texttip=new String();
+                                    texttip="This position is billed";
+                                      if(datam.get(tl).isCanceled()==true){
+                                         texttip= texttip + " and canceled";
+                                      }
+                                    tol.setText(texttip);
+                                    Tooltip.install(this, tol);
+                                 }
+                                 setText(item);
+                               }
+                               
+                                setText(item);
+//                               }
+                          }
+                         
+                         
+                          
+                         
+                      };
+                  }
+                });  
+             
+                             
+              // #############cAmount
+             
+             this.cAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("camountstring"));
+             this.cAmount_Account_tablefxColumn.setCellFactory(new Callback<TableColumn<viewAccountPositionsProperty, String>, TableCell<viewAccountPositionsProperty, String>>() {
+                  @Override
+              public TableCell<viewAccountPositionsProperty, String> call(TableColumn<viewAccountPositionsProperty, String> param) {
+                      return new TableCell<viewAccountPositionsProperty, String>() {
+                                 
+                         @Override
+                         public void updateItem(String item, boolean empty) {
+                             
+                             
+                              super.updateItem(item, empty);
+                              
+                               int tl=getIndex();
+
+                                if(tl<=datam.size()-1){
+                                 if(datam.get(tl).isBilled()==true){
+                                 setTextFill(Color.GREY);
+                                    String texttip=new String();
+                                    texttip="This position is billed";
+                                     
+                                 }
+                                 setText(item);
+                             
+                         } 
+                          
+                         }
+                      };
+                  }
+                });  
+             
+        
+             // ################ cPosname
+             
+             //cService_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cPosition");
+             this.cService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cpositionname"));
+           
+             
+             
+              // #############cPrice
+            
+             this.cPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cpricestring"));
+              // ################ cTotal
+             
+             this.cTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("ctotal"));
+              
+             
+             
+          
+             
+            
+             
+             // ##############dPosname
+             
+              this.dService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dpositionname"));
+              
+             
+              this.dService_Account_tablefxColumn.setStyle("-fx-table-cell-border-color: grey");
+              
+          
+             // #################dAmount
+          
+              this.dAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("damountstring"));
+            
+                // #############dPrice
+            
+             this.dPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dpricestring"));
+             
+              // ################ dTotal
+                       
+            this.dTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dtotal"));
+           
+              
+             
+           
+              
+             
+              
+              
+  
+             
+             
+          // List<viewAccountPositionsProperty> accview=new ArrayList<viewAccountPositionsProperty>();
    
+    
+   
+   
+   
+             
+  
+       ko.setItems(this.datamk);
+    }
+        
+    }
+    
+    private List<BillTabs> billtablist;
 
     @Override
     protected Object clone() throws CloneNotSupportedException {
@@ -152,6 +395,9 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
         balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
                  String.valueOf(acc.getSumofDebitsPos()));
+       
+              
+        
         
     }
     
@@ -204,19 +450,61 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         } catch (Exception e) {
         }
                
-               
-               
                TabPane gg=Account.getTabPane();
-              Tab tabBill= new Tab();
-             gg.getTabs().add(tabBill);
+               billtablist= new ArrayList<BillTabs>();
+              boolean gh=false;
+               // Search for Billed Position
+            for(Iterator<viewAccountPositionsProperty> im=datam.iterator(); im.hasNext();  ){
+                 gh=false;
+                 viewAccountPositionsProperty ggl=im.next();
+                 
+                if(ggl.getBillno()!=0){
+                       // search for exiting tab with bill no
+                       for(Iterator<BillTabs> tbas=billtablist.iterator();tbas.hasNext();){
+                               if(tbas.next().billno==im.next().getBillno()) {
+                                   BillTabs koller=tbas.next();   
+                                   gh=true; 
+                                      // add position to Tab ObsList
+                                      koller.addPosition(im.next());
+                               } 
+                              
+                         
+                        }
+                       // Add new tab
+                     try {
+                        if (gh == false) {
+                            
+                            
+                            BillTabs jj = new BillTabs(ggl.getBillno());
+
+                            // add position to Tab ObsList
+                            jj.addPosition(ggl);
+                            
+                        }
+                    } catch (Exception e) {
+                         System.err.println(e.toString());
+                    }
+                     
+                     
+                }
+                
+            } 
+               
+               
+             for(Iterator<BillTabs>kkl=billtablist.iterator();kkl.hasNext();){
+                 BillTabs mlk=kkl.next();
+                 mlk.createTabel();
+                 gg.getTabs().add(mlk.getBilltab());   
+                 
+             }  
+              
              
              
-             TableView ggk = new TableView();
-             ggk.setPrefHeight(501);
-             ggk.setPrefWidth(829);
+             
+             
             
-             tabBill.setText("Rechnung");
-             tabBill.setContent(ggk);
+             
+             
                      
            
                      
