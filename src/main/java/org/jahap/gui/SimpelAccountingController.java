@@ -194,11 +194,18 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         }
         
         public void addPosition(viewAccountPositionsProperty jj){
-            datamk.add(jj);
+            try {
+                this.datamk.add(jj);
+            } catch (Exception e) {
+                System.out.println("---<BillTabs>---");
+                System.out.println(e.toString());               
+            }
+            
+            
         }
         
         public ObservableList<viewAccountPositionsProperty>getList(){
-            return datamk;
+            return this.datamk;
         }
         
         public void createTabel(){
@@ -217,7 +224,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
              
               // ############### Date
                 
-                 
+             this.date_Account_tablefx=new TableColumn<viewAccountPositionsProperty, String>("rateDateString");    
              this.date_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("rateDateString"));
              this.date_Account_tablefx .setCellFactory(new Callback<TableColumn<viewAccountPositionsProperty, String>, TableCell<viewAccountPositionsProperty, String>>() {
                   @Override
@@ -266,10 +273,10 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                       };
                   }
                 });  
-             
-                             
+             ko.getColumns().add(this.date_Account_tablefx);
+                          
               // #############cAmount
-             
+             this.cAmount_Account_tablefxColumn=new TableColumn<viewAccountPositionsProperty, String>("camountstring"); 
              this.cAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("camountstring"));
              this.cAmount_Account_tablefxColumn.setCellFactory(new Callback<TableColumn<viewAccountPositionsProperty, String>, TableCell<viewAccountPositionsProperty, String>>() {
                   @Override
@@ -299,22 +306,23 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                       };
                   }
                 });  
-             
+             ko.getColumns().add(this.cAmount_Account_tablefxColumn);   
         
              // ################ cPosname
              
-             //cService_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cPosition");
+           this.cService_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cPosition");
              this.cService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cpositionname"));
-           
+           ko.getColumns().add(this.cPrice_Account_tablefxColumn);   
              
              
               // #############cPrice
-            
+             this.cPrice_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cpricestring");
              this.cPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cpricestring"));
+             ko.getColumns().add(this.dPrice_Account_tablefxColumn);   
               // ################ cTotal
-             
+              this.cTotal_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("ctotal");
              this.cTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("ctotal"));
-              
+              ko.getColumns().add(this.dTotal_Account_tablefxColumn);   
              
              
           
@@ -322,25 +330,26 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             
              
              // ##############dPosname
-             
+               this.dService_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("dpositionname");
               this.dService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dpositionname"));
               
              
               this.dService_Account_tablefxColumn.setStyle("-fx-table-cell-border-color: grey");
-              
+              ko.getColumns().add(this.dAmount_Account_tablefxColumn);   
           
              // #################dAmount
-          
+              this.dAmount_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("damountstring");
               this.dAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("damountstring"));
-            
+            ko.getColumns().add(this.dAmount_Account_tablefxColumn);   
+              
                 // #############dPrice
-            
+             this.dPrice_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("dpricestring");
              this.dPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dpricestring"));
-             
+             ko.getColumns().add(this.dPrice_Account_tablefxColumn);   
               // ################ dTotal
-                       
+             this.dTotal_Account_tablefxColumn = new TableColumn<viewAccountPositionsProperty, String>("dtotal");          
             this.dTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dtotal"));
-           
+           ko.getColumns().add(this.dTotal_Account_tablefxColumn);   
               
              
            
@@ -461,11 +470,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 if(ggl.getBillno()!=0){
                        // search for exiting tab with bill no
                        for(Iterator<BillTabs> tbas=billtablist.iterator();tbas.hasNext();){
-                               if(tbas.next().billno==im.next().getBillno()) {
-                                   BillTabs koller=tbas.next();   
+                           BillTabs koller=tbas.next();   
+                               if(koller.billno==ggl.getBillno()) {
+                                   
                                    gh=true; 
                                       // add position to Tab ObsList
-                                      koller.addPosition(im.next());
+                                      koller.addPosition(ggl);
                                } 
                               
                          
@@ -480,9 +490,11 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                             // add position to Tab ObsList
                             jj.addPosition(ggl);
                             
+                            billtablist.add(jj);
                         }
                     } catch (Exception e) {
-                         System.err.println(e.toString());
+                         System.out.println("----<add to billtablist >-----");
+                         e.printStackTrace();
                     }
                      
                      
