@@ -2,9 +2,11 @@
 
 <?import java.lang.*?>
 <?import java.util.*?>
+<?import javafx.collections.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
 
 <AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="790.0" prefWidth="953.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.jahap.gui.SimpelAccountingController">
   <children>
@@ -45,7 +47,6 @@
                 </AnchorPane>
               </content>
             </Tab>
-            
           </tabs>
         </TabPane>
       </center>
@@ -61,11 +62,32 @@
               </tooltip>
             </Button>
             <Button fx:id="printOverview" mnemonicParsing="false" onAction="#printOverview" prefHeight="34.0" prefWidth="124.0" text="Print Overview" />
-            <Button fx:id="createInvoice" mnemonicParsing="false" onAction="#createInvoice" prefHeight="34.0" prefWidth="124.0" text="Create Invoice" />
             <Button fx:id="closeAccount" mnemonicParsing="false" onAction="#closeAccount" prefHeight="34.0" prefWidth="124.0" text="Close Account" />
             <Button id="closeAccount" fx:id="AdvancedChargeRates" mnemonicParsing="false" onAction="#AdvancedChargeRates" prefHeight="34.0" prefWidth="124.0" text="Charge Rates">
               <tooltip>
                 <Tooltip text="Charge Rate in advance" />
+              </tooltip>
+            </Button>
+            <Separator prefHeight="61.0" prefWidth="124.0" />
+            <Button id="createInvoice" fx:id="createInvoiceButton" mnemonicParsing="false" onAction="#createInvoice" prefHeight="34.0" prefWidth="124.0" text="Create Invoice" />
+            <ChoiceBox fx:id="movePositionToBillChoiceBox" prefHeight="34.0" prefWidth="124.0">
+              <items>
+                <FXCollections fx:factory="observableArrayList">
+                  <String fx:value="Item 1" />
+                  <String fx:value="Item 2" />
+                  <String fx:value="Item 3" />
+                </FXCollections>
+              </items>
+              <tooltip>
+                <Tooltip text="Move Selected Position to Bill" />
+              </tooltip>
+            </ChoiceBox>
+            <Button id="removePosfromBill" fx:id="removePosfromBillbutton" mnemonicParsing="false" onAction="#removePosfromBill" prefHeight="34.0" prefWidth="124.0" text="Del BillPos">
+              <font>
+                <Font size="15.0" />
+              </font>
+              <tooltip>
+                <Tooltip text="Delete selected Position from Bill" />
               </tooltip>
             </Button>
           </children>
