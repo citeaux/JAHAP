@@ -40,7 +40,7 @@ public  class viewAccountPositionsProperty {
      
      private final SimpleStringProperty cpricestring = new SimpleStringProperty();
      private final SimpleStringProperty dpricestring = new SimpleStringProperty();
-     
+     private final SimpleStringProperty billnamestring = new SimpleStringProperty();
      private long cRateid;
      private long dRateid;
      private final SimpleStringProperty cpositionname=new SimpleStringProperty();
@@ -77,7 +77,7 @@ public  class viewAccountPositionsProperty {
         this.rateId = rateId;
     }
      
-     
+   
      
     public SimpleStringProperty getRateDateStringProperty(){
         return rateDateString;
@@ -193,7 +193,18 @@ public  class viewAccountPositionsProperty {
     
     }
     
+    public void setBillnamestring(String billname){
+         this.billnamestring.set(billname);
+    }
 
+    public SimpleStringProperty getbillnamestringProperty(){
+        return billnamestring;
+    }
+    
+    public String getBillnamestring(){
+        return billnamestring.get();
+    }
+    
     public void setCpositionname(String cPositionname) {
         this.cpositionname.set(cPositionname);
     }

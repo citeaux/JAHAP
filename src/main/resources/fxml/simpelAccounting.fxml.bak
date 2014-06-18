@@ -69,20 +69,14 @@
               </tooltip>
             </Button>
             <Separator prefHeight="61.0" prefWidth="124.0" />
-            <Button id="createInvoice" mnemonicParsing="false" onAction="#createInvoice" prefHeight="34.0" prefWidth="124.0" text="Create Invoice" />
-            <ChoiceBox prefHeight="34.0" prefWidth="124.0">
-              <items>
-                <FXCollections fx:factory="observableArrayList">
-                  <String fx:value="Item 1" />
-                  <String fx:value="Item 2" />
-                  <String fx:value="Item 3" />
-                </FXCollections>
-              </items>
+            <Button id="createInvoice" fx:id="createInvoiceButton" mnemonicParsing="false" onAction="#createInvoice" prefHeight="34.0" prefWidth="124.0" text="Create Invoice" />
+            <ChoiceBox fx:id="movePositionToBillChoiceBox" prefHeight="34.0" prefWidth="124.0">
+             
               <tooltip>
                 <Tooltip text="Move Selected Position to Bill" />
               </tooltip>
             </ChoiceBox>
-            <Button mnemonicParsing="false" prefHeight="34.0" prefWidth="124.0" text="Del BillPos">
+            <Button id="removePosfromBill" fx:id="removePosfromBillbutton" mnemonicParsing="false" onAction="#removePosfromBill" prefHeight="34.0" prefWidth="124.0" text="Del BillPos">
               <font>
                 <Font size="15.0" />
               </font>

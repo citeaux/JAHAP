@@ -70,14 +70,8 @@
             </Button>
             <Separator prefHeight="61.0" prefWidth="124.0" />
             <Button id="createInvoice" fx:id="createInvoiceButton" mnemonicParsing="false" onAction="#createInvoice" prefHeight="34.0" prefWidth="124.0" text="Create Invoice" />
+            <Button id="createInvoice" mnemonicParsing="false" onAction="#MovePosition" prefHeight="34.0" prefWidth="124.0" text="Move To:" />
             <ChoiceBox fx:id="movePositionToBillChoiceBox" prefHeight="34.0" prefWidth="124.0">
-              <items>
-                <FXCollections fx:factory="observableArrayList">
-                  <String fx:value="Item 1" />
-                  <String fx:value="Item 2" />
-                  <String fx:value="Item 3" />
-                </FXCollections>
-              </items>
               <tooltip>
                 <Tooltip text="Move Selected Position to Bill" />
               </tooltip>

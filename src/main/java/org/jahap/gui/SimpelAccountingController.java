@@ -116,6 +116,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     @FXML
     private Tooltip balance_textbox_fxtooltip;
   
+    private ObservableList<String> tempBills=FXCollections.observableArrayList();
+    
     @FXML
     private Tab Account;
     
@@ -126,275 +128,19 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     @FXML
     private Button createInvoiceButton;
     @FXML
-    private ChoiceBox<?> movePositionToBillChoiceBox;
+    private ChoiceBox<String> movePositionToBillChoiceBox;
     @FXML
     private Button removePosfromBillbutton;
+    @FXML
+    private TabPane AccountTab;
+   
     
 
     @FXML
     private void removePosfromBill(ActionEvent event) {
     }
     
-    private class BillTabs{
-        
-        @FXML
-         private TableColumn<viewAccountPositionsProperty, String>id_Account_tablefx;                                                   
-        @FXML
-        private TableColumn<viewAccountPositionsProperty, String> date_Account_tablefx;
-        @FXML
-        private TableColumn<viewAccountPositionsProperty, String> cService_Account_tablefxColumn;
-        @FXML
-        private TableColumn<viewAccountPositionsProperty, String> cAmount_Account_tablefxColumn;
-        @FXML
-        private TableColumn<viewAccountPositionsProperty, String> dService_Account_tablefxColumn;
-        @FXML
-        private TableColumn<viewAccountPositionsProperty, String> dAmount_Account_tablefxColumn;
-        @FXML
-        private TableColumn<viewAccountPositionsProperty, String> cPrice_Account_tablefxColumn;
-        @FXML
-        private TableColumn<viewAccountPositionsProperty, String> dPrice_Account_tablefxColumn;
-        private EventBus eventbus;
-        @FXML
-        private TableColumn<viewAccountPositionsProperty, String> cTotal_Account_tablefxColumn;
-        @FXML
-        private TableColumn<viewAccountPositionsProperty, String> dTotal_Account_tablefxColumn;
-        
-        
-         private ObservableList<viewAccountPositionsProperty> datamk=FXCollections.observableArrayList();
-         private long billno;
-         private Tab billtab;
-        private TableView ggk;
-         
-          
-         
-        public BillTabs(long billno) {
-           ggk = new TableView();
-             ggk.setPrefHeight(501);
-             ggk.setPrefWidth(829);
-             this.setBillno(billno);
-             
-             billtab = new Tab();
-            billtab.setText(String.valueOf(billno));
-            billtab.setContent(ggk);
-        }     
-        
-        
-        public BillTabs(String billname) {
-           ggk = new TableView();
-             ggk.setPrefHeight(501);
-             ggk.setPrefWidth(829);
-             this.setBillno(billno);
-             
-             billtab = new Tab();
-            billtab.setText(billname);
-            billtab.setContent(ggk);
-        }     
-
-        public TableView getGgk() {
-            return ggk;
-        }
-
-        public void setGgk(TableView ggk) {
-            this.ggk = ggk;
-        }
-             
-        
-        
-        public long getBillno() {
-            return billno;
-        }
-
-        public void setBillno(long billno) {
-            this.billno = billno;
-        }
-
-        public Tab getBilltab() {
-            return billtab;
-        }
-
-        public void setBilltab(Tab billtab) {
-            this.billtab = billtab;
-        }
-        
-        public void addPosition(viewAccountPositionsProperty jj){
-            try {
-                this.datamk.add(jj);
-            } catch (Exception e) {
-                System.out.println("---<BillTabs>---");
-                System.out.println(e.toString());               
-            }
-            
-            
-        }
-        
-        public ObservableList<viewAccountPositionsProperty>getList(){
-            return this.datamk;
-        }
-        
-        public void createTabel(){
-            buildTable(this.ggk);
-        }
-        
-        
-          private void buildTable(TableView ko){
-              // #################  ID       
-            this.id_Account_tablefx  = new TableColumn<viewAccountPositionsProperty, String>("idx");
-             this.id_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("idx"));
-                     
-           
-            
-             
-             
-              // ############### Date
-                
-             this.date_Account_tablefx=new TableColumn<viewAccountPositionsProperty, String>("rateDateString");    
-             this.date_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("rateDateString"));
-             this.date_Account_tablefx .setCellFactory(new Callback<TableColumn<viewAccountPositionsProperty, String>, TableCell<viewAccountPositionsProperty, String>>() {
-                  @Override
-                  public TableCell<viewAccountPositionsProperty, String> call(TableColumn<viewAccountPositionsProperty, String> param) {
-                      return new TableCell<viewAccountPositionsProperty, String>() {
-                                 
-                         @Override
-                         public void updateItem(String item, boolean empty) {
-                             Tooltip tol=new Tooltip("Info");
-                             
-                              super.updateItem(item, empty);
-                              
-                               int tl=getIndex();
-
-                               if(tl<=datamk.size()-1){
-                                 if(datamk.get(tl).isDebit()==true){
-                                 // DEV: Stylshert implement
-                                 // setStyle("-fx-font-style: italic;");
-                                 
-                                 }
-                                 if(datamk.get(tl).isCanceled()==true){
-                                  setTextFill(Color.RED);
-                                   tol.setText("This position is canceled");
-                                    Tooltip.install(this, tol);
-                                 }
-                                 if(datamk.get(tl).isBilled()==true){
-                                    setTextFill(Color.GREY);
-                                    String texttip=new String();
-                                    texttip="This position is billed";
-                                      if(datamk.get(tl).isCanceled()==true){
-                                         texttip= texttip + " and canceled";
-                                      }
-                                    tol.setText(texttip);
-                                    Tooltip.install(this, tol);
-                                 }
-                                 setText(item);
-                               }
-                               
-                                setText(item);
-//                               }
-                          }
-                         
-                         
-                          
-                         
-                      };
-                  }
-                });  
-             ko.getColumns().add(this.date_Account_tablefx);
-                          
-              // #############cAmount
-             this.cAmount_Account_tablefxColumn=new TableColumn<viewAccountPositionsProperty, String>("camountstring"); 
-             this.cAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("camountstring"));
-             this.cAmount_Account_tablefxColumn.setCellFactory(new Callback<TableColumn<viewAccountPositionsProperty, String>, TableCell<viewAccountPositionsProperty, String>>() {
-                  @Override
-              public TableCell<viewAccountPositionsProperty, String> call(TableColumn<viewAccountPositionsProperty, String> param) {
-                      return new TableCell<viewAccountPositionsProperty, String>() {
-                                 
-                         @Override
-                         public void updateItem(String item, boolean empty) {
-                             
-                             
-                              super.updateItem(item, empty);
-                              
-                               int tl=getIndex();
-
-                                if(tl<=datamk.size()-1){
-                                 if(datamk.get(tl).isBilled()==true){
-                                 setTextFill(Color.GREY);
-                                    String texttip=new String();
-                                    texttip="This position is billed";
-                                     
-                                 }
-                                 setText(item);
-                             
-                         } 
-                          
-                         }
-                      };
-                  }
-                });  
-             ko.getColumns().add(this.cAmount_Account_tablefxColumn);   
-        
-             // ################ cPosname
-             
-           this.cService_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cPosition");
-             this.cService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cpositionname"));
-           ko.getColumns().add(this.cService_Account_tablefxColumn);   
-             
-             
-              // #############cPrice
-             this.cPrice_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("cpricestring");
-             this.cPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("cpricestring"));
-             ko.getColumns().add(this.cPrice_Account_tablefxColumn);   
-              // ################ cTotal
-              this.cTotal_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("ctotal");
-             this.cTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("ctotal"));
-              ko.getColumns().add(this.cTotal_Account_tablefxColumn);   
-             
-             
-          
-             
-            
-             
-             // ##############dPosname
-               this.dService_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("dpositionname");
-              this.dService_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dpositionname"));
-              
-             
-              this.dService_Account_tablefxColumn.setStyle("-fx-table-cell-border-color: grey");
-              ko.getColumns().add(this.dService_Account_tablefxColumn);   
-          
-             // #################dAmount
-              this.dAmount_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("damountstring");
-              this.dAmount_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("damountstring"));
-            ko.getColumns().add(this.dAmount_Account_tablefxColumn);   
-              
-                // #############dPrice
-             this.dPrice_Account_tablefxColumn  = new TableColumn<viewAccountPositionsProperty, String>("dpricestring");
-             this.dPrice_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dpricestring"));
-             ko.getColumns().add(this.dPrice_Account_tablefxColumn);   
-              // ################ dTotal
-             this.dTotal_Account_tablefxColumn = new TableColumn<viewAccountPositionsProperty, String>("dtotal");          
-            this.dTotal_Account_tablefxColumn.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("dtotal"));
-           ko.getColumns().add(this.dTotal_Account_tablefxColumn);   
-              
-             
-           
-              
-             
-              
-              
-  
-             
-             
-          // List<viewAccountPositionsProperty> accview=new ArrayList<viewAccountPositionsProperty>();
-   
     
-   
-   
-   
-             
-  
-       ko.setItems(this.datamk);
-    }
-        
-    }
     
     private List<BillTabs> billtablist;
 
@@ -456,8 +202,19 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 bz.setCanceled(zw.isCanceled());
                 
                 
-                bz.setBillno(zw.getBill().getBillno());
-
+                try {
+                    bz.setBillnamestring(zw.getBill().getBillname());
+                } catch (Exception e) {
+                    bz.setBillnamestring("");
+                }
+              
+                        try {
+                    bz.setBillno(zw.getBill().getBillno());
+                } catch (Exception e) {
+                     bz.setBillno(0); 
+                }
+                
+           
                 // ############### Split Credit Row  #####################      
                 if (zw.getDebit() == false) {
                     bz.setcAmount(zw.getAmount());
@@ -480,6 +237,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             
             }            
         } catch (Exception e) {
+            System.err.print("----<property set >----");
+            e.printStackTrace();
         }
                
                TabPane gg=Account.getTabPane();
@@ -494,11 +253,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                        // search for exiting tab with bill no
                        for(Iterator<BillTabs> tbas=billtablist.iterator();tbas.hasNext();){
                            BillTabs koller=tbas.next();   
-                               if(koller.billno==ggl.getBillno()) {
+                               if(koller.getBillno()==ggl.getBillno()) {
                                    
                                    gh=true; 
                                       // add position to Tab ObsList
                                       koller.addPosition(ggl);
+                                      
                                } 
                               
                          
@@ -520,7 +280,44 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                          e.printStackTrace();
                     }
                      
-                     
+                     // TEMP BILLS: Bills that are not closed yet and therefore have non billno
+                }else{
+                    if(ggl.getBillno()==0){
+                        if(ggl.getBillnamestring()!=""){
+                            
+                               for(Iterator<BillTabs> tbas=billtablist.iterator();tbas.hasNext();){
+                           BillTabs koller=tbas.next();   
+                               if(koller.getBillno()==ggl.getBillno()) {
+                                   
+                                   gh=true; 
+                                      // add position to Tab ObsList
+                                      koller.addPosition(ggl);
+                                      
+                               } 
+                              
+                         
+                        }
+                       // Add new tab
+                     try {
+                        if (gh == false) {
+                            
+                            
+                             BillTabs jj = new BillTabs(ggl.getBillnamestring());
+                              jj.addPosition(ggl);
+                              billtablist.add(jj);
+                              tempBills.add(ggl.getBillnamestring());
+                        }
+                    } catch (Exception e) {
+                         System.out.println("----<add to billtablist TEMP >-----");
+                         e.printStackTrace();
+                    }
+                            
+                            
+                            
+                            
+                             
+                        }
+                    }
                 }
                 
             } 
@@ -533,7 +330,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                  
              }  
               
-             
+             movePositionToBillChoiceBox.setItems(tempBills);
              
              
              
@@ -842,6 +639,10 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 
         BillTabs jj=new BillTabs("Temp");
         billtablist.add(jj);
+         TabPane gg=Account.getTabPane();
+        gg.getTabs().add(jj.getBilltab());
+        tempBills.add(jj.getBilltab().getText());
+        
     }
 
     @FXML
@@ -896,5 +697,25 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
        }
 }
 
+    @FXML
+    private void MovePosition(ActionEvent event) {
+        for(Iterator<BillTabs> k= billtablist.listIterator();k.hasNext();){
+             BillTabs ko=k.next();
+                    if(ko.getBillname()==movePositionToBillChoiceBox.getValue()){
+                        ObservableList<viewAccountPositionsProperty> jh=  Account_tablefx.getSelectionModel().getSelectedItems();
+                        ko.addPositions(jh);
+                         for(Iterator<viewAccountPositionsProperty> lop=jh.listIterator();lop.hasNext();){
+                               viewAccountPositionsProperty fou=lop.next();
+                               fou.setBillnamestring(movePositionToBillChoiceBox.getValue());
+                               
+                         }
+                        
+                        
+                    }  
+                   
+        
+        
+    }
+    }
        
 }
