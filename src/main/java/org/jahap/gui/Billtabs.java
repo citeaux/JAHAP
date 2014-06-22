@@ -21,6 +21,7 @@ package org.jahap.gui;
 import com.google.common.eventbus.EventBus;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TableCell;
@@ -133,7 +134,18 @@ public class BillTabs{
         }
         
         public void addPositions(ObservableList<viewAccountPositionsProperty> jj){
-             datamk.addAll(jj);
+            
+            
+            boolean addAll = this.datamk.addAll(jj);
+//            ggk.getItems().removeAll();
+//            
+//            ggk.getItems().add(datamk);
+//            billtab.setContent(ggk);
+            
+            this.ggk.setVisible(false);
+            this.ggk.setVisible(true);
+            
+            
         }
         
         
@@ -143,6 +155,10 @@ public class BillTabs{
         
         public void createTabel(){
             buildTable(this.ggk);
+        }
+        
+        public void refreshTab(){
+             
         }
         
         

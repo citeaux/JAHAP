@@ -133,6 +133,13 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private Button removePosfromBillbutton;
     @FXML
     private TabPane AccountTab;
+    @FXML
+    private Button PrintAndCloseBill_FxButton;
+    @FXML
+    private TitledPane x1;
+    @FXML
+    private TitledPane x2;
+    
    
     
 
@@ -638,6 +645,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         
                 
         BillTabs jj=new BillTabs("Temp");
+        jj.createTabel(); // Create Tabel in TAB 
         billtablist.add(jj);
          TabPane gg=Account.getTabPane();
         gg.getTabs().add(jj.getBilltab());
@@ -703,19 +711,36 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
              BillTabs ko=k.next();
                     if(ko.getBillname()==movePositionToBillChoiceBox.getValue()){
                         ObservableList<viewAccountPositionsProperty> jh=  Account_tablefx.getSelectionModel().getSelectedItems();
-                        ko.addPositions(jh);
+                        boolean haki=false;
+                        
+                        // Is a Position allready billed or marked for Billing?
+                        for(Iterator<viewAccountPositionsProperty> olk=jh.listIterator();olk.hasNext();){
+                          if(olk.next().getBillno()!=0 || olk.next().getBillnamestring()!="") haki=true;
+                        
+                        }
+                        
+                        //Only if the position is not marked (has no Billno / or Billname) move to new bill and mark as be in bill processing
+                        if(haki!=true){
+                        
+                        ko.addPositions(jh); // add all marked Position
                          for(Iterator<viewAccountPositionsProperty> lop=jh.listIterator();lop.hasNext();){
                                viewAccountPositionsProperty fou=lop.next();
                                fou.setBillnamestring(movePositionToBillChoiceBox.getValue());
                                
                          }
-                        
+                        }
                         
                     }  
                    
         
         
     }
-    }
+        
        
+    }
+
+    @FXML
+    private void PrintAndCloseBill(ActionEvent event) {
+    }
+     
 }
