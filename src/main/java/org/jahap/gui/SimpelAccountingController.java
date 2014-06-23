@@ -49,9 +49,11 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.jahap.business.acc.accountsbean;
+import org.jahap.business.acc.billbean;
 import org.jahap.business.base.ratesbean;
 import org.jahap.entities.AccountPosition;
 import org.jahap.entities.Accounts;
+import org.jahap.entities.Bill;
 import org.jahap.entities.Rates;
 
 /**
@@ -139,6 +141,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private TitledPane x1;
     @FXML
     private TitledPane x2;
+    @FXML
+    private TitledPane x3;
     
    
     
@@ -390,7 +394,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                    tol.setText("This position is canceled");
                                     Tooltip.install(this, tol);
                                  }
-                                 if(datam.get(tl).isBilled()==true){
+                                 if(datam.get(tl).isBilled()==true || datam.get(tl).getBillnamestring()!=""){
                                     setTextFill(Color.GREY);
                                     String texttip=new String();
                                     texttip="This position is billed";
@@ -432,7 +436,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                int tl=getIndex();
 
                                 if(tl<=datam.size()-1){
-                                 if(datam.get(tl).isBilled()==true){
+                                 if(datam.get(tl).isBilled()==true || datam.get(tl).getBillnamestring()!=""){
                                  setTextFill(Color.GREY);
                                     String texttip=new String();
                                     texttip="This position is billed";
@@ -546,7 +550,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         
         
         viewAccountPositionsProperty ml=new viewAccountPositionsProperty();
-        if(jh.isDebit()==false && jh.isCanceled()==false){   
+        if(jh.isDebit()==false && jh.isCanceled()==false && jh.isBilled()!= true && jh.getBillnamestring()==""){   
            ml.setDebit(true);
            ml.setdRateid(jh.getcRateid());
            ml.setdAmount(jh.getcAmount());
@@ -584,7 +588,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
           ObservableList<viewAccountPositionsProperty>  gg = FXCollections.observableArrayList();;
         gg=Account_tablefx.getSelectionModel().getSelectedItems();
         if(gg.size()==1){
-          if(jh.isCanceled()==false && jh.getCanceledposition()==0){
+          if(jh.isCanceled()==false && jh.getCanceledposition()==0 && jh.isBilled()!= true && jh.getBillnamestring()==""){
          Stage stage = new Stage();
         String fxmlFile = "/fxml/EditPositionFx.fxml";
        
@@ -741,6 +745,62 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 
     @FXML
     private void PrintAndCloseBill(ActionEvent event) {
+    }
+    
+    class TempBills{
+        
+        String tempbillname;
+        Bill tempbill;
+        List<long> position=new ArrayList<long>();
+        
+        public addPosition(Long id)
+        
+        public String getTempbillname() {
+            return tempbillname;
+        }
+
+        public void setTempbillname(String tempbillname) {
+            this.tempbillname = tempbillname;
+        }
+
+        public Bill getTempbill() {
+            return tempbill;
+        }
+
+        public void setTempbill(Bill tempbill) {
+            this.tempbill = tempbill;
+        }
+        
+    }
+    
+    
+    @FXML
+    private void Save(ActionEvent event) {
+        billbean billb=new billbean();
+        boolean tempbillexits=false;
+        List<TempBills> tempbills= new ArrayList<TempBills>();
+        for(Iterator<viewAccountPositionsProperty> kali= datam.iterator();kali.hasNext();){
+                viewAccountPositionsProperty kj=kali.next();
+                for(Iterator<TempBills> jk=tempbills.iterator();jk.hasNext();){
+                    String jj=jk.next().getTempbillname();
+                    if(jj==kj.getBillnamestring()){
+                         tempbillexits=true;
+                    }
+                }
+           if(tempbillexits==false){
+               
+               tempbills.add(new TempBills());
+               tempbills.get(tempbills.size()-1).setTempbillname(kj.getBillnamestring());
+           }     
+        }
+        for(Iterator<TempBills> kkj=tempbills.iterator();kkj.hasNext();){
+           TempBills hugo=kkj.next();
+            billb.createNewEmptyRecord();
+           hugo.setTempbill(billb.getLastPosition());
+           billb.setBillname(hugo.getTempbillname());
+        }
+        
+        for()
     }
      
 }

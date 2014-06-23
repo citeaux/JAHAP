@@ -199,7 +199,7 @@ public class BillTabs{
                                    tol.setText("This position is canceled");
                                     Tooltip.install(this, tol);
                                  }
-                                 if(datamk.get(tl).isBilled()==true){
+                                 if(datamk.get(tl).isBilled()==true || datamk.get(tl).getBillnamestring()!=""){
                                     setTextFill(Color.GREY);
                                     String texttip=new String();
                                     texttip="This position is billed";
@@ -241,7 +241,7 @@ public class BillTabs{
                                int tl=getIndex();
 
                                 if(tl<=datamk.size()-1){
-                                 if(datamk.get(tl).isBilled()==true){
+                                 if(datamk.get(tl).isBilled()==true || datamk.get(tl).getBillnamestring()!=""){
                                  setTextFill(Color.GREY);
                                     String texttip=new String();
                                     texttip="This position is billed";

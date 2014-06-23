@@ -70,8 +70,8 @@
             </Button>
             <Separator prefHeight="61.0" prefWidth="124.0" />
             <Button id="createInvoice" fx:id="createInvoiceButton" mnemonicParsing="false" onAction="#createInvoice" prefHeight="34.0" prefWidth="124.0" text="Create Invoice" />
+            <Button id="createInvoice" mnemonicParsing="false" onAction="#MovePosition" prefHeight="34.0" prefWidth="124.0" text="Move To:" />
             <ChoiceBox fx:id="movePositionToBillChoiceBox" prefHeight="34.0" prefWidth="124.0">
-             
               <tooltip>
                 <Tooltip text="Move Selected Position to Bill" />
               </tooltip>
@@ -84,25 +84,13 @@
                 <Tooltip text="Delete selected Position from Bill" />
               </tooltip>
             </Button>
+            <Button fx:id="PrintAndCloseBill_FxButton" mnemonicParsing="false" onAction="#PrintAndCloseBill" prefHeight="36.0" prefWidth="134.0" text="Print &amp; Close Bill" />
+            <Button id="PrintAndCloseBill_FxButton" mnemonicParsing="false" onAction="#Save" prefHeight="36.0" prefWidth="134.0" text="Save" />
           </children>
         </VBox>
       </right>
       <top>
         <Accordion prefHeight="153.0" prefWidth="953.0">
-          <expandedPane>
-            <TitledPane fx:id="x2" animated="false" text="Reservation">
-              <content>
-                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                  <children>
-                    <Label layoutX="23.0" layoutY="14.0" text="from:" />
-                    <Label layoutX="353.0" layoutY="18.0" text="to:" />
-                    <TextField layoutX="69.0" layoutY="14.0" prefWidth="147.0" />
-                    <TextField layoutX="384.0" layoutY="14.0" prefWidth="147.0" />
-                  </children>
-                </AnchorPane>
-              </content>
-            </TitledPane>
-          </expandedPane>
           <panes>
             <TitledPane fx:id="x1" animated="false" text="Account">
               <content>
@@ -116,7 +104,18 @@
                 </AnchorPane>
               </content>
             </TitledPane>
-            <fx:reference source="x2" />
+            <TitledPane fx:id="x2" animated="false" text="Reservation">
+              <content>
+                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                  <children>
+                    <Label layoutX="23.0" layoutY="14.0" text="from:" />
+                    <Label layoutX="353.0" layoutY="18.0" text="to:" />
+                    <TextField layoutX="69.0" layoutY="14.0" prefWidth="147.0" />
+                    <TextField layoutX="384.0" layoutY="14.0" prefWidth="147.0" />
+                  </children>
+                </AnchorPane>
+              </content>
+            </TitledPane>
           </panes>
         </Accordion>
       </top>
