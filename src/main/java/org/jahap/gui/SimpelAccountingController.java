@@ -49,6 +49,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.jahap.business.acc.accountsbean;
+import org.jahap.business.acc.accountspositionbean;
 import org.jahap.business.acc.billbean;
 import org.jahap.business.base.ratesbean;
 import org.jahap.entities.AccountPosition;
@@ -143,13 +144,13 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private TitledPane x2;
     @FXML
     private TitledPane x3;
+    @FXML
+    private TitledPane x4;
     
    
     
 
-    @FXML
-    private void removePosfromBill(ActionEvent event) {
-    }
+    
     
     
     
@@ -541,7 +542,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     @FXML
     private void cancleArticle(ActionEvent event) {
         Calendar cal  = Calendar.getInstance();
-        ObservableList<viewAccountPositionsProperty>  gg = FXCollections.observableArrayList();;
+        ObservableList<viewAccountPositionsProperty>  gg = FXCollections.observableArrayList();
         gg=Account_tablefx.getSelectionModel().getSelectedItems();
         if(gg.size()==1){
         Account_tablefx.getSelectionModel().getSelectedItems();
@@ -746,14 +747,26 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     @FXML
     private void PrintAndCloseBill(ActionEvent event) {
     }
+
+    @FXML
+    private void RemovePosition(ActionEvent event) {
+    }
     
     class TempBills{
+       
         
         String tempbillname;
         Bill tempbill;
-        List<long> position=new ArrayList<long>();
         
-        public addPosition(Long id)
+        List<viewAccountPositionsProperty> jjhj=new ArrayList<viewAccountPositionsProperty>();
+       
+        public void addPos(viewAccountPositionsProperty dd){
+            jjhj.add(dd);
+        }
+        
+        public Iterator<viewAccountPositionsProperty> getIterator(){
+             return jjhj.iterator();
+        }
         
         public String getTempbillname() {
             return tempbillname;
@@ -776,14 +789,25 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     @FXML
     private void Save(ActionEvent event) {
+         
+        // ######### Saves TempBill ##########
         billbean billb=new billbean();
+        accountspositionbean hj= new accountspositionbean();
+        
         boolean tempbillexits=false;
         List<TempBills> tempbills= new ArrayList<TempBills>();
+        
+        // searching for availabe tempbills
         for(Iterator<viewAccountPositionsProperty> kali= datam.iterator();kali.hasNext();){
                 viewAccountPositionsProperty kj=kali.next();
+                
+                // add new Tempbill if necessary and all position belonging to it
                 for(Iterator<TempBills> jk=tempbills.iterator();jk.hasNext();){
-                    String jj=jk.next().getTempbillname();
+                    
+                    TempBills hhj=jk.next();
+                    String jj=hhj.getTempbillname();
                     if(jj==kj.getBillnamestring()){
+                         hhj.addPos(kj);
                          tempbillexits=true;
                     }
                 }
@@ -793,14 +817,61 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                tempbills.get(tempbills.size()-1).setTempbillname(kj.getBillnamestring());
            }     
         }
+        // create TempBill in database, add Tempbill key to accposition
         for(Iterator<TempBills> kkj=tempbills.iterator();kkj.hasNext();){
            TempBills hugo=kkj.next();
             billb.createNewEmptyRecord();
            hugo.setTempbill(billb.getLastPosition());
            billb.setBillname(hugo.getTempbillname());
+           for(Iterator<viewAccountPositionsProperty>kkk=hugo.getIterator();kkk.hasNext();) {
+               viewAccountPositionsProperty mg=kkk.next();
+               hj.getDataRecord(mg.getId());
+               hj.setBill(hugo.getTempbill());
+               
+           }
+           
+           
+           
         }
-        
-        for()
+        // persist both tables < bill and accpos>
+        hj.saveRecord();
+        billb.saveRecord();
     }
      
+    @FXML
+    private void removePosfromBill(ActionEvent event) {
+       List<viewAccountPositionsProperty>kjh; 
+       billbean jjj= new billbean();
+       Bill jkk= new Bill(); // create an empty Bill
+       jkk.setId(Long.valueOf(0));
+       Tab gg=AccountTab.getSelectionModel().getSelectedItem(); 
+       accountspositionbean bbo= new accountspositionbean();
+       // Remove from tab
+       for(Iterator<BillTabs>jfj=billtablist.iterator();jfj.hasNext();){
+              BillTabs fjjf = jfj.next();
+              if(fjjf.getBillname()==gg.getText()){
+                    kjh=fjjf.removeSelectedPosiions();
+             }
+       }
+        
+       // Remove temp Billtag (Billname) from Acctountstab
+       
+       for(Iterator<viewAccountPositionsProperty>llo=datam.iterator(); llo.hasNext();){
+            viewAccountPositionsProperty kj=llo.next();
+            if(kj.getBillnamestring()==gg.getText()){
+                kj.setBillnamestring("");
+                bbo.getDataRecord(kj.getId());
+                bbo.setBill(jjj.getZeroRecord());
+            }
+            
+            
+            
+       }
+       
+       bbo.saveRecord();
+       
+     
+       
+    }
+    
 }

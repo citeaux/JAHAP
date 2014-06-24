@@ -34,3 +34,6 @@
     -fx-effect: dropshadow( gaussian , rgba(255,255,255,0.5) , 0,0,0,1 );
 }
 
+.PrintAndCloseBill_FxButton{
+    -fx-background-color: linear-gradient(#FF3300, #993333);
+}

@@ -19,6 +19,9 @@
 package org.jahap.gui;
 
 import com.google.common.eventbus.EventBus;
+import com.lowagie.text.pdf.hyphenation.TernaryTree;
+import java.util.Iterator;
+import java.util.List;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.EventType;
@@ -83,6 +86,23 @@ public class BillTabs{
         public String getBillname(){
             return this.billtab.getText();
         }
+        
+        public List<viewAccountPositionsProperty> removeSelectedPosiions(){
+            ObservableList<viewAccountPositionsProperty>  gg = FXCollections.observableArrayList();
+            gg=ggk.getSelectionModel().getSelectedItems();
+            boolean jk=false;
+            // checks for billed position which are not temp bills
+            for(Iterator<viewAccountPositionsProperty>jjk=gg.iterator();jjk.hasNext();){
+                  if(jjk.next().getBillno()!=0){
+                      jk=true;
+                  }
+            }
+            if(jk==false){
+             ggk.getItems().remove(gg);
+            }
+            return gg;
+        }
+        
         
         
         public BillTabs(String billname) {

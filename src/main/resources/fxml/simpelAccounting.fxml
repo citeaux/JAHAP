@@ -55,6 +55,37 @@
           <children>
             <Accordion minWidth="147.0" prefHeight="437.0" prefWidth="147.0">
               <expandedPane>
+                <TitledPane fx:id="x4" animated="false" text="Invoice">
+                  <content>
+                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                      <children>
+                        <Button id="createInvoice" fx:id="createInvoiceButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#createInvoice" prefHeight="34.0" prefWidth="142.0" text="Create Invoice" />
+                        <Button id="createInvoice" layoutX="0.0" layoutY="34.0" mnemonicParsing="false" onAction="#MovePosition" prefHeight="34.0" prefWidth="142.0" text="Move To:" />
+                        <ChoiceBox fx:id="movePositionToBillChoiceBox" layoutX="0.0" layoutY="68.0" prefHeight="34.0" prefWidth="142.0">
+                          <tooltip>
+                            <Tooltip text="Move Selected Position to Bill" />
+                          </tooltip>
+                        </ChoiceBox>
+                        <Button id="removePosfromBill" fx:id="removePosfromBillbutton" layoutX="0.0" layoutY="102.0" mnemonicParsing="false" onAction="#removePosfromBill" prefHeight="34.0" prefWidth="142.0" text="Del BillPos">
+                          <font>
+                            <Font size="15.0" />
+                          </font>
+                          <tooltip>
+                            <Tooltip text="Delete selected Position from Bill" />
+                          </tooltip>
+                        </Button>
+                        <Button fx:id="PrintAndCloseBill_FxButton" layoutX="0.0" layoutY="339.0" mnemonicParsing="false" onAction="#PrintAndCloseBill" prefHeight="36.0" prefWidth="142.0" text="Print &amp; Close Bill" />
+                        <Button id="closeAccount" layoutX="0.0" layoutY="136.0" mnemonicParsing="false" onAction="#RemovePosition" prefHeight="34.0" prefWidth="142.0" text="Remove Pos">
+                          <tooltip>
+                            <Tooltip text="Charge Rate in advance" />
+                          </tooltip>
+                        </Button>
+                      </children>
+                    </AnchorPane>
+                  </content>
+                </TitledPane>
+              </expandedPane>
+              <panes>
                 <TitledPane fx:id="x3" animated="false" minWidth="162.0" prefHeight="332.0" prefWidth="205.0" text="Account">
                   <content>
                     <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="296.0" prefWidth="142.0">
@@ -78,33 +109,7 @@
                     </AnchorPane>
                   </content>
                 </TitledPane>
-              </expandedPane>
-              <panes>
-                <fx:reference source="x3" />
-                <TitledPane animated="false" text="Invoice">
-                  <content>
-                    <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                      <children>
-                        <Button id="createInvoice" fx:id="createInvoiceButton" layoutX="0.0" layoutY="0.0" mnemonicParsing="false" onAction="#createInvoice" prefHeight="34.0" prefWidth="142.0" text="Create Invoice" />
-                        <Button id="createInvoice" layoutX="0.0" layoutY="34.0" mnemonicParsing="false" onAction="#MovePosition" prefHeight="34.0" prefWidth="142.0" text="Move To:" />
-                        <ChoiceBox fx:id="movePositionToBillChoiceBox" layoutX="0.0" layoutY="68.0" prefHeight="34.0" prefWidth="142.0">
-                          <tooltip>
-                            <Tooltip text="Move Selected Position to Bill" />
-                          </tooltip>
-                        </ChoiceBox>
-                        <Button id="removePosfromBill" fx:id="removePosfromBillbutton" layoutX="0.0" layoutY="102.0" mnemonicParsing="false" onAction="#removePosfromBill" prefHeight="34.0" prefWidth="142.0" text="Del BillPos">
-                          <font>
-                            <Font size="15.0" />
-                          </font>
-                          <tooltip>
-                            <Tooltip text="Delete selected Position from Bill" />
-                          </tooltip>
-                        </Button>
-                        <Button fx:id="PrintAndCloseBill_FxButton" layoutX="0.0" layoutY="136.0" mnemonicParsing="false" onAction="#PrintAndCloseBill" prefHeight="36.0" prefWidth="142.0" text="Print &amp; Close Bill" />
-                      </children>
-                    </AnchorPane>
-                  </content>
-                </TitledPane>
+                <fx:reference source="x4" />
               </panes>
             </Accordion>
             <Separator prefHeight="61.0" prefWidth="124.0" />
