@@ -720,12 +720,17 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                         
                         // Is a Position allready billed or marked for Billing?
                         for(Iterator<viewAccountPositionsProperty> olk=jh.listIterator();olk.hasNext();){
-                          if(olk.next().getBillno()!=0 || olk.next().getBillnamestring()!="") haki=true;
+                            try {
+                                if (olk.next().getBillno() == 0 || olk.next().getBillnamestring() != "") {
+                                    haki = true;
+                                }
+                            } catch (Exception e) {
+                            }
                         
                         }
                         
                         //Only if the position is not marked (has no Billno / or Billname) move to new bill and mark as be in bill processing
-                        if(haki!=true){
+                        if(haki==true){
                         
                         ko.addPositions(jh); // add all marked Position
                          for(Iterator<viewAccountPositionsProperty> lop=jh.listIterator();lop.hasNext();){
@@ -858,7 +863,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
        
        for(Iterator<viewAccountPositionsProperty>llo=datam.iterator(); llo.hasNext();){
             viewAccountPositionsProperty kj=llo.next();
-            if(kj.getBillnamestring()==gg.getText()){
+            if(kj.getBillnamestring()==gg.getText() &&  kj.getBillno()==0){
                 kj.setBillnamestring("");
                 bbo.getDataRecord(kj.getId());
                 bbo.setBill(jjj.getZeroRecord());
