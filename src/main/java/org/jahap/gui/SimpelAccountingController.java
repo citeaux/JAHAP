@@ -800,27 +800,26 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         accountspositionbean hj= new accountspositionbean();
         
         boolean tempbillexits=false;
-        List<TempBills> tempbills= new ArrayList<TempBills>();
+        List<TempBills> tempbills= new ArrayList<>();
         
         // searching for availabe tempbills
-        for(Iterator<viewAccountPositionsProperty> kali= datam.iterator();kali.hasNext();){
-                viewAccountPositionsProperty kj=kali.next();
-                
-                // add new Tempbill if necessary and all position belonging to it
-                for(Iterator<TempBills> jk=tempbills.iterator();jk.hasNext();){
-                    
-                    TempBills hhj=jk.next();
-                    String jj=hhj.getTempbillname();
-                    if(jj==kj.getBillnamestring()){
-                         hhj.addPos(kj);
-                         tempbillexits=true;
-                    }
+        for (viewAccountPositionsProperty kj : datam) {
+            // add all position belonging to tempbilllist
+            for (TempBills hhj : tempbills) {
+                String jj=hhj.getTempbillname();
+                if(jj==kj.getBillnamestring()){
+                    hhj.addPos(kj);
+                    tempbillexits=true;
                 }
-           if(tempbillexits==false){
-               
-               tempbills.add(new TempBills());
-               tempbills.get(tempbills.size()-1).setTempbillname(kj.getBillnamestring());
-           }     
+            }
+            //if tempill does not exists: create one
+            if(tempbillexits==false){
+                if(kj.getBillno()==0){
+                tempbills.add(new TempBills());
+                tempbills.get(tempbills.size()-1).setTempbillname(kj.getBillnamestring());
+                tempbills.get(tempbills.size()-1).addPos(kj);
+                }
+            }     
         }
         // create TempBill in database, add Tempbill key to accposition
         for(Iterator<TempBills> kkj=tempbills.iterator();kkj.hasNext();){
