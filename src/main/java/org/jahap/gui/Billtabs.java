@@ -2,21 +2,14 @@
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
- *//*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- *//*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- *//*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
  */
 
 package org.jahap.gui;
+
+/**
+ *
+ * @author russ
+ */
 
 import com.google.common.eventbus.EventBus;
 import com.lowagie.text.pdf.hyphenation.TernaryTree;
@@ -219,7 +212,7 @@ public class BillTabs{
                                    tol.setText("This position is canceled");
                                     Tooltip.install(this, tol);
                                  }
-                                 if(datamk.get(tl).isBilled()==true || datamk.get(tl).getBillnamestring()!=""){
+                                 if(datamk.get(tl).isBilled()==true || datamk.get(tl).getBillnamestring()!="" && !datamk.get(tl).getBillnamestring().contentEquals("ZEROBILL")){
                                     setTextFill(Color.GREY);
                                     String texttip=new String();
                                     texttip="This position is billed";
@@ -261,7 +254,7 @@ public class BillTabs{
                                int tl=getIndex();
 
                                 if(tl<=datamk.size()-1){
-                                 if(datamk.get(tl).isBilled()==true || datamk.get(tl).getBillnamestring()!=""){
+                                 if(datamk.get(tl).isBilled()==true || datamk.get(tl).getBillnamestring()!="" && !datamk.get(tl).getBillnamestring().contentEquals("ZEROBILL")){
                                  setTextFill(Color.GREY);
                                     String texttip=new String();
                                     texttip="This position is billed";

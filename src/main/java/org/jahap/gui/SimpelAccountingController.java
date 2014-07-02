@@ -294,8 +294,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                      
                      // TEMP BILLS: Bills that are not closed yet and therefore have non billno
                 }else{
-                    if(ggl.getBillno()==0){
-                        if(ggl.getBillnamestring()!=""){
+                    if(ggl.getBillno()==0 && !ggl.getBillnamestring().equalsIgnoreCase("ZEROBILL")){
+                        if(ggl.getBillnamestring()!=""  ){
                             
                                for(Iterator<BillTabs> tbas=billtablist.iterator();tbas.hasNext();){
                            BillTabs koller=tbas.next();   
@@ -395,7 +395,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                    tol.setText("This position is canceled");
                                     Tooltip.install(this, tol);
                                  }
-                                 if(datam.get(tl).isBilled()==true || datam.get(tl).getBillnamestring()!=""){
+                                 if(datam.get(tl).isBilled()==true || datam.get(tl).getBillnamestring()!="" && !datam.get(tl).getBillnamestring().contentEquals("ZEROBILL") ){
                                     setTextFill(Color.GREY);
                                     String texttip=new String();
                                     texttip="This position is billed";
@@ -437,7 +437,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                int tl=getIndex();
 
                                 if(tl<=datam.size()-1){
-                                 if(datam.get(tl).isBilled()==true || datam.get(tl).getBillnamestring()!=""){
+                                 if(datam.get(tl).isBilled()==true || datam.get(tl).getBillnamestring()!="" && !datam.get(tl).getBillnamestring().contentEquals("ZEROBILL")){
                                  setTextFill(Color.GREY);
                                     String texttip=new String();
                                     texttip="This position is billed";
@@ -838,8 +838,9 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
            
         }
         // persist both tables < bill and accpos>
-        hj.saveRecord();
         billb.saveRecord();
+        hj.saveRecord();
+        
     }
      
     @FXML
