@@ -1,0 +1,5 @@
+2014-07-03 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:179) - This is a Debug
+2014-07-03  INFO [JavaFX Application Thread] (SimpelAccountingController.java:180) - This is an Info
+2014-07-03  WARN [JavaFX Application Thread] (SimpelAccountingController.java:181) - This is a Warn
+2014-07-03 ERROR [JavaFX Application Thread] (SimpelAccountingController.java:182) - This is an Error
+2014-07-03 FATAL [JavaFX Application Thread] (SimpelAccountingController.java:183) - This is a Fatal

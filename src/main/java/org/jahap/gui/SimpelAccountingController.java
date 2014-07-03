@@ -8,6 +8,8 @@ import com.google.common.eventbus.EventBus;
 import com.google.common.eventbus.Subscribe;
 import java.io.IOException;
 import java.net.URL;
+
+import org.apache.log4j.Logger;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -64,7 +66,7 @@ import org.jahap.entities.Rates;
  */
 public class SimpelAccountingController implements Initializable, InterAccSearchResultListener{
 
-    
+    static Logger log = Logger.getLogger(SimpelAccountingController.class.getName());
     
     
     @FXML
@@ -173,7 +175,13 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
          //eventbus=new EventBus("Position"); 
           //eventbus.register(SimpelAccountingController.this);
           
-                 
+       log.trace("This is a Trace");
+ log.debug("This is a Debug");
+ log.info("This is an Info");
+ log.warn("This is a Warn");
+ log.error("This is an Error");
+ log.fatal("This is a Fatal");
+          
         acc=new accountsbean();
         rates= new ratesbean();
         accsearchresult = new InterAccSearchResult();
@@ -378,38 +386,43 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                  
                          @Override
                          public void updateItem(String item, boolean empty) {
-                             Tooltip tol=new Tooltip("Info");
-                             
-                              super.updateItem(item, empty);
-                              
-                               int tl=getIndex();
-
-                               if(tl<=datam.size()-1){
-                                 if(datam.get(tl).isDebit()==true){
-                                 // DEV: Stylshert implement
-                                 // setStyle("-fx-font-style: italic;");
+                             try {
+                                 Tooltip tol = new Tooltip("Info");
                                  
+                                 super.updateItem(item, empty);
+                                 
+                                 int tl = getIndex();
+                                 
+                                 if (tl <= datam.size() - 1) {
+                                     if (datam.get(tl).isDebit() == true) {
+                                 // DEV: Stylshert implement
+                                         // setStyle("-fx-font-style: italic;");
+                                         
+                                     }
+                                     if (datam.get(tl).isCanceled() == true) {
+                                         setTextFill(Color.RED);
+                                         tol.setText("This position is canceled");
+                                         Tooltip.install(this, tol);
+                                     }
+                                     if (datam.get(tl).isBilled() == true || datam.get(tl).getBillnamestring() != "" && !datam.get(tl).getBillnamestring().contentEquals("ZEROBILL")) {
+                                         setTextFill(Color.GREY);
+                                         String texttip = new String();
+                                         texttip = "This position is billed";
+                                         if (datam.get(tl).isCanceled() == true) {
+                                             texttip = texttip + " and canceled";
+                                         }
+                                         tol.setText(texttip);
+                                         Tooltip.install(this, tol);
+                                     }
+                                     setText(item);
                                  }
-                                 if(datam.get(tl).isCanceled()==true){
-                                  setTextFill(Color.RED);
-                                   tol.setText("This position is canceled");
-                                    Tooltip.install(this, tol);
-                                 }
-                                 if(datam.get(tl).isBilled()==true || datam.get(tl).getBillnamestring()!="" && !datam.get(tl).getBillnamestring().contentEquals("ZEROBILL") ){
-                                    setTextFill(Color.GREY);
-                                    String texttip=new String();
-                                    texttip="This position is billed";
-                                      if(datam.get(tl).isCanceled()==true){
-                                         texttip= texttip + " and canceled";
-                                      }
-                                    tol.setText(texttip);
-                                    Tooltip.install(this, tol);
-                                 }
+                                 
                                  setText(item);
-                               }
-                               
-                                setText(item);
 //                               }
+                             } catch (Exception e) {
+                                 e.printStackTrace();
+                                   
+                             }
                           }
                          
                          
@@ -436,16 +449,20 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                               
                                int tl=getIndex();
 
-                                if(tl<=datam.size()-1){
-                                 if(datam.get(tl).isBilled()==true || datam.get(tl).getBillnamestring()!="" && !datam.get(tl).getBillnamestring().contentEquals("ZEROBILL")){
-                                 setTextFill(Color.GREY);
-                                    String texttip=new String();
-                                    texttip="This position is billed";
+                               try {
+                                 if (tl <= datam.size() - 1) {
+                                     if (datam.get(tl).isBilled() == true || datam.get(tl).getBillnamestring() != "" && !datam.get(tl).getBillnamestring().contentEquals("ZEROBILL")) {
+                                         setTextFill(Color.GREY);
+                                         String texttip = new String();
+                                         texttip = "This position is billed";
+                                         
+                                     }
+                                     setText(item);
                                      
-                                 }
-                                 setText(item);
-                             
-                         } 
+                                 }                                 
+                             } catch (Exception e) {
+                                 e.printStackTrace();
+                             }
                           
                          }
                       };
@@ -753,9 +770,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private void PrintAndCloseBill(ActionEvent event) {
     }
 
-    @FXML
-    private void RemovePosition(ActionEvent event) {
-    }
+ 
     
     class TempBills{
        
@@ -856,6 +871,10 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
               BillTabs fjjf = jfj.next();
               if(fjjf.getBillname()==gg.getText()){
                     kjh=fjjf.removeSelectedPosiions();
+                    for( viewAccountPositionsProperty hhh:kjh){
+                            hhh.setBillnamestring("");
+                            hhh.setBillno(0);
+                    }
              }
        }
         
@@ -872,6 +891,9 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             
             
        }
+       
+       
+       
        
        bbo.saveRecord();
        

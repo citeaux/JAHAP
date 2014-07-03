@@ -75,11 +75,7 @@
                           </tooltip>
                         </Button>
                         <Button fx:id="PrintAndCloseBill_FxButton" layoutX="0.0" layoutY="339.0" mnemonicParsing="false" onAction="#PrintAndCloseBill" prefHeight="36.0" prefWidth="142.0" text="Print &amp; Close Bill" />
-                        <Button id="closeAccount" layoutX="0.0" layoutY="136.0" mnemonicParsing="false" onAction="#RemovePosition" prefHeight="34.0" prefWidth="142.0" text="Remove Pos">
-                          <tooltip>
-                            <Tooltip text="Charge Rate in advance" />
-                          </tooltip>
-                        </Button>
+                       
                       </children>
                     </AnchorPane>
                   </content>
