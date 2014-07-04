@@ -5,7 +5,7 @@
 package org.jahap.gui;
 
 import com.google.common.eventbus.EventBus;
-import com.google.common.eventbus.Subscribe;
+
 import java.io.IOException;
 import java.net.URL;
 
@@ -50,6 +50,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Callback;
+import javax.print.DocFlavor;
 import org.jahap.business.acc.accountsbean;
 import org.jahap.business.acc.accountspositionbean;
 import org.jahap.business.acc.billbean;
@@ -168,19 +169,19 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        log.debug("Function entry");
+        log.debug("Function exit");
     }    
     
     void init(long id){
+        log.debug("Function entry: init" );
+            
+                
         //this.eventbus=even;
          //eventbus=new EventBus("Position"); 
           //eventbus.register(SimpelAccountingController.this);
           
-       log.trace("This is a Trace");
- log.debug("This is a Debug");
- log.info("This is an Info");
- log.warn("This is a Warn");
- log.error("This is an Error");
- log.fatal("This is a Fatal");
+    
           
         acc=new accountsbean();
         rates= new ratesbean();
@@ -196,7 +197,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
        
               
         
-        
+        log.debug("Function exit: init");
     }
     
 
@@ -207,7 +208,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 //    }
     
     void testinittable(){
-            
+              log.debug("Function entry testinittable");    
+        
                     AccountPosition zw=new AccountPosition();
                       viewAccountPositionsProperty bz;
                try {
@@ -363,11 +365,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                    
         buildTable(Account_tablefx);
         
-        
+        log.debug("Function exit testinittable");
     }
     
     private void buildTable(TableView ko){
-              // #################  ID       
+              // #################  ID  
+            log.debug("Function entry buildTable");
             id_Account_tablefx  = new TableColumn<viewAccountPositionsProperty, String>("idx");
              id_Account_tablefx.setCellValueFactory(new PropertyValueFactory<viewAccountPositionsProperty, String>("idx"));
                      
@@ -529,12 +532,15 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
              
        ko.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
        ko.setItems(datam);
+       
+        log.debug("Function exit");
     }
     
     
     
     @FXML
     private void addArticle(ActionEvent event) throws IOException {
+        log.debug("Function entry");
          Stage stage = new Stage();
         String fxmlFile = "/fxml/RatesList.fxml";
        
@@ -553,11 +559,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         
         stage.showAndWait();
         
-        
+        log.debug("Function exit buildTable");
     }
 
     @FXML
     private void cancleArticle(ActionEvent event) {
+        log.debug("Function entry cancleArticle");
         Calendar cal  = Calendar.getInstance();
         ObservableList<viewAccountPositionsProperty>  gg = FXCollections.observableArrayList();
         gg=Account_tablefx.getSelectionModel().getSelectedItems();
@@ -595,12 +602,13 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                  String.valueOf(acc.getSumofDebitsPos()));
         }
         }
-        
+        log.debug("Function exit cancleArticle");
     }
 
     @FXML
     private void editArticle(ActionEvent event) throws IOException {
 ////////////        
+        log.debug("Function entry editArticle");
           viewAccountPositionsProperty jh= (viewAccountPositionsProperty) Account_tablefx.getSelectionModel().getSelectedItem();
           
           ObservableList<viewAccountPositionsProperty>  gg = FXCollections.observableArrayList();;
@@ -627,6 +635,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
           }
           
         }
+        log.debug("Function exit editArticle");
     }
     
     
@@ -638,7 +647,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     @FXML
     private void editRates(ActionEvent event) throws IOException {
-        
+        log.debug("Function entry editRates");
         Stage stage = new Stage();
         String fxmlFile = "/fxml/CscGuiFx.fxml";
        
@@ -656,15 +665,18 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
       
         // accsearchresult,this,"rate"
         stage.showAndWait();
+        log.debug("Function exit editRates");
     }
 
     @FXML
     private void printOverview(ActionEvent event) {
+        log.debug("Function entry printOverview");
+        log.debug("Function exit printOverview");
     }
 
     @FXML
     private void createInvoice(ActionEvent event) {
-        
+        log.debug("Function entry createInvoice");
                 
         BillTabs jj=new BillTabs("Temp");
         jj.createTabel(); // Create Tabel in TAB 
@@ -672,18 +684,25 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
          TabPane gg=Account.getTabPane();
         gg.getTabs().add(jj.getBilltab());
         tempBills.add(jj.getBilltab().getText());
-        
+        log.debug("Function exit createInvoice");
+                
+                
     }
 
     @FXML
     private void closeAccount(ActionEvent event) {
+        log.debug("Function entry closeAccount");
+        log.debug("Function exit closeAccount");
     }
 
     @FXML
     private void AdvancedChargeRates(ActionEvent event) {
+        log.debug("Function entry AdvancedChargeRates");
+        log.debug("Function exit AdvancedChargeRates");
     }
 
     public void idinfo(InterAccSearchResultEvent e) {
+        log.debug("Function entry idinfo");
          if(e.getTableNameofSource()=="rate"){
            System.out.println("Rate" + String.valueOf(e.getDbRecordId()));
            
@@ -725,10 +744,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                          String.valueOf(acc.getSumofDebitsPos()));
                   System.err.println("After");
        }
+        log.debug("Function exit idinfo");
 }
 
     @FXML
     private void MovePosition(ActionEvent event) {
+        log.debug("Function entry MovePosition" );
         for(Iterator<BillTabs> k= billtablist.listIterator();k.hasNext();){
              BillTabs ko=k.next();
                     if(ko.getBillname()==movePositionToBillChoiceBox.getValue()){
@@ -763,11 +784,15 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         
     }
         
-       
+        log.debug("Function exit MovePosition");   
     }
 
     @FXML
     private void PrintAndCloseBill(ActionEvent event) {
+        log.debug("Function entry PrintAndCloseBill");
+        log.debug("Function exit PrintAndCloseBill");
+                
+                
     }
 
  
@@ -781,27 +806,42 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         List<viewAccountPositionsProperty> jjhj=new ArrayList<viewAccountPositionsProperty>();
        
         public void addPos(viewAccountPositionsProperty dd){
+            log.debug("Function entry addPos");
             jjhj.add(dd);
+            log.debug("Function exit addPos");
         }
         
         public Iterator<viewAccountPositionsProperty> getIterator(){
-             return jjhj.iterator();
+            log.debug("Function entry getIterator");
+            log.debug("Function exit getIterator " + String.valueOf(jjhj));  
+            return jjhj.iterator();
+            
         }
         
         public String getTempbillname() {
+            log.debug("Function entry getTempbillname");
+                    
+            log.debug("Function exit getTempbillname" + String.valueOf(tempbillname));
             return tempbillname;
         }
 
         public void setTempbillname(String tempbillname) {
+            log.debug("Function entry setTempbillname");
             this.tempbillname = tempbillname;
+            log.debug("Function exit setTempbillname");
         }
 
         public Bill getTempbill() {
+            log.debug("Function entry getTempbill");
+            log.debug("Function exit getTempbill" + String.valueOf(tempbill));        
             return tempbill;
         }
 
         public void setTempbill(Bill tempbill) {
+            log.debug("Function entry setTempbill");
             this.tempbill = tempbill;
+            log.debug("Function exit setTempbill");
+                    
         }
         
     }
@@ -809,7 +849,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     @FXML
     private void Save(ActionEvent event) {
-         
+         log.debug("Function entry Save");
         // ######### Saves TempBill ##########
         billbean billb=new billbean();
         accountspositionbean hj= new accountspositionbean();
@@ -855,11 +895,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         // persist both tables < bill and accpos>
         billb.saveRecord();
         hj.saveRecord();
-        
+        log.debug("Function exit Save");
     }
      
     @FXML
     private void removePosfromBill(ActionEvent event) {
+        log.debug("Function entry removePosfromBill");
        List<viewAccountPositionsProperty>kjh; 
        billbean jjj= new billbean();
        Bill jkk= new Bill(); // create an empty Bill
@@ -898,7 +939,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
        bbo.saveRecord();
        
      
-       
+        log.debug("Function exit removePosfromBill");
     }
     
 }
