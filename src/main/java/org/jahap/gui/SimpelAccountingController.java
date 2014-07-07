@@ -802,12 +802,13 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         
         String tempbillname;
         Bill tempbill;
-        
+        List<AccountPosition>jlk=new ArrayList<>();
         List<viewAccountPositionsProperty> jjhj=new ArrayList<viewAccountPositionsProperty>();
        
         public void addPos(viewAccountPositionsProperty dd){
             log.debug("Function entry addPos");
             jjhj.add(dd);
+            
             log.debug("Function exit addPos");
         }
         
@@ -863,7 +864,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             for (TempBills hhj : tempbills) {
                 String jj=hhj.getTempbillname();
                 if(jj==kj.getBillnamestring()){
-                    hhj.addPos(kj);
+                    hhj.addPos(kj);  
+                     // get pos from AccPos Table
                     tempbillexits=true;
                 }
             }
@@ -873,6 +875,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 tempbills.add(new TempBills());
                 tempbills.get(tempbills.size()-1).setTempbillname(kj.getBillnamestring());
                 tempbills.get(tempbills.size()-1).addPos(kj);
+               
                 }
             }     
         }
@@ -882,6 +885,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             billb.createNewEmptyRecord();
            hugo.setTempbill(billb.getLastPosition());
            billb.setBillname(hugo.getTempbillname());
+           billb.setAccountPositionCollection(jlk); // add AccPos to billCollection
            for(Iterator<viewAccountPositionsProperty>kkk=hugo.getIterator();kkk.hasNext();) {
                viewAccountPositionsProperty mg=kkk.next();
                hj.getDataRecord(mg.getId());
