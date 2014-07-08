@@ -209,7 +209,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     void testinittable(){
               log.debug("Function entry testinittable");    
-        
+         billbean jjk= new billbean();
                     AccountPosition zw=new AccountPosition();
                       viewAccountPositionsProperty bz;
                try {
@@ -225,13 +225,16 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 
                 
                 try {
-                    bz.setBillnamestring(zw.getBill().getBillname());
+                    
+                    if(zw.getBill()!=0){
+                        bz.setBillnamestring(jjk.getDataRecord(zw.getBill()).getBillname());
+                    }
                 } catch (Exception e) {
                     bz.setBillnamestring("");
                 }
               
                         try {
-                    bz.setBillno(zw.getBill().getBillno());
+                    bz.setBillno(zw.getBill());
                 } catch (Exception e) {
                      bz.setBillno(0); 
                 }
@@ -804,11 +807,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         Bill tempbill;
         List<AccountPosition>jlk=new ArrayList<>();
         List<viewAccountPositionsProperty> jjhj=new ArrayList<viewAccountPositionsProperty>();
-       
-        public void addPos(viewAccountPositionsProperty dd){
+        
+        
+        public void addPos(viewAccountPositionsProperty dd,accountspositionbean hj){
             log.debug("Function entry addPos");
             jjhj.add(dd);
-            
+;            jlk.add(hj.getDataRecord(dd.getId()));
             log.debug("Function exit addPos");
         }
         
@@ -844,6 +848,10 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             log.debug("Function exit setTempbill");
                     
         }
+
+        public List<AccountPosition> getAccountPositions() {
+            return jlk;
+        }
         
     }
     
@@ -864,7 +872,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             for (TempBills hhj : tempbills) {
                 String jj=hhj.getTempbillname();
                 if(jj==kj.getBillnamestring()){
-                    hhj.addPos(kj);  
+                    hhj.addPos(kj,hj);  
                      // get pos from AccPos Table
                     tempbillexits=true;
                 }
@@ -874,7 +882,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 if(kj.getBillno()==0){
                 tempbills.add(new TempBills());
                 tempbills.get(tempbills.size()-1).setTempbillname(kj.getBillnamestring());
-                tempbills.get(tempbills.size()-1).addPos(kj);
+                tempbills.get(tempbills.size()-1).addPos(kj,hj);
                
                 }
             }     
@@ -885,11 +893,11 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             billb.createNewEmptyRecord();
            hugo.setTempbill(billb.getLastPosition());
            billb.setBillname(hugo.getTempbillname());
-           billb.setAccountPositionCollection(jlk); // add AccPos to billCollection
+           //billb.setAccountPositionCollection(hugo.getAccountPositions()); // add AccPos to billCollection
            for(Iterator<viewAccountPositionsProperty>kkk=hugo.getIterator();kkk.hasNext();) {
                viewAccountPositionsProperty mg=kkk.next();
                hj.getDataRecord(mg.getId());
-               hj.setBill(hugo.getTempbill());
+               hj.setBill(hugo.getTempbill().getBillno());
                
            }
            
@@ -898,6 +906,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         }
         // persist both tables < bill and accpos>
         billb.saveRecord();
+        
         hj.saveRecord();
         log.debug("Function exit Save");
     }
@@ -930,7 +939,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             if(kj.getBillnamestring()==gg.getText() &&  kj.getBillno()==0){
                 kj.setBillnamestring("");
                 bbo.getDataRecord(kj.getId());
-                bbo.setBill(jjj.getZeroRecord());
+                bbo.setBill(0);
             }
             
             

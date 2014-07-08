@@ -358,7 +358,8 @@ public  class viewAccountPositionsProperty {
         AccountPosition pos=new AccountPosition();
         pos.setBilled(this.billed);
         pos.setDebit(this.debit);
-        pos.getBill().setBillno(billno);
+        
+        pos.setBill(billno);
        ratesbean jj=new ratesbean();
         
         if(this.debit==false){
