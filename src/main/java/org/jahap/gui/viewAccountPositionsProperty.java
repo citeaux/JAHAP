@@ -12,6 +12,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import javafx.beans.property.*;
+import org.jahap.business.acc.billbean;
 import org.jahap.business.base.ratesbean;
 import org.jahap.entities.AccountPosition;
 import org.joda.time.format.DateTimeFormat;
@@ -356,10 +357,11 @@ public  class viewAccountPositionsProperty {
     
     public AccountPosition getAccountPosition(){
         AccountPosition pos=new AccountPosition();
+        billbean bb=new billbean();
         pos.setBilled(this.billed);
         pos.setDebit(this.debit);
         
-        pos.setBill(billno);
+        pos.setBill(this.billno);
        ratesbean jj=new ratesbean();
         
         if(this.debit==false){

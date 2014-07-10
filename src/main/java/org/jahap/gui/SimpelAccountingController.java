@@ -226,7 +226,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 
                 try {
                     
-                    if(zw.getBill()!=0){
+                    if(jjk.getDataRecord(zw.getBill()).getBillname()!=""){
                         bz.setBillnamestring(jjk.getDataRecord(zw.getBill()).getBillname());
                     }
                 } catch (Exception e) {
@@ -893,7 +893,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             billb.createNewEmptyRecord();
            hugo.setTempbill(billb.getLastPosition());
            billb.setBillname(hugo.getTempbillname());
-           //billb.setAccountPositionCollection(hugo.getAccountPositions()); // add AccPos to billCollection
+           billb.setAccountPositionCollection(hugo.getAccountPositions()); // add AccPos to billCollection
            for(Iterator<viewAccountPositionsProperty>kkk=hugo.getIterator();kkk.hasNext();) {
                viewAccountPositionsProperty mg=kkk.next();
                hj.getDataRecord(mg.getId());
