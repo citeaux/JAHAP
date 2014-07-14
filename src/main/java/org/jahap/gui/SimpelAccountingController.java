@@ -177,11 +177,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         log.debug("Function entry: init" );
             
                 
-        //this.eventbus=even;
-         //eventbus=new EventBus("Position"); 
-          //eventbus.register(SimpelAccountingController.this);
-          
-    
+       
           
         acc=new accountsbean();
         rates= new ratesbean();
@@ -226,15 +222,17 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 
                 try {
                     
-                    if(jjk.getDataRecord(zw.getBill()).getBillname()!=""){
+                    if(jjk.getDataRecord(zw.getBill()).getBillname()!="" || jjk.getDataRecord(zw.getBill()).getBillname()!="ZEROBILL"){
                         bz.setBillnamestring(jjk.getDataRecord(zw.getBill()).getBillname());
                     }
                 } catch (Exception e) {
                     bz.setBillnamestring("");
                 }
               
-                        try {
+                   try {
+                      if(!"ZEROBILL".equals(jjk.getDataRecord(zw.getBill()).getBillname())){   //   
                     bz.setBillno(zw.getBill());
+                      }
                 } catch (Exception e) {
                      bz.setBillno(0); 
                 }
@@ -707,6 +705,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     public void idinfo(InterAccSearchResultEvent e) {
         log.debug("Function entry idinfo");
          if(e.getTableNameofSource()=="rate"){
+             log.debug("Action reaction - add article -");  
            System.out.println("Rate" + String.valueOf(e.getDbRecordId()));
            
            viewAccountPositionsProperty ml=new viewAccountPositionsProperty();
