@@ -1,296 +1,967 @@
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:544) - Function entry
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:706) - Function entry idinfo
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:708) - Action reaction - add article -
-2014-07-14 DEBUG [JavaFX Application Thread] (accountsbean.java:395) - Function entry addposition 1/ amount: 1/ price: 50.0/Posname: Logis Single Room
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:563) - Function exit buildTable
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:544) - Function entry
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:706) - Function entry idinfo
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:708) - Action reaction - add article -
-2014-07-14 DEBUG [JavaFX Application Thread] (accountsbean.java:395) - Function entry addposition 2/ amount: 1/ price: 12.8/Posname: Breakfast
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:172) - Function entry
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:173) - Function exit
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:177) - Function entry: init
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function entry testinittable
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:651) - Function entry editRates
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:544) - Function entry
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:706) - Function entry idinfo
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:708) - Action reaction - add article -
-2014-07-14 DEBUG [JavaFX Application Thread] (accountsbean.java:395) - Function entry addposition 2/ amount: 1/ price: 12.8/Posname: Breakfast
-2014-07-14 DEBUG [JavaFX Application Thread] (accountsbean.java:414) - addposition
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:172) - Function entry
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:173) - Function exit
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:177) - Function entry: init
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function entry testinittable
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 1
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:544) - Function entry
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:706) - Function entry idinfo
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:708) - Action reaction - add article -
-2014-07-14 DEBUG [JavaFX Application Thread] (accountsbean.java:395) - Function entry addposition 2/ amount: 1/ price: 12.8/Posname: Breakfast
-2014-07-14 DEBUG [JavaFX Application Thread] (accountspositionbean.java:113) - Function entry -createNewEmptyRecord -
-2014-07-14 DEBUG [JavaFX Application Thread] (accountspositionbean.java:347) - Function entry savenewrecord
-2014-07-14 DEBUG [JavaFX Application Thread] (accountspositionbean.java:352) - Function entry 27  --  null
-2014-07-14 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function exit saveNewRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (accountspositionbean.java:131) - New Record Number 6251
-2014-07-14 DEBUG [JavaFX Application Thread] (accountspositionbean.java:134) - Function exit -createNewEmptyRecord - 
-2014-07-14 DEBUG [JavaFX Application Thread] (accountsbean.java:465) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=6251 ]
-2014-07-14 DEBUG [JavaFX Application Thread] (accountspositionbean.java:347) - Function entry savenewrecord
-2014-07-14 DEBUG [JavaFX Application Thread] (accountspositionbean.java:352) - Function entry 27  --  6251
-2014-07-14 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function exit saveNewRecord
-2014-07-14 DEBUG [JavaFX Application Thread] (accountsbean.java:476) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=6251 ]
-2014-07-14 DEBUG [JavaFX Application Thread] (accountsbean.java:483) - Function exit addPosition 
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:749) - Function exit idinfo
-2014-07-14 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:563) - Function exit buildTable
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:612) - Function entry editArticle
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:172) - Function entry
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:173) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:177) - Function entry: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function entry testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:612) - Function entry editArticle
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:706) - Function entry idinfo
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:639) - Function exit editArticle
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:172) - Function entry
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:173) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:177) - Function entry: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function entry testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:612) - Function entry editArticle
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:706) - Function entry idinfo
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:639) - Function exit editArticle
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:172) - Function entry
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:173) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:177) - Function entry: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function entry testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:612) - Function entry editArticle
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:706) - Function entry idinfo
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:347) - Function entry savenewrecord
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:352) - Function entry 4  --  2651
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function exit saveNewRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:749) - Function exit idinfo
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:639) - Function exit editArticle
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:612) - Function entry editArticle
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:706) - Function entry idinfo
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:347) - Function entry savenewrecord
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:352) - Function entry 12  --  3851
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function exit saveNewRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:749) - Function exit idinfo
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:639) - Function exit editArticle
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:680) - Function entry createInvoice
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:688) - Function exit createInvoice
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:754) - Function entry MovePosition
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:789) - Function exit MovePosition
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:860) - Function entry Save
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:833) - Function entry setTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:835) - Function exit setTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:87) - Function entry createNewEmptyRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:150) - Function entry RefreshAllRecords
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:160) - Function exit RefreshAllRecords
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:107) - Function exit createNewEmptyRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:188) - Function entry getLastPosition(
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:190) - Function exit getLastPosition
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:845) - Function entry setTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:847) - Function exit setTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameZEROBILL
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:819) - Function entry getIterator
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:820) - Function exit getIterator [org.jahap.gui.viewAccountPositionsProperty@e5713e, org.jahap.gui.viewAccountPositionsProperty@16db99a, org.jahap.gui.viewAccountPositionsProperty@b43666, org.jahap.gui.viewAccountPositionsProperty@15f80a6, org.jahap.gui.viewAccountPositionsProperty@f71925, org.jahap.gui.viewAccountPositionsProperty@940a2e, org.jahap.gui.viewAccountPositionsProperty@12865cb, org.jahap.gui.viewAccountPositionsProperty@13313d8, org.jahap.gui.viewAccountPositionsProperty@5bec5f]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:134) - Function entry saveRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:199) - Function entry saveNewRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:150) - Function entry RefreshAllRecords
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:160) - Function exit RefreshAllRecords
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:145) - Function exit saveRecord 
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:347) - Function entry savenewrecord
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:352) - Function entry 4  --  2651
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function exit saveNewRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:906) - Function exit Save
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:172) - Function entry
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:173) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:177) - Function entry: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function entry testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:172) - Function entry
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:173) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:177) - Function entry: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function entry testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:172) - Function entry
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:173) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:177) - Function entry: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function entry testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:680) - Function entry createInvoice
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:688) - Function exit createInvoice
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:754) - Function entry MovePosition
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:789) - Function exit MovePosition
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:860) - Function entry Save
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:833) - Function entry setTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:835) - Function exit setTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:812) - Function entry addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:815) - Function exit addPos
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:87) - Function entry createNewEmptyRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:150) - Function entry RefreshAllRecords
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:160) - Function exit RefreshAllRecords
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:107) - Function exit createNewEmptyRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:188) - Function entry getLastPosition(
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:190) - Function exit getLastPosition
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:188) - Function entry getLastPosition(
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:190) - Function exit getLastPosition
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:845) - Function entry setTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:847) - Function exit setTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:826) - Function entry getTempbillname
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:828) - Function exit getTempbillnameTemp
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:819) - Function entry getIterator
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:820) - Function exit getIterator [org.jahap.gui.viewAccountPositionsProperty@1ab04bb, org.jahap.gui.viewAccountPositionsProperty@c3af97, org.jahap.gui.viewAccountPositionsProperty@13d1008]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:839) - Function entry getTempbill
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:840) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:134) - Function entry saveRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:199) - Function entry saveNewRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:150) - Function entry RefreshAllRecords
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:160) - Function exit RefreshAllRecords
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:145) - Function exit saveRecord 
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:347) - Function entry savenewrecord
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:352) - Function entry 14  --  4001
+2014-07-15 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function exit saveNewRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:906) - Function exit Save
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:172) - Function entry
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:173) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:177) - Function entry: init
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function entry testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:37) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:63) - Function entry billbean
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 7
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 7
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 7
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 7
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 7
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 7
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 7
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 7
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 7
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 5
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 0
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:166) - Function entry getDataRecord
+2014-07-15 DEBUG [JavaFX Application Thread] (billbean.java:181) - Function exit getDataRecord 6
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:374) - Function entry buildTable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:537) - Function exit
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:369) - Function exit testinittable
+2014-07-15 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:196) - Function exit: init

@@ -272,7 +272,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                  gh=false;
                  viewAccountPositionsProperty ggl=im.next();
                  
-                if(ggl.getBillno()!=0){
+                if(ggl.getBillno()!=0 && ggl.getBillnamestring()!=){
                        // search for exiting tab with bill no
                        for(Iterator<BillTabs> tbas=billtablist.iterator();tbas.hasNext();){
                            BillTabs koller=tbas.next();   
@@ -615,7 +615,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
           ObservableList<viewAccountPositionsProperty>  gg = FXCollections.observableArrayList();;
         gg=Account_tablefx.getSelectionModel().getSelectedItems();
         if(gg.size()==1){
-          if(jh.isCanceled()==false && jh.getCanceledposition()==0 && jh.isBilled()!= true && jh.getBillnamestring()==""){
+          if(jh.isCanceled()==false && jh.getCanceledposition()==0 && !jh.isBilled() && ("".equals(jh.getBillnamestring()) || "ZEROBILL".equals(jh.getBillnamestring()))){
          Stage stage = new Stage();
         String fxmlFile = "/fxml/EditPositionFx.fxml";
        
@@ -887,21 +887,17 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             }     
         }
         // create TempBill in database, add Tempbill key to accposition
-        for(Iterator<TempBills> kkj=tempbills.iterator();kkj.hasNext();){
-           TempBills hugo=kkj.next();
+        for (TempBills hugo : tempbills) {
             billb.createNewEmptyRecord();
-           hugo.setTempbill(billb.getLastPosition());
-           billb.setBillname(hugo.getTempbillname());
-           billb.setAccountPositionCollection(hugo.getAccountPositions()); // add AccPos to billCollection
-           for(Iterator<viewAccountPositionsProperty>kkk=hugo.getIterator();kkk.hasNext();) {
-               viewAccountPositionsProperty mg=kkk.next();
-               hj.getDataRecord(mg.getId());
-               hj.setBill(hugo.getTempbill().getBillno());
-               
-           }
-           
-           
-           
+            hugo.setTempbill(billb.getLastPosition());
+            billb.setBillname(hugo.getTempbillname());
+            billb.setAccountPositionCollection(hugo.getAccountPositions()); // add AccPos to billCollection
+            for(Iterator<viewAccountPositionsProperty>kkk=hugo.getIterator();kkk.hasNext();) {
+                viewAccountPositionsProperty mg=kkk.next();
+                hj.getDataRecord(mg.getId());
+                hj.setBill(hugo.getTempbill().getBillno());
+                
+            }
         }
         // persist both tables < bill and accpos>
         billb.saveRecord();
