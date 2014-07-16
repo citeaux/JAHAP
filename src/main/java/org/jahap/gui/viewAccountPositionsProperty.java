@@ -52,6 +52,7 @@ public  class viewAccountPositionsProperty {
      private final SimpleStringProperty camountstring = new SimpleStringProperty();
      private final SimpleStringProperty damountstring = new SimpleStringProperty();
      private final SimpleStringProperty billnostring = new SimpleStringProperty();
+     private boolean isTempBill; 
      
      private long billno;
      private int cAmount;
@@ -350,6 +351,14 @@ public  class viewAccountPositionsProperty {
 
     public void setBillnostring(String billnoString) {
         this.damountstring.set(billnoString);
+    }
+
+    public boolean isIsTempBill() {
+        return isTempBill;
+    }
+
+    public void setIsTempBill(boolean isTempBill) {
+        this.isTempBill = isTempBill;
     }
     
     

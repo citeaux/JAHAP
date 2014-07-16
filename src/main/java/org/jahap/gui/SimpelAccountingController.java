@@ -15,9 +15,11 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
+import java.util.Set;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
@@ -59,6 +61,7 @@ import org.jahap.entities.AccountPosition;
 import org.jahap.entities.Accounts;
 import org.jahap.entities.Bill;
 import org.jahap.entities.Rates;
+import static org.jahap.gui.BillTabs.log;
 
 /**
  * FXML Controller class
@@ -218,11 +221,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 bz.setId(zw.getId());
                 bz.setBilled(zw.getBilled());
                 bz.setCanceled(zw.isCanceled());
+                bz.setIsTempBill(jjk.getDataRecord(zw.getBill()).isTemp_bill());
                 
                 
                 try {
-                    
-                    if(jjk.getDataRecord(zw.getBill()).getBillname()!="" || jjk.getDataRecord(zw.getBill()).getBillname()!="ZEROBILL"){
+                    //DEV: Warning: Record returns Null Parameter:? Catch??
+                    if(jjk.getDataRecord(zw.getBill()).isTemp_bill() && !"ZEROBILL".equalsIgnoreCase(jjk.getDataRecord(zw.getBill()).getBillname()) ){
                         bz.setBillnamestring(jjk.getDataRecord(zw.getBill()).getBillname());
                     }
                 } catch (Exception e) {
@@ -230,7 +234,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 }
               
                    try {
-                      if(!"ZEROBILL".equals(jjk.getDataRecord(zw.getBill()).getBillname())){   //   
+                      if(!jjk.getDataRecord(zw.getBill()).isTemp_bill() && !"ZEROBILL".equals(jjk.getDataRecord(zw.getBill()).getBillname())){   //   
                     bz.setBillno(zw.getBill());
                       }
                 } catch (Exception e) {
@@ -272,7 +276,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                  gh=false;
                  viewAccountPositionsProperty ggl=im.next();
                  
-                if(ggl.getBillno()!=0 && ggl.getBillnamestring()!=){
+                if(ggl.getBillno()!=0 && !ggl.isIsTempBill()){
                        // search for exiting tab with bill no
                        for(Iterator<BillTabs> tbas=billtablist.iterator();tbas.hasNext();){
                            BillTabs koller=tbas.next();   
@@ -299,14 +303,14 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                             billtablist.add(jj);
                         }
                     } catch (Exception e) {
-                         System.out.println("----<add to billtablist >-----");
+                         log.debug("Error while adding to billtab list");
                          e.printStackTrace();
                     }
                      
                      // TEMP BILLS: Bills that are not closed yet and therefore have non billno
                 }else{
-                    if(ggl.getBillno()==0 && !ggl.getBillnamestring().equalsIgnoreCase("ZEROBILL")){
-                        if(ggl.getBillnamestring()!=""  ){
+                    if(ggl.isIsTempBill() && !ggl.getBillnamestring().equalsIgnoreCase("ZEROBILL") ){
+                        
                             
                                for(Iterator<BillTabs> tbas=billtablist.iterator();tbas.hasNext();){
                            BillTabs koller=tbas.next();   
@@ -339,7 +343,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                             
                             
                              
-                        }
+                        
                     }
                 }
                 
@@ -390,6 +394,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                  
                          @Override
                          public void updateItem(String item, boolean empty) {
+                             log.debug("Function entry updateItem Table Format row");
                              try {
                                  Tooltip tol = new Tooltip("Info");
                                  
@@ -408,7 +413,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                          tol.setText("This position is canceled");
                                          Tooltip.install(this, tol);
                                      }
-                                     if (datam.get(tl).isBilled() == true || datam.get(tl).getBillnamestring() != "" && !datam.get(tl).getBillnamestring().contentEquals("ZEROBILL")) {
+                                     if (datam.get(tl).isBilled() == true || datam.get(tl).isIsTempBill()) {
                                          setTextFill(Color.GREY);
                                          String texttip = new String();
                                          texttip = "This position is billed";
@@ -455,7 +460,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 
                                try {
                                  if (tl <= datam.size() - 1) {
-                                     if (datam.get(tl).isBilled() == true || datam.get(tl).getBillnamestring() != "" && !datam.get(tl).getBillnamestring().contentEquals("ZEROBILL")) {
+                                     if (datam.get(tl).isBilled() == true || datam.get(tl).isIsTempBill()) {
                                          setTextFill(Color.GREY);
                                          String texttip = new String();
                                          texttip = "This position is billed";
@@ -771,7 +776,9 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                         
                         //Only if the position is not marked (has no Billno / or Billname) move to new bill and mark as be in bill processing
                         if(haki==true){
-                        
+                        for (viewAccountPositionsProperty kj:jh){
+                                 kj.setIsTempBill(true);
+                        }
                         ko.addPositions(jh); // add all marked Position
                          for(Iterator<viewAccountPositionsProperty> lop=jh.listIterator();lop.hasNext();){
                                viewAccountPositionsProperty fou=lop.next();
@@ -889,6 +896,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         // create TempBill in database, add Tempbill key to accposition
         for (TempBills hugo : tempbills) {
             billb.createNewEmptyRecord();
+            billb.getLastPosition().setTemp_bill(true);
             hugo.setTempbill(billb.getLastPosition());
             billb.setBillname(hugo.getTempbillname());
             billb.setAccountPositionCollection(hugo.getAccountPositions()); // add AccPos to billCollection
@@ -922,6 +930,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                     kjh=fjjf.removeSelectedPosiions();
                     for( viewAccountPositionsProperty hhh:kjh){
                             hhh.setBillnamestring("");
+                            hhh.setIsTempBill(false);
                             hhh.setBillno(0);
                     }
              }
@@ -931,10 +940,12 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
        
        for(Iterator<viewAccountPositionsProperty>llo=datam.iterator(); llo.hasNext();){
             viewAccountPositionsProperty kj=llo.next();
-            if(kj.getBillnamestring()==gg.getText() &&  kj.getBillno()==0){
+            if(kj.getBillnamestring()==gg.getText() &&  kj.isIsTempBill()){
                 kj.setBillnamestring("");
+                kj.setIsTempBill(false);
                 bbo.getDataRecord(kj.getId());
-                bbo.setBill(0);
+                // set Bill Key to ZeroBill
+                bbo.setBill(jjj.getZeroRecord().getId());
             }
             
             
