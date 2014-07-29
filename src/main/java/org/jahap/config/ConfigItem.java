@@ -22,40 +22,30 @@
  * THE SOFTWARE.
  */
 
-package org.jahap;
+package org.jahap.config;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+/**
+ *
+ * @author russ
+ */
+public class ConfigItem {
+    
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+  private String persitence_unit; 
 
-public class MainApp extends Application {
-
-    //private static final Logger log = LoggerFactory.getLogger(MainApp.class);
-
-    public static void main(String[] args) throws Exception {
-        launch(args);
+    public String getPersitence_unit() {
+        return persitence_unit;
     }
-     
-    public void start(Stage stage) throws Exception {
 
-        //log.info("Starting Hello JavaFX and Maven demonstration application");
-       
-        String fxmlFile = "/fxml/Maingui.fxml";
-        //log.debug("Loading FXML for main view from: {}", fxmlFile);
-        FXMLLoader loader = new FXMLLoader();
-        Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
-
-        //log.debug("Showing JFX scene");
-        Scene scene = new Scene(rootNode);
-     
-
-        
-        stage.setScene(scene);
-        stage.show();
+    public void setPersitence_unit(String persitence_unit) {
+        this.persitence_unit = persitence_unit;
     }
-}
+
+  
+ 
+
+  @Override
+  public String toString() {
+    return "database [persitence_unit=" + persitence_unit  + "]";
+  }
+} 

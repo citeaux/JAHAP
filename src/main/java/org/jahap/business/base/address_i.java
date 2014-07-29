@@ -22,40 +22,30 @@
  * THE SOFTWARE.
  */
 
-package org.jahap;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+package org.jahap.business.base;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-public class MainApp extends Application {
-
-    //private static final Logger log = LoggerFactory.getLogger(MainApp.class);
-
-    public static void main(String[] args) throws Exception {
-        launch(args);
-    }
-     
-    public void start(Stage stage) throws Exception {
-
-        //log.info("Starting Hello JavaFX and Maven demonstration application");
-       
-        String fxmlFile = "/fxml/Maingui.fxml";
-        //log.debug("Loading FXML for main view from: {}", fxmlFile);
-        FXMLLoader loader = new FXMLLoader();
-        Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
-
-        //log.debug("Showing JFX scene");
-        Scene scene = new Scene(rootNode);
-     
-
-        
-        stage.setScene(scene);
-        stage.show();
-    }
+import javax.ejb.Remote;
+import org.jahap.entities.address_ie;
+/**
+ *
+ * @author russ
+ */
+@Remote
+public interface address_i extends DatabaseOperations_i, address_ie{
+    String getName();
+    String getChristianname();
+    String getStreet();
+    String getZipcode();
+    String getCity();
+    String getPhone();
+    String getEmail();
+    void setName(String name);
+    void setChristianname(String christianname);
+    void setStreet(String street);
+    void setZipcode(String zipcode);
+    void setCity(String city);
+    void setPhone(String phone);
+    void setEmail(String email);
+    void quitDBaccess();
 }

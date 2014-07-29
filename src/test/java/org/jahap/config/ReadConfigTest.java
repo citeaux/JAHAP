@@ -22,40 +22,54 @@
  * THE SOFTWARE.
  */
 
-package org.jahap;
+package org.jahap.config;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+import java.util.List;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-public class MainApp extends Application {
-
-    //private static final Logger log = LoggerFactory.getLogger(MainApp.class);
-
-    public static void main(String[] args) throws Exception {
-        launch(args);
+/**
+ *
+ * @author russ
+ */
+public class ReadConfigTest {
+    
+    public ReadConfigTest() {
     }
-     
-    public void start(Stage stage) throws Exception {
+    
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
+    }
+    
+    @After
+    public void tearDown() {
+    }
 
-        //log.info("Starting Hello JavaFX and Maven demonstration application");
+    /**
+     * Test of readConfig method, of class ReadConfig.
+     */
+    @Test
+    public void testReadConfig() {
+        System.out.println("readConfig");
+        String configFile = "";
+        ReadConfig instance = new ReadConfig();
+        List<ConfigItem> expResult = null;
+        List<ConfigItem> result = instance.readConfig("config.xml");
        
-        String fxmlFile = "/fxml/Maingui.fxml";
-        //log.debug("Loading FXML for main view from: {}", fxmlFile);
-        FXMLLoader loader = new FXMLLoader();
-        Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
-
-        //log.debug("Showing JFX scene");
-        Scene scene = new Scene(rootNode);
-     
-
-        
-        stage.setScene(scene);
-        stage.show();
+        // TODO review the generated test code and remove the default call to fail.
+        //fail("The test case is a prototype.");
     }
+    
 }

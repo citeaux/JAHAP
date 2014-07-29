@@ -22,40 +22,35 @@
  * THE SOFTWARE.
  */
 
-package org.jahap;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+package org.jahap.business.base;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+import javax.persistence.Query;
 
-public class MainApp extends Application {
-
-    //private static final Logger log = LoggerFactory.getLogger(MainApp.class);
-
-    public static void main(String[] args) throws Exception {
-        launch(args);
+/**
+ *
+ * @author russ
+ */
+public class DatabaseOperations {
+     int currentRecordNumber=0;
+     int numberOfLastRecord;
+      Query query_AllDbRecords;
+     boolean newEmptyRecordCreated=false;
+   boolean tabelIsEmpty=true; 
+    boolean tabelIsInit=false; // Set Tabel iniated - List is connected
+    
+    
+    void setNewEmptyRecordCreadted() {
+        this.newEmptyRecordCreated = true;
+        this.tabelIsEmpty=false;
     }
-     
-    public void start(Stage stage) throws Exception {
-
-        //log.info("Starting Hello JavaFX and Maven demonstration application");
-       
-        String fxmlFile = "/fxml/Maingui.fxml";
-        //log.debug("Loading FXML for main view from: {}", fxmlFile);
-        FXMLLoader loader = new FXMLLoader();
-        Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
-
-        //log.debug("Showing JFX scene");
-        Scene scene = new Scene(rootNode);
-     
-
-        
-        stage.setScene(scene);
-        stage.show();
+    
+    void setNewEmptyRecordSaved(){
+        this.newEmptyRecordCreated = false;
     }
+    
+    
+    
+    
+    
 }
