@@ -45,14 +45,14 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
          
         try {
            
-            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Rooms t GROUP BY t.id");
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Rooms t ORDER BY t.id");
             List<Rooms>allroomslist= query_AllDbRecords.getResultList();
             numberOfLastRecord= allroomslist.size()-1;
         } catch (Exception e) {
             numberOfLastRecord=-1;
         }
         
-        query_AllDbRecords = dbhook.getEntity().createQuery("select t from Rooms t GROUP BY t.id");
+        query_AllDbRecords = dbhook.getEntity().createQuery("select t from Rooms t ORDER BY t.id");
             allrecordlist= query_AllDbRecords.getResultList();
         
         try {

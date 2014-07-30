@@ -58,14 +58,14 @@ public class resbean extends DatabaseOperations implements res_i {
          
         try {
            
-            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Res t GROUP BY t.id");
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Res t ORDER BY t.id");
             List<Res>allreslist= query_AllDbRecords.getResultList();
             numberOfLastRecord= allreslist.size()-1;
         } catch (Exception e) {
             numberOfLastRecord=-1;
         }
         
-        query_AllDbRecords = dbhook.getEntity().createQuery("select t from Res t GROUP BY t.id");
+        query_AllDbRecords = dbhook.getEntity().createQuery("select t from Res t ORDER BY t.id");
             allrecordlist= query_AllDbRecords.getResultList();
         
         try {
@@ -156,7 +156,7 @@ public class resbean extends DatabaseOperations implements res_i {
             dbhook.getEntity().getTransaction().commit();
             newEmptyRecordCreated=false;
             allrecordlist.clear();
-            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Res t GROUP BY t.id"); // Refresh list
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Res t ORDER BY t.id"); // Refresh list
             allrecordlist= query_AllDbRecords.getResultList();
             
             }
@@ -251,7 +251,7 @@ public class resbean extends DatabaseOperations implements res_i {
     private void RefreshAllRecords(){
         try {
             allrecordlist.clear();
-            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Res t GROUP BY t.id");
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Res t ORDER BY t.id");
             allrecordlist = query_AllDbRecords.getResultList();
             numberOfLastRecord=allrecordlist.size()-1;
         } catch (Exception e) {
