@@ -331,6 +331,19 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                      
                      // TEMP BILLS: Bills that are not closed yet and therefore have non billno
                 }else{
+                       try {
+                        boolean jj = ggl.isIsTempBill();
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                           try {
+                        boolean k = ggl.getBillnamestring().equalsIgnoreCase("ZEROBILL");
+                    } catch (Exception e) {
+                               log.debug(e.toString());
+                        
+                        ggl.setBillnamestring("");
+                    }
+                    
                     if(ggl.isIsTempBill() && !ggl.getBillnamestring().equalsIgnoreCase("ZEROBILL") ){
                         
                             
