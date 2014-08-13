@@ -128,6 +128,10 @@ public class occplan implements Initializable {
     
     //******************* OCC BOX **************************
     
+    /**
+     *
+     */
+        
    public class occbox extends Label {
     
     private String id;
@@ -140,70 +144,130 @@ public class occplan implements Initializable {
     private String yPosEndByYHeader;
     private int yPosEndByYHeaderPercentOfbox=50;
 
-      public occbox(String xPosStartByXHeader,String xPosEndByXHeader, String yPosStartByYHeader,String text ){
+        /**
+         *
+         * @param xPosStartByXHeader
+         * @param xPosEndByXHeader
+         * @param yPosStartByYHeader
+         * @param text
+         */
+        public occbox(String xPosStartByXHeader,String xPosEndByXHeader, String yPosStartByYHeader,String text ){
         this.xPosStartByXHeader=xPosStartByXHeader;
         this.xPosEndByXHeader=xPosEndByXHeader;
         this.yPosStartByYHeader=yPosStartByYHeader;
         this.xPosStartByXHeaderPercentOfbox=50;
         this.setText(text);
     }
-    
-    
-    
-    public String getxPosStartByXHeader() {
+
+        /**
+         *
+         * @return
+         */
+        public String getxPosStartByXHeader() {
         return xPosStartByXHeader;
     }
 
-    public void setxPosStartByXHeader(String xPosStartByXHeader) {
+        /**
+         *
+         * @param xPosStartByXHeader
+         */
+        public void setxPosStartByXHeader(String xPosStartByXHeader) {
         this.xPosStartByXHeader = xPosStartByXHeader;
     }
 
-    public String getyPosStartByYHeader() {
+        /**
+         *
+         * @return
+         */
+        public String getyPosStartByYHeader() {
         return yPosStartByYHeader;
     }
 
-    public void setyPosStartByYHeader(String yPosStartByYHeader) {
+        /**
+         *
+         * @param yPosStartByYHeader
+         */
+        public void setyPosStartByYHeader(String yPosStartByYHeader) {
         this.yPosStartByYHeader = yPosStartByYHeader;
     }
 
-    public int getxPosStartByXHeaderPercentOfbox() {
+        /**
+         *
+         * @return
+         */
+        public int getxPosStartByXHeaderPercentOfbox() {
         return xPosStartByXHeaderPercentOfbox;
     }
 
-    public void setxPosStartByXHeaderPercentOfbox(int xPosStartByXHeaderPercentOfbox) {
+        /**
+         *
+         * @param xPosStartByXHeaderPercentOfbox
+         */
+        public void setxPosStartByXHeaderPercentOfbox(int xPosStartByXHeaderPercentOfbox) {
         this.xPosStartByXHeaderPercentOfbox = xPosStartByXHeaderPercentOfbox;
     }
 
-    public String getxPosEndByXHeader() {
+        /**
+         *
+         * @return
+         */
+        public String getxPosEndByXHeader() {
         return xPosEndByXHeader;
     }
 
-    public void setxPosEndByXHeader(String xPosEndByXHeader) {
+        /**
+         *
+         * @param xPosEndByXHeader
+         */
+        public void setxPosEndByXHeader(String xPosEndByXHeader) {
         this.xPosEndByXHeader = xPosEndByXHeader;
     }
 
-    public String getyPosEndByYHeader() {
+        /**
+         *
+         * @return
+         */
+        public String getyPosEndByYHeader() {
         return yPosEndByYHeader;
     }
 
-    public void setyPosEndByYHeader(String yPosEndByYHeader) {
+        /**
+         *
+         * @param yPosEndByYHeader
+         */
+        public void setyPosEndByYHeader(String yPosEndByYHeader) {
         this.yPosEndByYHeader = yPosEndByYHeader;
     }
 
-    public int getyPosEndByYHeaderPercentOfbox() {
+        /**
+         *
+         * @return
+         */
+        public int getyPosEndByYHeaderPercentOfbox() {
         return yPosEndByYHeaderPercentOfbox;
     }
 
-    public void setyPosEndByYHeaderPercentOfbox(int yPosEndByYHeaderPercentOfbox) {
+        /**
+         *
+         * @param yPosEndByYHeaderPercentOfbox
+         */
+        public void setyPosEndByYHeaderPercentOfbox(int yPosEndByYHeaderPercentOfbox) {
         this.yPosEndByYHeaderPercentOfbox = yPosEndByYHeaderPercentOfbox;
     }
-  
-    
-  public String getObjId() {
+
+        /**
+         *
+         * @return
+         */
+        public String getObjId() {
         return id;
     }
 
-    public void setObjId(String id) {
+        /**
+         *
+         * @param id
+         */
+        public void setObjId(String id) {
         this.id = id;
     }
 
@@ -228,6 +292,8 @@ public class occplan implements Initializable {
     
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     
     @Override
@@ -235,11 +301,15 @@ public class occplan implements Initializable {
         // TODO
         
         
-    }    
-    
-    
-    
-     public occplan(List<String>xheader,List<String>yheader,List<occbox>OccDataList) {
+    }
+
+    /**
+     *
+     * @param xheader
+     * @param yheader
+     * @param OccDataList
+     */
+    public occplan(List<String>xheader,List<String>yheader,List<occbox>OccDataList) {
        // List<occbox>OccDataList
        // initComponents();
        
@@ -253,6 +323,9 @@ public class occplan implements Initializable {
         drawMainSheet();
     }
     
+    /**
+     *
+     */
     public void  drawMainSheet(){
         List<Label> labels= new ArrayList<Label>(); 
         List<occgrid> grid= new ArrayList<occgrid>();
