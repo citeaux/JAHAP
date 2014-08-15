@@ -91,6 +91,8 @@ public class resbean extends DatabaseOperations implements res_i {
      * @return
      */
     public  long getNewResNumber(){
+        
+        // DEV: Number Area has to be implemented
         long resno=0;
         int gg=0;
         try {
@@ -223,7 +225,7 @@ public class resbean extends DatabaseOperations implements res_i {
         
         for(Res k:allrecordlist){
             
-            if(k.getId()==id){
+            if(k.getId().equals(id)){
                 log.debug("Function entry " + inl );
                 currentRecordNumber=inl;
                 break;

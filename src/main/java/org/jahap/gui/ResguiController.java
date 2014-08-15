@@ -43,6 +43,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
+import java.util.logging.Level;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -199,7 +200,22 @@ public class ResguiController implements Initializable, InterResSearchResultList
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        
+        textfields=new ArrayList<TextField>();
+        
+        
+        
+        
+        res = new resbean();
+        address=new addressbean();
+        occ=new occbean();
+        room=new roomsbean();
+        rate=new ratesbean();
+        accs=new accountsbean();
+        cscs=new cscbean();
+        ressearchresult=new InterResSearchResult();
+        createNewRecord=true;
+         ressearchresult.addIDListener(this);
     }    
 
     @FXML
@@ -360,7 +376,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         
          res.setAddresses(address.getDataRecord(ordererid));  // Set Addressrecord
                       
-
+   
                      
 
                       
@@ -452,7 +468,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Date SaveToDate=occ.getDeparturedate();
         long SaveRoomId=occ.getRoom().getId();
         long SaveAddressId=occ.getGuest().getId();
-        
+        long ResNo=res.getNewResNumber();
             
       
          res.createNewEmptyRecord();
@@ -476,6 +492,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
          List<String>overlaps=new ArrayList<String>();  
          overlaps=occ.CheckForOverlappingReservations();  
          if(overlaps==null){
+            res.setResno(String.valueOf(ResNo));
              
              res.setArrivaldate(formatter.format(occ.getArrivaldate()));
              res.setDeparturedate(formatter.format(occ.getDeparturedate()));
