@@ -95,21 +95,32 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     static Logger log = Logger.getLogger(SimpelAccountingController.class.getName());
     
     
+    @FXML
         private TableView Account_tablefx;
     
              private TableColumn<viewAccountPositionsProperty, String>id_Account_tablefx;                                                   
+    @FXML
                 private TableColumn<viewAccountPositionsProperty, String> date_Account_tablefx;
+    @FXML
                 private TableColumn<viewAccountPositionsProperty, String> cService_Account_tablefxColumn;
+    @FXML
                 private TableColumn<viewAccountPositionsProperty, String> cAmount_Account_tablefxColumn;
+    @FXML
                 private TableColumn<viewAccountPositionsProperty, String> dService_Account_tablefxColumn;
+    @FXML
                 private TableColumn<viewAccountPositionsProperty, String> dAmount_Account_tablefxColumn;
+    @FXML
                 private TableColumn<viewAccountPositionsProperty, String> cPrice_Account_tablefxColumn;
+    @FXML
                 private TableColumn<viewAccountPositionsProperty, String> dPrice_Account_tablefxColumn;
    
+    @FXML
                 private TableColumn<viewAccountPositionsProperty, String> cTotal_Account_tablefxColumn;
+    @FXML
                 private TableColumn<viewAccountPositionsProperty, String> dTotal_Account_tablefxColumn;
     
     
+    @FXML
         private TextField balance_fxtextbox;
     //private List<viewAccountPositions> accview;
     private InterAccSearchResult accsearchresult;
@@ -119,17 +130,21 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     private long rateid=0;
     //private ObservableList<viewAccountPositions> data;
     final ObservableList<viewAccountPositionsProperty> datam=FXCollections.observableArrayList();
+    @FXML
         private Tooltip balance_textbox_fxtooltip;
   
     private ObservableList<String> tempBills=FXCollections.observableArrayList();
     
+    @FXML
         private Tab Account;
     
     
     
     private List<AccountViewer> accViewList;
   
+    @FXML
         private ChoiceBox<String> movePositionToBillChoiceBox;
+    @FXML
         private TabPane AccountTab;
     
    
@@ -140,7 +155,43 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     
     private List<BillTabs> billtablist;
+    @FXML
+    private TitledPane x1;
+    @FXML
+    private TitledPane x2;
+    @FXML
+    private TitledPane x3;
+    @FXML
+    private Button addArticle;
+    @FXML
+    private Button cancleArticle;
+    @FXML
+    private Button editArticle;
+    @FXML
+    private Button editRates;
+    @FXML
+    private Button printOverview;
+    @FXML
+    private Button closeAccount;
+    @FXML
+    private Button AdvancedChargeRates;
+    @FXML
+    private TitledPane x4;
+    @FXML
+    private Button createInvoiceButton;
+    @FXML
+    private Button removePosfromBillbutton;
+    @FXML
+    private Button PrintInvoice_FxButton;
+    @FXML
+    private Button CloseInvoice_FxButton1;
 
+      @FXML
+    private Button addPayment1;
+
+    @FXML
+    private Button addPayment;
+    
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone(); //To change body of generated methods, choose Tools | Templates.
@@ -542,6 +593,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
     
     
+    @FXML
         private void addArticle(ActionEvent event) throws IOException {
         log.debug("Function entry");
          Stage stage = new Stage();
@@ -563,8 +615,9 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         stage.showAndWait();
         
         log.debug("Function exit buildTable");
-    }
-
+       
+ }
+        @FXML
         private void cancleArticle(ActionEvent event) {
         log.debug("Function entry cancleArticle");
         Calendar cal  = Calendar.getInstance();
@@ -605,8 +658,9 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         }
         }
         log.debug("Function exit cancleArticle");
-    }
-
+       
+ }
+        @FXML
         private void editArticle(ActionEvent event) throws IOException {
 ////////////        
         log.debug("Function entry editArticle");
@@ -644,7 +698,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     //@Subscribe
    
     
-    
+     @FXML
+   
         private void editRates(ActionEvent event) throws IOException {
         log.debug("Function entry editRates");
         Stage stage = new Stage();
@@ -665,13 +720,15 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         // accsearchresult,this,"rate"
         stage.showAndWait();
         log.debug("Function exit editRates");
-    }
-
+       
+ }
+        @FXML
         private void printOverview(ActionEvent event) {
         log.debug("Function entry printOverview");
         log.debug("Function exit printOverview");
-    }
-
+      
+ }
+         @FXML
         private void createInvoice(ActionEvent event) {
         log.debug("Function entry createInvoice");
                 
@@ -684,13 +741,15 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         log.debug("Function exit createInvoice");
                 
                 
-    }
-
+       
+ }
+        @FXML
         private void closeAccount(ActionEvent event) {
         log.debug("Function entry closeAccount");
         log.debug("Function exit closeAccount");
-    }
-
+       
+ }
+        @FXML
         private void AdvancedChargeRates(ActionEvent event) {
         log.debug("Function entry AdvancedChargeRates");
         log.debug("Function exit AdvancedChargeRates");
@@ -740,9 +799,10 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                          String.valueOf(acc.getSumofDebitsPos()));
                   System.err.println("After");
        }
-        log.debug("Function exit idinfo");
-}
+        log.debug("Function exit idinfo");    
 
+}
+        @FXML
         private void MovePosition(ActionEvent event) {
         log.debug("Function entry MovePosition" );
         for(Iterator<BillTabs> k= billtablist.listIterator();k.hasNext();){
@@ -787,9 +847,19 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         private void PrintAndCloseBill(ActionEvent event) {
         log.debug("Function entry PrintAndCloseBill");
         log.debug("Function exit PrintAndCloseBill");
+        }
                 
-                
+       @FXML
+    private void PrintInvoice(ActionEvent event) {
+            
     }
+    
+     @FXML
+    private void CloseInvoice(ActionEvent event) {
+    }
+
+
+
 
 
  
@@ -847,9 +917,10 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
             return jlk;
         }
         
-    }
-    
-    
+    } 
+     ///--------
+     
+        @FXML
         private void Save(ActionEvent event) {
          log.debug("Function entry Save");
         // ######### Saves TempBill ##########
@@ -900,8 +971,8 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         hj.saveRecord();
         log.debug("Function exit Save");
     }
-     
-        private void removePosfromBill(ActionEvent event) {
+      @FXML
+      private void removePosfromBill(ActionEvent event) {
         log.debug("Function entry removePosfromBill");
        List<viewAccountPositionsProperty>kjh; 
        billbean jjj= new billbean();
@@ -947,4 +1018,9 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         log.debug("Function exit removePosfromBill");
     }
     
+       @FXML
+    void addPayment(ActionEvent event) {
+
+    }
+      
 }
