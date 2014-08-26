@@ -30,13 +30,12 @@ package org.jahap.gui;
 
 import java.io.IOException;
 import java.net.URL;
-
-import org.apache.log4j.Logger;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
@@ -75,6 +74,7 @@ import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import javax.print.DocFlavor;
+import org.apache.log4j.Logger;
 import org.jahap.business.acc.accountsbean;
 import org.jahap.business.acc.accountspositionbean;
 import org.jahap.business.acc.billbean;
@@ -805,6 +805,28 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         @FXML
         private void MovePosition(ActionEvent event) {
         log.debug("Function entry MovePosition" );
+        ObservableList<viewAccountPositionsProperty> klm=  Account_tablefx.getSelectionModel().getSelectedItems();
+        ArrayList payment=new ArrayList<>();
+        HashSet hs = new HashSet<>();
+        int ik=klm.size()-1;
+        for(int io=0;io<=ik;io++){     // Search for Pos which has been payed for. 
+            if(klm.get(io).getPayment()!=0){
+                  hs.add(klm.get(io).getPayment()); // add Pos then to memList
+                  klm.remove(io);   // remove from selection List
+            }
+        }
+            
+        payment.addAll(hs);
+        int zu;
+        for(int kk=0;kk<=payment.size()-1;kk++){
+            for(viewAccountPositionsProperty jj:datam){  //find payment in MainList compared to memlist an add back to selection list
+                     if(payment.get(kk).equals(jj.getPayment())){
+                         klm.add(jj);
+                     }
+            }
+        }
+        
+        
         for(Iterator<BillTabs> k= billtablist.listIterator();k.hasNext();){
              BillTabs ko=k.next();
                     if(ko.getBillname()==movePositionToBillChoiceBox.getValue()){
@@ -826,7 +848,11 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                         if(haki==true){
                         for (viewAccountPositionsProperty kj:jh){
                                  kj.setIsTempBill(true);
+                                 
                         }
+                        
+                        
+                        
                         ko.addPositions(jh); // add all marked Position
                          for(Iterator<viewAccountPositionsProperty> lop=jh.listIterator();lop.hasNext();){
                                viewAccountPositionsProperty fou=lop.next();
@@ -1020,6 +1046,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     
        @FXML
     void addPayment(ActionEvent event) {
+        
 
     }
       

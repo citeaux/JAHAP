@@ -56,7 +56,7 @@ public  class viewAccountPositionsProperty {
      private long  canceledposition;
      private double cPrice;
      private double dPrice;
-     
+     private long payment;
      private final SimpleStringProperty cpricestring = new SimpleStringProperty();
      private final SimpleStringProperty dpricestring = new SimpleStringProperty();
      private final SimpleStringProperty billnamestring = new SimpleStringProperty();
@@ -403,5 +403,15 @@ public  class viewAccountPositionsProperty {
         }
         return pos;
     }
+
+    public long getPayment() {
+        return payment;
+    }
+
+    public void setPayment(long payment) {
+        this.payment = payment;
+    }
+    
+    
     
 }
