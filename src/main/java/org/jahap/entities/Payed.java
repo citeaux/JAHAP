@@ -54,13 +54,17 @@ import javax.xml.bind.annotation.XmlTransient;
     @NamedQuery(name = "Payed.findAll", query = "SELECT p FROM Payed p"),
     @NamedQuery(name = "Payed.findById", query = "SELECT p FROM Payed p WHERE p.id = :id"),
     @NamedQuery(name = "Payed.findByDebit", query = "SELECT p FROM Payed p WHERE p.debit = :debit")})
-public class Payed implements Serializable, Payed_ie {
+    public class Payed implements Serializable, Payed_ie {
     @Column(name = "DEBIT")
-    private Boolean debit;
+    private boolean debit;
     @Column(name = "TOTAL")
     private double total;
     @Column(name = "OPENPOS")
-    private Boolean openpos;
+    private boolean openpos;
+    @Column(name = "CANCELED")
+    private boolean canceled;
+    @Column(name = "CANCELEDPAYMENT")
+    private long canceledpayment;
     private static final long serialVersionUID = 1L;
     @Id
    @Basic(optional = false)
@@ -121,7 +125,25 @@ public class Payed implements Serializable, Payed_ie {
         }
         return true;
     }
-
+    @Override
+    public boolean isCanceled() {
+        return canceled;
+    }
+    @Override
+    public void setCanceled(boolean canceled) {
+        this.canceled = canceled;
+    }
+    @Override
+    public long getCanceledpayment() {
+        return canceledpayment;
+    }
+    @Override
+    public void setCanceledpayment(long conceledpayment) {
+        this.canceledpayment = conceledpayment;
+    }
+    
+    
+    
     @Override
     public String toString() {
         return "org.arnea.jahap.standalone.entities.Payed[ id=" + id + " ]";
@@ -148,12 +170,12 @@ public class Payed implements Serializable, Payed_ie {
     }
 
     @Override
-    public Boolean getOpenpos() {
+    public boolean getOpenpos() {
         return openpos;
     }
 
     @Override
-    public void setOpenpos(Boolean openpos) {
+    public void setOpenpos(boolean openpos) {
         this.openpos = openpos;
     }
     

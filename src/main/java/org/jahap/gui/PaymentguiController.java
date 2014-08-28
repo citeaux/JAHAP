@@ -25,8 +25,21 @@
 package org.jahap.gui;
 
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
+import org.apache.log4j.Logger;
+import org.jahap.business.base.Paymenttypesbean;
+import org.jahap.entities.Paymenttypes;
 
 /**
  * FXML Controller class
@@ -34,7 +47,17 @@ import javafx.fxml.Initializable;
  * @author Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>
  */
 public class PaymentguiController implements Initializable {
-
+    @FXML
+    private TextField totalSum;
+    @FXML
+    private ComboBox<String> paymentType;
+    @FXML
+    private Button PayAndPrint;
+    static Logger log = Logger.getLogger(PaymentguiController.class.getName()); 
+    private InterAccSearchResult iAccResult;
+    private Paymenttypesbean pTypes;
+    private ObservableList<String> options;
+    private HashMap total;
     /**
      * Initializes the controller class.
      */
@@ -42,5 +65,45 @@ public class PaymentguiController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    public void init(double totalamount, InterAccSearchResult iAccResult){
+        this.iAccResult=iAccResult;
+        total=new HashMap();
+       pTypes=new Paymenttypesbean();
+        totalSum.setText(String.valueOf(totalamount));
+        total.put("total", totalamount);
+        options = FXCollections.observableArrayList(pTypes.SearchForPaymenttypes());
+        pTypes.SearchForPaymenttypes().forEach(name->System.out.println(name.toString()));
+        try {
+          for(String mjj:options){  
+             paymentType.getItems().add(mjj);
+          }
+        } catch (Exception e) {
+            log.debug("Yeah");
+            e.printStackTrace();
+        }
+        
+        
+        
+        
+        
+    }
+
+    @FXML
+    private void PayAndPrint(ActionEvent event) {
+        List<Paymenttypes> hhh=new ArrayList<>();
+
+        if(!"".equals(paymentType.getValue())){
+                  hhh=pTypes.SearchForPaymenttypes(paymentType.getValue());
+        }
+        
+    
+       try {
+            iAccResult.setDbRecordId(hhh.get(0).getId(), "paymenttype", total);
+        } catch (Exception e) {
+        }
+        
+        
+    }
     
 }

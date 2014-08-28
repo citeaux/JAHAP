@@ -14,6 +14,8 @@ CREATE TABLE payed (
                 ID BIGINT,
                 debit BOOLEAN,
                 paymenttype BIGINT,
+                canceled BOOLEAN,
+                canceledpayment BIGINT,
                 total DECIMAL(8,2),
                 openpos BOOLEAN
                 

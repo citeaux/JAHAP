@@ -39,19 +39,24 @@ public interface Payed_ie {
 
     Long getId();
 
-    Boolean getOpenpos();
+    boolean getOpenpos();
 
     Paymenttypes getPaymenttype();
 
     double getTotal();
 
-
+    boolean isCanceled(); 
+    
+    long getCanceledpayment();
 
     void setDebit(Boolean debit);
 
     void setId(Long id);
-
-    void setOpenpos(Boolean openpos);
+    void setCanceled(boolean canceled);
+    
+    void setCanceledpayment(long conceledpayment);
+       
+    void setOpenpos(boolean openpos);
 
     void setPaymenttype(Paymenttypes paymenttype);
 

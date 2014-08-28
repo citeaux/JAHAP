@@ -41,6 +41,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.Set;
+import java.util.stream.Collectors;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
@@ -75,9 +76,12 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import javax.print.DocFlavor;
 import org.apache.log4j.Logger;
+import org.dbunit.database.statement.IStatementFactory;
 import org.jahap.business.acc.accountsbean;
 import org.jahap.business.acc.accountspositionbean;
 import org.jahap.business.acc.billbean;
+import org.jahap.business.acc.payedbean;
+import org.jahap.business.base.Paymenttypesbean;
 import org.jahap.business.base.ratesbean;
 import org.jahap.entities.AccountPosition;
 import org.jahap.entities.Accounts;
@@ -757,6 +761,30 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
 
     public void idinfo(InterAccSearchResultEvent e) {
         log.debug("Function entry idinfo");
+        ObservableList<viewAccountPositionsProperty>  gg = FXCollections.observableArrayList();
+        gg=Account_tablefx.getSelectionModel().getSelectedItems();
+        if(e.getTableNameofSource()=="paymenttype"){
+                log.debug("Action reaction - add payment -"); 
+                //create payment 
+                payedbean py=new payedbean(); 
+                Paymenttypesbean pyT= new Paymenttypesbean();
+                py.createNewEmptyRecord();
+                py.setPaymenttype(pyT.getDataRecord(e.getDbRecordId()));
+                
+                py.setTotal(Double.valueOf(e.getDatamap().get("total").toString()));
+                py.saveRecord();
+                for(viewAccountPositionsProperty dd:gg){
+                    dd.setPayment(py.getLastPosition());
+                    acc.adjustPosition(dd.getId(),dd.getAccountPosition());
+                }
+                //add payment to pos
+                
+                acc.saveRecord();
+                
+                
+        }
+        
+        
          if(e.getTableNameofSource()=="rate"){
              log.debug("Action reaction - add article -");  
            System.out.println("Rate" + String.valueOf(e.getDbRecordId()));
@@ -805,12 +833,13 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         @FXML
         private void MovePosition(ActionEvent event) {
         log.debug("Function entry MovePosition" );
+        //------------- Move all payed Pos to selection   -----       
         ObservableList<viewAccountPositionsProperty> klm=  Account_tablefx.getSelectionModel().getSelectedItems();
         ArrayList payment=new ArrayList<>();
         HashSet hs = new HashSet<>();
         int ik=klm.size()-1;
         for(int io=0;io<=ik;io++){     // Search for Pos which has been payed for. 
-            if(klm.get(io).getPayment()!=0){
+            if( klm.get(io).getPayment()!=null){
                   hs.add(klm.get(io).getPayment()); // add Pos then to memList
                   klm.remove(io);   // remove from selection List
             }
@@ -825,8 +854,9 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                      }
             }
         }
+        //################### Move all payed Pos to selection ###############
         
-        
+        //------------------- Move Selection to temp Bill ---------------
         for(Iterator<BillTabs> k= billtablist.listIterator();k.hasNext();){
              BillTabs ko=k.next();
                     if(ko.getBillname()==movePositionToBillChoiceBox.getValue()){
@@ -944,8 +974,9 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
         }
         
     } 
-     ///--------
      
+    
+    
         @FXML
         private void Save(ActionEvent event) {
          log.debug("Function entry Save");
@@ -1045,9 +1076,46 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
     }
     
        @FXML
-    void addPayment(ActionEvent event) {
-        
+    void addPayment(ActionEvent event) throws IOException {
+            double totalAmount=0;
+           log.debug("Function entry addPayment");  
+            ObservableList<viewAccountPositionsProperty> klm=  Account_tablefx.getSelectionModel().getSelectedItems();
+            boolean payedposExisting=false;
+            for(viewAccountPositionsProperty kk:klm){
+                    if(kk.getPayment()!=null){
+                           payedposExisting=true;
+                    }
+            }
 
-    }
+            if(payedposExisting==false){
+               for(viewAccountPositionsProperty lo:klm ){
+                           totalAmount=totalAmount+ (lo.getcAmount()*lo.getcPrice());
+                           totalAmount=totalAmount - (lo.getdAmount()*lo.getdPrice());
+                           
+                           
+                           
+                           
+            }
+            
+               
+               Stage stage = new Stage();
+        String fxmlFile = "/fxml/paymentgui.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        PaymentguiController controller= loader.<PaymentguiController>getController();
+       controller.init(totalAmount,accsearchresult);
       
+        // accsearchresult,this,"rate"
+        stage.showAndWait();
+           log.debug("Function exit addPayment"); 
+    }
+    }
 }

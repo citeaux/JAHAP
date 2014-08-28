@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2014 Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>.
+ * Copyright 2014 Open Jahap Community.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,59 +22,12 @@
  * THE SOFTWARE.
  */
 
-
-
 package org.jahap.gui;
-
-import java.util.EventObject;
-import java.util.HashMap;
-
 
 /**
  *
- * @author russ
+ * @author Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>
  */
-public class InterAccSearchResultEvent extends EventObject{
-    
-    private long DbRecordId;
-
-    private Object EvObj;
-    private String TableNameofSource;
-    private HashMap datamap;
-    
-     public long getDbRecordId() {
-        return DbRecordId;
-    }
-
-    public HashMap getDatamap() {
-        return datamap;
-    }
-
- 
-
-    public Object getTableNameofSource() {
-        return TableNameofSource;
-    }
-    
-    
-    public void setEventObject(Object EvObj){
-          this.EvObj=EvObj;
-    }
-    
-    public Object getEventObject(){
-        return this.EvObj;
-    }
-    
-    public InterAccSearchResultEvent(Object source, long DataRecordId, String TableNameofSource,HashMap datamap, Object EvObj ){
-        super(source);
-        this.DbRecordId=DataRecordId;
-        this.TableNameofSource=TableNameofSource;
-        this.datamap=datamap;
-        this.EvObj=EvObj;
-    }
-    
-     
-        
-    
+class paymenttypes {
     
 }

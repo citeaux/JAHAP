@@ -13,7 +13,10 @@ CREATE TABLE Paymenttypes (
 CREATE TABLE payed (
                 ID BIGINT,
                 debit BOOLEAN,
+                canceled BOOLEAN,
+                canceledpayment BIGINT,
                 paymenttype BIGINT,
+                
                 total DECIMAL(8,2),
                 openpos BOOLEAN,
                 CONSTRAINT payed_pk PRIMARY KEY (ID)

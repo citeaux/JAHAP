@@ -33,6 +33,7 @@ import javafx.beans.property.*;
 import org.jahap.business.acc.billbean;
 import org.jahap.business.base.ratesbean;
 import org.jahap.entities.AccountPosition;
+import org.jahap.entities.Payed;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
@@ -56,7 +57,7 @@ public  class viewAccountPositionsProperty {
      private long  canceledposition;
      private double cPrice;
      private double dPrice;
-     private long payment;
+     private Payed payment;
      private final SimpleStringProperty cpricestring = new SimpleStringProperty();
      private final SimpleStringProperty dpricestring = new SimpleStringProperty();
      private final SimpleStringProperty billnamestring = new SimpleStringProperty();
@@ -387,10 +388,10 @@ public  class viewAccountPositionsProperty {
         billbean bb=new billbean();
         pos.setBilled(this.billed);
         pos.setDebit(this.debit);
-        
+        pos.setPayed(payment);
         pos.setBill(this.billno);
        ratesbean jj=new ratesbean();
-        
+       
         if(this.debit==false){
              pos.setAmount(this.cAmount);
              pos.setPositionname(this.cpositionname.get());
@@ -404,13 +405,15 @@ public  class viewAccountPositionsProperty {
         return pos;
     }
 
-    public long getPayment() {
+    public Payed getPayment() {
         return payment;
     }
 
-    public void setPayment(long payment) {
+    public void setPayment(Payed payment) {
         this.payment = payment;
     }
+
+   
     
     
     

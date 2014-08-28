@@ -25,6 +25,7 @@
 
 package org.jahap.gui;
 
+import java.util.HashMap;
 import javax.swing.event.EventListenerList;
 import javax.swing.table.TableModel;
 
@@ -36,17 +37,19 @@ public class InterAccSearchResult {
     private long DbRecordId;
     private String TableNameofSource;
     private Object EventObj;
-   
+    private HashMap datamap;
+    
     public long getDbRecordId() {
         return DbRecordId;
     }
     
 
-    public void setDbRecordId(long DataRecordId, String TableNameofSource) {
+    public void setDbRecordId(long DataRecordId, String TableNameofSource, HashMap datamap) {
         //
         this.TableNameofSource=TableNameofSource;
         this.DbRecordId=DataRecordId;
-        notifyId(new InterAccSearchResultEvent(this,DataRecordId,TableNameofSource,EventObj));
+        this.datamap=datamap;
+        notifyId(new InterAccSearchResultEvent(this,DataRecordId,TableNameofSource,datamap,EventObj));
     }
 
     public Object getEventObj() {

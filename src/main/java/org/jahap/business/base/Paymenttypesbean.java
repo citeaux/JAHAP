@@ -26,6 +26,7 @@ package org.jahap.business.base;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import static java.util.stream.Collectors.toList;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.Payed;
 import org.jahap.entities.Paymenttypes;
@@ -54,7 +55,7 @@ public class Paymenttypesbean extends DatabaseOperations  implements Paymenttype
             numberOfLastRecord=-1;
         }
         
-        query_AllDbRecords = dbhook.getEntity().createQuery("select t from Rates t ORDER BY t.id");
+        query_AllDbRecords = dbhook.getEntity().createQuery("select t from Paymenttypes t ORDER BY t.id");
             allrecordlist= query_AllDbRecords.getResultList();
         
         try {
@@ -168,12 +169,28 @@ public class Paymenttypesbean extends DatabaseOperations  implements Paymenttype
    }
      
        
-        public List<Paymenttypes>SearchForRate(String searchstring){
-                
+        public List<Paymenttypes>SearchForPaymenttypes(String paymenttype){
+                if(!"".equals(paymenttype)){
+                         for (Paymenttypes kk:allrecordlist){
+                           if(kk.getName().equals(paymenttype)){
+                               SearchForPaymenttypes().add(paymenttype);
+                           }
+        }                     
+                }
         return allrecordlist;
     }
         
-        
+        public List<String>SearchForPaymenttypes(){
+                   
+            List<String>hh=new ArrayList<>();
+            for (Paymenttypes kk:allrecordlist){
+                     hh.add(kk.getName());
+        }
+            
+            
+            
+        return hh;
+    }
        
      
      public Paymenttypes  getDataRecord(Long id){

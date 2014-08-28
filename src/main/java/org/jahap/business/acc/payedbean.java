@@ -273,13 +273,13 @@ public class payedbean extends DatabaseOperations implements payed_i{
     }
 
     @Override
-    public Boolean getOpenpos() {
+    public boolean getOpenpos() {
         log.debug("Function entry getOpenpos");
        if( tabelIsEmpty!=true){ 
               return allrecordlist.get(currentRecordNumber).getOpenpos();
                    
        }
-        return null;
+        return false;
     }
 
     @Override
@@ -317,7 +317,7 @@ public class payedbean extends DatabaseOperations implements payed_i{
     }
 
     @Override
-    public void setOpenpos(Boolean openpos) {
+    public void setOpenpos(boolean openpos) {
         if(tabelIsInit==false|| tabelIsEmpty==true)
             createNewEmptyRecord();
         
@@ -341,5 +341,44 @@ public class payedbean extends DatabaseOperations implements payed_i{
         
             allrecordlist.get(currentRecordNumber).setTotal(total);
     }
+
+    
+
+    @Override
+    public boolean isCanceled() {
+        log.debug("Function entry getAddress");
+       if( tabelIsEmpty!=true){ 
+              return allrecordlist.get(currentRecordNumber).isCanceled();
+                   
+       }
+        return false;
+    }
+
+    @Override
+    public long getCanceledpayment() {
+         log.debug("Function entry getAddress");
+       if( tabelIsEmpty!=true){ 
+              return allrecordlist.get(currentRecordNumber).getCanceledpayment();
+                   
+       }
+        return 0;
+    }
+
+    @Override
+    public void setCanceled(boolean canceled) {
+       if(tabelIsInit==false|| tabelIsEmpty==true)
+            createNewEmptyRecord();
+        
+            allrecordlist.get(currentRecordNumber).setCanceled(canceled);
+    }
+
+    @Override
+    public void setCanceledpayment(long conceledpayment) {
+        if(tabelIsInit==false|| tabelIsEmpty==true)
+            createNewEmptyRecord();
+        
+            allrecordlist.get(currentRecordNumber).setCanceledpayment(conceledpayment);
+    }
+
     
 }

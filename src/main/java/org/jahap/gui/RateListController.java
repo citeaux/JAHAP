@@ -232,7 +232,7 @@ public class RateListController implements Initializable {
             }
         }if(AccSearchresult!=null){
             try {
-                AccSearchresult.setDbRecordId(id, guisource);
+                AccSearchresult.setDbRecordId(id, guisource,null);
             } catch (Exception e) {
             }
         }
