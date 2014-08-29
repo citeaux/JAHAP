@@ -67,7 +67,7 @@ import javax.xml.bind.annotation.XmlTransient;
     private long canceledpayment;
     private static final long serialVersionUID = 1L;
     @Id
-   @Basic(optional = false)
+    @Basic(optional = false)
     @GeneratedValue
     @Column(name = "ID")
     private Long id;

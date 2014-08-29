@@ -1,425 +1,587 @@
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:116) - Function enter BillTabTemp
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:146) - Function entry setBillno
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:125) - Function exit BillTab
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:357) - java.lang.NullPointerException
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:196) - Function entry createTabel
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:207) - Function entry buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:373) - Function exit buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:151) - Function entry getBilltab
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:428) - Function entry buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:592) - Function exit
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:423) - Function exit testinittable
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:230) - Function exit: init
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException: -1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException: -1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1054) - Function entry addPayment
-2014-08-27 DEBUG [JavaFX Application Thread] (PaymentguiController.java:69) - Yeah
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1091) - Function exit addPayment
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:206) - Function entry
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function exit
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:211) - Function entry: init
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:241) - Function entry testinittable
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:116) - Function enter BillTabTemp
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:146) - Function entry setBillno
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:125) - Function exit BillTab
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:357) - java.lang.NullPointerException
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:196) - Function entry createTabel
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:207) - Function entry buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:373) - Function exit buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:151) - Function entry getBilltab
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:428) - Function entry buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:592) - Function exit
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:423) - Function exit testinittable
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:230) - Function exit: init
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException: -1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException: -1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1054) - Function entry addPayment
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1091) - Function exit addPayment
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:206) - Function entry
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function exit
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:211) - Function entry: init
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:241) - Function entry testinittable
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:116) - Function enter BillTabTemp
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:146) - Function entry setBillno
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:125) - Function exit BillTab
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:357) - java.lang.NullPointerException
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:196) - Function entry createTabel
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:207) - Function entry buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:373) - Function exit buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:151) - Function entry getBilltab
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:428) - Function entry buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:592) - Function exit
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:423) - Function exit testinittable
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:230) - Function exit: init
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException: -1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException: -1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException: -1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException: -1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1054) - Function entry addPayment
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1091) - Function exit addPayment
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1054) - Function entry addPayment
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1091) - Function exit addPayment
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:206) - Function entry
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:207) - Function exit
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:211) - Function entry: init
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:241) - Function entry testinittable
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
-2014-08-27 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:116) - Function enter BillTabTemp
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:146) - Function entry setBillno
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:125) - Function exit BillTab
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:357) - java.lang.NullPointerException
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:196) - Function entry createTabel
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:207) - Function entry buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:373) - Function exit buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:151) - Function entry getBilltab
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:428) - Function entry buildTable
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:592) - Function exit
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:423) - Function exit testinittable
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:230) - Function exit: init
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException: -1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException: -1
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:447) - Function entry updateItem Table Format row
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1054) - Function entry addPayment
-2014-08-27 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1091) - Function exit addPayment
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:209) - Function entry
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:210) - Function exit
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:214) - Function entry: init
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:244) - Function entry testinittable
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:116) - Function enter BillTabTemp
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:146) - Function entry setBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:125) - Function exit BillTab
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:196) - Function entry createTabel
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:207) - Function entry buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:373) - Function exit buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:151) - Function entry getBilltab
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:431) - Function entry buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:595) - Function exit
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:426) - Function exit testinittable
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:233) - Function exit: init
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:209) - Function entry
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:210) - Function exit
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:214) - Function entry: init
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:244) - Function entry testinittable
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:116) - Function enter BillTabTemp
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:146) - Function entry setBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:125) - Function exit BillTab
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:196) - Function entry createTabel
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:207) - Function entry buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:373) - Function exit buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:151) - Function entry getBilltab
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:431) - Function entry buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:595) - Function exit
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:426) - Function exit testinittable
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:233) - Function exit: init
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:209) - Function entry
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:210) - Function exit
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:214) - Function entry: init
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:244) - Function entry testinittable
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:116) - Function enter BillTabTemp
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:146) - Function entry setBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:125) - Function exit BillTab
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:141) - Function entry getBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:196) - Function entry createTabel
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:207) - Function entry buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:373) - Function exit buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:151) - Function entry getBilltab
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:431) - Function entry buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:595) - Function exit
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:426) - Function exit testinittable
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:233) - Function exit: init
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException: -1
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException: -1
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 06.16.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 06.16.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 06.16.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 08.05.2013
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 08.05.2013
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:209) - Function entry
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:210) - Function exit
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:214) - Function entry: init
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:244) - Function entry testinittable
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:116) - Function enter BillTabTemp
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:146) - Function entry setBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:125) - Function exit BillTab
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:196) - Function entry createTabel
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:207) - Function entry buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:373) - Function exit buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:151) - Function entry getBilltab
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:431) - Function entry buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:595) - Function exit
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:426) - Function exit testinittable
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:233) - Function exit: init
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 06.30.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 06.30.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 06.30.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.14.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.14.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.14.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.14.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:209) - Function entry
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:210) - Function exit
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:214) - Function entry: init
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:244) - Function entry testinittable
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-08-29 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 2
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:116) - Function enter BillTabTemp
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:146) - Function entry setBillno
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:125) - Function exit BillTab
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:161) - Function entry addPosition 
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:169) - Function exit addPosition
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:196) - Function entry createTabel
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:207) - Function entry buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:373) - Function exit buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:151) - Function entry getBilltab
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:431) - Function entry buildTable
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:595) - Function exit
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:426) - Function exit testinittable
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:233) - Function exit: init
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException: -1
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException: -1
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:261) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:303) - java.lang.ArrayIndexOutOfBoundsException
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:227) - Function entry updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (BillTabs.java:264) - Function exit updateItem Table Format row
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 06.30.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 06.30.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 06.30.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.03.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.14.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.14.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.14.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row 07.14.2014
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null
+2014-08-29 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:450) - Function entry updateItem Table Format row null

@@ -37,6 +37,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.Paymenttypesbean;
 import org.jahap.entities.Paymenttypes;
@@ -103,7 +104,9 @@ public class PaymentguiController implements Initializable {
         } catch (Exception e) {
         }
         
-        
+        Stage jimbo= (Stage) PayAndPrint.getScene().getWindow();
+         
+        jimbo.close();
     }
     
 }

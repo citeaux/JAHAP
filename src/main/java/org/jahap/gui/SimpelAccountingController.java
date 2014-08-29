@@ -447,7 +447,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                                  
                          @Override
                          public void updateItem(String item, boolean empty) {
-                             log.debug("Function entry updateItem Table Format row");
+                             log.debug("Function entry updateItem Table Format row " + item);
                              try {
                                  Tooltip tol = new Tooltip("Info");
                                  
@@ -773,13 +773,21 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
                 
                 py.setTotal(Double.valueOf(e.getDatamap().get("total").toString()));
                 py.saveRecord();
+                // add payment for each pos
                 for(viewAccountPositionsProperty dd:gg){
                     dd.setPayment(py.getLastPosition());
                     acc.adjustPosition(dd.getId(),dd.getAccountPosition());
                 }
-                //add payment to pos
                 
-                acc.saveRecord();
+                //add Payment as Debit Pos
+                viewAccountPositionsProperty jj=new  viewAccountPositionsProperty();
+                jj.setDpositionname(py.getLastPosition().getPaymenttype().getName() + " Receipt:" + py.getLastPosition().getId() );
+                jj.setdAmount(1);
+                jj.setdPrice(py.getLastPosition().getTotal());
+                jj.setPayment(py.getLastPosition());
+                acc.addPayment(py.getLastPosition());
+                datam.add(jj);
+                
                 
                 
         }
