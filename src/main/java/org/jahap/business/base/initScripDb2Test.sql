@@ -6,7 +6,12 @@ CREATE TABLE Paymenttypes (
                 
 );
 
-
+create table reports( id integer not null primary key, 
+                      name varchar(50),
+                      description varchar(200),
+                      report_group varchar(50),
+                      report blob(16M));
+                      report_layout blob(16M));
 
 
 

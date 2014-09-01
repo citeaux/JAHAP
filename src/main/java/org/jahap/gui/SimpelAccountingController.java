@@ -245,68 +245,79 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
          billbean jjk= new billbean();
                     AccountPosition zw=new AccountPosition();
                       viewAccountPositionsProperty bz;
-               try {
+               
             for (Iterator<AccountPosition> iAccPos = acc.getAccountPositionCollection().iterator(); iAccPos.hasNext();) {
-                
-                bz = new viewAccountPositionsProperty();
-                zw = iAccPos.next();
-                bz.setRatedate(zw.getRatedate());                
-                bz.setDebit(zw.getDebit());
-                bz.setId(zw.getId());
-                bz.setBilled(zw.getBilled());
-                bz.setCanceled(zw.isCanceled());
-                
-                
-                if(zw.getBill()!=0){
-                      
-                    bz.setIsTempBill(jjk.getDataRecord(zw.getBill()).isTemp_bill());
-                
-                
-               
-                    //DEV: Warning: Record returns Null Parameter:? Catch??
-                    if(jjk.getDataRecord(zw.getBill()).isTemp_bill() && !"ZEROBILL".equalsIgnoreCase(jjk.getDataRecord(zw.getBill()).getBillname()) ){
-                        bz.setBillnamestring(jjk.getDataRecord(zw.getBill()).getBillname());
-                    }
-         
+                 bz = new viewAccountPositionsProperty();
+                try {
                     
+                    zw = iAccPos.next();
+                    bz.setRatedate(zw.getRatedate());                    
+                    bz.setDebit(zw.getDebit());
+                    bz.setId(zw.getId());
+                    bz.setBilled(zw.getBilled());
+                    bz.setCanceled(zw.isCanceled());
+                } catch (Exception e) {
+                    log.debug("Function testinittable " + e.toString() );
+                }
                 
-              
-                  
-                      if(!jjk.getDataRecord(zw.getBill()).isTemp_bill() && !"ZEROBILL".equals(jjk.getDataRecord(zw.getBill()).getBillname())){   //   
-                        bz.setBillno(zw.getBill());
-                      }
-               
+                log.debug("testinittable " + zw.getId().toString());
                 
-                }else{
-                    bz.setBillno(0); 
-                    bz.setBillnamestring("");
+                try {
+                    if (zw.getBill() != 0) {
+                        
+                        bz.setIsTempBill(jjk.getDataRecord(zw.getBill()).isTemp_bill());
+
+                        //DEV: Warning: Record returns Null Parameter:? Catch??
+                        if (jjk.getDataRecord(zw.getBill()).isTemp_bill() && !"ZEROBILL".equalsIgnoreCase(jjk.getDataRecord(zw.getBill()).getBillname())) {
+                            bz.setBillnamestring(jjk.getDataRecord(zw.getBill()).getBillname());
+                        }
+                        
+                        if (!jjk.getDataRecord(zw.getBill()).isTemp_bill() && !"ZEROBILL".equals(jjk.getDataRecord(zw.getBill()).getBillname())) {   //   
+                            bz.setBillno(zw.getBill());
+                        }
+                        
+                    } else {
+                        bz.setBillno(0);                        
+                        bz.setBillnamestring("");
+                    }
+                } catch (Exception e) {
+                    log.debug("Function testinittable " + e.toString() );
                 }
            
                 // ############### Split Credit Row  #####################      
-                if (zw.getDebit() == false) {
-                    bz.setcAmount(zw.getAmount());
-                    bz.setCpositionname(zw.getPositionname());
-                    bz.setcRateid(zw.getRate().getId());
-                    bz.setcPrice(zw.getPrice());
-                    
-                }                
+                try {
+                    if (zw.getDebit() == false) {
+                        bz.setcAmount(zw.getAmount());
+                        bz.setCpositionname(zw.getPositionname());
+                        bz.setcRateid(zw.getRate().getId());
+                        bz.setcPrice(zw.getPrice());
+                        
+                    }                    
+                } catch (Exception e) {
+                    log.debug("Function testinittable " + e.toString() );
+                }
                 
-                if (zw.getDebit() == true) {
-                    bz.setdAmount(zw.getAmount());
-                    bz.setDpositionname(zw.getPositionname());
-                    bz.setdRateid(zw.getRate().getId());
-                    bz.setdPrice(zw.getPrice());
-                    
+                try {
+                    if (zw.getDebit() == true) {
+                        bz.setdAmount(zw.getAmount());
+                        bz.setDpositionname(zw.getPositionname());
+                        try {
+                            bz.setdRateid(zw.getRate().getId());
+                        } catch (Exception e) {
+                             log.debug("Function testinittable Split Credit Row" + e.toString() );
+                        }
+                        bz.setdPrice(zw.getPrice());
+                        
+                    }
+                } catch (Exception e) {
+                    log.debug("Function testinittable Split Credit Row" + e.toString() );
                 }
 
                 // accview.add(bz);
                 datam.add(bz);
             
             }            
-        } catch (Exception e) {
-            System.err.print("----<property set >----");
-            e.printStackTrace();
-        }
+        
                
                TabPane gg=Account.getTabPane();
                billtablist= new ArrayList<BillTabs>();

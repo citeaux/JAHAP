@@ -63,7 +63,7 @@ public class addressreports {
                     
                          
                         try {
-            jp = JasperFillManager.fillReport("C:\\wiki\\jahapfx\\jahap\\src\\main\\resources\\reports\\address.jasper", new HashMap(), adSource);
+            jp = JasperFillManager.fillReport("C:\\Users\\russ\\Documents\\NetBeansProjects\\jahap\\src\\main\\resources\\reports\\address.jasper", new HashMap(), adSource);
             
         } catch (JRException jRException) {
         }
@@ -107,7 +107,7 @@ public class addressreports {
                     
                          
                         try {
-            jp = JasperFillManager.fillReport("C:\\wiki\\jahapfx\\jahap\\src\\main\\resources\\reports\\addressList.jasper", new HashMap(), adSource);
+            jp = JasperFillManager.fillReport("C:\\Users\\russ\\Documents\\NetBeansProjects\\jahap\\src\\main\\resources\\reports\\addressList.jasper", new HashMap(), adSource);
             
         } catch (JRException jRException) {
         }

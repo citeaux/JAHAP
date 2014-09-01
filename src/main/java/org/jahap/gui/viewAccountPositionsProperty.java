@@ -30,6 +30,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import javafx.beans.property.*;
+import org.apache.log4j.Logger;
 import org.jahap.business.acc.billbean;
 import org.jahap.business.base.ratesbean;
 import org.jahap.entities.AccountPosition;
@@ -43,7 +44,7 @@ import org.joda.time.format.DateTimeFormatter;
  */
 public  class viewAccountPositionsProperty {
 
-   
+      static Logger log = Logger.getLogger(viewAccountPositionsProperty.class.getName());
     
      private boolean billed=false;
      private boolean debit=false;
@@ -79,7 +80,7 @@ public  class viewAccountPositionsProperty {
     private  DateFormat df ;
      
       public viewAccountPositionsProperty() {
-    df = new SimpleDateFormat("MM.dd.yyyy");
+    df = new SimpleDateFormat("dd.MM.yyyy");
     }
     
     public boolean isBilled() {
@@ -281,8 +282,11 @@ public  class viewAccountPositionsProperty {
 
     public void setcPrice(double cPrice) {
         this.cPrice = cPrice;
+         
+        
         if(cPrice!=0){
             this.cpricestring.set(String.valueOf(cPrice));
+            this.ctotal.set(String.valueOf(cAmount*cPrice));
         }
     }
 
@@ -291,9 +295,11 @@ public  class viewAccountPositionsProperty {
     }
 
     public void setdPrice(double dPrice) {
+        log.debug("Function setDprice " + String.valueOf(dPrice));
         this.dPrice = dPrice;
         if(dPrice!=0){
             this.dpricestring.set(String.valueOf(dPrice));
+            this.dtotal.set(String.valueOf(dAmount*dPrice));
         }
     }
 
