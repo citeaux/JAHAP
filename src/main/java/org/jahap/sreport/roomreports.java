@@ -24,6 +24,7 @@
 
 package org.jahap.sreport;
 
+import java.io.ByteArrayInputStream;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -60,11 +61,12 @@ public class roomreports {
         
 			
 			JasperPrint jp= new JasperPrint();
-			              
+			   reportsbean rbean=new reportsbean();
+			       ByteArrayInputStream bis = new ByteArrayInputStream(rbean.SearchForReport("Room").getReport());             
                     
                          
                         try {
-            jp = JasperFillManager.fillReport("C:\\Users\\russ\\Documents\\NetBeansProjects\\jahap\\src\\main\\resources\\reports\\room.jasper", new HashMap(), adSource);
+            jp = JasperFillManager.fillReport(bis, new HashMap(), adSource);
             
         } catch (JRException jRException) {
         }
@@ -104,11 +106,12 @@ public class roomreports {
         
 			
 			JasperPrint jp= new JasperPrint();
-			              
+			 reportsbean rbean=new reportsbean();
+			       ByteArrayInputStream bis = new ByteArrayInputStream(rbean.SearchForReport("Room list").getReport());                
                     
                          
                         try {
-            jp = JasperFillManager.fillReport("C:\\Users\\russ\\Documents\\NetBeansProjects\\jahap\\src\\main\\resources\\reports\\roomsList.jasper", new HashMap(), adSource);
+            jp = JasperFillManager.fillReport(bis, new HashMap(), adSource);
             
         } catch (JRException jRException) {
         }

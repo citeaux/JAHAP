@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2014 Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>.
+ * Copyright 2014 Open Jahap Community.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -22,40 +22,23 @@
  * THE SOFTWARE.
  */
 
-package org.jahap.config;
+package org.jahap.sreport;
+
+import org.jahap.entities.Reports_ie;
 
 /**
  *
- * @author russ
+ * @author Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>
  */
-public class ConfigItem {
-    
+public interface reports_i extends DatabaseOperations_i, Reports_ie{
+    public void createNewEmptyRecord(); 
 
-  private String persitence_unit; 
-   private String database_url; 
-
-    public String getDatabase_url() {
-        return database_url;
-    }
-
-    public void setDatabase_url(String database_url) {
-        this.database_url = database_url;
-    }
-   
-    public String getPersitence_unit() {
-        return persitence_unit;
-    }
-
-    public void setPersitence_unit(String persitence_unit) {
-        this.persitence_unit = persitence_unit;
-    }
+    public void nextRecordBackward(); 
      
-  
-  
- 
 
-  @Override
-  public String toString() {
-    return "database [persitence_unit=" + persitence_unit  + "]";
-  }
-} 
+    public void nextRecordForeward() ;
+
+
+    public void saveRecord() ;
+    public void quitDBaccess();
+}

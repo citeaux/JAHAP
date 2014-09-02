@@ -45,6 +45,7 @@ import javax.xml.stream.events.XMLEvent;
 public class ReadConfig {
 
     static final String PERSISTENCE_UNIT = "persitence_unit";
+    static final String DATABASE_URL = "database_url";
     static final String DATABASE = "database";
 
     @SuppressWarnings({"unchecked", "null"})
@@ -82,6 +83,12 @@ public class ReadConfig {
                 .equals(PERSISTENCE_UNIT)) {
               event = eventReader.nextEvent();
               item.setPersitence_unit(event.asCharacters().getData());
+              continue;
+            }
+            if (event.asStartElement().getName().getLocalPart()
+                .equals(DATABASE_URL)) {
+              event = eventReader.nextEvent();
+              item.setDatabase_url(event.asCharacters().getData());
               continue;
             }
           }

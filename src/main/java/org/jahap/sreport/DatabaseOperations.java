@@ -22,40 +22,36 @@
  * THE SOFTWARE.
  */
 
-package org.jahap.config;
+
+package org.jahap.sreport;
+
+import org.jahap.business.base.*;
+import javax.persistence.Query;
 
 /**
  *
  * @author russ
  */
-public class ConfigItem {
+public class DatabaseOperations {
+     int currentRecordNumber=0;
+     int numberOfLastRecord;
+      Query query_AllDbRecords;
+     boolean newEmptyRecordCreated=false;
+   boolean tabelIsEmpty=true; 
+    boolean tabelIsInit=false; // Set Tabel iniated - List is connected
     
-
-  private String persitence_unit; 
-   private String database_url; 
-
-    public String getDatabase_url() {
-        return database_url;
+    
+    void setNewEmptyRecordCreadted() {
+        this.newEmptyRecordCreated = true;
+        this.tabelIsEmpty=false;
     }
-
-    public void setDatabase_url(String database_url) {
-        this.database_url = database_url;
+    
+    void setNewEmptyRecordSaved(){
+        this.newEmptyRecordCreated = false;
     }
-   
-    public String getPersitence_unit() {
-        return persitence_unit;
-    }
-
-    public void setPersitence_unit(String persitence_unit) {
-        this.persitence_unit = persitence_unit;
-    }
-     
-  
-  
- 
-
-  @Override
-  public String toString() {
-    return "database [persitence_unit=" + persitence_unit  + "]";
-  }
-} 
+    
+    
+    
+    
+    
+}

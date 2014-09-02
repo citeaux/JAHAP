@@ -25,6 +25,7 @@
 
 package org.jahap.sreport;
 
+import java.io.ByteArrayInputStream;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -37,7 +38,6 @@ import net.sf.jasperreports.engine.data.JRMapCollectionDataSource;
 import net.sf.jasperreports.engine.query.JRJpaQueryExecuterFactory;
 import net.sf.jasperreports.swing.JRViewer;
 import net.sf.jasperreports.view.JasperViewer;
-
 import org.jahap.entities.Rates;
 
 
@@ -49,7 +49,7 @@ public class ratereports {
     
     public void singleRateReport(List<Rates>adlist) throws JRException{
           ratesDataSource adSource=new ratesDataSource(adlist);
-        
+          reportsbean rbean=new reportsbean();
         
           HashMap<String, String> parameter =
                 new HashMap<String, String>();
@@ -60,11 +60,11 @@ public class ratereports {
         
 			
 			JasperPrint jp= new JasperPrint();
-			              
+			  ByteArrayInputStream bis = new ByteArrayInputStream(rbean.SearchForReport("Rate").getReport());            
                     
                          
                         try {
-            jp = JasperFillManager.fillReport("C:\\Users\\russ\\Documents\\NetBeansProjects\\jahap\\src\\main\\resources\\reports\\rate.jasper", new HashMap(), adSource);
+            jp = JasperFillManager.fillReport(bis, new HashMap(), adSource);
             
         } catch (JRException jRException) {
         }
@@ -104,11 +104,12 @@ public class ratereports {
         
 			
 			JasperPrint jp= new JasperPrint();
-			              
+                        reportsbean rbean=new reportsbean();
+			       ByteArrayInputStream bis = new ByteArrayInputStream(rbean.SearchForReport("RateList").getReport());            
                     
                          
                         try {
-            jp = JasperFillManager.fillReport("C:\\Users\\russ\\Documents\\NetBeansProjects\\jahap\\src\\main\\resources\\reports\\ratesList.jasper", new HashMap(), adSource);
+            jp = JasperFillManager.fillReport(bis, new HashMap(), adSource);
             
         } catch (JRException jRException) {
         }

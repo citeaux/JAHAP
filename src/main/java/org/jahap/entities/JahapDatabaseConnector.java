@@ -26,7 +26,9 @@
 
 
 package org.jahap.entities;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
@@ -42,21 +44,49 @@ import org.jahap.config.ReadConfig;
 public final class JahapDatabaseConnector {
 
      private static  String PERSISTENCE_UNIT_NAME;
+     private static String DB_URL;
     // private static final String PERSISTENCE_UNIT_NAME = "JAHAP";
   public static EntityManagerFactory factory;
     private static EntityManager EntManager;
     private static JahapDatabaseConnector databaseConnector;
-     
+     private String DBUSER;
+     private String DBPASS;
     
     public JahapDatabaseConnector() {
         ReadConfig config = new ReadConfig();
         List<ConfigItem> result = config.readConfig("config.xml");
         PERSISTENCE_UNIT_NAME = result.get(0).getPersitence_unit();
-        
+        DB_URL= result.get(0).getDatabase_url();
+        Map properties = new HashMap();
+        properties.put("javax.persistence.jdbc.url", DB_URL);
+        properties.put("javax.persistence.jdbc.user", DBUSER);
+        properties.put("javax.persistence.jdbc.password", DBPASS);
         factory=Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-        EntManager=factory.createEntityManager();
+        
+        EntManager=factory.createEntityManager(properties);
+        
     }
-
+    
+    public JahapDatabaseConnector(String user, String password) {
+        ReadConfig config = new ReadConfig();
+        List<ConfigItem> result = config.readConfig("config.xml");
+      PERSISTENCE_UNIT_NAME = result.get(0).getPersitence_unit();
+        DB_URL= result.get(0).getDatabase_url();
+        Map properties = new HashMap();
+        DBPASS=password;
+        DBUSER=user;
+        properties.put("javax.persistence.jdbc.url", DB_URL);
+        properties.put("javax.persistence.jdbc.user", user);
+        properties.put("javax.persistence.jdbc.password", password);
+        properties.put("eclipselink.ddl-generation", "create-tables");
+        properties.put("javax.persistence.jdbc.driver", "org.apache.derby.jdbc.ClientDriver");
+        
+        factory=Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME,properties);
+        
+        EntManager=factory.createEntityManager();
+        
+    }
+    
     public static EntityManagerFactory getFactory() {
         return factory;
     }

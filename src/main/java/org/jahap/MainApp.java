@@ -45,13 +45,29 @@ public class MainApp extends Application {
 
         //log.info("Starting Hello JavaFX and Maven demonstration application");
        
-        String fxmlFile = "/fxml/Maingui.fxml";
+       String   fxmlFile = "/fxml/LogonGui.fxml";
         //log.debug("Loading FXML for main view from: {}", fxmlFile);
         FXMLLoader loader = new FXMLLoader();
         Parent rootNode = (Parent) loader.load(getClass().getResourceAsStream(fxmlFile));
 
         //log.debug("Showing JFX scene");
         Scene scene = new Scene(rootNode);
+         
+
+        
+        stage.setScene(scene);
+        
+        stage.showAndWait();
+        
+       
+        String  fxmlFils = "/fxml/Maingui.fxml";
+        //log.debug("Loading FXML for main view from: {}", fxmlFile);
+       
+         Parent Node = (Parent) loader.load(getClass().getResourceAsStream(fxmlFils));
+
+        //log.debug("Showing JFX scene");
+         
+         scene = new Scene(Node);
      
 
         
