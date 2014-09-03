@@ -33,6 +33,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.jahap.MainEventResult;
 import org.jahap.entities.JahapDatabaseConnector;
 
 /**
@@ -49,7 +50,8 @@ public class LogonGuiController implements Initializable {
     private TextField loginName;
     @FXML
     private PasswordField password;
-
+    
+    private MainEventResult mEv;
     /**
      * Initializes the controller class.
      */
@@ -58,12 +60,19 @@ public class LogonGuiController implements Initializable {
         // TODO
     }    
 
+    public void init(MainEventResult mEv){
+        
+        this.mEv=mEv;
+        
+    }
+    
     @FXML
     private void loginEvent(ActionEvent event) {
         JahapDatabaseConnector hhh=new JahapDatabaseConnector(loginName.getText(), password.getText());
          Stage jimbo= (Stage) LoginButton.getScene().getWindow();
-         
+         this.mEv.setDbRecordId(true, "WW");
         jimbo.close();
+        
     }
 
     @FXML

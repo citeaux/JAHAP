@@ -95,7 +95,7 @@ import static org.jahap.gui.BillTabs.log;
  * @author russ
  */
 public class SimpelAccountingController implements Initializable, InterAccSearchResultListener{
-
+        
     static Logger log = Logger.getLogger(SimpelAccountingController.class.getName());
     
     
