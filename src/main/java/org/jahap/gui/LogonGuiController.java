@@ -33,6 +33,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.jahap.CurrentUser;
 import org.jahap.MainEventResult;
 import org.jahap.entities.JahapDatabaseConnector;
 
@@ -68,8 +69,14 @@ public class LogonGuiController implements Initializable {
     
     @FXML
     private void loginEvent(ActionEvent event) {
-        JahapDatabaseConnector hhh=new JahapDatabaseConnector(loginName.getText(), password.getText());
+        
+        JahapDatabaseConnector hhh=JahapDatabaseConnector.getConnector(loginName.getText(), password.getText());
+           
          Stage jimbo= (Stage) LoginButton.getScene().getWindow();
+         boolean admin=false;
+         if(loginName.getText().equals("root")) admin=true;
+         CurrentUser hh = CurrentUser.getCurrentUser(loginName.getText(), admin);
+         
          this.mEv.setDbRecordId(true, "WW");
         jimbo.close();
         

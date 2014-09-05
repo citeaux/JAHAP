@@ -47,7 +47,7 @@ public class vatbean extends DatabaseOperations  implements vat_i{
     
     public vatbean() {
        long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

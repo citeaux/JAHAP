@@ -64,7 +64,7 @@ public class occbean extends  DatabaseOperations implements occ_i{
     public occbean(){
         log.debug("Function entry Contructor");
         long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

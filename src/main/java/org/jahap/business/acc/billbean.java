@@ -40,7 +40,7 @@ public class billbean extends DatabaseOperations implements bill_i{
        
          log.debug("Function entry billbean");
         long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

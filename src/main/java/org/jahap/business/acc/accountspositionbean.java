@@ -57,7 +57,7 @@ public class accountspositionbean extends DatabaseOperations implements accounts
      */
     public accountspositionbean(){
         long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

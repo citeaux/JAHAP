@@ -43,7 +43,7 @@ public class Paymenttypesbean extends DatabaseOperations  implements Paymenttype
 
     public Paymenttypesbean() {
                long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

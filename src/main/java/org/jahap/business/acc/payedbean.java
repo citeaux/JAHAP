@@ -47,7 +47,7 @@ public class payedbean extends DatabaseOperations implements payed_i{
     public payedbean() {
         log.debug("Function entry payedbean");
         long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

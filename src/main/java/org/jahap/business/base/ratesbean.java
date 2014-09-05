@@ -45,7 +45,7 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
     private static List<Rates> allrecordlist; 
     public ratesbean(){
        long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

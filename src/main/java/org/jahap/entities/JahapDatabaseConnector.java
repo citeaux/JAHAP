@@ -41,33 +41,33 @@ import org.jahap.config.ReadConfig;
  * 
  * - Hier muss ein Singelton einfügt werden, so dass nur eine Instanz des DB objekt gebildet werden kann.
  */
-public final class JahapDatabaseConnector {
+public  final class JahapDatabaseConnector {
 
      private static  String PERSISTENCE_UNIT_NAME;
      private static String DB_URL;
     // private static final String PERSISTENCE_UNIT_NAME = "JAHAP";
-  public static EntityManagerFactory factory;
+  private static EntityManagerFactory factory;
     private static EntityManager EntManager;
-    private static JahapDatabaseConnector databaseConnector;
+    private static JahapDatabaseConnector databaseConnector=null;
      private String DBUSER;
      private String DBPASS;
     
-    public JahapDatabaseConnector() {
-        ReadConfig config = new ReadConfig();
-        List<ConfigItem> result = config.readConfig("config.xml");
-        PERSISTENCE_UNIT_NAME = result.get(0).getPersitence_unit();
-        DB_URL= result.get(0).getDatabase_url();
-        Map properties = new HashMap();
-        properties.put("javax.persistence.jdbc.url", DB_URL);
-        properties.put("javax.persistence.jdbc.user", DBUSER);
-        properties.put("javax.persistence.jdbc.password", DBPASS);
-        factory=Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
-        
-        EntManager=factory.createEntityManager(properties);
-        
-    }
+//    private JahapDatabaseConnector() {
+//        ReadConfig config = new ReadConfig();
+//        List<ConfigItem> result = config.readConfig("config.xml");
+//        PERSISTENCE_UNIT_NAME = result.get(0).getPersitence_unit();
+//        DB_URL= result.get(0).getDatabase_url();
+//        Map properties = new HashMap();
+//        properties.put("javax.persistence.jdbc.url", DB_URL);
+//        properties.put("javax.persistence.jdbc.user", DBUSER);
+//        properties.put("javax.persistence.jdbc.password", DBPASS);
+//        factory=Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+//        
+//        EntManager=factory.createEntityManager(properties);
+//        
+//    }
     
-    public JahapDatabaseConnector(String user, String password) {
+    private JahapDatabaseConnector(String user, String password) {
         ReadConfig config = new ReadConfig();
         List<ConfigItem> result = config.readConfig("config.xml");
       PERSISTENCE_UNIT_NAME = result.get(0).getPersitence_unit();
@@ -87,6 +87,9 @@ public final class JahapDatabaseConnector {
         
     }
     
+    
+    
+    
     public static EntityManagerFactory getFactory() {
         return factory;
     }
@@ -96,12 +99,21 @@ public final class JahapDatabaseConnector {
     }
     
     
-  
-    
+     public static JahapDatabaseConnector getConnector(String user, String password){
+          if(databaseConnector==null){
+               databaseConnector=new JahapDatabaseConnector(user, password);
+               
+        }
+          return databaseConnector;
+     }
+     public static JahapDatabaseConnector getConnector(){
+          
+          return databaseConnector;
+     }
     
    
     public EntityManager getEntity(){
-        
+       
         return EntManager;
        
     }

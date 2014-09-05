@@ -44,6 +44,7 @@ public class MainApp  extends Application implements MainEventListener{
     //private static final Logger log = LoggerFactory.getLogger(MainApp.class);
     private MainEventResult mEv;
     public static void main(String[] args)  throws Exception {
+        
         launch(args);
         
     }
@@ -74,9 +75,10 @@ public class MainApp  extends Application implements MainEventListener{
     }
     
     public void start(Stage stage) throws Exception {
-
+        mEv = new MainEventResult();
+        mEv.addIDListener(this);
         //log.info("Starting Hello JavaFX and Maven demonstration application");
-       mEv= new MainEventResult();
+       
        String   fxmlFile = "/fxml/LogonGui.fxml";
         //log.debug("Loading FXML for main view from: {}", fxmlFile);
         FXMLLoader loader = new FXMLLoader();

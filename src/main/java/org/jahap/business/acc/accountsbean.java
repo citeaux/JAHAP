@@ -74,7 +74,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
     public accountsbean(){
         // cscServices=new cscbean();
         long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
         cscServices= new cscbean();
          
         try {

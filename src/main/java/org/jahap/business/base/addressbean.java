@@ -54,7 +54,7 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     public addressbean(){
         long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

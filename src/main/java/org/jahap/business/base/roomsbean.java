@@ -40,7 +40,7 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
     private static List<Rooms> allrecordlist; 
     public roomsbean(){
        long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

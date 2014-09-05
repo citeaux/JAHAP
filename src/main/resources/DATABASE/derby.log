@@ -1,7 +1,7 @@
-Wed Sep 03 17:38:14 CEST 2014 : Apache Derby Network Server 10.8.3.0 - (1405108) wurde gestartet und ist bereit, Verbindungen am Port 1527 zu akzeptieren.
+Fri Sep 05 11:29:34 CEST 2014 : Apache Derby Network Server 10.8.3.0 - (1405108) wurde gestartet und ist bereit, Verbindungen am Port 1527 zu akzeptieren.
 ----------------------------------------------------------------
-Wed Sep 03 17:50:58 CEST 2014:
-Booten von Derby Version The Apache Software Foundation - Apache Derby - 10.8.3.0 - (1405108): Instanz a816c00e-0148-3c2a-8ca8-ffff836f7129
+Fri Sep 05 12:16:07 CEST 2014:
+Booten von Derby Version The Apache Software Foundation - Apache Derby - 10.8.3.0 - (1405108): Instanz a816c00e-0148-4525-aeca-ffff836f7129
 für Datenbankverzeichnis C:\Users\russ\Documents\NetBeansProjects\jahap\src\main\resources\DATABASE\JAHAPs   mit Klassenladeprogrammn sun.misc.Launcher$AppClassLoader@1d44bcfa
 
 java.vendor=Oracle Corporation
@@ -12,3 +12,5 @@ os.arch=amd64
 os.version=6.1
 derby.system.home=C:\Users\russ\Documents\NetBeansProjects\jahap\src\main\resources\DATABASE
 Das Ladeprogramm für Datenbankklassen wurde gestartet - derby.database.classpath=''
+----------------------------------------------------------------
+Fri Sep 05 17:52:21 CEST 2014: Derby-Engine wird heruntergefahren

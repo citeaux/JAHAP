@@ -46,9 +46,11 @@ import javafx.scene.Scene;
 import javafx.scene.control.TitledPane;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
+import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import org.jahap.CurrentUser;
 
 
 public class MainGuiFx implements Initializable {
@@ -83,6 +85,14 @@ public class MainGuiFx implements Initializable {
     private MenuItem Checkcout;
     @FXML
     private MenuItem newReservation;
+    @FXML
+    private Menu PreferencesMenu;
+    @FXML
+    private MenuItem RoomPrefMenuItem;
+    @FXML
+    private MenuItem RatesPrefMenuItem;
+    @FXML
+    private MenuItem HotelPrefMenuItem;
    
 
     @FXML
@@ -105,8 +115,12 @@ public class MainGuiFx implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle rb) {
-       
+         CurrentUser cu=CurrentUser.getCurrentUser();
+         System.out.print(cu.isIsAdmin());
+         PreferencesMenu.visibleProperty().set(cu.isIsAdmin());
          System.out.print(com.sun.javafx.runtime.VersionInfo.getVersion());
+         
+         
     } 
 
     @FXML
@@ -245,6 +259,18 @@ public class MainGuiFx implements Initializable {
             stage.setScene(scene);
             stage.show();
         
+    }
+
+    @FXML
+    private void RoomPrefMenu(ActionEvent event) {
+    }
+
+    @FXML
+    private void RatesPrefMenu(ActionEvent event) {
+    }
+
+    @FXML
+    private void HotelPrefMenu(ActionEvent event) {
     }
     
 }

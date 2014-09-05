@@ -44,7 +44,7 @@ public class billnobean extends DatabaseOperations implements BILLNO_i{
      public billnobean(){
          log.debug("Function entry billnobean");
         long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

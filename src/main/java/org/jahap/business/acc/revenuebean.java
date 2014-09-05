@@ -46,7 +46,7 @@ public class revenuebean extends DatabaseOperations  implements revenue_i {
     
     public revenuebean(){
        long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

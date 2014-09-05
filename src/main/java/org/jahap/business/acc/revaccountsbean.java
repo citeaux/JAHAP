@@ -43,7 +43,7 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
     JahapDatabaseConnector dbhook;
         public revaccountsbean(){
         long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

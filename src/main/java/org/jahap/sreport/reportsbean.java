@@ -46,7 +46,7 @@ public class reportsbean  extends DatabaseOperations  implements reports_i{
 
     public reportsbean() {
                long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
          
          
         try {

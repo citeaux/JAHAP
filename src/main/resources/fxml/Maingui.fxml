@@ -31,7 +31,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.000199999995" prefWidth="919.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="org.jahap.gui.MainGuiFx">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="765.000199999995" prefWidth="919.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jahap.gui.MainGuiFx">
   <children>
     <BorderPane prefHeight="766.000199999995" prefWidth="919.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <bottom>
@@ -91,11 +91,11 @@ THE SOFTWARE.
                     <MenuItem fx:id="occplan_fxmenuitem" mnemonicParsing="false" onAction="#OpenOccplan" text="Occupancy Plan" />
                   </items>
                 </Menu>
-                <Menu mnemonicParsing="false" text="Preference">
+                <Menu fx:id="PreferencesMenu" mnemonicParsing="false" text="Preferences">
                   <items>
-                    <MenuItem mnemonicParsing="false" text="Rooms" />
-                    <MenuItem mnemonicParsing="false" text="Settings" />
-                    <MenuItem mnemonicParsing="false" text="Hotel" />
+                    <MenuItem fx:id="RoomPrefMenuItem" mnemonicParsing="false" onAction="#RoomPrefMenu" text="Rooms" />
+                    <MenuItem fx:id="RatesPrefMenuItem" mnemonicParsing="false" onAction="#RatesPrefMenu" text="Rates" />
+                    <MenuItem fx:id="HotelPrefMenuItem" mnemonicParsing="false" onAction="#HotelPrefMenu" text="Hotel" />
                   </items>
                 </Menu>
               </menus>

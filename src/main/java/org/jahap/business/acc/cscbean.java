@@ -42,7 +42,7 @@ public class cscbean extends DatabaseOperations implements csc_i {
 
     public cscbean() {
         long testg;
-        dbhook = new JahapDatabaseConnector();
+        dbhook = JahapDatabaseConnector.getConnector();
 
         try {
 
