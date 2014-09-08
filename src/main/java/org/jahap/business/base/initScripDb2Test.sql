@@ -15,6 +15,21 @@ create table reports( id integer not null primary key,
 
 
 
+CREATE TABLE language ( id integer not null primary key, 
+                        language_code varchar(5),
+                        language_name varchar(100);
+
+CREATE TABLE currency ( id integer not null primary key, 
+                        currency_code varchar(5),
+                        currency_name varchar(100),
+                        currency_symbol char(1);
+                        
+CREATE TABLE country ( id integer not null primary key, 
+                        country_code varchar(10),
+                        country_name varchar(100),
+                        country_currency integer;
+
+
 CREATE TABLE payed (
                 ID BIGINT,
                 debit BOOLEAN,

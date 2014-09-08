@@ -35,7 +35,8 @@ public final class CurrentUser {
     private static String name;
     
     private CurrentUser(String name, boolean isAdmin){
-       
+          this.isAdmin=isAdmin;
+          this.name=name;
     }
     
     public static CurrentUser getCurrentUser(String name, boolean isAdmin){

@@ -22,7 +22,9 @@
     <class>org.jahap.entities.SeqStore</class>
     <class>org.jahap.entities.BillNo</class>
     <class>org.jahap.entities.Reports</class>
-    
+    <class>org.jahap.entities.Country</class>
+    <class>org.jahap.entities.Currency</class>
+    <class>org.jahap.entities.Language</class>
   </persistence-unit>
   <!--<persistence-unit name="JAHAPTEST" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>

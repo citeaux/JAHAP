@@ -318,5 +318,21 @@ public class reportsbean  extends DatabaseOperations  implements reports_i{
         }
         allrecordlist.get(currentRecordNumber).setReportLayoutFile(file);
     }
+
+    @Override
+    public String getLanguage() {
+       if( tabelIsEmpty!=true){ 
+              return allrecordlist.get(currentRecordNumber).getLanguage();
+        }
+        return "";
+    }
+
+    @Override
+    public void setLanguage(String language) {
+        if (tabelIsInit==false || tabelIsEmpty!=true){
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        }
+        allrecordlist.get(currentRecordNumber).setLanguage(language);
+    }
     
 }

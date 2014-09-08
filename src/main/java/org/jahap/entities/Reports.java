@@ -78,6 +78,9 @@ public class Reports implements Reports_ie {
     @Lob
     @Column(name = "REPORT_LAYOUT")
     private byte[] reportLayout;
+    @Size(max=5)
+    @Column(name="LANGUAGE")
+    private String language;
 
     public Reports() {
     }
@@ -212,6 +215,16 @@ public class Reports implements Reports_ie {
     @Override
     public String toString() {
         return "org.jahap.entities.Reports[ id=" + id + " ]";
+    }
+
+    @Override
+    public String getLanguage() {
+       return this.language;
+    }
+
+    @Override
+    public void setLanguage(String language) {
+        this.language=language;
     }
     
 }

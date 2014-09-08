@@ -24,48 +24,20 @@
 
 package org.jahap.entities;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.Serializable;
-
 /**
  *
  * @author Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>
  */
-public interface Reports_ie extends Serializable {
-
-    boolean equals(Object object);
-
-    String getDescription();
+public interface Language_ie {
 
     Integer getId();
 
-    String getName();
+    String getLanguageCode();
 
-    byte[] getReport();
+    String getLanguageName();
 
-    String getReportGroup();
-    
-    String getLanguage();
+    void setLanguageCode(String languageCode);
 
-    byte[] getReportLayout();
-
-    void setDescription(String description);
-
-    void setName(String name);
-
-    void setReport(byte[] report);
-
-    void setReportFile(File file) throws IOException;
-
-    void setReportGroup(String reportGroup);
-
-    void setReportLayout(byte[] reportLayout);
-
-    void setLanguage(String language);  
-
-    void setReportLayoutFile(File file) throws IOException;
-
-    String toString();
+    void setLanguageName(String languageName);
     
 }
