@@ -38,6 +38,8 @@ public interface DatabaseOperations_i {
 
     void createNewEmptyRecord();
 
+   
+    
     void nextRecordBackward();
 
     void nextRecordForeward();

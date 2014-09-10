@@ -30,8 +30,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 
-
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="719.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.jahap.gui.AdressGuiFx">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jahap.gui.AdressGuiFx">
   <children>
     <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <bottom>
@@ -65,6 +64,8 @@ THE SOFTWARE.
                     <TextField fx:id="city_fxtextfield" layoutX="172.0" layoutY="180.0" prefWidth="200.0" />
                     <TextField fx:id="phoneno_fxtextfield" layoutX="172.0" layoutY="214.0" prefWidth="200.0" />
                     <TextField fx:id="email_fxtextfield" layoutX="172.0" layoutY="246.0" prefWidth="200.0" />
+                              <Label layoutX="245.0" layoutY="152.0" text="Country:" />
+                              <ChoiceBox fx:id="CountryChoiceBox" layoutX="308.0" layoutY="147.0" prefHeight="31.0" prefWidth="64.0" />
                   </children>
                 </AnchorPane>
               </content>
@@ -74,6 +75,17 @@ THE SOFTWARE.
                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>
             </Tab>
+                  <Tab text="Preferences">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="24.0" layoutY="29.0" text="Language:" />
+                              <ChoiceBox fx:id="CountryChoiceBox" layoutX="105.0" layoutY="24.0" prefWidth="150.0" />
+                              <Label layoutX="24.0" layoutY="73.0" text="Currency:" />
+                              <ChoiceBox fx:id="CurrencyChoiceBox" layoutX="105.0" layoutY="68.0" prefWidth="150.0" />
+                           </children></AnchorPane>
+                    </content>
+                  </Tab>
           </tabs>
         </TabPane>
       </center>

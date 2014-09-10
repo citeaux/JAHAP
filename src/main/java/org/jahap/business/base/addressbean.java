@@ -435,13 +435,63 @@ public class addressbean extends DatabaseOperations implements address_i {
     }
 
     public void setBillCollection(Collection<Bill> billCollection) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
     public void setResCollection(Collection<Res> resCollection) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-  
+    @Override
+    public Language getLanguage() {
+       if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).getLanguage();
+       return null;
+    }
+
+    @Override
+    public Country getCountry() {
+        if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).getCountry();
+       return null;    
+    
+    }
+
+    @Override
+    public Currency getCurrency() {
+        
+         if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).getCurrency();
+       return null;
+        
+         }
+
+    @Override
+    public void setCountry(Country country) {
+        
+     if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        allrecordlist.get(currentRecordNumber).setCountry(country);    
+    
+    }
+
+    @Override
+    public void setCurrency(Currency currency) {
+        if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        allrecordlist.get(currentRecordNumber).setCurrency(currency);
+    
+    }
+
+    @Override
+    public void setLanguage(Language language) {
+         if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        allrecordlist.get(currentRecordNumber).setLanguage(language);
+        
+        
+            }
+
+
 
 }

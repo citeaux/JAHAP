@@ -32,6 +32,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
@@ -95,6 +97,17 @@ public class Address implements Serializable, address_ie {
    // private Bill bill;
     @OneToMany(mappedBy = "addressid")
     private Collection<Res> resCollection;
+    
+    @JoinColumn(name = "LANGUAGE", referencedColumnName = "ID")
+    @ManyToOne
+    private Language language;
+    
+    @JoinColumn(name = "COUNTRY", referencedColumnName = "ID")
+    @ManyToOne
+    private Country country;
+    @JoinColumn(name = "CURRENCY", referencedColumnName = "ID")
+    @ManyToOne
+    private Currency currency;
 
     public Address() {
     }
@@ -223,6 +236,36 @@ public class Address implements Serializable, address_ie {
             return false;
         }
         return true;
+    }
+
+    @Override
+    public Language getLanguage() {
+        return language;
+    }
+
+    @Override
+    public void setLanguage(Language language) {
+        this.language = language;
+    }
+
+    @Override
+    public Country getCountry() {
+        return country;
+    }
+
+    @Override
+    public void setCountry(Country country) {
+        this.country = country;
+    }
+
+    @Override
+    public Currency getCurrency() {
+        return currency;
+    }
+
+    @Override
+    public void setCurrency(Currency currency) {
+        this.currency = currency;
     }
 
     @Override

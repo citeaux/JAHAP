@@ -46,7 +46,7 @@ public interface Reports_ie extends Serializable {
 
     String getReportGroup();
     
-    String getLanguage();
+    Language getLanguage();
 
     byte[] getReportLayout();
 
@@ -62,7 +62,7 @@ public interface Reports_ie extends Serializable {
 
     void setReportLayout(byte[] reportLayout);
 
-    void setLanguage(String language);  
+    void setLanguage(Language language);  
 
     void setReportLayoutFile(File file) throws IOException;
 

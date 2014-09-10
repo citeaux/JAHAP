@@ -34,7 +34,9 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -78,9 +80,9 @@ public class Reports implements Reports_ie {
     @Lob
     @Column(name = "REPORT_LAYOUT")
     private byte[] reportLayout;
-    @Size(max=5)
-    @Column(name="LANGUAGE")
-    private String language;
+    @JoinColumn(name = "LANGUAGE", referencedColumnName = "ID")
+    @ManyToOne
+    private Language language;
 
     public Reports() {
     }
@@ -218,12 +220,12 @@ public class Reports implements Reports_ie {
     }
 
     @Override
-    public String getLanguage() {
+    public Language getLanguage() {
        return this.language;
     }
 
     @Override
-    public void setLanguage(String language) {
+    public void setLanguage(Language language) {
         this.language=language;
     }
     

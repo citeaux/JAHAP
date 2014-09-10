@@ -14,6 +14,20 @@ create table reports( id integer not null primary key,
                       report_layout blob(16M));
 
 
+CREATE TABLE hotel (
+                ID BIGINT ,
+                hotel_code VARCHAR(10) ,
+                hotel_name VARCHAR(100) ,
+                hotel_adress BIGINT,
+                hotel_bankaccountdata1 VARCHAR(200) ,
+                hotel_bankaccountdata2 VARCHAR(200) ,
+                hotel_language BIGINT,
+                hotel_country BIGINT,
+                hotel_currency BIGINT,
+                hotel_footertext VARCHAR(200) ,
+             
+);
+
 
 CREATE TABLE language ( id integer not null primary key, 
                         language_code varchar(5),

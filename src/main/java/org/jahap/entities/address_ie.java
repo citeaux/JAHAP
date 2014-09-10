@@ -46,7 +46,13 @@ public interface address_ie {
     String getName();
 
     String getPhone();
-
+    
+    Language getLanguage();
+    
+    Country getCountry();
+    
+    Currency getCurrency();
+    
     /*
     public Bill getBill() {
     return bill;
@@ -65,7 +71,13 @@ public interface address_ie {
     void setBillCollection(Collection<Bill> billCollection);
 
     void setChristianname(String christianname);
-
+     
+    void setCountry(Country country);
+    
+    void setCurrency(Currency currency);
+    
+    void setLanguage(Language language);
+    
     void setCity(String city);
 
     void setEmail(String email);
