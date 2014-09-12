@@ -12,3 +12,28 @@ os.arch=amd64
 os.version=6.1
 derby.system.home=C:\Users\russ\Documents\NetBeansProjects\jahap\src\main\resources\DATABASE
 Das Ladeprogramm für Datenbankklassen wurde gestartet - derby.database.classpath=''
+----------------------------------------------------------------
+Wed Sep 10 18:02:02 CEST 2014: Derby-Engine wird heruntergefahren
+----------------------------------------------------------------
+Wed Sep 10 18:02:02 CEST 2014:
+Instanz a816c00e-0148-5f60-c919-ffff836f7129 im Datenbankverzeichnis C:\Users\russ\Documents\NetBeansProjects\jahap\src\main\resources\DATABASE\JAHAPs mit Klassenlader sun.misc.Launcher$AppClassLoader@1d44bcfa wird heruntergefahren
+Wed Sep 10 18:02:02 CEST 2014 : Unerwartete Ausnahme:
+ {0}
+Wed Sep 10 18:02:02 CEST 2014 : access denied ("java.sql.SQLPermission" "deregisterDriver")
+java.security.AccessControlException: access denied ("java.sql.SQLPermission" "deregisterDriver")
+	at java.security.AccessControlContext.checkPermission(AccessControlContext.java:457)
+	at java.security.AccessController.checkPermission(AccessController.java:884)
+	at java.lang.SecurityManager.checkPermission(SecurityManager.java:549)
+	at java.sql.DriverManager.deregisterDriver(DriverManager.java:402)
+	at org.apache.derby.jdbc.AutoloadedDriver.unregisterDriverModule(Unknown Source)
+	at org.apache.derby.jdbc.Driver20.stop(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.stop(Unknown Source)
+	at org.apache.derby.impl.services.monitor.TopService.shutdown(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.shutdown(Unknown Source)
+	at org.apache.derby.impl.services.monitor.BaseMonitor.shutdown(Unknown Source)
+	at org.apache.derby.jdbc.InternalDriver.connect(Unknown Source)
+	at org.apache.derby.jdbc.EmbeddedDriver.connect(Unknown Source)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.blockingStart(Unknown Source)
+	at org.apache.derby.impl.drda.NetworkServerControlImpl.executeWork(Unknown Source)
+	at org.apache.derby.drda.NetworkServerControl.main(Unknown Source)
+Wed Sep 10 18:02:02 CEST 2014 : Apache Derby Network Server 10.8.3.0 - (1405108) wurde heruntergefahren.
