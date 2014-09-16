@@ -29,19 +29,26 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.base.addressbean;
+import org.jahap.business.base.countrybean;
+import org.jahap.business.base.currencybean;
+import org.jahap.business.base.languagebean;
 import org.jahap.entities.Address;
+import org.jahap.entities.Country;
 import org.jahap.sreport.addressreports;
 
  
@@ -83,11 +90,21 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
      private List<TextField> textfields;
      private AddressSearchResult searchresults;
      private long addressid=0;
+     private countrybean counBean;
+     private currencybean currBean;
+     private languagebean  langBean;
+     
      
     @FXML
     private Button printAdress;
     @FXML
     private Button newadress;
+    @FXML
+    private ChoiceBox<Country> CountryChoiceBox;
+    @FXML
+    private ChoiceBox<String> CurrencyChoiceBox;
+    @FXML
+    private ChoiceBox<String> LanguageChoiceBox;
 
     public void initialize(URL url, ResourceBundle rb) {
          
@@ -104,8 +121,9 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
           
         addresses = new addressbean();
         searchresults= new AddressSearchResult();
-        
-        
+        counBean = new countrybean();
+        ObservableList<Country> data= FXCollections.observableList(counBean.SearchForCurrency(null));
+        CountryChoiceBox.setItems(data);
         
        searchresults.addIDListener(this);
         

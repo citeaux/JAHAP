@@ -80,7 +80,7 @@ THE SOFTWARE.
                       <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
                               <Label layoutX="24.0" layoutY="29.0" text="Language:" />
-                              <ChoiceBox fx:id="CountryChoiceBox" layoutX="105.0" layoutY="24.0" prefWidth="150.0" />
+                              <ChoiceBox fx:id="LanguageChoiceBox" layoutX="105.0" layoutY="24.0" prefWidth="150.0" />
                               <Label layoutX="24.0" layoutY="73.0" text="Currency:" />
                               <ChoiceBox fx:id="CurrencyChoiceBox" layoutX="105.0" layoutY="68.0" prefWidth="150.0" />
                            </children></AnchorPane>
