@@ -36,7 +36,11 @@ import org.jahap.entities.JahapDatabaseConnector;
  *
  * @author Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>
  */
+ 
+
+
 public class countrybean extends DatabaseOperations implements country_i{
+      
     
     
      JahapDatabaseConnector dbhook;
@@ -88,7 +92,26 @@ public class countrybean extends DatabaseOperations implements country_i{
         return allrecordlist;
     }  
     
-   
+    public List<String>SearchForCountry(enum search{CODE,NAME}){
+        List<String>hh=new ArrayList<String>();
+         log.debug("Function entry SearchForBill");
+        for(Country u:allrecordlist){
+            if(u.getCountryCode().equals(fff)){
+                hh.add(u.getCountryCode());
+            }
+            
+            if(u.getCountryName().equals(fff)){
+                hh.add(u.getCountryName());
+            }
+            
+            
+        }
+         
+         
+        
+        log.debug("Function exit SearchForBill ");
+        return hh;
+    }  
     
        public void createNewEmptyRecord() {
           

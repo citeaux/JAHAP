@@ -363,3 +363,11 @@
 2014-09-16 DEBUG [JavaFX Application Thread] (countrybean.java:77) - Function entry billbean
 2014-09-16 DEBUG [JavaFX Application Thread] (countrybean.java:83) - Function entry SearchForBill
 2014-09-16 DEBUG [JavaFX Application Thread] (countrybean.java:87) - Function exit SearchForBill 
+2014-09-17 DEBUG [JavaFX Application Thread] (countrybean.java:51) - Function entry countrybean
+2014-09-17 DEBUG [JavaFX Application Thread] (countrybean.java:77) - Function entry billbean
+2014-09-17 DEBUG [JavaFX Application Thread] (countrybean.java:93) - Function entry SearchForBill
+2014-09-17 DEBUG [JavaFX Application Thread] (countrybean.java:108) - Function exit SearchForBill 
+2014-09-17 DEBUG [JavaFX Application Thread] (countrybean.java:51) - Function entry countrybean
+2014-09-17 DEBUG [JavaFX Application Thread] (countrybean.java:77) - Function entry billbean
+2014-09-17 DEBUG [JavaFX Application Thread] (countrybean.java:93) - Function entry SearchForBill
+2014-09-17 DEBUG [JavaFX Application Thread] (countrybean.java:108) - Function exit SearchForBill 

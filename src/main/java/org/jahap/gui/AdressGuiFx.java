@@ -56,6 +56,9 @@ import org.jahap.sreport.addressreports;
  * @author russ
  */
 public class AdressGuiFx implements Initializable, AddressSearchResultListener {
+    
+    
+    
     @FXML
     private Button Save;
     @FXML
@@ -100,7 +103,7 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
     @FXML
     private Button newadress;
     @FXML
-    private ChoiceBox<Country> CountryChoiceBox;
+    private ChoiceBox<String> CountryChoiceBox;
     @FXML
     private ChoiceBox<String> CurrencyChoiceBox;
     @FXML
@@ -122,7 +125,8 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         addresses = new addressbean();
         searchresults= new AddressSearchResult();
         counBean = new countrybean();
-        ObservableList<Country> data= FXCollections.observableList(counBean.SearchForCurrency(null));
+        Country ffc= new Country();
+        ObservableList<String> data= FXCollections.observableList();
         CountryChoiceBox.setItems(data);
         
        searchresults.addIDListener(this);
