@@ -30,28 +30,32 @@ import java.util.List;
 import java.util.Set;
 import org.apache.log4j.Logger;
 import org.jahap.entities.Country;
+import org.jahap.entities.Currency;
 import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.Language;
 
 /**
  *
  * @author Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>
  */
- 
+  
 
 
 public class countrybean extends DatabaseOperations implements country_i{
       
-    
+   
     
      JahapDatabaseConnector dbhook;
     private static List<Country> allrecordlist;
      static Logger log = Logger.getLogger(languagebean.class.getName());
 
+    
+     
     /**
      *
      */
     public countrybean(){
-       
+         
          log.debug("Function entry countrybean");
         long testg;
         dbhook = JahapDatabaseConnector.getConnector();
@@ -82,6 +86,8 @@ public class countrybean extends DatabaseOperations implements country_i{
         
     }
     
+    
+    
     public List<Country>SearchForCurrency(String searchstring){
         
          log.debug("Function entry SearchForBill");
@@ -92,15 +98,15 @@ public class countrybean extends DatabaseOperations implements country_i{
         return allrecordlist;
     }  
     
-    public List<String>SearchForCountry(enum search{CODE,NAME}){
+    public List<String>SearchForCountry(country dd){
         List<String>hh=new ArrayList<String>();
-         log.debug("Function entry SearchForBill");
+         log.debug("Function entry SearchForCountry" + String.valueOf(dd));
         for(Country u:allrecordlist){
-            if(u.getCountryCode().equals(fff)){
+            if(dd==dd.code){
                 hh.add(u.getCountryCode());
             }
             
-            if(u.getCountryName().equals(fff)){
+            if(dd==dd.name){
                 hh.add(u.getCountryName());
             }
             
@@ -109,7 +115,7 @@ public class countrybean extends DatabaseOperations implements country_i{
          
          
         
-        log.debug("Function exit SearchForBill ");
+        log.debug("Function exit SearchForCountry ");
         return hh;
     }  
     
@@ -293,12 +299,7 @@ public class countrybean extends DatabaseOperations implements country_i{
         
     }
 
-    @Override
-    public Integer getCountryCurrency() {
-         if( tabelIsEmpty!=true) 
-              return allrecordlist.get(currentRecordNumber).getCountryCurrency();
-        return null;
-    }
+    
 
     @Override
     public String getCountryName() {
@@ -326,15 +327,7 @@ public class countrybean extends DatabaseOperations implements country_i{
         
     }
 
-    @Override
-    public void setCountryCurrency(Integer countryCurrency) {
-        
-         if(tabelIsInit==false|| tabelIsEmpty==true)
-            createNewEmptyRecord();
-        
-            allrecordlist.get(currentRecordNumber).setCountryCurrency(countryCurrency);
-        
-    }
+    
 
     @Override
     public void setCountryName(String countryName) {
@@ -343,6 +336,36 @@ public class countrybean extends DatabaseOperations implements country_i{
         
             allrecordlist.get(currentRecordNumber).setCountryName(countryName);
        
+    }
+
+    @Override
+    public Currency getCountryCurrency() {
+         if( tabelIsEmpty!=true) 
+              return allrecordlist.get(currentRecordNumber).getCountryCurrency();
+        return null;
+    }
+
+    @Override
+    public Language getContryLanguage() {
+         if( tabelIsEmpty!=true) 
+              return allrecordlist.get(currentRecordNumber).getContryLanguage();
+        return null;
+    }
+
+    @Override
+    public void setCountryCurrency(Currency countryCurrency) {
+       if(tabelIsInit==false|| tabelIsEmpty==true)
+            createNewEmptyRecord();
+        
+            allrecordlist.get(currentRecordNumber).setCountryCurrency(countryCurrency);
+    }
+
+    @Override
+    public void setContryLanguage(Language contryLanguage) {
+         if(tabelIsInit==false|| tabelIsEmpty==true)
+            createNewEmptyRecord();
+        
+            allrecordlist.get(currentRecordNumber).setContryLanguage(contryLanguage);
     }
     
 }

@@ -32,16 +32,21 @@ public interface Country_ie {
 
     String getCountryCode();
 
-    Integer getCountryCurrency();
+    
 
     String getCountryName();
+    
+    Currency getCountryCurrency();
+            
+    Language getContryLanguage();
 
     Integer getId();
 
     void setCountryCode(String countryCode);
 
-    void setCountryCurrency(Integer countryCurrency);
+    void setCountryCurrency(Currency countryCurrency);
 
     void setCountryName(String countryName);
     
+    void setContryLanguage(Language contryLanguage);
 }

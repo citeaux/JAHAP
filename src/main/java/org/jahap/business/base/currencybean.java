@@ -115,7 +115,24 @@ public class currencybean extends DatabaseOperations implements currency_i  {
     }
      
      
-     
+      public List<String>SearchForCountry(currency dd){
+        List<String>hh=new ArrayList<String>();
+         log.debug("Function entry SearchForCountry" + String.valueOf(dd));
+        for(Currency u:allrecordlist){
+            if(dd==dd.code){
+                hh.add(u.getCurrencyCode());
+            }
+            
+            if(dd==dd.name){
+                hh.add(u.getCurrencyName());
+            }
+            
+            if(dd==dd.symbol){
+                hh.add(String.valueOf(u.getCurrencySymbol()));
+            }
+        }
+        return hh;
+     }
      
     
 

@@ -29,6 +29,8 @@ import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -62,9 +64,13 @@ public class Country implements Serializable, Country_ie {
     @Size(max = 100)
     @Column(name = "COUNTRY_NAME")
     private String countryName;
-    @Column(name = "COUNTRY_CURRENCY")
-    private Integer countryCurrency;
-
+    @JoinColumn(name = "CURRENCY", referencedColumnName = "ID")
+    @ManyToOne
+    private Currency countryCurrency;
+    @JoinColumn(name = "LANGUAGE", referencedColumnName = "ID")
+    @ManyToOne
+    private Language contryLanguage;
+    
     public Country() {
     }
 
@@ -101,15 +107,23 @@ public class Country implements Serializable, Country_ie {
         this.countryName = countryName;
     }
 
-    @Override
-    public Integer getCountryCurrency() {
+    public Currency getCountryCurrency() {
         return countryCurrency;
     }
 
-    @Override
-    public void setCountryCurrency(Integer countryCurrency) {
+    public void setCountryCurrency(Currency countryCurrency) {
         this.countryCurrency = countryCurrency;
     }
+
+    public Language getContryLanguage() {
+        return contryLanguage;
+    }
+
+    public void setContryLanguage(Language contryLanguage) {
+        this.contryLanguage = contryLanguage;
+    }
+
+    
 
     @Override
     public int hashCode() {

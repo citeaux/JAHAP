@@ -44,8 +44,11 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.base.addressbean;
+import org.jahap.business.base.country;
 import org.jahap.business.base.countrybean;
+import org.jahap.business.base.currency;
 import org.jahap.business.base.currencybean;
+import org.jahap.business.base.language;
 import org.jahap.business.base.languagebean;
 import org.jahap.entities.Address;
 import org.jahap.entities.Country;
@@ -125,9 +128,15 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         addresses = new addressbean();
         searchresults= new AddressSearchResult();
         counBean = new countrybean();
-        Country ffc= new Country();
-        ObservableList<String> data= FXCollections.observableList();
+        langBean = new languagebean();
+        currBean = new currencybean();
+        
+     ObservableList<String> data= FXCollections.observableList(counBean.SearchForCountry(country.name));
+     ObservableList<String> datal= FXCollections.observableList(langBean.SearchForCountry(language.name));   
+     ObservableList<String> datac= FXCollections.observableList(currBean.SearchForCountry(currency.name));  
         CountryChoiceBox.setItems(data);
+        LanguageChoiceBox.setItems(datal);
+        CurrencyChoiceBox.setItems(datac);
         
        searchresults.addIDListener(this);
         
@@ -152,6 +161,9 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         addresses.setPhone(phoneno_fxtextfield.getText());
         addresses.setStreet(street_fxtextfield.getText());
         addresses.setZipcode(zipcode_fxtextfield.getText());
+        addresses.setCountry(CountryChoiceBox.getSelectionModel().getSelectedIndex()-1);
+        addresses.setCurrency(CurrencyChoiceBox.getSelectionModel().getSelectedIndex()-1);
+        addresses.setLanguage(LanguageChoiceBox.getSelectionModel().getSelectedIndex()-1);
         addresses.saveRecord();
         
     }
@@ -214,9 +226,9 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         phoneno_fxtextfield.setText(addresses.getPhone());
         street_fxtextfield.setText(addresses.getStreet());
         zipcode_fxtextfield.setText(addresses.getZipcode());
-                
-     
-        
+         CountryChoiceBox.setValue(addresses.getCountry().getCountryName());       
+       LanguageChoiceBox.setValue(addresses.getLanguage().getLanguageName());
+        CurrencyChoiceBox.setValue(addresses.getCurrency().getCurrencyName());
    
       
         

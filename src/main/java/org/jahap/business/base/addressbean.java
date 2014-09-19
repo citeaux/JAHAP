@@ -475,11 +475,33 @@ public class addressbean extends DatabaseOperations implements address_i {
     
     }
 
+    
+    public void setCountry(int country) {
+        
+     if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        countrybean gg=new countrybean();
+        
+        allrecordlist.get(currentRecordNumber).setCountry(gg.getDataRecord(country));    
+    
+    }
+    
     @Override
     public void setCurrency(Currency currency) {
         if (tabelIsInit==false || tabelIsEmpty!=true) 
             if(newEmptyRecordCreated!=true)createNewEmptyRecord();
         allrecordlist.get(currentRecordNumber).setCurrency(currency);
+    
+    }
+    
+    
+    public void setCurrency(int currency) {
+        if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        currencybean hh=new currencybean();
+        
+        
+        allrecordlist.get(currentRecordNumber).setCurrency(hh.getDataRecord(currency));
     
     }
 
@@ -492,6 +514,14 @@ public class addressbean extends DatabaseOperations implements address_i {
         
             }
 
-
+   public void setLanguage(int language) {
+         if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         languagebean hh=new languagebean();
+        allrecordlist.get(currentRecordNumber).setLanguage(hh.getDataRecord(language));
+        
+        
+            }
+    
 
 }

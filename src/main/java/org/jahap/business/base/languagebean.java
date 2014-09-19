@@ -117,8 +117,22 @@ public class languagebean extends DatabaseOperations implements language_i{
      
      
      
-     
-    
+     public List<String>SearchForCountry(language dd){
+        List<String>hh=new ArrayList<String>();
+         log.debug("Function entry SearchForCountry" + String.valueOf(dd));
+        for(Language u:allrecordlist){
+            if(dd==dd.code){
+                hh.add(u.getLanguageCode());
+            }
+            
+            if(dd==dd.name){
+                hh.add(u.getLanguageName());
+            }
+            
+            
+        }
+        return hh;
+     }
 
     @Override
     public void nextRecordBackward() {
