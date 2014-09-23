@@ -38,6 +38,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
@@ -111,6 +113,18 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
     private ChoiceBox<String> CurrencyChoiceBox;
     @FXML
     private ChoiceBox<String> LanguageChoiceBox;
+    @FXML
+    private TextField homepage;
+    @FXML
+    private ComboBox<String> titel;
+    @FXML
+    private ComboBox<String> greeting;
+    @FXML
+    private ComboBox<String> salutation;
+    @FXML
+    private ChoiceBox<String> addresstype;
+    @FXML
+    private TextArea remarks;
 
     public void initialize(URL url, ResourceBundle rb) {
          

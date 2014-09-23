@@ -53,6 +53,18 @@ public interface address_ie {
     
     Currency getCurrency();
     
+    String getTitel();
+    
+    String getHomepage();
+    
+    String getAddresstype();
+    
+    String getRemarks();
+    
+    String getGreeting();
+    
+    String getSalutation();
+    
     /*
     public Bill getBill() {
     return bill;
@@ -91,5 +103,17 @@ public interface address_ie {
     void setStreet(String street);
 
     void setZipcode(String zipcode);
+    
+    void setTitel(String title);
+    
+    void setHomepage(String homepage);
+    
+    void setAddresstype(String addresstype);
+    
+    void setRemarks(String remarks);
+    
+    void setGreeting(String greeting);
+    
+    void setSalutation(String salutation);
     
 }

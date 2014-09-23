@@ -14,6 +14,19 @@ create table reports( id integer not null primary key,
                       report_layout blob(16M));
 
 
+CREATE TABLE CHOICE (
+                ID BIGINT NOT NULL, 
+                GROUPID INTEGER, 
+                GROUPCODE VARCHAR(5), 
+                GROUPNAME VARCHAR(50), 
+                CHOICECODE VARCHAR(5), 
+                CHOICETEXT VARCHAR(100), 
+                CHOICEINT INTEGER, 
+                CHOICEFLOAT DECIMAL(8, 2), 
+                "LANGUAGE" INTEGER, 
+                PRIMARY KEY (ID)
+);
+
 CREATE TABLE hotel (
                 ID BIGINT ,
                 hotel_code VARCHAR(10) ,

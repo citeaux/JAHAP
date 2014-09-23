@@ -108,7 +108,25 @@ public class Address implements Serializable, address_ie {
     @JoinColumn(name = "CURRENCY", referencedColumnName = "ID")
     @ManyToOne
     private Currency currency;
-
+    @Column(name = "TITLE")
+    @Size(max = 50)
+    private String Titel;
+    @Column(name = "HOMEPAGE")
+    @Size(max = 100)
+    private String Homepage;
+    @Column(name = "ADDRESSTYPE")
+    @Size(max = 100)
+    private String Addresstype;
+    @Column(name = "REMARKS")
+    @Size(max = 200)
+    private String Remarks;
+    @Column(name ="GREETING")
+    @Size(max = 50)
+    private String Greeting;
+    @Column(name = "SALUTATION")
+    @Size(max = 50)
+    private String Salutation;
+    
     public Address() {
     }
 
@@ -282,6 +300,70 @@ public class Address implements Serializable, address_ie {
     @Override
     public void setBillCollection(Collection<Bill> billCollection) {
         this.billCollection = billCollection;
+    }
+
+    @Override
+    public String getTitel() {
+        return this.Titel;
+    }
+
+    @Override
+    public String getHomepage() {
+        return this.Homepage;
+    }
+
+    @Override
+    public String getAddresstype() {
+        return this.Addresstype;
+    }
+
+    @Override
+    public String getRemarks() {
+        return this.Remarks;
+        
+        
+    }
+
+    @Override
+    public String getGreeting() {
+        return this.Greeting;
+    }
+
+    @Override
+    public String getSalutation() {
+       return this.Salutation;
+    }
+
+    @Override
+    public void setTitel(String title) {
+        this.Titel=title;
+    }
+
+    @Override
+    public void setHomepage(String homepage) {
+       this.Homepage=homepage;
+        
+        
+    }
+
+    @Override
+    public void setAddresstype(String addresstype) {
+   this.Addresstype=addresstype; 
+           }
+
+    @Override
+    public void setRemarks(String remarks) {
+   this.Remarks=remarks;
+    }
+
+    @Override
+    public void setGreeting(String greeting) {
+   this.Greeting=greeting;
+    }
+
+    @Override
+    public void setSalutation(String salutation) {
+     this.Salutation=salutation;
     }
     
 }

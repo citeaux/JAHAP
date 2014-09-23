@@ -522,6 +522,96 @@ public class addressbean extends DatabaseOperations implements address_i {
         
         
             }
+
+    @Override
+    public String getTitel() {
+         if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).getTitel();
+       return null;
+    }
+
+    @Override
+    public String getHomepage() {
+         if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).getHomepage();
+       return null;
+    }
+
+    @Override
+    public String getAddresstype() {
+        if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).getAddresstype();
+       return null;
+    }
+
+    @Override
+    public String getRemarks() {
+         if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).getRemarks();
+       return null;
+    }
+
+    @Override
+    public String getGreeting() {
+        if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).getGreeting();
+       return null;
+    }
+
+    @Override
+    public String getSalutation() {
+         if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).getSalutation();
+       return null;
+    }
+
+    @Override
+    public void setTitel(String title) {
+        if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         languagebean hh=new languagebean();
+        allrecordlist.get(currentRecordNumber).setTitel(title);
+    }
+
+    @Override
+    public void setHomepage(String homepage) {
+         if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         languagebean hh=new languagebean();
+        allrecordlist.get(currentRecordNumber).setHomepage(homepage);
+    }
+
+    @Override
+    public void setAddresstype(String addresstype) {
+        if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         languagebean hh=new languagebean();
+        allrecordlist.get(currentRecordNumber).setRemarks(addresstype);
+    }
+
+    @Override
+    public void setRemarks(String remarks) {
+         if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         languagebean hh=new languagebean();
+        allrecordlist.get(currentRecordNumber).setRemarks(remarks);
+    }
+
+    @Override
+    public void setGreeting(String greeting) {
+        if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         languagebean hh=new languagebean();
+        allrecordlist.get(currentRecordNumber).setGreeting(greeting);
+    }
+
+    @Override
+    public void setSalutation(String salutation) {
+         if (tabelIsInit==false || tabelIsEmpty!=true) 
+            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         languagebean hh=new languagebean();
+        allrecordlist.get(currentRecordNumber).setSalutation(salutation);
+    }
     
 
 }
