@@ -1,7 +1,7 @@
-Tue Sep 23 11:24:04 CEST 2014 : Apache Derby Network Server 10.10.1.3 - (1557168) wurde gestartet und ist bereit, Verbindungen auf Port 1527 zu akzeptieren.
+Wed Sep 24 16:30:10 CEST 2014 : Apache Derby Network Server 10.10.1.3 - (1557168) wurde gestartet und ist bereit, Verbindungen auf Port 1527 zu akzeptieren.
 ----------------------------------------------------------------
-Tue Sep 23 13:52:10 CEST 2014:
-Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.10.1.3 - (1557168): Instanz a816c00e-0148-a1d3-2bbd-fffff4db26be
+Wed Sep 24 16:32:59 CEST 2014:
+Booten von Derby-Version The Apache Software Foundation - Apache Derby - 10.10.1.3 - (1557168): Instanz a816c00e-0148-a811-c6be-fffff4db26be
 für Datenbankverzeichnis C:\wiki\Jahap\jahap\src\main\resources\DATABASE\JAHAPs mit Class Loader sun.misc.Launcher$AppClassLoader@1d44bcfa
 Geladen aus file:/C:/wiki/jdk1.8.0_11/db/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -13,4 +13,4 @@ os.version=6.1
 derby.system.home=C:\wiki\Jahap\jahap\src\main\resources\DATABASE
 Datenbank-Class Loader wurde gestartet - derby.database.classpath=''
 ----------------------------------------------------------------
-Tue Sep 23 17:41:31 CEST 2014: Derby-Engine wird heruntergefahren
+Wed Sep 24 18:01:50 CEST 2014: Derby-Engine wird heruntergefahren

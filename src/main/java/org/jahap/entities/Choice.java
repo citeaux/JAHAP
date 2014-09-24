@@ -85,7 +85,7 @@ public class Choice implements Serializable, Choice_ie {
     private BigDecimal choicefloat;
     @JoinColumn(name = "LANGUAGE", referencedColumnName = "ID")
     @ManyToOne
-    private Language Language;
+    private Language language;
 
     public Choice() {
     }
@@ -175,12 +175,12 @@ public class Choice implements Serializable, Choice_ie {
 
     @Override
     public Language getLanguage() {
-        return Language;
+        return language;
     }
 
     @Override
     public void setLanguage(Language language) {
-        this.Language = language;
+        this.language = language;
     }
 
     @Override

@@ -97,10 +97,10 @@ public class Choicebean extends DatabaseOperations implements choice_i {
     }  
     
     public List<String>SearchForChoiceString(choicegroups group){
+        log.debug("Function entry SearchForChoice");
         
-         log.debug("Function entry SearchForChoice");
         
-         query_AllDbRecords = dbhook.getEntity().createQuery("select t.choicetext from Choice t where t.groupname='"+group.toString() + "' BY t.id");
+         query_AllDbRecords = dbhook.getEntity().createQuery("select t.choicetext from Choice t where t.groupname='"+ group.toString() + "' ORDER BY t.id");
           log.debug("Function exit SearchForChoice ");
            return query_AllDbRecords.getResultList();
         

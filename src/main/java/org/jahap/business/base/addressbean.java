@@ -29,6 +29,7 @@ package org.jahap.business.base;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import org.apache.log4j.Logger;
 import org.jahap.entities.*;
         
 
@@ -40,7 +41,7 @@ import org.jahap.entities.*;
 public class addressbean extends DatabaseOperations implements address_i {
 
   
-
+   static Logger log = Logger.getLogger(addressbean.class.getName());
     JahapDatabaseConnector dbhook;
     private static List<Address> allrecordlist;
     // Has there been an Tabel buffer (List) created?
@@ -79,8 +80,7 @@ public class addressbean extends DatabaseOperations implements address_i {
         
         
         
-       System.out.println("=========>dbconnection");
-           // If the table is yet empty, init List 
+       log.debug("Function Exit newrecordcreated:" + newEmptyRecordCreated);
         
     }
     //--------------------------------- Search Function ----------------------
@@ -346,8 +346,7 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     @Override
     public void setName(String name) {
-        if(tabelIsInit==false || tabelIsEmpty!=true)
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if(tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
         
             allrecordlist.get(currentRecordNumber).setName(name);
     }
@@ -358,9 +357,8 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     @Override
     public void setChristianname(String christianname) {
-        if (tabelIsInit==false || tabelIsEmpty!=true){
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
-        }
+        if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+       
         allrecordlist.get(currentRecordNumber).setChristianname(christianname);
     }
 
@@ -370,8 +368,8 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     @Override
     public void setStreet(String street) {
-        if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+        
         allrecordlist.get(currentRecordNumber).setStreet(street);
     }
 
@@ -381,8 +379,8 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     @Override
     public void setZipcode(String zipcode) {
-        if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+        
         allrecordlist.get(currentRecordNumber).setZipcode(zipcode);
     }
     
@@ -393,8 +391,8 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     @Override
     public void setCity(String city) {
-        if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+        
         allrecordlist.get(currentRecordNumber).setCity(city);
     }
 
@@ -404,8 +402,8 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     @Override
     public void setPhone(String phone) {
-        if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+        
         allrecordlist.get(currentRecordNumber).setPhone(phone);
         
     }
@@ -416,8 +414,8 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     @Override
     public void setEmail(String email) {
-        if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+        
         allrecordlist.get(currentRecordNumber).setEmail(email);
         
     }
@@ -469,8 +467,8 @@ public class addressbean extends DatabaseOperations implements address_i {
     @Override
     public void setCountry(Country country) {
         
-     if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+     if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+     
         allrecordlist.get(currentRecordNumber).setCountry(country);    
     
     }
@@ -478,8 +476,8 @@ public class addressbean extends DatabaseOperations implements address_i {
     
     public void setCountry(int country) {
         
-     if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+     if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+     
         countrybean gg=new countrybean();
         
         allrecordlist.get(currentRecordNumber).setCountry(gg.getDataRecord(country));    
@@ -488,16 +486,16 @@ public class addressbean extends DatabaseOperations implements address_i {
     
     @Override
     public void setCurrency(Currency currency) {
-        if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+        
         allrecordlist.get(currentRecordNumber).setCurrency(currency);
     
     }
     
     
     public void setCurrency(int currency) {
-        if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+        
         currencybean hh=new currencybean();
         
         
@@ -507,16 +505,16 @@ public class addressbean extends DatabaseOperations implements address_i {
 
     @Override
     public void setLanguage(Language language) {
-         if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+         
         allrecordlist.get(currentRecordNumber).setLanguage(language);
         
         
             }
 
    public void setLanguage(int language) {
-         if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+         
          languagebean hh=new languagebean();
         allrecordlist.get(currentRecordNumber).setLanguage(hh.getDataRecord(language));
         
@@ -567,48 +565,48 @@ public class addressbean extends DatabaseOperations implements address_i {
 
     @Override
     public void setTitel(String title) {
-        if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+        
          languagebean hh=new languagebean();
         allrecordlist.get(currentRecordNumber).setTitel(title);
     }
 
     @Override
     public void setHomepage(String homepage) {
-         if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+         
          languagebean hh=new languagebean();
         allrecordlist.get(currentRecordNumber).setHomepage(homepage);
     }
 
     @Override
     public void setAddresstype(String addresstype) {
-        if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+            
          languagebean hh=new languagebean();
         allrecordlist.get(currentRecordNumber).setRemarks(addresstype);
     }
 
     @Override
     public void setRemarks(String remarks) {
-         if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+         
          languagebean hh=new languagebean();
         allrecordlist.get(currentRecordNumber).setRemarks(remarks);
     }
 
     @Override
     public void setGreeting(String greeting) {
-        if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+        
          languagebean hh=new languagebean();
         allrecordlist.get(currentRecordNumber).setGreeting(greeting);
     }
 
     @Override
     public void setSalutation(String salutation) {
-         if (tabelIsInit==false || tabelIsEmpty!=true) 
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+         
          languagebean hh=new languagebean();
         allrecordlist.get(currentRecordNumber).setSalutation(salutation);
     }

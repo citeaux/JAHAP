@@ -45,7 +45,9 @@ import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JRException;
+import org.jahap.business.base.Choicebean;
 import org.jahap.business.base.addressbean;
+import org.jahap.business.base.choicegroups;
 import org.jahap.business.base.country;
 import org.jahap.business.base.countrybean;
 import org.jahap.business.base.currency;
@@ -101,7 +103,7 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
      private countrybean counBean;
      private currencybean currBean;
      private languagebean  langBean;
-     
+     private Choicebean choicebean;
      
     @FXML
     private Button printAdress;
@@ -144,14 +146,22 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         counBean = new countrybean();
         langBean = new languagebean();
         currBean = new currencybean();
+        choicebean= new Choicebean();
         
      ObservableList<String> data= FXCollections.observableList(counBean.SearchForCountry(country.name));
      ObservableList<String> datal= FXCollections.observableList(langBean.SearchForCountry(language.name));   
      ObservableList<String> datac= FXCollections.observableList(currBean.SearchForCountry(currency.name));  
-        CountryChoiceBox.setItems(data);
+       ObservableList<String> datap= FXCollections.observableList(choicebean.SearchForChoiceString(choicegroups.title)); 
+       ObservableList<String> dataz= FXCollections.observableList(choicebean.SearchForChoiceString(choicegroups.addresstype)); 
+       ObservableList<String> dataui= FXCollections.observableList(choicebean.SearchForChoiceString(choicegroups.greeting)); 
+       ObservableList<String> dataop= FXCollections.observableList(choicebean.SearchForChoiceString(choicegroups.salutation)); 
+       titel.setItems(datap);
+       CountryChoiceBox.setItems(data);
         LanguageChoiceBox.setItems(datal);
         CurrencyChoiceBox.setItems(datac);
-        
+        addresstype.setItems(dataz);
+        greeting.setItems(dataui);
+        salutation.setItems(dataop);
        searchresults.addIDListener(this);
         
     }
@@ -178,6 +188,10 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         addresses.setCountry(CountryChoiceBox.getSelectionModel().getSelectedIndex()-1);
         addresses.setCurrency(CurrencyChoiceBox.getSelectionModel().getSelectedIndex()-1);
         addresses.setLanguage(LanguageChoiceBox.getSelectionModel().getSelectedIndex()-1);
+        addresses.setTitel(titel.getValue());
+        addresses.setAddresstype(addresstype.getValue());
+        addresses.setGreeting(greeting.getValue());
+        addresses.setSalutation(salutation.getValue());
         addresses.saveRecord();
         
     }
@@ -243,9 +257,10 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
          CountryChoiceBox.setValue(addresses.getCountry().getCountryName());       
        LanguageChoiceBox.setValue(addresses.getLanguage().getLanguageName());
         CurrencyChoiceBox.setValue(addresses.getCurrency().getCurrencyName());
-   
-      
-        
+        titel.setValue(addresses.getTitel());
+        greeting.setValue(addresses.getGreeting());
+        addresstype.setValue(addresses.getAddresstype());
+        salutation.setValue(addresses.getSalutation());
         
     }   
 

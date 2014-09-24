@@ -41,4 +41,6 @@ public enum choicegroups {
     */
      title,
      
+     addresstype  
+     
 }
