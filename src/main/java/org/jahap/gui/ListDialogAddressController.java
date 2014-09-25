@@ -207,6 +207,14 @@ public class ListDialogAddressController implements Initializable{
         initTable();
     }
     
+    public void init(InterResSearchResult ResSearchresults,HotelSetupController zi,String guisource){
+         isOverviewDialog=true;
+         
+         this.ResSearchresult=ResSearchresults;
+         this.guisource=guisource;
+        initTable();
+    }
+    
     
     public void initialize(URL url, ResourceBundle rb) {
        searchresult= new AddressSearchResult();

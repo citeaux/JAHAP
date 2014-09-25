@@ -28,7 +28,10 @@ import java.math.BigInteger;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
@@ -55,11 +58,11 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Hotel.findByHotelCountry", query = "SELECT h FROM Hotel h WHERE h.hotelCountry = :hotelCountry"),
     @NamedQuery(name = "Hotel.findByHotelCurrency", query = "SELECT h FROM Hotel h WHERE h.hotelCurrency = :hotelCurrency"),
     @NamedQuery(name = "Hotel.findByHotelFootertext", query = "SELECT h FROM Hotel h WHERE h.hotelFootertext = :hotelFootertext")})
-public class Hotel implements Serializable {
+public class Hotel implements Serializable, Hotel_ie {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
+    @GeneratedValue
     @Column(name = "ID")
     private Integer id;
     @Size(max = 10)
@@ -68,20 +71,24 @@ public class Hotel implements Serializable {
     @Size(max = 100)
     @Column(name = "HOTEL_NAME")
     private String hotelName;
-    @Column(name = "HOTEL_ADRESS")
-    private BigInteger hotelAdress;
+    @JoinColumn(name = "HOTEL_ADRESS", referencedColumnName = "ID")
+    @ManyToOne
+    private Address hotelAdress;
     @Size(max = 200)
     @Column(name = "HOTEL_BANKACCOUNTDATA1")
     private String hotelBankaccountdata1;
     @Size(max = 200)
     @Column(name = "HOTEL_BANKACCOUNTDATA2")
     private String hotelBankaccountdata2;
-    @Column(name = "HOTEL_LANGUAGE")
-    private Integer hotelLanguage;
-    @Column(name = "HOTEL_COUNTRY")
-    private Integer hotelCountry;
-    @Column(name = "HOTEL_CURRENCY")
-    private Integer hotelCurrency;
+    @JoinColumn(name = "HOTEL_LANGUAGE", referencedColumnName = "ID")
+    @ManyToOne
+    private Language hotelLanguage;   
+    @JoinColumn(name = "HOTEL_COUNTRY", referencedColumnName = "ID")
+    @ManyToOne
+    private Country hotelCountry;
+    @JoinColumn(name = "HOTEL_CURRENCY", referencedColumnName = "ID")
+    @ManyToOne
+    private Currency hotelCurrency;
     @Size(max = 200)
     @Column(name = "HOTEL_FOOTERTEXT")
     private String hotelFootertext;
@@ -93,6 +100,7 @@ public class Hotel implements Serializable {
         this.id = id;
     }
 
+    @Override
     public Integer getId() {
         return id;
     }
@@ -101,74 +109,92 @@ public class Hotel implements Serializable {
         this.id = id;
     }
 
+    @Override
     public String getHotelCode() {
         return hotelCode;
     }
 
+    @Override
     public void setHotelCode(String hotelCode) {
         this.hotelCode = hotelCode;
     }
 
+    @Override
     public String getHotelName() {
         return hotelName;
     }
 
+    @Override
     public void setHotelName(String hotelName) {
         this.hotelName = hotelName;
     }
 
-    public BigInteger getHotelAdress() {
+    @Override
+    public Address getHotelAdress() {
         return hotelAdress;
     }
 
-    public void setHotelAdress(BigInteger hotelAdress) {
+    @Override
+    public void setHotelAdress(Address hotelAdress) {
         this.hotelAdress = hotelAdress;
     }
 
+    @Override
     public String getHotelBankaccountdata1() {
         return hotelBankaccountdata1;
     }
 
+    @Override
     public void setHotelBankaccountdata1(String hotelBankaccountdata1) {
         this.hotelBankaccountdata1 = hotelBankaccountdata1;
     }
 
+    @Override
     public String getHotelBankaccountdata2() {
         return hotelBankaccountdata2;
     }
 
+    @Override
     public void setHotelBankaccountdata2(String hotelBankaccountdata2) {
         this.hotelBankaccountdata2 = hotelBankaccountdata2;
     }
 
-    public Integer getHotelLanguage() {
+    @Override
+    public Language getHotelLanguage() {
         return hotelLanguage;
     }
 
-    public void setHotelLanguage(Integer hotelLanguage) {
+    @Override
+    public void setHotelLanguage(Language hotelLanguage) {
         this.hotelLanguage = hotelLanguage;
     }
 
-    public Integer getHotelCountry() {
+    @Override
+    public Country getHotelCountry() {
         return hotelCountry;
     }
 
-    public void setHotelCountry(Integer hotelCountry) {
+    @Override
+    public void setHotelCountry(Country hotelCountry) {
         this.hotelCountry = hotelCountry;
     }
 
-    public Integer getHotelCurrency() {
+    @Override
+    public Currency getHotelCurrency() {
         return hotelCurrency;
     }
 
-    public void setHotelCurrency(Integer hotelCurrency) {
+    @Override
+    public void setHotelCurrency(Currency hotelCurrency) {
         this.hotelCurrency = hotelCurrency;
     }
 
+    @Override
     public String getHotelFootertext() {
         return hotelFootertext;
     }
 
+    @Override
     public void setHotelFootertext(String hotelFootertext) {
         this.hotelFootertext = hotelFootertext;
     }

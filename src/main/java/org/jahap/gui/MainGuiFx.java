@@ -270,7 +270,20 @@ public class MainGuiFx implements Initializable {
     }
 
     @FXML
-    private void HotelPrefMenu(ActionEvent event) {
+    private void HotelPrefMenu(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/hotelSetup.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setTitle("Hotel Setup");
+            stage.setScene(scene);
+            stage.show();
+        
     }
     
 }

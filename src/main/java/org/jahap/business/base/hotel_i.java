@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2014 Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>.
+ * Copyright 2014 Open Jahap Community.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,19 +21,14 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-
-
 package org.jahap.business.base;
-
-import org.jahap.entities.Paymenttypes_ie;
-
-
+import org.jahap.entities.Hotel_ie;
 /**
  *
  * @author russ
  */
-public interface Paymenttypes_i extends DatabaseOperations_i, Paymenttypes_ie {
-      public void createNewEmptyRecord(); 
+public interface hotel_i extends DatabaseOperations_i, Hotel_ie{
+    public void createNewEmptyRecord(); 
 
     public void nextRecordBackward(); 
      

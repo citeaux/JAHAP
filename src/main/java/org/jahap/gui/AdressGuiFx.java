@@ -201,7 +201,7 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         for(int i=0;i<textfields.size();i++){
             textfields.get(i).setText("");
         }
-        
+        addresses.createNewEmptyRecord();
        
         
     }
