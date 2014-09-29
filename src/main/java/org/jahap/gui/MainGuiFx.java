@@ -55,8 +55,6 @@ import org.jahap.CurrentUser;
 
 public class MainGuiFx implements Initializable {
 
-    @FXML
-    private TitledPane x1;
 
     @FXML
     private MenuItem newAddress;
@@ -85,14 +83,13 @@ public class MainGuiFx implements Initializable {
     private MenuItem Checkcout;
     @FXML
     private MenuItem newReservation;
-    @FXML
-    private Menu PreferencesMenu;
-    @FXML
-    private MenuItem RoomPrefMenuItem;
-    @FXML
-    private MenuItem RatesPrefMenuItem;
+  
     @FXML
     private MenuItem HotelPrefMenuItem;
+    @FXML
+    private MenuItem revAccounts;
+    @FXML
+    private MenuItem taxes;
    
 
     @FXML
@@ -117,7 +114,7 @@ public class MainGuiFx implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
          CurrentUser cu=CurrentUser.getCurrentUser();
          System.out.print(cu.isIsAdmin());
-         PreferencesMenu.visibleProperty().set(cu.isIsAdmin());
+         
          System.out.print(com.sun.javafx.runtime.VersionInfo.getVersion());
          
          
@@ -261,13 +258,6 @@ public class MainGuiFx implements Initializable {
         
     }
 
-    @FXML
-    private void RoomPrefMenu(ActionEvent event) {
-    }
-
-    @FXML
-    private void RatesPrefMenu(ActionEvent event) {
-    }
 
     @FXML
     private void HotelPrefMenu(ActionEvent event) throws IOException {
@@ -284,6 +274,14 @@ public class MainGuiFx implements Initializable {
             stage.setScene(scene);
             stage.show();
         
+    }
+
+    @FXML
+    private void revAccounts(ActionEvent event) {
+    }
+
+    @FXML
+    private void taxes(ActionEvent event) {
     }
     
 }

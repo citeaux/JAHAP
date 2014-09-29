@@ -30,7 +30,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jahap.gui.RateGuiFx">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jahap.gui.RevGuiFx">
   <children>
     <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <bottom>
@@ -50,18 +50,10 @@ THE SOFTWARE.
               <content>
                 <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
-                    <Label layoutX="94.0" layoutY="48.0" text="Rate Code:" />
-                    <Label layoutX="92.0" layoutY="84.0" text="Rate name:" />
-                    <Label layoutX="140.0" layoutY="119.0" text="Vat:" />
-                    <Label layoutX="59.0" layoutY="150.0" prefWidth="105.0" text="Rate Base Price:" />
-                    <TextField id="name" fx:id="ratecode_fxtextfield" layoutX="172.0" layoutY="48.0" prefWidth="87.0" />
-                    <TextField id="christianname" fx:id="ratename_fxtextfield" layoutX="171.0" layoutY="81.0" prefWidth="200.0" />
-                    <TextField id="zipcode_fxtextfield" fx:id="RateBasePrice_fxtextfield" layoutX="172.0" layoutY="147.0" prefWidth="100.0" />
-                    <Label layoutX="47.0" layoutY="184.0" text="Revenue Account:" />
-                    <CheckBox fx:id="OvernightRate_fxCheckBox" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="172.0" layoutY="220.0" mnemonicParsing="false" text="" textAlignment="RIGHT" />
-                    <Label layoutX="66.0" layoutY="220.0" text="Overnight Rate" />
-                              <ChoiceBox fx:id="revAccount" layoutX="172.0" layoutY="180.0" prefWidth="150.0" />
-                              <ChoiceBox fx:id="vat" layoutX="172.0" layoutY="114.0" prefWidth="150.0" />
+                    <Label layoutX="82.0" layoutY="48.0" text="Account No." />
+                    <Label layoutX="65.0" layoutY="84.0" text="Account name:" />
+                    <TextField id="name" fx:id="accountno" layoutX="172.0" layoutY="48.0" prefHeight="31.0" prefWidth="198.0" />
+                    <TextField id="christianname" fx:id="accountName" layoutX="171.0" layoutY="81.0" prefWidth="200.0" />
                   </children>
                 </AnchorPane>
               </content>
@@ -72,10 +64,10 @@ THE SOFTWARE.
       <right>
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_RIGHT">
           <children>
-            <Button fx:id="search" mnemonicParsing="false" onAction="#searchAdress" prefHeight="36.0" prefWidth="100.0" text="Search" />
-            <Button id="search" fx:id="printAdress" mnemonicParsing="false" onAction="#printAdress" prefHeight="36.0" prefWidth="100.0" text="Print" />
-                  <Button id="search" fx:id="newRate" mnemonicParsing="false" onAction="#newRate" prefHeight="36.0" prefWidth="100.0" text="New" />
-                  <Button id="search" fx:id="saveRate" mnemonicParsing="false" onAction="#saveRate" prefHeight="36.0" prefWidth="100.0" text="Save" />
+            <Button fx:id="search" mnemonicParsing="false" onAction="#searchRoom" prefHeight="36.0" prefWidth="100.0" text="Search" />
+            <Button id="search" fx:id="printAdress" mnemonicParsing="false" onAction="#printRoom" prefHeight="36.0" prefWidth="100.0" text="Print" />
+                  <Button id="search" fx:id="newRoom" mnemonicParsing="false" onAction="#newRoom" prefHeight="36.0" prefWidth="100.0" text="New" />
+                  <Button id="search" fx:id="saveRoom" mnemonicParsing="false" onAction="#saveRoom" prefHeight="36.0" prefWidth="100.0" text="Save" />
           </children>
         </VBox>
       </right>
