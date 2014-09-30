@@ -73,7 +73,7 @@ THE SOFTWARE.
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_RIGHT">
           <children>
             <Button fx:id="search" mnemonicParsing="false" onAction="#searchAdress" prefHeight="36.0" prefWidth="100.0" text="Search" />
-            <Button id="search" fx:id="printAdress" mnemonicParsing="false" onAction="#printAdress" prefHeight="36.0" prefWidth="100.0" text="Print" />
+            <Button id="search" fx:id="printRate" mnemonicParsing="false" onAction="#printAdress" prefHeight="36.0" prefWidth="100.0" text="Print" />
                   <Button id="search" fx:id="newRate" mnemonicParsing="false" onAction="#newRate" prefHeight="36.0" prefWidth="100.0" text="New" />
                   <Button id="search" fx:id="saveRate" mnemonicParsing="false" onAction="#saveRate" prefHeight="36.0" prefWidth="100.0" text="Save" />
           </children>

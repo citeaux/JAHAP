@@ -60,15 +60,15 @@ THE SOFTWARE.
                     <MenuItem fx:id="newAddress" mnemonicParsing="false" onAction="#newAddress" text="New Address" />
                     <MenuItem fx:id="AdressSearch" mnemonicParsing="false" onAction="#AdressSearch" text="Search for Address" />
                     <MenuItem fx:id="Rates" mnemonicParsing="false" onAction="#OpenRatesSearch" text="Rates" />
-                    <MenuItem fx:id="Exit" mnemonicParsing="false" text="Close" />
+                    <MenuItem fx:id="Exit" mnemonicParsing="false" onAction="#exit" text="Close" />
                   </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="FO">
                   <items>
                     <MenuItem fx:id="checkin" mnemonicParsing="false" onAction="#DoCheckin" text="Check-In" />
                     <MenuItem fx:id="Checkcout" mnemonicParsing="false" onAction="#DoCheckout" text="Check-Out" />
-                              <MenuItem mnemonicParsing="false" text="Arrivals" />
-                              <MenuItem mnemonicParsing="false" text="Departures" />
+                              <MenuItem fx:id="arrivals" mnemonicParsing="false" onAction="#getArrivals" text="Arrivals" />
+                              <MenuItem fx:id="departures" mnemonicParsing="false" onAction="#getDepartures" text="Departures" />
                               <SeparatorMenuItem mnemonicParsing="false" />
                     <MenuItem fx:id="searchForGuestAccount_fxmenuitem" mnemonicParsing="false" onAction="#searchForGuestAccount" text="Guest Account" />
                               <Menu mnemonicParsing="false" text="Guest accounts reports">
@@ -89,17 +89,17 @@ THE SOFTWARE.
                         </Menu>
                         <Menu mnemonicParsing="false" text="House Managment">
                           <items>
-                              <MenuItem mnemonicParsing="false" text="Room cleaning" />
-                            <MenuItem mnemonicParsing="false" text="Room maintenance" />
+                              <MenuItem fx:id="roomCleaning" mnemonicParsing="false" onAction="#openRoomCleaning" text="Housekeeping" />
+                            <MenuItem fx:id="roomMaintenance" mnemonicParsing="false" onAction="#openRoomMaintenance" text="Maintenance" />
                               <SeparatorMenuItem mnemonicParsing="false" />
                               <Menu mnemonicParsing="false" text="Houskeeping Reports">
                                 <items>
-                                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                                  <MenuItem fx:id="dirtyRooms" mnemonicParsing="false" onAction="#getDirtyRoomsReport" text="Dirty Rooms" />
                                 </items>
                               </Menu>
                               <Menu mnemonicParsing="false" text="Maintenance Reports">
                                 <items>
-                                  <MenuItem mnemonicParsing="false" text="Action 1" />
+                                  <MenuItem fx:id="maintainReport" mnemonicParsing="false" onAction="#getMaintainReport" text="Rooms to Maintain" />
                                 </items>
                               </Menu>
                           </items>
@@ -108,7 +108,7 @@ THE SOFTWARE.
                           <items>
                     <MenuItem fx:id="Rooms" mnemonicParsing="false" onAction="#RoomsSearch" text="Rooms" />
                     <MenuItem fx:id="HotelPrefMenuItem" mnemonicParsing="false" onAction="#HotelPrefMenu" text="Hotel" />
-                            <MenuItem mnemonicParsing="false" text="Chef Info" />
+                            <MenuItem fx:id="chefInfoReport" mnemonicParsing="false" onAction="#getChefInfoReport" text="Chef Info" />
                               <MenuItem fx:id="revAccounts" mnemonicParsing="false" onAction="#revAccounts" text="Revenue Accounts" />
                               <MenuItem fx:id="taxes" mnemonicParsing="false" onAction="#taxes" text="Taxes" />
                           </items>

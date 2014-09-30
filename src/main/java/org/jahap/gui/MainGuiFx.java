@@ -90,6 +90,20 @@ public class MainGuiFx implements Initializable {
     private MenuItem revAccounts;
     @FXML
     private MenuItem taxes;
+    @FXML
+    private MenuItem arrivals;
+    @FXML
+    private MenuItem departures;
+    @FXML
+    private MenuItem roomCleaning;
+    @FXML
+    private MenuItem roomMaintenance;
+    @FXML
+    private MenuItem dirtyRooms;
+    @FXML
+    private MenuItem maintainReport;
+    @FXML
+    private MenuItem chefInfoReport;
    
 
     @FXML
@@ -277,11 +291,70 @@ public class MainGuiFx implements Initializable {
     }
 
     @FXML
-    private void revAccounts(ActionEvent event) {
+    private void revAccounts(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/RevAccList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setTitle("Hotel Setup");
+            stage.setScene(scene);
+            stage.show();
+        
+        
     }
 
     @FXML
-    private void taxes(ActionEvent event) {
+    private void taxes(ActionEvent event) throws IOException {
+          Stage stage = new Stage();
+        String fxmlFile = "/fxml/VatTypes.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setTitle("Tax Setup");
+            stage.setScene(scene);
+            stage.show();
+        
+    }
+
+    @FXML
+    private void exit(ActionEvent event) {
+    }
+
+    @FXML
+    private void getArrivals(ActionEvent event) {
+    }
+
+    @FXML
+    private void getDepartures(ActionEvent event) {
+    }
+
+    @FXML
+    private void openRoomCleaning(ActionEvent event) {
+    }
+
+    @FXML
+    private void openRoomMaintenance(ActionEvent event) {
+    }
+
+    @FXML
+    private void getDirtyRoomsReport(ActionEvent event) {
+    }
+
+    @FXML
+    private void getMaintainReport(ActionEvent event) {
+    }
+
+    @FXML
+    private void getChefInfoReport(ActionEvent event) {
     }
     
 }

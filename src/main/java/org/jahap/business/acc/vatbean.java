@@ -194,7 +194,7 @@ public class vatbean extends DatabaseOperations  implements vat_i{
     }
      
      
-    public List<Vat>SearchForRate(String searchstring){
+    public List<Vat>SearchForVAT(String searchstring){
     
         return allrecordlist;
     }   
@@ -217,6 +217,10 @@ public class vatbean extends DatabaseOperations  implements vat_i{
         return allrecordlist.get(currentRecordNumber);
    }    
     
+   
+     
+       
+       
     
     public void quitDBaccess() {
            dbhook.getEntity().close();

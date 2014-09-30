@@ -29,16 +29,22 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import net.sf.jasperreports.engine.JRException;
+import org.jahap.CurrentUser;
+import org.jahap.business.acc.vatbean;
 import org.jahap.business.base.addressbean;
 import org.jahap.business.base.ratesbean;
+import org.jahap.business.base.vattypesbean;
 import org.jahap.entities.Rates;
 import static org.jahap.gui.AdressGuiFx.addresses;
 import org.jahap.sreport.ratereports;
@@ -55,10 +61,6 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
         private TextField ratename_fxtextfield;
     @FXML
         private TextField RateBasePrice_fxtextfield;
-    @FXML
-        private TextField ratevat_fxtextfield;
-    @FXML
-        private TextField RateRevAccount_fxtextfield;
     @FXML
     private Button search;
     @FXML
@@ -78,23 +80,40 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
     private Button oneRecordForward_fxbutton;
     @FXML
     private Button lastRecord_fxbutton;
+    private CurrentUser cuser;
+    @FXML
+    private ChoiceBox<String> revAccount;
+    @FXML
+    private ChoiceBox<String> vat;
+    @FXML
+    private Button newRate;
+    @FXML
+    private Button saveRate;
     
     
+    private vattypesbean vbean;
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        vbean=new vattypesbean();
         textfields=new ArrayList<TextField>();
          textfields.add(ratecode_fxtextfield);
-         textfields.add(ratevat_fxtextfield);
+         
+         
+         
          textfields.add(ratename_fxtextfield);
-         textfields.add(RateRevAccount_fxtextfield);
+         
          textfields.add(RateBasePrice_fxtextfield);
          
          rates= new ratesbean();
          searchresults = new RateSearchResult();
          searchresults.addIDListener(this);
+         cuser= CurrentUser.getCurrentUser();
+         if(!cuser.isIsAdmin())saveRate.setVisible(false);
+         
+        ObservableList<String> data= FXCollections.observableList(vbean.SearchForRateString(null));
          
     }    
 
@@ -158,6 +177,14 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
 
     @FXML
     private void goLastRecord(ActionEvent event) {
+    }
+
+    @FXML
+    private void newRate(ActionEvent event) {
+    }
+
+    @FXML
+    private void saveRate(ActionEvent event) {
     }
     
 }

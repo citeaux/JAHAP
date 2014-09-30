@@ -168,6 +168,16 @@ public class vattypesbean extends DatabaseOperations  implements vattypes_i{
         return allrecordlist;
     }  
      
+      public List<String>SearchForRateString(String searchstring){
+        List<String>hh=new ArrayList<>();
+        for(Vattype i:allrecordlist){
+            hh.add((String.valueOf(i.getPercentage())));
+        }
+          
+          
+        return hh;
+    }  
+      
       
        public Vattype  getDataRecord(Long id){
         int inl=-1;

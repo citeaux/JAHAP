@@ -87,7 +87,7 @@ import org.jahap.entities.AccountPosition;
 import org.jahap.entities.Accounts;
 import org.jahap.entities.Bill;
 import org.jahap.entities.Rates;
-import static org.jahap.gui.BillTabs.log;
+//import static org.jahap.gui.BillTabs.log;
 
 /**
  * FXML Controller class
