@@ -29,9 +29,11 @@ import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.Revaccounts;
 import org.jahap.entities.Revenue;
+import org.jahap.entities.Vattype;
 
 /**
  *
@@ -95,6 +97,15 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
        
     }
         
+      public List<String> SearchForRevAccountString(){
+           
+        
+             
+         return allrecordlist.stream().map(Revaccounts->Revaccounts.getName()).collect(Collectors.toList());
+        
+       
+    }
+     
         
     
     

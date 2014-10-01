@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.Rates;
 import org.jahap.entities.Vat;
@@ -163,19 +164,16 @@ public class vattypesbean extends DatabaseOperations  implements vattypes_i{
        
    }
      
-      public List<Vattype>SearchForRate(String searchstring){
+      public List<Vattype>SearchForVatType(String searchstring){
     
         return allrecordlist;
     }  
      
-      public List<String>SearchForRateString(String searchstring){
-        List<String>hh=new ArrayList<>();
-        for(Vattype i:allrecordlist){
-            hh.add((String.valueOf(i.getPercentage())));
-        }
+      public List<String>SearchForVatTypeString(String searchstring){
+        
           
           
-        return hh;
+        return allrecordlist.stream().map(Vattype->String.valueOf(Vattype.getPercentage())).collect(Collectors.toList());
     }  
       
       

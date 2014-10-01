@@ -369,9 +369,9 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
                   }
                   
                    if((AdjustLikePosition.getRate()!=null)){
-                           if (AdjustLikePosition.getRate().getRevaccount()!=0){
+                           if (AdjustLikePosition.getRate().getRevaccount().getId()!=0){
                              
-                              rev.setRevaccount(jj.SearchForRevAccount(AdjustLikePosition.getRate().getRevaccount()));
+                              rev.setRevaccount(jj.SearchForRevAccount(AdjustLikePosition.getRate().getRevaccount().getId()));
                            }
                    }
                    
@@ -694,9 +694,9 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
                   }
                   
                    if((AdjustLikePosition.getRate()!=null)){
-                           if (AdjustLikePosition.getRate().getRevaccount()!=0){
+                           if (AdjustLikePosition.getRate().getRevaccount().getId()!=0){
                              
-                              rev.setRevaccount(jj.SearchForRevAccount(AdjustLikePosition.getRate().getRevaccount()));
+                              rev.setRevaccount(jj.SearchForRevAccount(AdjustLikePosition.getRate().getRevaccount().getId()));
                            }
                    }
                    

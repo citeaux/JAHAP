@@ -63,8 +63,10 @@ public class Rates implements Serializable, rates_ie {
     // @Max(value=?)  @Min(value=?)//if you know range of your decimal fields consider using these annotations to enforce field validation
     @Column(name = "PRICE")
     private double price;
-    @Column(name = "REVACCOUNT")
-    private long revaccount;
+   
+    @JoinColumn(name = "REVACCOUNT", referencedColumnName = "ID")
+    @ManyToOne
+    private Revaccounts revaccount;
     @Column(name = "OVERNIGHT")
     private boolean overnight;
     @OneToMany(mappedBy = "rate")
@@ -135,11 +137,11 @@ public class Rates implements Serializable, rates_ie {
     public void setAccountPositionCollection(Collection<AccountPosition> accountPositionCollection) {
         this.accountPositionCollection = accountPositionCollection;
     }
-
+      @Override
     public Vattype getVattype() {
         return vattype;
     }
-
+     @Override
     public void setVattype(Vattype vattype) {
         this.vattype = vattype;
     }
@@ -180,11 +182,11 @@ public class Rates implements Serializable, rates_ie {
         this.price = price;
     }
 
-    public long getRevaccount() {
+    public Revaccounts getRevaccount() {
         return revaccount;
     }
 
-    public void setRevaccount(long revaccount) {
+    public void setRevaccount(Revaccounts revaccount) {
         this.revaccount = revaccount;
     }
 

@@ -37,6 +37,7 @@ public interface rates_i extends DatabaseOperations_i, rates_ie {
 
     public void nextRecordBackward(); 
      
+    
 
     public void nextRecordForeward() ;
 

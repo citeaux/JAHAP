@@ -28,11 +28,14 @@ package org.jahap.business.base;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import org.jahap.business.acc.revaccountsbean;
 import org.jahap.entities.AccountPosition;
 import org.jahap.entities.Csc;
 
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.Rates;
+import org.jahap.entities.Revaccounts;
+import org.jahap.entities.Vattype;
 
 
 /**
@@ -43,10 +46,11 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
 
      JahapDatabaseConnector dbhook;
     private static List<Rates> allrecordlist; 
+    private revaccountsbean revAccBean;
     public ratesbean(){
        long testg;
         dbhook = JahapDatabaseConnector.getConnector();
-         
+         revAccBean= new revaccountsbean();
          
         try {
            
@@ -255,29 +259,31 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
     }
 
     public void setAccountPositionCollection(Collection<AccountPosition> accountPositionCollection) {
+        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+        
         
     }
 
     public void setCode(String code) {
-         if (tabelIsInit==false || tabelIsEmpty!=true){
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
-        }
+         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+         
+         
         allrecordlist.get(currentRecordNumber).setCode(code);
     }
 
   
 
     public void setName(String name) {
-         if (tabelIsInit==false || tabelIsEmpty!=true){
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
-        }
+        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+         
+         
         allrecordlist.get(currentRecordNumber).setName(name);
     }
 
     public void setPrice(double price) {
-         if (tabelIsInit==false || tabelIsEmpty!=true){
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
-        }
+        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord(); 
+        
+        
         allrecordlist.get(currentRecordNumber).setPrice(price);
     }
 
@@ -285,11 +291,12 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    public long getRevaccount() {
-        if( tabelIsEmpty!=true) 
-              return allrecordlist.get(currentRecordNumber).getRevaccount();
-        return 0;
-    }
+    
+//        public long getRevaccount() {
+//            if( tabelIsEmpty!=true) 
+//                  return allrecordlist.get(currentRecordNumber).getRevaccount().getId();
+//            return 0;
+//        }
 
     
 
@@ -312,17 +319,51 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
     }
 
     public void setOvernight(boolean overnight) {
-        if (tabelIsInit==false || tabelIsEmpty!=true){
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
-        }
+        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+        
+        
         allrecordlist.get(currentRecordNumber).setOvernight(overnight);
     }
 
     public void setRevaccount(long revaccount) {
-        if (tabelIsInit==false || tabelIsEmpty!=true){
-            if(newEmptyRecordCreated!=true)createNewEmptyRecord();
+        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+        
+        allrecordlist.get(currentRecordNumber).setRevaccount(revAccBean.SearchForRevAccount(revaccount));
+    }
+
+    @Override
+    public Vattype getVattype() {
+       if( tabelIsEmpty!=true){ 
+              return allrecordlist.get(currentRecordNumber).getVattype();
         }
-        allrecordlist.get(currentRecordNumber).setRevaccount(revaccount);
+        return null;
+    
+    
+    }
+
+    @Override
+    public void setVattype(Vattype vattype) {
+         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+         
+         allrecordlist.get(currentRecordNumber).setVattype(vattype);
+         
+    
+    
+    
+    }
+
+    @Override
+    public Revaccounts getRevaccount() {
+       if( tabelIsEmpty!=true) 
+              return allrecordlist.get(currentRecordNumber).getRevaccount();
+        return null;
+    }
+
+    @Override
+    public void setRevaccount(Revaccounts revaccount) {
+        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+         
+         allrecordlist.get(currentRecordNumber).setRevaccount(revaccount);
     }
     
 }

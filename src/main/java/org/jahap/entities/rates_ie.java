@@ -41,9 +41,11 @@ public interface rates_ie {
 
     String getName();
     
-    long getRevaccount();
+    Revaccounts getRevaccount();
 
     double getPrice();
+    
+    Vattype getVattype();
 
     void setAccountPositionCollection(Collection<AccountPosition> accountPositionCollection);
 
@@ -56,8 +58,9 @@ public interface rates_ie {
             
     void setOvernight(boolean overnight);
 
+    void setVattype(Vattype vattype);
 
-    void setRevaccount(long revaccount);
+    void setRevaccount(Revaccounts revaccount);
        
     void setId(Long id);
 

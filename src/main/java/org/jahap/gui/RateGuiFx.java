@@ -41,6 +41,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import net.sf.jasperreports.engine.JRException;
 import org.jahap.CurrentUser;
+import org.jahap.business.acc.revaccountsbean;
 import org.jahap.business.acc.vatbean;
 import org.jahap.business.base.addressbean;
 import org.jahap.business.base.ratesbean;
@@ -89,7 +90,7 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
     private Button newRate;
     @FXML
     private Button saveRate;
-    
+    private revaccountsbean revAccbean;
     
     private vattypesbean vbean;
     /**
@@ -100,7 +101,7 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
         vbean=new vattypesbean();
         textfields=new ArrayList<TextField>();
          textfields.add(ratecode_fxtextfield);
-         
+         revAccbean= new revaccountsbean();
          
          
          textfields.add(ratename_fxtextfield);
@@ -113,7 +114,10 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
          cuser= CurrentUser.getCurrentUser();
          if(!cuser.isIsAdmin())saveRate.setVisible(false);
          
-        ObservableList<String> data= FXCollections.observableList(vbean.SearchForRateString(null));
+        ObservableList<String> data= FXCollections.observableList(vbean.SearchForVatTypeString(null));
+         ObservableList<String> datas= FXCollections.observableList(revAccbean.SearchForRevAccountString());
+         revAccount.setItems(datas);
+         vat.setItems(data);
          
     }    
 
@@ -165,7 +169,8 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
     private void FillWithSelectedData() {
         ratename_fxtextfield.setText(rates.getName());
         ratecode_fxtextfield.setText(rates.getCode());
-        RateRevAccount_fxtextfield.setText( String.valueOf(rates.getRevaccount()));
+        vat.setValue(String.valueOf(rates.getVattype().getPercentage()));
+        revAccount.setValue(rates.getRevaccount().getName());
         RateBasePrice_fxtextfield.setText(String.valueOf(rates.getPrice()));
         OvernightRate_fxCheckBox.setSelected(rates.getOvernight());
         
