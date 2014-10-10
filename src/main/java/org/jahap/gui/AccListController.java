@@ -59,6 +59,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import javafx.util.StringConverter;
 import net.sf.jasperreports.engine.JRException;
+import org.apache.log4j.Logger;
 import org.jahap.business.acc.accountsbean;
 import org.jahap.business.acc.AccountInfo;
 import org.jahap.entities.Accounts;
@@ -80,15 +81,16 @@ public class AccListController implements Initializable {
     private Button Cancel;
      private  List ll;
     
-  
+  static Logger log = Logger.getLogger(AccListController.class.getName());
      
  
     
     private  accountsbean accbean;
-
+      
+              
     
        private void initTable(){
-       
+          log.debug("Function entry initTable");
         
         accbean  = new accountsbean();
       
@@ -155,6 +157,7 @@ public class AccListController implements Initializable {
       
       
       dataTable.setItems(cc);
+      log.debug("Function exit initTabel");
   }  
     
        
@@ -165,13 +168,14 @@ public class AccListController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
        
-         
+          log.debug("Function enter initialize");
         
         
         
        
         
         initTable();
+        log.debug("Function exit initialize");
     }    
 
     @FXML
@@ -180,6 +184,7 @@ public class AccListController implements Initializable {
 
     @FXML
     private void MouseClicked(MouseEvent event) throws IOException {
+        log.debug("Function enter MouseClicked");
         AccountInfo Ai=(AccountInfo) dataTable.getSelectionModel().getSelectedItem();
         int id;
         id= Integer.valueOf(Ai.getId());
@@ -200,7 +205,7 @@ public class AccListController implements Initializable {
        
       
         stage.showAndWait();
-        
+        log.debug("Function exit MouseClicked");
     }
 
     @FXML

@@ -1,8 +1,9 @@
 
 --checked
-INSERT INTO ADDRESS (ID,CHRISTIANNAME,NAME,STREET,ZIPCODE,CITY,PHONE) 
-      VALUES(1,'Peter','Dillinger','Hollertszug 4','85454','Albital','07866673'),
-            (2,'Hildegard','Walburger','Am Kassau 33','24445','Nachigental','054544');
+INSERT INTO "public".address (id, christianname, city, email, "name", phone, street, zipcode, country, currency, "language", homepage, addresstype, remarks, greeting, salutation, title) 
+	VALUES (1, 'Peter', 'Albital', NULL, 'Dillinger', '07866673', 'Hollertszug 4', '85454', 1, 1, 1, 'privat', 1, NULL, 'Mr', 'Dear Mr', NULL),
+               (2, 'Hildegard', 'Nachigental', NULL, 'Walburger', '054544', 'Am Kassau 33', '24445', 2, 2, 2, 'company', 2, NULL, 'Mdme', 'Dear Mdme', NULL);
+            
 --checked
 INSERT INTO ROOMS (ID,CATEGORY,CODE,NAME)
        VALUES(1,'Single','101','Garden Room'),
@@ -74,3 +75,29 @@ INSERT INTO OCC (ID, ARRIVALDATE,DEPARTUREDATE,GUEST, ROOM,RES, ACCOUNT)
 INSERT INTO CSC (ID, RATE, FROMDATE, TODATE, ACCOUNT,AMOUNT,PRICE,SERVICE)
 	VALUES(1,1,'2013-12-01','2013-12-05',1,4,45.56,1),
 	      (2,1,'2013-12-05','2013-12-10',2,3,70.89,1);
+
+INSERT INTO "public".currency (id, currency_code, currency_name, currency_symbol) 
+	VALUES (1, 'DOLLAR', 'Dollar', '$'),
+               (2, 'EURO', 'Euro', '€'),
+               (3, 'POUND', 'British Pound', '£');
+
+INSERT INTO "public"."language" (id, language_code, language_name) 
+	VALUES(1, 'EN', 'English'),
+              (2, 'FR', 'French'),
+              (3, 'DE', 'German');
+
+INSERT INTO "public".country (id, country_code, country_name, "language", currency) 
+	VALUES (1, 'USA', 'USA', 1, 1),
+               (2, 'UK', 'UK', 1, 3),
+               (3, 'FR', 'France', 2, 2),
+               (4, 'DE', 'Germany', 3, 2);
+
+INSERT INTO "public".choice (id, groupid, groupcode, groupname, choicecode, choicetext, choiceint, choicefloat, "language") 
+	VALUES (1, 1, 'GREET', 'greeting', 'Mr', 'Mr', NULL, NULL, 1),
+	 (2, 1, 'GREET', 'greeting', 'Mrs', 'Mrs', NULL, NULL, 1),
+	 (3, 2, 'SALUT', 'salutation', 'DMr', 'Dear Mr', NULL, NULL, 1),
+	 (4, 2, 'SALUT', 'salutation', 'DMrs', 'Dear Mrs', NULL, NULL, 1),
+	 (5, 3, 'TITLE', 'title', 'DR', 'Dr.', NULL, NULL, 1),
+	 (6, 3, 'TITLE', 'title', 'DPL', 'Dplm. Ing.', NULL, NULL, 1),
+	 (7, 4, 'ATYPE', 'addresstype', 'PR', 'privat', NULL, NULL, 1),
+	 (8, 4, 'ATYPE', 'addresstype', 'PR', 'company', NULL, NULL, 1);
