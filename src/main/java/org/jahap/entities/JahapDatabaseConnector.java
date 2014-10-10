@@ -79,7 +79,7 @@ public  final class JahapDatabaseConnector {
         properties.put("javax.persistence.jdbc.user", user);
         properties.put("javax.persistence.jdbc.password", password);
         properties.put("eclipselink.ddl-generation", "create-tables");
-        properties.put("javax.persistence.jdbc.driver", "org.apache.derby.jdbc.ClientDriver");
+        properties.put("javax.persistence.jdbc.driver", "org.postgresql.Driver");
         
         factory=Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME,properties);
         

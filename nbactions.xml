@@ -34,4 +34,30 @@
                 <exec.executable>${profiler.java}</exec.executable>
             </properties>
         </action>
+        <action>
+            <actionName>CUSTOM-flyaway:clean</actionName>
+            <displayName>flyaway:clean</displayName>
+            <goals>
+                <goal>flyway:clean</goal>
+                <goal>-e</goal>
+            </goals>
+        </action>
+        <action>
+            <actionName>CUSTOM-flyaway:init</actionName>
+            <displayName>flyaway:init</displayName>
+            <goals>
+                <goal>flyway:init</goal>
+            </goals>
+            <properties>
+                <flyway.initVersion>1</flyway.initVersion>
+                <flyway.initDescription>"Base version"</flyway.initDescription>
+            </properties>
+        </action>
+        <action>
+            <actionName>CUSTOM-flyway:migrate</actionName>
+            <displayName>flyway:migrate</displayName>
+            <goals>
+                <goal>flyway:migrate</goal>
+            </goals>
+        </action>
     </actions>
