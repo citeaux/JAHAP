@@ -31,7 +31,7 @@ THE SOFTWARE.
 -->
 
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="924.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.jahap.gui.RateListController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="924.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.jahap.gui.base.RateListController">
   <children>
     <TabPane prefHeight="726.0" prefWidth="924.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <tabs>

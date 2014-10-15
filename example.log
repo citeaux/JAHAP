@@ -178,3 +178,76 @@
 2014-10-10 DEBUG [JavaFX Application Thread] (Choicebean.java:100) - Function entry SearchForChoice
 2014-10-10 DEBUG [JavaFX Application Thread] (Choicebean.java:104) - Function exit SearchForChoice 
 2014-10-10 DEBUG [JavaFX Application Thread] (addressbean.java:83) - Function Exit newrecordcreated:false
+2014-10-14 DEBUG [JavaFX Application Thread] (addressbean.java:83) - Function Exit newrecordcreated:false
+2014-10-14 DEBUG [JavaFX Application Thread] (countrybean.java:59) - Function entry countrybean
+2014-10-14 DEBUG [JavaFX Application Thread] (countrybean.java:85) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (languagebean.java:50) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (languagebean.java:76) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (currencybean.java:49) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (currencybean.java:75) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (Choicebean.java:59) - Function entry countrybean
+2014-10-14 DEBUG [JavaFX Application Thread] (Choicebean.java:85) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (countrybean.java:103) - Function entry SearchForCountryname
+2014-10-14 DEBUG [JavaFX Application Thread] (countrybean.java:118) - Function exit SearchForCountry 
+2014-10-14 DEBUG [JavaFX Application Thread] (languagebean.java:122) - Function entry SearchForCountryname
+2014-10-14 DEBUG [JavaFX Application Thread] (currencybean.java:120) - Function entry SearchForCountryname
+2014-10-14 DEBUG [JavaFX Application Thread] (Choicebean.java:100) - Function entry SearchForChoice
+2014-10-14 DEBUG [JavaFX Application Thread] (Choicebean.java:104) - Function exit SearchForChoice 
+2014-10-14 DEBUG [JavaFX Application Thread] (Choicebean.java:100) - Function entry SearchForChoice
+2014-10-14 DEBUG [JavaFX Application Thread] (Choicebean.java:104) - Function exit SearchForChoice 
+2014-10-14 DEBUG [JavaFX Application Thread] (Choicebean.java:100) - Function entry SearchForChoice
+2014-10-14 DEBUG [JavaFX Application Thread] (Choicebean.java:104) - Function exit SearchForChoice 
+2014-10-14 DEBUG [JavaFX Application Thread] (Choicebean.java:100) - Function entry SearchForChoice
+2014-10-14 DEBUG [JavaFX Application Thread] (Choicebean.java:104) - Function exit SearchForChoice 
+2014-10-14 DEBUG [JavaFX Application Thread] (addressbean.java:83) - Function Exit newrecordcreated:false
+2014-10-14 DEBUG [JavaFX Application Thread] (occbean.java:65) - Function entry Contructor
+2014-10-14 DEBUG [JavaFX Application Thread] (occbean.java:92) - Function exit Contructor
+2014-10-14 DEBUG [JavaFX Application Thread] (addressbean.java:83) - Function Exit newrecordcreated:false
+2014-10-14 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2014-10-14 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (countrybean.java:59) - Function entry countrybean
+2014-10-14 DEBUG [JavaFX Application Thread] (countrybean.java:85) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (languagebean.java:50) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (languagebean.java:76) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (currencybean.java:49) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (currencybean.java:75) - Function entry billbean
+2014-10-14 DEBUG [JavaFX Application Thread] (countrybean.java:103) - Function entry SearchForCountryname
+2014-10-14 DEBUG [JavaFX Application Thread] (countrybean.java:118) - Function exit SearchForCountry 
+2014-10-14 DEBUG [JavaFX Application Thread] (languagebean.java:122) - Function entry SearchForCountryname
+2014-10-14 DEBUG [JavaFX Application Thread] (currencybean.java:120) - Function entry SearchForCountryname
+2014-10-14 DEBUG [JavaFX Application Thread] (Hotelbean.java:189) - Function entry getDataRecord
+2014-10-14 DEBUG [JavaFX Application Thread] (occbean.java:65) - Function entry Contructor
+2014-10-14 DEBUG [JavaFX Application Thread] (occbean.java:92) - Function exit Contructor
+2014-10-14 DEBUG [JavaFX Application Thread] (occbean.java:124) - Function entryTue Oct 14 00:00:00 CEST 2014   // Fri Nov 14 00:00:00 CET 2014
+2014-10-14 DEBUG [JavaFX Application Thread] (occplan.java:448) - Function entry create Gridbox
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:97) - Function entry createNewEmptyRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:157) - Function entry saveNewRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:97) - Function entry createNewEmptyRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:159) - Function entry saveNewRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:97) - Function entry createNewEmptyRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:159) - Function entry saveNewRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
+2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord

@@ -25,6 +25,10 @@
 
 package org.jahap.gui;
 
+import org.jahap.gui.res.InterResSearchResult;
+import org.jahap.gui.res.ResguiController;
+import org.jahap.gui.base.AddressSearchResult;
+import org.jahap.gui.base.AdressGuiFx;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;

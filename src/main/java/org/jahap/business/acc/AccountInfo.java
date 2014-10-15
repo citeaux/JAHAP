@@ -35,16 +35,16 @@ import javafx.beans.property.SimpleStringProperty;
             private String id;
             private String arrivaldate;
             private String departuredate;
-            private String Name;
-            private String Balance;
+            private String name;
+            private String balance;
             
 
     public AccountInfo(String id, String arrivaldate, String departuredate, String Name,String balance) {
         this.id = id;
         this.arrivaldate = arrivaldate;
         this.departuredate = departuredate;
-        this.Name = Name;
-        this.Balance=balance;
+        this.name = Name;
+        this.balance=balance;
     }
 
     public String getId() {
@@ -72,19 +72,19 @@ import javafx.beans.property.SimpleStringProperty;
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String Name) {
-        this.Name = Name;
+        this.name = Name;
     }
 
     public String getBalance() {
-        return Balance;
+        return balance;
     }
 
     public void setBalance(String Balance) {
-        this.Balance = Balance;
+        this.balance = Balance;
     }
             
            

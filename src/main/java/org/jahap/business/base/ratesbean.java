@@ -28,10 +28,10 @@ package org.jahap.business.base;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import org.apache.log4j.Logger;
 import org.jahap.business.acc.revaccountsbean;
 import org.jahap.entities.AccountPosition;
 import org.jahap.entities.Csc;
-
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.Rates;
 import org.jahap.entities.Revaccounts;
@@ -43,7 +43,10 @@ import org.jahap.entities.Vattype;
  * @author russ
  */
 public class ratesbean  extends DatabaseOperations  implements rates_i{
-
+   
+    static Logger log = Logger.getLogger(ratesbean.class.getName());
+    
+  
      JahapDatabaseConnector dbhook;
     private static List<Rates> allrecordlist; 
     private revaccountsbean revAccBean;
@@ -90,7 +93,11 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
     }
     
     
-    public void createNewEmptyRecord() {
+        public void createNewEmptyRecord() {
+        log.debug("Function entry createNewEmptyRecord");
+       
+         
+                 
         if(numberOfLastRecord==-1){
             allrecordlist = new ArrayList();
             numberOfLastRecord++;
@@ -121,18 +128,22 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
     }
 
     public void saveRecord() {
-          if (newEmptyRecordCreated==true){
+        log.debug("Function entry save Record");
+         
+      if (newEmptyRecordCreated==false){
+          saveOldRecord();
+      }
+      
+       if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           
-      }
-      if (newEmptyRecordCreated==false){
-          saveOldRecord();
       }
     }
     
     
      private void saveOldRecord(){
+         log.debug("Function entry saveOldRecord");
         if(newEmptyRecordCreated==false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().find(Rates.class,allrecordlist.get(currentRecordNumber).getId() );
@@ -145,6 +156,8 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
 
     
     private void saveNewRecord(){
+        log.debug("Function entry saveNewRecord");
+        
         if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
@@ -341,6 +354,17 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
     
     }
 
+    
+    public void setVattype(long vattype) {
+         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+         vattypesbean vatb= new vattypesbean(); 
+         allrecordlist.get(currentRecordNumber).setVattype(vatb.getDataRecord(vattype));
+         
+    
+    
+    }
+    
+    
     @Override
     public void setVattype(Vattype vattype) {
          if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();

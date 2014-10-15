@@ -33,7 +33,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import net.sf.jasperreports.j2ee.servlets.XmlServlet;
-import org.jahap.gui.InterAccSearchResultEvent;
+import org.jahap.gui.acc.InterAccSearchResultEvent;
 import org.jahap.gui.LogonGuiController;
 
 import org.slf4j.Logger;

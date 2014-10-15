@@ -24,6 +24,9 @@
 
 package org.jahap.gui;
 
+import org.jahap.gui.res.InterResSearchResultListener;
+import org.jahap.gui.res.InterResSearchResult;
+import org.jahap.gui.res.InterResSearchResultEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;

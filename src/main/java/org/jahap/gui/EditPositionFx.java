@@ -26,6 +26,9 @@
 package org.jahap.gui;
 
 
+import org.jahap.gui.acc.SimpelAccountingController;
+import org.jahap.gui.acc.viewAccountPositionsProperty;
+import org.jahap.gui.acc.InterAccSearchResult;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -85,7 +88,7 @@ public class EditPositionFx implements Initializable {
         // TODO
     }    
     
-    void init(InterAccSearchResult AccSearchresults,SimpelAccountingController zi,String guisource, viewAccountPositionsProperty jm){
+    public void init(InterAccSearchResult AccSearchresults,SimpelAccountingController zi,String guisource, viewAccountPositionsProperty jm){
          
          
          this.guisource=guisource;
