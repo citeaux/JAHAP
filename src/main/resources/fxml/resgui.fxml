@@ -35,7 +35,7 @@ THE SOFTWARE.
 -->
 
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="748.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.jahap.gui.ResguiController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="748.0" xmlns:fx="http://javafx.com/fxml" fx:controller="org.jahap.gui.res.ResguiController">
   <children>
     <BorderPane prefHeight="533.0" prefWidth="748.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <bottom>
