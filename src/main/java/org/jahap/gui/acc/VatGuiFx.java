@@ -25,11 +25,22 @@ package org.jahap.gui.acc;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellDataFeatures;
+import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.util.Callback;
+import org.apache.log4j.Logger;
+import org.jahap.business.base.vattypesbean;
+import org.jahap.entities.Vattype;
 
 /**
  * FXML Controller class
@@ -37,6 +48,9 @@ import javafx.scene.control.TextField;
  * @author russ
  */
 public class VatGuiFx implements Initializable {
+    
+    static Logger log = Logger.getLogger(VatGuiFx.class.getName());
+    
     @FXML
     private TextField vatName;
     @FXML
@@ -47,16 +61,76 @@ public class VatGuiFx implements Initializable {
     private Button newVat;
     @FXML
     private Button saveVat;
-
+    vattypesbean vatTypeBean;
+    @FXML
+    private TableView vatTable;
+    
+    
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
+        initTable();
     }    
 
 
+     private void initTable(){
+          log.debug("Function entry initTable");
+        
+        vatTypeBean  = new vattypesbean();
+      
+        
+       ObservableList<Vattype> cc=FXCollections.observableList(vatTypeBean.SearchForVatType(null));
+   
+        
+//         -----------------  id
+        TableColumn<Vattype,String> IdCol = new TableColumn<Vattype,String>("id");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Vattype, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Vattype, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getId());
+     }
+     
+             
+      });  
+      
+//     dataTable.getColumns().add(IdCol);
+    
+      TableColumn<Vattype,String> vatName = new TableColumn<Vattype,String>("Name");
+       vatName.setCellValueFactory(new Callback<CellDataFeatures<Vattype, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Vattype, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getName());
+     }
+     
+             
+      });  
+      
+      vatTable.getColumns().add(vatName);
+      
+      
+      
+       TableColumn<Vattype,String> percentage = new TableColumn<Vattype,String>("%");
+      percentage.setCellValueFactory(new Callback<CellDataFeatures<Vattype, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Vattype, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getPercentage());
+     }
+     
+             
+      });  
+      
+      vatTable.getColumns().add(percentage);
+      
+     
+      
+      
+     vatTable.setItems(cc);
+      log.debug("Function exit initTabel");
+  }  
+    
+    
+    
     @FXML
     private void printRoom(ActionEvent event) {
     }

@@ -253,3 +253,5 @@
 2014-10-15 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
 2014-10-17 DEBUG [JavaFX Application Thread] (ratesbean.java:131) - Function entry save Record
 2014-10-17 DEBUG [JavaFX Application Thread] (ratesbean.java:146) - Function entry saveOldRecord
+2014-10-22 DEBUG [JavaFX Application Thread] (VatGuiFx.java:81) - Function entry initTable
+2014-10-22 DEBUG [JavaFX Application Thread] (VatGuiFx.java:129) - Function exit initTabel

@@ -25,45 +25,30 @@
 package org.jahap.gui.acc;
 
 
-import com.lowagie.text.pdf.hyphenation.TernaryTree;
 import java.io.IOException;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
 import java.util.ResourceBundle;
 import javafx.beans.property.ReadOnlyObjectWrapper;
-import javafx.beans.property.SimpleStringProperty;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.TableCell;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.MapValueFactory;
-import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.control.cell.TextFieldTableCell;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
-import javafx.util.StringConverter;
-import net.sf.jasperreports.engine.JRException;
 import org.apache.log4j.Logger;
-import org.jahap.business.acc.Accountsbean;
 import org.jahap.business.acc.AccountInfo;
-import org.jahap.entities.Accounts;
-
+import org.jahap.business.acc.accountsbean;
 
 /**
  * FXML Controller class
@@ -85,14 +70,14 @@ public class AccListController implements Initializable {
      
  
     
-    private  Accountsbean accbean;
+    private  accountsbean accbean;
       
               
     
        private void initTable(){
           log.debug("Function entry initTable");
         
-        accbean  = new Accountsbean();
+        accbean  = new accountsbean();
       
         ll=accbean.getAccOverview();
        ObservableList<AccountInfo> cc=FXCollections.observableList(ll);
