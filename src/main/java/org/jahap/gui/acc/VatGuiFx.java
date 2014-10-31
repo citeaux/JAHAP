@@ -37,6 +37,7 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.vattypesbean;
@@ -64,7 +65,8 @@ public class VatGuiFx implements Initializable {
     vattypesbean vatTypeBean;
     @FXML
     private TableView vatTable;
-    
+    private long selectedItem;
+           
     
     /**
      * Initializes the controller class.
@@ -141,6 +143,20 @@ public class VatGuiFx implements Initializable {
 
     @FXML
     private void saveRoom(ActionEvent event) {
+    }
+
+    @FXML
+    private void TableMouseClicked(MouseEvent event) {
+        Vattype j=(Vattype) vatTable.getSelectionModel().getSelectedItem();
+        
+        if (event.getClickCount()==2){
+                   selectedItem=j.getId();
+                   vatName.setText(j.getName());
+                   vatPercentage.setText(String.valueOf(j.getPercentage()));
+            
+        }
+        
+        
     }
     
 }

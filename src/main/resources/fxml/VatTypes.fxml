@@ -47,7 +47,7 @@ THE SOFTWARE.
                               <MeshView layoutX="155.0" layoutY="265.0" />
                               <TextField fx:id="vatPercentage" layoutX="134.0" layoutY="79.0" prefHeight="31.0" prefWidth="165.0" />
                               <Label layoutX="49.0" layoutY="84.0" text="Percentage" />
-                              <TableView fx:id="vatTable" layoutX="51.0" layoutY="181.0" prefHeight="241.0" prefWidth="347.0">
+                              <TableView fx:id="vatTable" layoutX="51.0" layoutY="181.0" onMouseClicked="#TableMouseClicked" prefHeight="241.0" prefWidth="347.0">
                                 <columns>
                                   
                                 </columns>
