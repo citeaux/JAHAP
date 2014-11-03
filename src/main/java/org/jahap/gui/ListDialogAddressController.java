@@ -25,42 +25,37 @@
 
 package org.jahap.gui;
 
-import org.jahap.gui.res.InterResSearchResult;
-import org.jahap.gui.res.ResguiController;
-import org.jahap.gui.base.AddressSearchResult;
-import org.jahap.gui.base.AdressGuiFx;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-import javafx.util.Callback;
-import net.sf.jasperreports.engine.JRException;
-import org.eclipse.persistence.internal.helper.DatabaseTable;
-import org.jahap.business.base.addressbean;
-import org.jahap.entities.Address;
-import org.jahap.sreport.addressreports;
-import javafx.application.Platform;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import javafx.util.Callback;
+import net.sf.jasperreports.engine.JRException;
+import org.apache.log4j.Logger;
+import org.jahap.business.base.addressbean;
+import org.jahap.entities.Address;
+import org.jahap.gui.base.AddressSearchResult;
+import org.jahap.gui.base.AdressGuiFx;
+import org.jahap.gui.res.InterResSearchResult;
+import org.jahap.gui.res.ResguiController;
+import org.jahap.sreport.addressreports;
 
 /**
  * FXML Controller class
@@ -68,6 +63,8 @@ import javafx.stage.Stage;
  * @author russ
  */
 public class ListDialogAddressController implements Initializable{
+    static Logger log = Logger.getLogger(ListDialogAddressController.class.getName());
+    
     private addressbean addresses;
     private List searchlistAddresses; // All Records of 
     @FXML
@@ -89,6 +86,8 @@ public class ListDialogAddressController implements Initializable{
     
     
     private void initTable(){
+        log.debug("Function entry initTable");
+                
         addresses = new addressbean();
         searchlistAddresses=addresses.SearchForAddress("*");
         ObservableList<Address> data= FXCollections.observableList(searchlistAddresses);
@@ -188,6 +187,7 @@ public class ListDialogAddressController implements Initializable{
        dataTable.getColumns().add(PhoneCol);
         
     dataTable.setItems(data);
+        log.debug("Function exit initTable");
     }
     
     
@@ -197,38 +197,48 @@ public class ListDialogAddressController implements Initializable{
      * Sets selected Address ID in Oberver
      */
     public void init(AddressSearchResult searchresults,AdressGuiFx zi){
+        log.debug("Function entry init -address");
+                
+        
          isOverviewDialog=true;
          searchresult= new AddressSearchResult();
          searchresult=searchresults;
         initTable();
+        log.debug("Function exit init -adddress");
     }
     
     public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource){
+        log.debug("Function entry init -res");
          isOverviewDialog=true;
          
          this.ResSearchresult=ResSearchresults;
          this.guisource=guisource;
         initTable();
+        log.debug("Function exit init -res ");
     }
     
     public void init(InterResSearchResult ResSearchresults,HotelSetupController zi,String guisource){
+        log.debug("Function entry init -hotel");   
          isOverviewDialog=true;
          
          this.ResSearchresult=ResSearchresults;
          this.guisource=guisource;
         initTable();
+        log.debug("Function exit init -hotel");
     }
     
     
     public void initialize(URL url, ResourceBundle rb) {
+        log.debug("Function entry initialize");
        searchresult= new AddressSearchResult();
        initTable();
-       
+        log.debug("Function exit initialize");
+               
     }    
 
     @FXML
     private void PrintReport(ActionEvent event) {
-        
+        log.debug("Function entry PrintReport");
          List<Address> adl= new ArrayList<Address>();
         adl=searchlistAddresses;
         
@@ -236,12 +246,14 @@ public class ListDialogAddressController implements Initializable{
         try {
             ARP.multiAdressReport(adl);
         } catch (JRException ex) {
-            Logger.getLogger(ListDialogAddressController.class.getName()).log(Level.SEVERE, null, ex);
+            ex.printStackTrace();
         }
+        log.debug("Function exit PrintReport ");
     }
 
     @FXML
     private void OkAction(ActionEvent event) throws IOException {
+        log.debug("Function entry OkAction");
         if(isOverviewDialog==false){
         Stage stage = (Stage) Ok.getScene().getWindow();
         stage.close();
@@ -256,7 +268,7 @@ public class ListDialogAddressController implements Initializable{
             Stage stage = (Stage) Ok.getScene().getWindow();
         stage.close();
         }
-        
+        log.debug("Function exit OkAction");
     }
 
     @FXML
@@ -266,7 +278,7 @@ public class ListDialogAddressController implements Initializable{
     @FXML
     private void MouseClicked(MouseEvent event) throws IOException {
         
-        
+     log.debug("Function entry MouseClicked");   
     
         
     Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
@@ -294,7 +306,7 @@ public class ListDialogAddressController implements Initializable{
         
         
     }
-    
+        log.debug("Function exit MouseClicked");
        }
     }
 

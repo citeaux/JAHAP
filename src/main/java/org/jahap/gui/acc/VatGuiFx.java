@@ -24,6 +24,9 @@
 package org.jahap.gui.acc;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.util.Date;
 import java.util.ResourceBundle;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.value.ObservableValue;
@@ -133,17 +136,6 @@ public class VatGuiFx implements Initializable {
     
     
     
-    @FXML
-    private void printRoom(ActionEvent event) {
-    }
-
-    @FXML
-    private void newRoom(ActionEvent event) {
-    }
-
-    @FXML
-    private void saveRoom(ActionEvent event) {
-    }
 
     @FXML
     private void TableMouseClicked(MouseEvent event) {
@@ -153,10 +145,32 @@ public class VatGuiFx implements Initializable {
                    selectedItem=j.getId();
                    vatName.setText(j.getName());
                    vatPercentage.setText(String.valueOf(j.getPercentage()));
+                   vatTypeBean.SearchForVatType(selectedItem);
             
         }
         
         
     }
+
+    @FXML
+    private void printVAT(ActionEvent event) {
+    }
+
+    @FXML
+    private void newVAT(ActionEvent event) {
+        vatName.setText("");
+        vatPercentage.setText("");
+        vatTypeBean.createNewEmptyRecord();
+    }
+
+    @FXML
+    private void saveVAT(ActionEvent event) {
+        vatTypeBean.setName(vatName.getText());
+        vatTypeBean.setPercentage(Float.valueOf(vatPercentage.getText()));
+        LocalDate today=LocalDate.now();
+        vatTypeBean.setDatevat(Date.from(today.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()));
+        vatTypeBean.saveRecord();
+    }
+    
     
 }

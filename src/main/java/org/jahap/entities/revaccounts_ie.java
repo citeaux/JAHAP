@@ -39,11 +39,15 @@ public interface revaccounts_ie {
     BigInteger getRevaccnumber();
 
     Collection<Revenue> getRevenueCollection();
+    
+    String getRev_group();
 
     void setName(String name);
 
     void setRevaccnumber(BigInteger revaccnumber);
 
     void setRevenueCollection(Collection<Revenue> revenueCollection);
+    
+    void setRev_group(String rev_group);
     
 }

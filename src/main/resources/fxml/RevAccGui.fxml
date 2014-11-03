@@ -54,6 +54,8 @@ THE SOFTWARE.
                     <Label layoutX="65.0" layoutY="84.0" text="Account name:" />
                     <TextField id="name" fx:id="accountno" layoutX="172.0" layoutY="48.0" prefHeight="31.0" prefWidth="198.0" />
                     <TextField id="christianname" fx:id="accountName" layoutX="171.0" layoutY="81.0" prefWidth="200.0" />
+                              <ComboBox fx:id="RevAccountGroup" layoutX="170.0" layoutY="120.0" prefHeight="28.0" prefWidth="201.0" />
+                              <Label layoutX="65.0" layoutY="123.0" text="Accountgroup:" />
                   </children>
                 </AnchorPane>
               </content>

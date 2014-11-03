@@ -38,7 +38,6 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -68,7 +67,10 @@ public class Revaccounts implements Serializable, revaccounts_ie {
     private String name;
     @OneToMany(mappedBy = "revaccount")
     private Collection<Revenue> revenueCollection;
-
+    @Column(name="REV_GROUP")
+    private String rev_group;
+    
+    
     @Override
     public Collection<Revenue> getRevenueCollection() {
         return revenueCollection;
@@ -111,6 +113,16 @@ public class Revaccounts implements Serializable, revaccounts_ie {
         return name;
     }
 
+    public String getRev_group() {
+        return rev_group;
+    }
+
+    public void setRev_group(String rev_group) {
+        this.rev_group = rev_group;
+    }
+
+    
+    
     @Override
     public void setName(String name) {
         this.name = name;

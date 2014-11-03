@@ -26,10 +26,6 @@
 package org.jahap.gui.res;
 
 
-import org.jahap.gui.base.RoomListController;
-import org.jahap.gui.base.RateListController;
-import org.jahap.gui.base.RateGuiFx;
-import org.jahap.gui.base.AdressGuiFx;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
@@ -55,6 +51,7 @@ import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
 import org.apache.log4j.Logger;
+import org.jahap.business.acc.accountsbean;
 import org.jahap.business.acc.cscbean;
 import org.jahap.business.base.addressbean;
 import org.jahap.business.base.ratesbean;
@@ -65,6 +62,10 @@ import org.jahap.entities.Accounts;
 import org.jahap.entities.Occ;
 import org.jahap.gui.ListDialogAddressController;
 import org.jahap.gui.acc.SimpelAccountingController;
+import org.jahap.gui.base.AdressGuiFx;
+import org.jahap.gui.base.RateGuiFx;
+import org.jahap.gui.base.RateListController;
+import org.jahap.gui.base.RoomListController;
 
 /**
  * FXML Controller class
@@ -164,7 +165,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
     private occbean occ;
     private roomsbean room;
     private addressbean address;
-    private Accountsbean accs;
+    private accountsbean accs;
     private cscbean cscs;
     @FXML
     private Font x3;
@@ -208,7 +209,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         occ=new occbean();
         room=new roomsbean();
         rate=new ratesbean();
-        accs=new Accountsbean();
+        accs=new accountsbean();
         cscs=new cscbean();
         ressearchresult=new InterResSearchResult();
         createNewRecord=true;
@@ -602,7 +603,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
         occ=new occbean();
         room=new roomsbean();
         rate=new ratesbean();
-        accs=new Accountsbean();
+        accs=new accountsbean();
         cscs=new cscbean();
         ressearchresult=new InterResSearchResult();
         res.setDataRecordId(id);

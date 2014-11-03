@@ -30,7 +30,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import org.apache.log4j.Logger;
-import org.jahap.entities.*;
+import org.jahap.entities.Address;
+import org.jahap.entities.Bill;
+import org.jahap.entities.Country;
+import org.jahap.entities.Currency;
+import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.Language;
+import org.jahap.entities.Res;
         
 
 /**
@@ -54,6 +60,7 @@ public class addressbean extends DatabaseOperations implements address_i {
      * establishes a connection to the Database an picks all adresses
      */
     public addressbean(){
+        log.debug("Function entry constructor");
         long testg;
         dbhook = JahapDatabaseConnector.getConnector();
          
@@ -78,7 +85,7 @@ public class addressbean extends DatabaseOperations implements address_i {
               tabelIsEmpty=true;
         }
         
-        
+        log.debug("Function exit constructor");
         
        log.debug("Function Exit newrecordcreated:" + newEmptyRecordCreated);
         
@@ -91,11 +98,14 @@ public class addressbean extends DatabaseOperations implements address_i {
      * gets all Addresses of the Database
      */
     public List<Address>SearchForAddress(String searchstring){
-    
+        log.debug("Function entry SearchForAddress");
         return allrecordlist;
+        
+        
     }
     
     public List<Address>getCurrentAddress(){
+        log.debug("Function entry getCurrentAddress");
         List<Address>hh=new ArrayList<Address>();
         hh.add(allrecordlist.get(currentRecordNumber));
         return hh;
@@ -110,7 +120,7 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     @Override
     public void createNewEmptyRecord(){
-         
+         log.debug("Function entry createNewEmptyRecord");
          if(numberOfLastRecord==-1){
             allrecordlist = new ArrayList();
             numberOfLastRecord++;
@@ -127,10 +137,11 @@ public class addressbean extends DatabaseOperations implements address_i {
         currentRecordNumber=numberOfLastRecord;
         setNewEmptyRecordCreadted();
         tabelIsInit=true; // Set Tabel iniated - List is connected
-       
+        log.debug("Function exit createNewEmptyRecord ");
     }
    
     private void saveNewRecord(){
+        log.debug("Function entry createNewEmptyRecord");
         if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
@@ -142,9 +153,11 @@ public class addressbean extends DatabaseOperations implements address_i {
                   e.printStackTrace();   
             }
         }
+        log.debug("Function exit createNewEmptyRecord");
         }
       
     private void saveOldRecord(){
+        log.debug("Function entry saveOldRecord");
         if(newEmptyRecordCreated==false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().find(Address.class,allrecordlist.get(currentRecordNumber).getId() );
@@ -152,6 +165,7 @@ public class addressbean extends DatabaseOperations implements address_i {
             
             dbhook.getEntity().getTransaction().commit();
         }
+        log.debug("Function exit saveOldRecord");
     }   
     
     /**
@@ -159,6 +173,7 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     @Override      
   public void saveRecord(){
+        log.debug("Function entry saveRecord");
       if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
@@ -168,6 +183,7 @@ public class addressbean extends DatabaseOperations implements address_i {
           saveOldRecord();
       }
       
+        log.debug("Function exit saveRecord"); 
   }        
 
        
@@ -198,7 +214,9 @@ public class addressbean extends DatabaseOperations implements address_i {
      * closes database connection
      */
     public void quitDBaccess(){
+        log.debug("Function entry quitDBaccess");
        dbhook.getEntity().close();
+        log.debug("Function exit quitDBaccess");
    }
     
    
@@ -208,6 +226,7 @@ public class addressbean extends DatabaseOperations implements address_i {
      * @return long 
      */
     public Long getId(){
+        log.debug("Function entry getid");
         if( tabelIsEmpty!=true) 
               return allrecordlist.get(currentRecordNumber).getId();
         return (long) 0;
@@ -218,6 +237,7 @@ public class addressbean extends DatabaseOperations implements address_i {
      * @param id
      */
     public void  setDataRecordId(Long id){
+        log.debug("Function entry setDataRecordId");
        int inl;
         
       
@@ -233,7 +253,7 @@ public class addressbean extends DatabaseOperations implements address_i {
               
             } 
             
-        
+        log.debug("Function exit setDataRecordId");
        
    }
    
@@ -243,6 +263,7 @@ public class addressbean extends DatabaseOperations implements address_i {
      * @return address
      */
     public Address getDataRecord(long id){
+        log.debug("Function entry getDataRecord");
        int inl=-1;
         
         try {
@@ -256,6 +277,7 @@ public class addressbean extends DatabaseOperations implements address_i {
         } catch (Exception e) {
             e.printStackTrace();  
         }
+        log.debug("Function exit getDataRecord");
         return allrecordlist.get(currentRecordNumber);
    }
    

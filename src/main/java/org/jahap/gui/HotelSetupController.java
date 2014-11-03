@@ -24,9 +24,6 @@
 
 package org.jahap.gui;
 
-import org.jahap.gui.res.InterResSearchResultListener;
-import org.jahap.gui.res.InterResSearchResult;
-import org.jahap.gui.res.InterResSearchResultEvent;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -43,6 +40,7 @@ import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.apache.log4j.Logger;
 import org.jahap.business.base.Hotelbean;
 import org.jahap.business.base.addressbean;
 import org.jahap.business.base.country;
@@ -51,6 +49,9 @@ import org.jahap.business.base.currency;
 import org.jahap.business.base.currencybean;
 import org.jahap.business.base.language;
 import org.jahap.business.base.languagebean;
+import org.jahap.gui.res.InterResSearchResult;
+import org.jahap.gui.res.InterResSearchResultEvent;
+import org.jahap.gui.res.InterResSearchResultListener;
 
 /**
  * FXML Controller class
@@ -58,6 +59,8 @@ import org.jahap.business.base.languagebean;
  * @author Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>
  */
 public class HotelSetupController implements Initializable, InterResSearchResultListener {
+    static Logger log = Logger.getLogger(HotelSetupController.class.getName());
+    
     @FXML
     private TextField hotelStreet;
     @FXML
@@ -107,6 +110,10 @@ public class HotelSetupController implements Initializable, InterResSearchResult
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        log.debug("Function entry initialize");
+                
+              
+                        
         // TODO
         addresses= new addressbean();
         hbean =  new Hotelbean();
@@ -124,6 +131,8 @@ public class HotelSetupController implements Initializable, InterResSearchResult
         hotelCurrencyChoice.setItems(datac);
         hotelLanguageChoice.setItems(datal);
         hbean.getDataRecord(1);
+        
+        log.debug("Function exit initialize ");
         fillDialog();
     }    
 
@@ -154,24 +163,41 @@ public class HotelSetupController implements Initializable, InterResSearchResult
     }
 
     private void fillDialog(){
-        HotelAdressId=hbean.getId();
-        hotelCity.setText(hbean.getHotelAdress().getCity());
-        hotelZipCode.setText(hbean.getHotelAdress().getZipcode());
-        hotelName.setText(hbean.getHotelName());
-        hotelStreet.setText(hbean.getHotelAdress().getStreet());
-        hotelInternet.setText(hbean.getHotelAdress().getHomepage());
-        hotelCode.setText(hbean.getHotelCode());
-        hotelPhone.setText(hbean.getHotelAdress().getPhone());
-        BankAccountData2.setText(hbean.getHotelBankaccountdata2());
-        bankAccountData1.setText(hbean.getHotelBankaccountdata1());
-        footerText.setText(hbean.getHotelFootertext());
-        hotelCountryChoice.setValue(hbean.getHotelCountry().getCountryName());
-        hotelCurrencyChoice.setValue(hbean.getHotelCurrency().getCurrencyName());
-        hotelLanguageChoice.setValue(hbean.getHotelLanguage().getLanguageName());
+        log.debug("Function entry fillDialog");
+            
+            hotelName.setText(hbean.getHotelName());
+            hotelCode.setText(hbean.getHotelCode());
+            BankAccountData2.setText(hbean.getHotelBankaccountdata2());
+            bankAccountData1.setText(hbean.getHotelBankaccountdata1());
+            footerText.setText(hbean.getHotelFootertext());
+            
+            HotelAdressId = hbean.getId();
+            
+           try {
+            hotelCity.setText(hbean.getHotelAdress().getCity());
+            hotelZipCode.setText(hbean.getHotelAdress().getZipcode());
+            
+            hotelStreet.setText(hbean.getHotelAdress().getStreet());
+            hotelInternet.setText(hbean.getHotelAdress().getHomepage());
+            
+            hotelPhone.setText(hbean.getHotelAdress().getPhone());
+            
+            hotelCountryChoice.setValue(hbean.getHotelCountry().getCountryName());
+            hotelCurrencyChoice.setValue(hbean.getHotelCurrency().getCurrencyName());
+            hotelLanguageChoice.setValue(hbean.getHotelLanguage().getLanguageName());
+        } catch (Exception e) {
+            e.printStackTrace();
+            
+        }
+       
+        log.debug("Function exit fillDialog");
+                
     }
     
     @FXML
     private void saveHotelData(ActionEvent event) {
+         log.debug("Function entry saveHotelData");
+        
          hbean.setHotelAdress(addresses.getDataRecord(HotelAdressId));
          hbean.setHotelBankaccountdata1(bankAccountData1.getText());
          hbean.setHotelBankaccountdata2(BankAccountData2.getText());
@@ -182,10 +208,13 @@ public class HotelSetupController implements Initializable, InterResSearchResult
          hbean.setHotelCurrency(hotelCurrencyChoice.getSelectionModel().getSelectedIndex()+1);
          hbean.setHotelName(hotelName.getText());
          hbean.saveRecord();
+         log.debug("Function exit saveHotelData");
+                 
     }
 
     @Override
     public void idinfo(InterResSearchResultEvent e) {
+        log.debug("Function entry InterResSearchResultEvent ");
         if(e.getTableNameofSource()=="hoteladdress"){
                  hotelName.setText(addresses.getDataRecord(e.getDbRecordId()).getName());
                  hotelCity.setText(addresses.getDataRecord(e.getDbRecordId()).getCity());
@@ -201,6 +230,7 @@ public class HotelSetupController implements Initializable, InterResSearchResult
                   HotelAdressId=(int) e.getDbRecordId();
         }  
         
+        log.debug("Function exit InterResSearchResultEvent");
         
         
     }

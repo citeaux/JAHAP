@@ -33,7 +33,6 @@ import java.util.stream.Collectors;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.Revaccounts;
 import org.jahap.entities.Revenue;
-import org.jahap.entities.Vattype;
 
 /**
  *
@@ -243,6 +242,16 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
 
     public Long getId() {
         throw new UnsupportedOperationException("Not supported yet.");
+    }
+
+    @Override
+    public String getRev_group() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void setRev_group(String rev_group) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
 }

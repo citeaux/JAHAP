@@ -41,10 +41,10 @@ import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import net.sf.jasperreports.engine.JRException;
+import org.apache.log4j.Logger;
 import org.jahap.business.base.Choicebean;
 import org.jahap.business.base.addressbean;
 import org.jahap.business.base.choicegroups;
@@ -55,7 +55,6 @@ import org.jahap.business.base.currencybean;
 import org.jahap.business.base.language;
 import org.jahap.business.base.languagebean;
 import org.jahap.entities.Address;
-import org.jahap.entities.Country;
 import org.jahap.gui.ListDialogAddressController;
 import org.jahap.sreport.addressreports;
 
@@ -65,7 +64,7 @@ import org.jahap.sreport.addressreports;
  */
 public class AdressGuiFx implements Initializable, AddressSearchResultListener {
     
-    
+    static Logger log = Logger.getLogger(AdressGuiFx.class.getName());
     
     @FXML
     private Button Save;
@@ -131,6 +130,7 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
 
     public void initialize(URL url, ResourceBundle rb) {
          
+          log.debug("Function entry initialize");
           textfields=new ArrayList<TextField>();
         
           textfields.add(city_fxtextfield);
@@ -164,21 +164,26 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         greeting.setItems(dataui);
         salutation.setItems(dataop);
        searchresults.addIDListener(this);
+        log.debug("Function exit initialize");
         
     }
     
     public void init(long id){
+        log.debug("Function entry init  ");
         addresses = new addressbean();
         addresses.setDataRecordId(id);
                       
               FillWithSelectedData();
         
         
-        
+        log.debug("Function exit init");
     }
 
     @FXML
     private void save(ActionEvent event) {
+        
+        log.debug("Function entry save");
+        
         addresses.setChristianname(christianname_fxtextfield.getText());
         addresses.setCity(city_fxtextfield.getText());
         addresses.setEmail(email_fxtextfield.getText());
@@ -195,21 +200,25 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         addresses.setSalutation(salutation.getValue());
         addresses.saveRecord();
         
+        log.debug("Function exit save");
     }
 
     @FXML
     private void newadress(ActionEvent event) {
+        log.debug("Function entry newadress");
+        
         for(int i=0;i<textfields.size();i++){
             textfields.get(i).setText("");
         }
         addresses.createNewEmptyRecord();
        
-        
+        log.debug("Function exit newadress");
     }
 
     @FXML
     private void searchAdress(ActionEvent event) throws IOException {
         
+        log.debug("Function entry searchadress");
         Stage stage = new Stage();
         String fxmlFile = "/fxml/AddressList.fxml";
        
@@ -227,6 +236,7 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
        
         
         stage.showAndWait();
+        log.debug("Function exit searchadress");
     }
 
     @FXML
@@ -235,18 +245,22 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
 
     @FXML
     private void goOneRecordBackward(ActionEvent event) {
+        log.debug("Function entry goOneRecordBackward");
         addresses.nextRecordBackward(); 
         FillWithSelectedData();
+        log.debug("Function exit goOneRecordBackward");
     }
 
     @FXML
     private void goOneRecordForward(ActionEvent event) {
+        log.debug("Function entry goOneRecordForward");
         addresses.nextRecordForeward();
         FillWithSelectedData();
+        log.debug("Function exit goOneRecordForward");
     }
 
     private void FillWithSelectedData(){
-        
+        log.debug("Function entry FillWithSelectedData");
         
         city_fxtextfield.setText(addresses.getCity());
         email_fxtextfield.setText(addresses.getEmail()); 
@@ -255,14 +269,25 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
         phoneno_fxtextfield.setText(addresses.getPhone());
         street_fxtextfield.setText(addresses.getStreet());
         zipcode_fxtextfield.setText(addresses.getZipcode());
-         CountryChoiceBox.setValue(addresses.getCountry().getCountryName());       
-       LanguageChoiceBox.setValue(addresses.getLanguage().getLanguageName());
-        CurrencyChoiceBox.setValue(addresses.getCurrency().getCurrencyName());
+         try {
+            CountryChoiceBox.setValue(addresses.getCountry().getCountryName());            
+        } catch (Exception e) {
+        }
+      
+        try {
+            LanguageChoiceBox.setValue(addresses.getLanguage().getLanguageName());
+        } catch (Exception e) {
+        }
+        try {
+            CurrencyChoiceBox.setValue(addresses.getCurrency().getCurrencyName());
+        } catch (Exception e) {
+        }
         titel.setValue(addresses.getTitel());
         greeting.setValue(addresses.getGreeting());
         addresstype.setValue(addresses.getAddresstype());
         salutation.setValue(addresses.getSalutation());
         
+        log.debug("Function exit FillWithSelectedData");
     }   
 
     @FXML
@@ -271,17 +296,18 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
 
     @FXML
     private void printAdress(ActionEvent event) throws JRException {
+        log.debug("Function entry printAdress");
         List<Address> adl= new ArrayList<Address>();
         adl=addresses.getCurrentAddress();
         
         addressreports ARP = new addressreports();
         ARP.singleAdressReport(adl);
         
-        
+        log.debug("Function exit printAdress");
     }
 
        public  void idinfo(AddressSearchResultEvent e) {
-          
+           log.debug("Function entry idinfo");
                  //JOptionPane.showMessageDialog(null,e.getDbRecordId()+ e.getTableNameofSource() );
           if (e.getTableNameofSource()=="Address"){
               this.addressid=e.getDbRecordId();
@@ -290,7 +316,7 @@ public class AdressGuiFx implements Initializable, AddressSearchResultListener {
               FillWithSelectedData();
               
               
-             
+              log.debug("Function exit idinfo"); 
               
           }
               
