@@ -105,7 +105,13 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
        
     }
      
+     public List<Revaccounts> SearchForRevAccount(String g){
+    
+            
+         return allrecordlist;
         
+       
+    }   
     
     
     public void createNewEmptyRecord() {

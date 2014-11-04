@@ -48,7 +48,7 @@ THE SOFTWARE.
           <tabs>
             <Tab text="Main">
               <content>
-                <AnchorPane id="Content" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                <AnchorPane id="Content" fx:id="accgroup" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                   <children>
                     <Label layoutX="82.0" layoutY="48.0" text="Account No." />
                     <Label layoutX="65.0" layoutY="84.0" text="Account name:" />
@@ -66,10 +66,9 @@ THE SOFTWARE.
       <right>
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_RIGHT">
           <children>
-            <Button fx:id="search" mnemonicParsing="false" onAction="#searchRoom" prefHeight="36.0" prefWidth="100.0" text="Search" />
-            <Button id="search" fx:id="printAdress" mnemonicParsing="false" onAction="#printRoom" prefHeight="36.0" prefWidth="100.0" text="Print" />
-                  <Button id="search" fx:id="newRoom" mnemonicParsing="false" onAction="#newRoom" prefHeight="36.0" prefWidth="100.0" text="New" />
-                  <Button id="search" fx:id="saveRoom" mnemonicParsing="false" onAction="#saveRoom" prefHeight="36.0" prefWidth="100.0" text="Save" />
+            <Button id="search" fx:id="printRevAcc" mnemonicParsing="false" onAction="#printRevAcc" prefHeight="36.0" prefWidth="100.0" text="Print" />
+                  <Button id="search" fx:id="newRevAcc" mnemonicParsing="false" onAction="#newRevAcc" prefHeight="36.0" prefWidth="100.0" text="New" />
+                  <Button id="search" fx:id="saveRevAcc" mnemonicParsing="false" onAction="#saveRevAcc" prefHeight="36.0" prefWidth="100.0" text="Save" />
           </children>
         </VBox>
       </right>

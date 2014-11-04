@@ -25,11 +25,18 @@ package org.jahap.gui.acc;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import org.jahap.business.acc.revaccountsbean;
+import org.jahap.business.base.Choicebean;
+import org.jahap.business.base.choicegroups;
 
 /**
  * FXML Controller class
@@ -49,15 +56,18 @@ public class RevGuiFx implements Initializable {
     private TextField accountno;
     @FXML
     private TextField accountName;
+    private revaccountsbean revaccbean;
     @FXML
-    private Button search;
+    private AnchorPane accgroup;
     @FXML
-    private Button printAdress;
+    private ComboBox<String> RevAccountGroup;
     @FXML
-    private Button newRoom;
+    private Button printRevAcc;
     @FXML
-    private Button saveRoom;
-
+    private Button newRevAcc;
+    @FXML
+    private Button saveRevAcc;
+    private Choicebean choicebean;
     /**
      * Initializes the controller class.
      */
@@ -66,6 +76,17 @@ public class RevGuiFx implements Initializable {
         // TODO
     }    
 
+    public void init(long id){
+        choicebean = new Choicebean();
+         ObservableList<String> datap= FXCollections.observableList(choicebean.SearchForChoiceString(choicegroups.revgroup));
+        revaccbean.SearchForRevAccount(id);
+        accountName.setText(revaccbean.getName());
+        accountno.setText(revaccbean.getRevaccnumber().toString());
+        RevAccountGroup.setItems(datap);
+        RevAccountGroup.setValue(revaccbean.getRev_group());
+        
+    }
+    
     @FXML
     private void goFirstRecord(ActionEvent event) {
     }
@@ -82,20 +103,20 @@ public class RevGuiFx implements Initializable {
     private void goLastRecord(ActionEvent event) {
     }
 
+
     @FXML
-    private void searchRoom(ActionEvent event) {
+    private void printRevAcc(ActionEvent event) {
     }
 
     @FXML
-    private void printRoom(ActionEvent event) {
+    private void newRevAcc(ActionEvent event) {
+        revaccbean.createNewEmptyRecord();
     }
 
     @FXML
-    private void newRoom(ActionEvent event) {
-    }
-
-    @FXML
-    private void saveRoom(ActionEvent event) {
+    private void saveRevAcc(ActionEvent event) {
+        
+        
     }
     
 }

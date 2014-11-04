@@ -23,6 +23,7 @@
  */
 package org.jahap.gui.acc;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -31,12 +32,16 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.apache.log4j.Logger;
 import org.jahap.business.acc.revaccountsbean;
@@ -53,9 +58,10 @@ public class ListDialogRevAccController implements Initializable {
     private Button PrintButton;
     @FXML
     private TableView dataTable;
-    private List searchRevAccList;
+    private List<Revaccounts> searchRevAccList;
     private long id=0;
     private revaccountsbean revAccBean;
+     
     /**
      * Initializes the controller class.
      */
@@ -63,13 +69,15 @@ public class ListDialogRevAccController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
         initTable();
+        log.debug("Function exit init ");
+                
     }    
     
     private void initTable(){
         log.debug("Function entry initTable");
                 
         revAccBean = new revaccountsbean();
-        searchRevAccList=revAccBean.SearchForRevAccountString();
+        searchRevAccList=revAccBean.SearchForRevAccount(null);
         ObservableList<Revaccounts> data= FXCollections.observableList(searchRevAccList);
         
         // -----------------  id
@@ -106,7 +114,7 @@ public class ListDialogRevAccController implements Initializable {
       
       //------------------------------------- Name --------------------------------
       
-       TableColumn<Revaccounts,String> revAccNumber = new TableColumn<Revaccounts,String>("Name");
+       TableColumn<Revaccounts,String> revAccNumber = new TableColumn<Revaccounts,String>("Number");
       revAccNumber.setCellValueFactory(new Callback<CellDataFeatures<Revaccounts, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Revaccounts, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getRevaccnumber());
@@ -119,7 +127,7 @@ public class ListDialogRevAccController implements Initializable {
        
        //---------------------------------- RevAccGroup --------------------------------
         
-         TableColumn<Revaccounts,String> revAccGroup = new TableColumn<Revaccounts,String>("Street");
+         TableColumn<Revaccounts,String> revAccGroup = new TableColumn<Revaccounts,String>("Group");
       revAccGroup.setCellValueFactory(new Callback<CellDataFeatures<Revaccounts, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(TableColumn.CellDataFeatures<Revaccounts, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getRev_group());
@@ -136,8 +144,30 @@ public class ListDialogRevAccController implements Initializable {
     }
 
     @FXML
-    private void MouseClicked(MouseEvent event) {
+    private void MouseClicked(MouseEvent event) throws IOException {
+        Revaccounts reva=(Revaccounts) dataTable.getSelectionModel().getSelectedItem();
+        long id;
+        id=reva.getId();
+       if(event.getClickCount()==2){
+       Stage stage = new Stage();
+        String fxmlFile = "/fxml/RevAccGui.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
         
+        Scene scene = new Scene(page);
+     
+
+        
+        stage.setScene(scene);
+        RevGuiFx controller= loader.<RevGuiFx>getController();
+       controller.init(id);
+       
+        
+        stage.showAndWait();
+        
+        }
         
     }
     
