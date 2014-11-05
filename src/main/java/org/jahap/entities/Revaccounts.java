@@ -27,7 +27,6 @@
 package org.jahap.entities;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.Collection;
 import javax.persistence.Basic;
 import javax.persistence.Column;
@@ -61,7 +60,7 @@ public class Revaccounts implements Serializable, revaccounts_ie {
     @Column(name = "ID")
     private Long id;
     @Column(name = "REVACCOUNTNUMBER")
-    private BigInteger revaccnumber;
+    private long revaccnumber;
     @Size(max = 255)
     @Column(name = "NAME")
     private String name;
@@ -99,12 +98,12 @@ public class Revaccounts implements Serializable, revaccounts_ie {
     }
 
     @Override
-    public BigInteger getRevaccnumber() {
+    public long getRevaccnumber() {
         return revaccnumber;
     }
 
     @Override
-    public void setRevaccnumber(BigInteger revaccnumber) {
+    public void setRevaccnumber(long revaccnumber) {
         this.revaccnumber = revaccnumber;
     }
 

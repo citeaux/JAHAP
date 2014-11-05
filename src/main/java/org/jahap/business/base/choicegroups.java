@@ -43,6 +43,6 @@ public enum choicegroups {
      
      addresstype,
      
-     revgroup
+     revenuegroup
      
 }

@@ -23,7 +23,6 @@
  */
 package org.jahap.entities;
 
-import java.math.BigInteger;
 import java.util.Collection;
 
 /**
@@ -36,7 +35,7 @@ public interface revaccounts_ie {
 
     String getName();
 
-    BigInteger getRevaccnumber();
+    long getRevaccnumber();
 
     Collection<Revenue> getRevenueCollection();
     
@@ -44,7 +43,7 @@ public interface revaccounts_ie {
 
     void setName(String name);
 
-    void setRevaccnumber(BigInteger revaccnumber);
+    void setRevaccnumber(long revaccnumber);
 
     void setRevenueCollection(Collection<Revenue> revenueCollection);
     

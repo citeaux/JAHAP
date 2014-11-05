@@ -34,6 +34,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import org.apache.log4j.Logger;
 import org.jahap.business.acc.revaccountsbean;
 import org.jahap.business.base.Choicebean;
 import org.jahap.business.base.choicegroups;
@@ -68,6 +69,8 @@ public class RevGuiFx implements Initializable {
     @FXML
     private Button saveRevAcc;
     private Choicebean choicebean;
+    
+    static Logger log = Logger.getLogger(RevGuiFx.class.getName());
     /**
      * Initializes the controller class.
      */
@@ -77,46 +80,75 @@ public class RevGuiFx implements Initializable {
     }    
 
     public void init(long id){
+        log.debug("Function entry init" + id);
+                
+       revaccbean= new revaccountsbean();
         choicebean = new Choicebean();
-         ObservableList<String> datap= FXCollections.observableList(choicebean.SearchForChoiceString(choicegroups.revgroup));
+         ObservableList<String> datap= FXCollections.observableList(choicebean.SearchForChoiceString(choicegroups.revenuegroup));
         revaccbean.SearchForRevAccount(id);
         accountName.setText(revaccbean.getName());
-        accountno.setText(revaccbean.getRevaccnumber().toString());
+        accountno.setText(String.valueOf(revaccbean.getRevaccnumber()));
         RevAccountGroup.setItems(datap);
         RevAccountGroup.setValue(revaccbean.getRev_group());
-        
+        log.debug("Function exit init");
     }
+    
+    private void FillDialog(){
+        
+        accountName.setText(revaccbean.getName());
+         accountno.setText(String.valueOf(revaccbean.getRevaccnumber()));
+        RevAccountGroup.setValue(revaccbean.getRev_group());
+    }
+    
     
     @FXML
     private void goFirstRecord(ActionEvent event) {
+        revaccbean.jumpToFirstRecord();
+        FillDialog();
     }
 
     @FXML
     private void goOneRecordBackward(ActionEvent event) {
+        revaccbean.nextRecordBackward();
+        FillDialog();
     }
 
     @FXML
     private void goOneRecordForward(ActionEvent event) {
+        revaccbean.nextRecordForeward();
+        FillDialog();
     }
 
     @FXML
     private void goLastRecord(ActionEvent event) {
+        revaccbean.jumpToLastRecord();
+        FillDialog();
     }
 
 
     @FXML
     private void printRevAcc(ActionEvent event) {
+        log.debug("Function entry printRevAcc");
+        
+        log.debug("Function exit printRevAcc");
     }
 
     @FXML
     private void newRevAcc(ActionEvent event) {
+        log.debug("Function entry newRevAcc");
         revaccbean.createNewEmptyRecord();
+         accountName.setText("");
+         accountno.setText("");
+        RevAccountGroup.setValue("");
+        log.debug("Function exit newRevAcc ");
     }
 
     @FXML
     private void saveRevAcc(ActionEvent event) {
-        
-        
+        revaccbean.setName(accountName.getText());
+        revaccbean.setRev_group(RevAccountGroup.getValue());
+        revaccbean.setRevaccnumber(Long.valueOf(accountno.getText()));
+        revaccbean.saveRecord();
     }
     
 }

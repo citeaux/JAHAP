@@ -68,6 +68,8 @@ public class ListDialogRevAccController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        
+       
         initTable();
         log.debug("Function exit init ");
                 
@@ -145,6 +147,7 @@ public class ListDialogRevAccController implements Initializable {
 
     @FXML
     private void MouseClicked(MouseEvent event) throws IOException {
+        log.debug("Function entry MouseClicked");
         Revaccounts reva=(Revaccounts) dataTable.getSelectionModel().getSelectedItem();
         long id;
         id=reva.getId();
@@ -168,7 +171,7 @@ public class ListDialogRevAccController implements Initializable {
         stage.showAndWait();
         
         }
-        
+        log.debug("Function exit MouseClicked");
     }
     
     

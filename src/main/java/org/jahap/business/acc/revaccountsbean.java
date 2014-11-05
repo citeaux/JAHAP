@@ -25,7 +25,6 @@
 
 package org.jahap.business.acc;
 
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -146,6 +145,14 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
             currentRecordNumber++;
         }
     }
+    
+    public void jumpToFirstRecord(){
+        currentRecordNumber=0;
+    }
+    
+    public void jumpToLastRecord(){
+        currentRecordNumber=numberOfLastRecord;
+    }
 
     public void saveRecord() {
          if (newEmptyRecordCreated=true){
@@ -216,10 +223,10 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
         return null;
     }
 
-    public BigInteger getRevaccnumber() {
+    public long getRevaccnumber() {
          if( tabelIsEmpty!=true) 
               return allrecordlist.get(currentRecordNumber).getRevaccnumber();
-        return null;
+        return 0;
     }
 
     public Collection<Revenue> getRevenueCollection() {
@@ -235,7 +242,7 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
             allrecordlist.get(currentRecordNumber).setName(name);
     }
 
-    public void setRevaccnumber(BigInteger revaccnumber) {
+    public void setRevaccnumber(long revaccnumber) {
           if(tabelIsInit==false|| tabelIsEmpty==true)
             createNewEmptyRecord();
         
@@ -252,12 +259,17 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
 
     @Override
     public String getRev_group() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if( tabelIsEmpty!=true) 
+              return allrecordlist.get(currentRecordNumber).getRev_group();
+        return null;
     }
 
     @Override
     public void setRev_group(String rev_group) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        if(tabelIsInit==false|| tabelIsEmpty==true)
+            createNewEmptyRecord();
+        
+            allrecordlist.get(currentRecordNumber).setRev_group(rev_group);
     }
     
 }
