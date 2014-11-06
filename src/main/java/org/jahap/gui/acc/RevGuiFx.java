@@ -38,6 +38,7 @@ import org.apache.log4j.Logger;
 import org.jahap.business.acc.revaccountsbean;
 import org.jahap.business.base.Choicebean;
 import org.jahap.business.base.choicegroups;
+import org.jahap.entities.Revaccounts;
 
 /**
  * FXML Controller class
@@ -81,15 +82,15 @@ public class RevGuiFx implements Initializable {
 
     public void init(long id){
         log.debug("Function entry init" + id);
-                
+          Revaccounts rf=new Revaccounts();      
        revaccbean= new revaccountsbean();
         choicebean = new Choicebean();
          ObservableList<String> datap= FXCollections.observableList(choicebean.SearchForChoiceString(choicegroups.revenuegroup));
-        revaccbean.SearchForRevAccount(id);
-        accountName.setText(revaccbean.getName());
-        accountno.setText(String.valueOf(revaccbean.getRevaccnumber()));
+        rf=revaccbean.SearchForRevAccount(id);
+        accountName.setText(rf.getName());
+        accountno.setText(String.valueOf(rf.getRevaccnumber()));
         RevAccountGroup.setItems(datap);
-        RevAccountGroup.setValue(revaccbean.getRev_group());
+        RevAccountGroup.setValue(rf.getRev_group());
         log.debug("Function exit init");
     }
     

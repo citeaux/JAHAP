@@ -30,7 +30,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="719.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="org.jahap.gui.base.RoomGuiFx">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jahap.gui.base.RoomGuiFx">
   <children>
     <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <bottom>
@@ -55,7 +55,23 @@ THE SOFTWARE.
                     <Label layoutX="97.0" layoutY="118.0" prefHeight="22.999908447265625" text="Category:" />
                     <TextField id="name" fx:id="roomcode_fxtextfield" layoutX="172.0" layoutY="48.0" prefWidth="87.0" />
                     <TextField id="christianname" fx:id="roomname_fxtextfield" layoutX="171.0" layoutY="81.0" prefWidth="200.0" />
-                    <TextField fx:id="roomcategory_fxtextfield" layoutX="172.0" layoutY="116.0" prefWidth="100.0" />
+                              <ToggleButton fx:id="Housekeeping_dirty" layoutX="172.0" layoutY="162.0" mnemonicParsing="false" selected="true" text="Dirty">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="HouseKeeping" />
+                                 </toggleGroup>
+                              </ToggleButton>
+                              <ToggleButton fx:id="Housekeeping_clean" layoutX="224.0" layoutY="162.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="61.0" text="Clean" toggleGroup="$HouseKeeping" />
+                              <ToggleButton fx:id="maintenance_blocked" layoutX="169.0" layoutY="203.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="78.0" selected="true" text="blocked">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="maintenance" />
+                                 </toggleGroup>
+                              </ToggleButton>
+                              <ToggleButton fx:id="maintenance_free" layoutX="247.0" layoutY="203.0" mnemonicParsing="false" text="free" toggleGroup="$maintenance" />
+                              <Label layoutX="65.0" layoutY="167.0" text="Housekeeping:" />
+                              <Label layoutX="75.0" layoutY="208.0" text="Maintenance:" />
+                              <ChoiceBox fx:id="roomcategory_fxtextfield" layoutX="172.0" layoutY="118.0" prefWidth="150.0" />
+                              <ChoiceBox fx:id="location" layoutX="168.0" layoutY="249.0" prefWidth="150.0" />
+                              <Label layoutX="102.0" layoutY="254.0" text="Location:" />
                   </children>
                 </AnchorPane>
               </content>
