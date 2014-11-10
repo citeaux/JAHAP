@@ -25,7 +25,7 @@
 
 package org.jahap.business.base;
 
-import org.jahap.entities.Paymenttypes_ie;
+import org.jahap.entities.acc.Paymenttypes_ie;
 
 
 /**

@@ -26,10 +26,10 @@ package org.jahap.business.acc;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-import org.jahap.entities.Accounts;
-import org.jahap.entities.Csc;
+import org.jahap.entities.acc.Accounts;
+import org.jahap.entities.acc.Csc;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Rates;
+import org.jahap.entities.base.Rates;
 
 /**
  *

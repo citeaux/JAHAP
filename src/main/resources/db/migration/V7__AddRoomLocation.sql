@@ -20,3 +20,9 @@ CREATE TABLE cat
 ALTER TABLE cat
    ADD CONSTRAINT cat_pkey
    PRIMARY KEY (id);
+
+ALTER TABLE rooms ADD COLUMN cat integer;
+ALTER TABLE rooms ADD COLUMN location integer;
+-- fallback: always dirty or under maintenance
+ALTER TABLE rooms ADD COLUMN no_maintenance boolean;
+ALTER TABLE rooms ADD COLUMN clean boolean;

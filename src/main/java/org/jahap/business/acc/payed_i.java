@@ -24,7 +24,7 @@
 
 package org.jahap.business.acc;
 
-import org.jahap.entities.Payed_ie;
+import org.jahap.entities.acc.Payed_ie;
 
 /**
  *

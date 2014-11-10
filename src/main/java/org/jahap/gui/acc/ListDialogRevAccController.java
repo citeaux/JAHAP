@@ -45,7 +45,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.apache.log4j.Logger;
 import org.jahap.business.acc.revaccountsbean;
-import org.jahap.entities.Revaccounts;
+import org.jahap.entities.acc.Revaccounts;
 
 /**
  * FXML Controller class

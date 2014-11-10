@@ -18,9 +18,9 @@ import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import org.apache.log4j.Logger;
-import org.jahap.entities.AccountPosition;
-import org.jahap.entities.Address;
-import org.jahap.entities.Bill;
+import org.jahap.entities.acc.AccountPosition;
+import org.jahap.entities.base.Address;
+import org.jahap.entities.acc.Bill;
 import org.jahap.entities.JahapDatabaseConnector;
 
 /**

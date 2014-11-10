@@ -26,7 +26,7 @@ package org.jahap.business.base;
 
 
 
-import org.jahap.entities.rooms_ie;
+import org.jahap.entities.base.rooms_ie;
 
 public interface rooms_i extends  DatabaseOperations_i, rooms_ie
 {

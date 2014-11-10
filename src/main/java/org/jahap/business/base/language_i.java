@@ -24,7 +24,7 @@
 
 package org.jahap.business.base;
 
-import org.jahap.entities.Language_ie;
+import org.jahap.entities.base.Language_ie;
 
 /**
  *

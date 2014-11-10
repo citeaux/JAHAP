@@ -28,10 +28,10 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.jahap.business.base.vattypesbean;
-import org.jahap.entities.AccountPosition;
+import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Vat;
-import org.jahap.entities.Vattype;
+import org.jahap.entities.acc.Vat;
+import org.jahap.entities.base.Vattype;
 
 /**
  *

@@ -32,7 +32,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Language;
+import org.jahap.entities.base.Language;
 import org.jahap.entities.Reports;
 
 /**

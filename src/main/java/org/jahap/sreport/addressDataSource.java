@@ -30,7 +30,7 @@ import java.util.List;
 import net.sf.jasperreports.engine.JRDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRField;
-import org.jahap.entities.Address;
+import org.jahap.entities.base.Address;
 
 
 /**

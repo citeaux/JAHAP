@@ -44,7 +44,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.util.Callback;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.vattypesbean;
-import org.jahap.entities.Vattype;
+import org.jahap.entities.base.Vattype;
 
 /**
  * FXML Controller class

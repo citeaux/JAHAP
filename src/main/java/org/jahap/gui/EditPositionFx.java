@@ -43,7 +43,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.jahap.business.base.ratesbean;
-import org.jahap.entities.Rates;
+import org.jahap.entities.base.Rates;
 
 /**
  * FXML Controller class

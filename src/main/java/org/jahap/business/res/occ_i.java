@@ -24,7 +24,7 @@
 package org.jahap.business.res;
 
 import org.jahap.business.base.DatabaseOperations_i;
-import org.jahap.entities.occ_ie;
+import org.jahap.entities.res.occ_ie;
 
 /**
  *

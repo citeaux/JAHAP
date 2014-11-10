@@ -39,7 +39,7 @@ import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.base.addressbean;
 import org.jahap.business.base.ratesbean;
 import org.jahap.business.base.roomsbean;
-import org.jahap.entities.Rates;
+import org.jahap.entities.base.Rates;
 import org.jahap.entities.Rooms;
 import static org.jahap.gui.base.AdressGuiFx.addresses;
 import org.jahap.sreport.roomreports;

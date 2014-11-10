@@ -30,10 +30,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import org.jahap.entities.AccountPosition;
+import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Revaccounts;
-import org.jahap.entities.Revenue;
+import org.jahap.entities.acc.Revaccounts;
+import org.jahap.entities.acc.Revenue;
 
 /**
  *

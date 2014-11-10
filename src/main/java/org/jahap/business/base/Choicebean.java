@@ -5,9 +5,9 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.DatabaseOperations;
 import org.jahap.business.base.choice_i;
-import org.jahap.entities.Choice;
+import org.jahap.entities.base.Choice;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Language;
+import org.jahap.entities.base.Language;
 
 
 /*

@@ -23,7 +23,7 @@
  */
 package org.jahap.business.acc;
 
-import org.jahap.entities.accountsposition_ie;
+import org.jahap.entities.acc.accountsposition_ie;
 
 /**
  *

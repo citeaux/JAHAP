@@ -4,12 +4,12 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.DatabaseOperations;
 import org.jahap.business.base.hotel_i;
-import org.jahap.entities.Address;
-import org.jahap.entities.Country;
-import org.jahap.entities.Currency;
-import org.jahap.entities.Hotel;
+import org.jahap.entities.base.Address;
+import org.jahap.entities.base.Country;
+import org.jahap.entities.base.Currency;
+import org.jahap.entities.base.Hotel;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Language;
+import org.jahap.entities.base.Language;
 
 
 /*

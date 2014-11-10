@@ -24,8 +24,8 @@
 package org.jahap.business.base;
 
 import java.util.Collection;
-import org.jahap.entities.AccountPosition;
-import org.jahap.entities.Rates;
+import org.jahap.entities.acc.AccountPosition;
+import org.jahap.entities.base.Rates;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;

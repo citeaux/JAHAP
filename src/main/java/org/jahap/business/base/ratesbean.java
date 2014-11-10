@@ -30,12 +30,12 @@ import java.util.Collection;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.jahap.business.acc.revaccountsbean;
-import org.jahap.entities.AccountPosition;
-import org.jahap.entities.Csc;
+import org.jahap.entities.acc.AccountPosition;
+import org.jahap.entities.acc.Csc;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Rates;
-import org.jahap.entities.Revaccounts;
-import org.jahap.entities.Vattype;
+import org.jahap.entities.base.Rates;
+import org.jahap.entities.acc.Revaccounts;
+import org.jahap.entities.base.Vattype;
 
 
 /**

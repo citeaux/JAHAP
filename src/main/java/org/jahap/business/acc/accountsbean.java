@@ -43,18 +43,18 @@ import org.apache.log4j.Logger;
 import org.jahap.business.acc.DatabaseOperations;
 import org.jahap.business.base.ratesbean;
 import org.jahap.business.base.vattypesbean;
-import org.jahap.entities.AccountPosition;
-import org.jahap.entities.Accounts;
-import org.jahap.entities.Address;
-import org.jahap.entities.Bill;
-import org.jahap.entities.Csc;
+import org.jahap.entities.acc.AccountPosition;
+import org.jahap.entities.acc.Accounts;
+import org.jahap.entities.base.Address;
+import org.jahap.entities.acc.Bill;
+import org.jahap.entities.acc.Csc;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Occ;
-import org.jahap.entities.Payed;
-import org.jahap.entities.Rates;
-import org.jahap.entities.Res;
-import org.jahap.entities.Revenue;
-import org.jahap.entities.Vat;
+import org.jahap.entities.res.Occ;
+import org.jahap.entities.acc.Payed;
+import org.jahap.entities.base.Rates;
+import org.jahap.entities.res.Res;
+import org.jahap.entities.acc.Revenue;
+import org.jahap.entities.acc.Vat;
 
 /**
  *

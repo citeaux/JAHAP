@@ -28,8 +28,8 @@ import java.util.Collection;
 import java.util.List;
 import static java.util.stream.Collectors.toList;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Payed;
-import org.jahap.entities.Paymenttypes;
+import org.jahap.entities.acc.Payed;
+import org.jahap.entities.acc.Paymenttypes;
 
 
 /**

@@ -31,8 +31,8 @@ import java.util.Set;
 import org.apache.log4j.Logger;
 import static org.jahap.business.acc.billbean.log;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Payed;
-import org.jahap.entities.Paymenttypes;
+import org.jahap.entities.acc.Payed;
+import org.jahap.entities.acc.Paymenttypes;
 
 /**
  *

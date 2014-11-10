@@ -30,7 +30,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 import org.jahap.business.base.ratesbean;
-import org.jahap.entities.AccountPosition;
+import org.jahap.entities.acc.AccountPosition;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 

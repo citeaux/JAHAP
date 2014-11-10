@@ -43,7 +43,7 @@ import org.jahap.CurrentUser;
 import org.jahap.business.acc.revaccountsbean;
 import org.jahap.business.base.ratesbean;
 import org.jahap.business.base.vattypesbean;
-import org.jahap.entities.Rates;
+import org.jahap.entities.base.Rates;
 import org.jahap.sreport.ratereports;
 
 /**

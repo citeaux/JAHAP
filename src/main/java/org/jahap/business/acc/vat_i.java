@@ -24,7 +24,7 @@
 
 package org.jahap.business.acc;
 
-import org.jahap.entities.Vat_ie;
+import org.jahap.entities.acc.Vat_ie;
 
 /**
  *

@@ -23,7 +23,7 @@
  */
 package org.jahap.business.acc;
 import org.jahap.business.base.DatabaseOperations_i;
-import org.jahap.entities.BILLNO_ie;
+import org.jahap.entities.acc.BILLNO_ie;
 /**
  *
  * @author Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>

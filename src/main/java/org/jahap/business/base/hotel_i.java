@@ -22,7 +22,7 @@
  * THE SOFTWARE.
  */
 package org.jahap.business.base;
-import org.jahap.entities.Hotel_ie;
+import org.jahap.entities.base.Hotel_ie;
 /**
  *
  * @author russ

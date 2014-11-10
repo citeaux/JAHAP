@@ -26,8 +26,8 @@
 
 package org.jahap.business.base;
 
-import org.jahap.entities.Vattype_ie;
-import org.jahap.entities.rates_ie;
+import org.jahap.entities.base.Vattype_ie;
+import org.jahap.entities.base.rates_ie;
 
 /**
  *

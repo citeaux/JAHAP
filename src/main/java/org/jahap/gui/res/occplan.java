@@ -48,8 +48,8 @@ import org.apache.log4j.Logger;
 import org.jahap.business.base.roomsbean;
 import org.jahap.business.res.occbean;
 import org.jahap.business.res.resbean;
-import org.jahap.entities.Occ;
-import org.jahap.entities.Res;
+import org.jahap.entities.res.Occ;
+import org.jahap.entities.res.Res;
 import org.jahap.entities.Rooms;
 
 /**

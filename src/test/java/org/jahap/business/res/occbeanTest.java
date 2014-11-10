@@ -38,9 +38,9 @@ import org.jahap.business.base.addressbean;
 import org.jahap.business.base.roomsbean;
 import org.jahap.config.WriteConfig;
 
-import org.jahap.entities.Address;
-import org.jahap.entities.Occ;
-import org.jahap.entities.Res;
+import org.jahap.entities.base.Address;
+import org.jahap.entities.res.Occ;
+import org.jahap.entities.res.Res;
 import org.jahap.entities.Rooms;
 import org.joda.time.DateTime;
 import org.joda.time.Period;

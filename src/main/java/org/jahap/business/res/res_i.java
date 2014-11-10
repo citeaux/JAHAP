@@ -22,6 +22,7 @@
  * THE SOFTWARE.
  */
 package org.jahap.business.res;
+import org.jahap.entities.res.res_ie;
 import org.jahap.business.base.DatabaseOperations_i;
 import org.jahap.entities.*;
 /**

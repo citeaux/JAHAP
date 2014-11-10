@@ -33,8 +33,8 @@ import javafx.beans.property.*;
 import org.apache.log4j.Logger;
 import org.jahap.business.acc.billbean;
 import org.jahap.business.base.ratesbean;
-import org.jahap.entities.AccountPosition;
-import org.jahap.entities.Payed;
+import org.jahap.entities.acc.AccountPosition;
+import org.jahap.entities.acc.Payed;
 import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 

@@ -30,13 +30,13 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import org.apache.log4j.Logger;
-import org.jahap.entities.Address;
-import org.jahap.entities.Bill;
-import org.jahap.entities.Country;
-import org.jahap.entities.Currency;
+import org.jahap.entities.base.Address;
+import org.jahap.entities.acc.Bill;
+import org.jahap.entities.base.Country;
+import org.jahap.entities.base.Currency;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Language;
-import org.jahap.entities.Res;
+import org.jahap.entities.base.Language;
+import org.jahap.entities.res.Res;
         
 
 /**

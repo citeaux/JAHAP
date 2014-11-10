@@ -23,7 +23,7 @@
  */
 package org.jahap.business.base;
 
-import org.jahap.entities.Choice_ie;
+import org.jahap.entities.base.Choice_ie;
 /**
  *
  * @author russ

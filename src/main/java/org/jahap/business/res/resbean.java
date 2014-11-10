@@ -30,10 +30,10 @@ import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.jahap.business.res.DatabaseOperations;
-import org.jahap.entities.Accounts;
-import org.jahap.entities.Address;
+import org.jahap.entities.acc.Accounts;
+import org.jahap.entities.base.Address;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Res;
+import org.jahap.entities.res.Res;
 import org.jahap.entities.Rooms;
 
 /**

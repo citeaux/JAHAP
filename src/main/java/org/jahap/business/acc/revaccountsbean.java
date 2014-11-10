@@ -30,8 +30,8 @@ import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Revaccounts;
-import org.jahap.entities.Revenue;
+import org.jahap.entities.acc.Revaccounts;
+import org.jahap.entities.acc.Revenue;
 
 /**
  *

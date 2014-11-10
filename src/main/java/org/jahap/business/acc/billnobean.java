@@ -27,8 +27,8 @@ package org.jahap.business.acc;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
-import org.jahap.entities.Bill;
-import org.jahap.entities.BillNo;
+import org.jahap.entities.acc.Bill;
+import org.jahap.entities.acc.BillNo;
 import org.jahap.entities.JahapDatabaseConnector;
 
 /**

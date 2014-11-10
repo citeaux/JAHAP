@@ -51,7 +51,7 @@ import javafx.util.Callback;
 import net.sf.jasperreports.engine.JRException;
 import org.apache.log4j.Logger;
 import org.jahap.business.res.resbean;
-import org.jahap.entities.Res;
+import org.jahap.entities.res.Res;
 import org.jahap.sreport.ratereports;
 
 /**

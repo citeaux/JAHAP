@@ -27,6 +27,7 @@
 
 package org.jahap.entities;
 
+import org.jahap.entities.res.Occ;
 import java.io.Serializable;
 import java.util.Collection;
 import javax.persistence.Basic;

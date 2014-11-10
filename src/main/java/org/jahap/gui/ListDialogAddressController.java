@@ -50,7 +50,7 @@ import javafx.util.Callback;
 import net.sf.jasperreports.engine.JRException;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.addressbean;
-import org.jahap.entities.Address;
+import org.jahap.entities.base.Address;
 import org.jahap.gui.base.AddressSearchResult;
 import org.jahap.gui.base.AdressGuiFx;
 import org.jahap.gui.res.InterResSearchResult;

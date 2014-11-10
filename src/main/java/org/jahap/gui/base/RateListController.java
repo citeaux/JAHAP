@@ -49,7 +49,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.base.ratesbean;
-import org.jahap.entities.Rates;
+import org.jahap.entities.base.Rates;
 import org.jahap.gui.acc.InterAccSearchResult;
 import org.jahap.gui.acc.SimpelAccountingController;
 import org.jahap.gui.res.InterResSearchResult;

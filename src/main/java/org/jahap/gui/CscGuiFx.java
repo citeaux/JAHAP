@@ -47,8 +47,8 @@ import javafx.util.Callback;
 import org.jahap.business.acc.Accountsbean;
 import org.jahap.business.acc.cscbean;
 import org.jahap.business.res.occbean;
-import org.jahap.entities.Csc;
-import org.jahap.entities.Occ;
+import org.jahap.entities.acc.Csc;
+import org.jahap.entities.res.Occ;
 
 /**
  * FXML Controller class

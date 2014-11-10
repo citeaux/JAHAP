@@ -38,7 +38,7 @@ import org.apache.log4j.Logger;
 import org.jahap.business.acc.revaccountsbean;
 import org.jahap.business.base.Choicebean;
 import org.jahap.business.base.choicegroups;
-import org.jahap.entities.Revaccounts;
+import org.jahap.entities.acc.Revaccounts;
 
 /**
  * FXML Controller class

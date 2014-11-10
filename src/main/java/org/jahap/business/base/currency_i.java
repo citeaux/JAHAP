@@ -24,7 +24,7 @@
 
 package org.jahap.business.base;
 
-import org.jahap.entities.Currency_ie;
+import org.jahap.entities.base.Currency_ie;
 
 
 /**

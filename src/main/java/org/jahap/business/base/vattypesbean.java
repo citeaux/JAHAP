@@ -30,9 +30,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Rates;
-import org.jahap.entities.Vat;
-import org.jahap.entities.Vattype;
+import org.jahap.entities.base.Rates;
+import org.jahap.entities.acc.Vat;
+import org.jahap.entities.base.Vattype;
 
 /**
  *

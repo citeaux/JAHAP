@@ -27,7 +27,7 @@
 package org.jahap.business.res;
 
 import org.jahap.business.base.*;
-import org.jahap.entities.resstate_ie;
+import org.jahap.entities.base.resstate_ie;
 
 /**
  *

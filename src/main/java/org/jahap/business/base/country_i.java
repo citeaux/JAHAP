@@ -24,7 +24,7 @@
 
 package org.jahap.business.base;
 
-import org.jahap.entities.Country_ie;
+import org.jahap.entities.base.Country_ie;
 
 /**
  *

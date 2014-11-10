@@ -24,7 +24,7 @@
 
 package org.jahap.business.acc;
 import org.jahap.business.base.DatabaseOperations_i;
-import org.jahap.entities.Bill_ie;
+import org.jahap.entities.acc.Bill_ie;
 
 /**
  *

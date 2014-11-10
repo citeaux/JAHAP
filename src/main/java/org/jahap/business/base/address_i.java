@@ -26,7 +26,7 @@
 package org.jahap.business.base;
 
 import javax.ejb.Remote;
-import org.jahap.entities.address_ie;
+import org.jahap.entities.base.address_ie;
 /**
  *
  * @author russ

@@ -26,7 +26,7 @@ package org.jahap.business.res;
 import java.util.ArrayList;
 import java.util.List;
 import org.jahap.business.base.DatabaseOperations;
-import org.jahap.entities.resstate;
+import org.jahap.entities.base.resstate;
 
 /**
  *

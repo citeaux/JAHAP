@@ -23,7 +23,7 @@
  */
 package org.jahap.business.acc;
 
-import org.jahap.entities.revaccounts_ie;
+import org.jahap.entities.acc.revaccounts_ie;
 
 /**
  *

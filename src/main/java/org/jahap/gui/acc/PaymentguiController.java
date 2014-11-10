@@ -40,7 +40,7 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.Paymenttypesbean;
-import org.jahap.entities.Paymenttypes;
+import org.jahap.entities.acc.Paymenttypes;
 
 /**
  * FXML Controller class

@@ -54,7 +54,7 @@ import org.jahap.business.base.currency;
 import org.jahap.business.base.currencybean;
 import org.jahap.business.base.language;
 import org.jahap.business.base.languagebean;
-import org.jahap.entities.Address;
+import org.jahap.entities.base.Address;
 import org.jahap.gui.ListDialogAddressController;
 import org.jahap.sreport.addressreports;
 

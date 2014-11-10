@@ -24,6 +24,7 @@
 
 package org.jahap.entities;
 
+import org.jahap.entities.base.Language;
 import java.io.File;
 import java.io.IOException;
 import java.io.Serializable;

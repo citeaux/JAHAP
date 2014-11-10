@@ -29,10 +29,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import org.apache.log4j.Logger;
-import org.jahap.entities.Country;
-import org.jahap.entities.Currency;
+import org.jahap.entities.base.Country;
+import org.jahap.entities.base.Currency;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.Language;
+import org.jahap.entities.base.Language;
 
 /**
  *
