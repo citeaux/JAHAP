@@ -27,8 +27,10 @@
 package org.jahap.business.base;
 import java.util.ArrayList;
 import java.util.List;
-
-import org.jahap.entities.*;
+import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.base.Cat;
+import org.jahap.entities.base.Location;
+import org.jahap.entities.base.Rooms;
 
 /**
  *
@@ -208,10 +210,10 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
         return "";
     }
 
-    public String getCategory() {
+    public Cat getCategory() {
           if( tabelIsEmpty!=true) 
               return allrecordlist.get(currentRecordNumber).getCategory();
-        return "";
+        return null;
     }
 
     public String getCode() {
@@ -220,7 +222,7 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
         return "";
     }
 
-    public void setCategory(String category) {
+    public void setCategory(Cat category) {
        if(tabelIsInit==false|| tabelIsEmpty!=true)
             if(newEmptyRecordCreated!=true){createNewEmptyRecord();
             }        
@@ -240,6 +242,55 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
             }    
         
             allrecordlist.get(currentRecordNumber).setName(name);
+    }
+
+   
+
+    @Override
+    public Location getLocation() {
+        if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).getLocation();
+       return null;
+    }
+
+    @Override
+    public boolean isNo_maintenance() {
+        if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).isNo_maintenance();
+       return false;
+    }
+
+    @Override
+    public boolean isClean() {
+        if( tabelIsEmpty!=true)   
+         return allrecordlist.get(currentRecordNumber).isClean();
+       return false;
+    }
+
+   
+
+    @Override
+    public void setLocaton(Location location) {
+        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+         
+         languagebean hh=new languagebean();
+        allrecordlist.get(currentRecordNumber).setLocation(location);
+    }
+
+    @Override
+    public void setClean(boolean clean) {
+        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+         
+         languagebean hh=new languagebean();
+        allrecordlist.get(currentRecordNumber).setClean(clean);
+    }
+
+    @Override
+    public void setNo_maintenance(boolean no_maintenance) {
+       if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+         
+         languagebean hh=new languagebean();
+        allrecordlist.get(currentRecordNumber).setNo_maintenance(no_maintenance);
     }
     
 }

@@ -35,21 +35,14 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.ResourceBundle;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.TitledPane;
-import javafx.stage.Stage;
-import javafx.scene.Scene;
-import javafx.scene.control.Menu;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 import org.jahap.CurrentUser;
 
 
@@ -104,6 +97,10 @@ public class MainGuiFx implements Initializable {
     private MenuItem maintainReport;
     @FXML
     private MenuItem chefInfoReport;
+    @FXML
+    private MenuItem categorie;
+    @FXML
+    private MenuItem location;
    
 
     @FXML
@@ -355,6 +352,39 @@ public class MainGuiFx implements Initializable {
 
     @FXML
     private void getChefInfoReport(ActionEvent event) {
+    }
+
+    @FXML
+    private void categorie(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/CatGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setTitle("Tax Setup");
+            stage.setScene(scene);
+            stage.show();
+        
+    }
+
+    @FXML
+    private void location(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/LocationGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setTitle("Tax Setup");
+            stage.setScene(scene);
+            stage.show();
     }
     
 }

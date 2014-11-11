@@ -52,7 +52,7 @@ import net.sf.jasperreports.engine.JRException;
 
 import org.jahap.business.base.roomsbean;
 
-import org.jahap.entities.Rooms;
+import org.jahap.entities.base.Rooms;
 import org.jahap.gui.res.InterResSearchResult;
 import org.jahap.gui.res.ResguiController;
 import org.jahap.sreport.ratereports;

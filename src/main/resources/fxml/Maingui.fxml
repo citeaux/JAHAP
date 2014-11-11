@@ -107,6 +107,8 @@ THE SOFTWARE.
                         <Menu mnemonicParsing="false" text="House administration">
                           <items>
                     <MenuItem fx:id="Rooms" mnemonicParsing="false" onAction="#RoomsSearch" text="Rooms" />
+                              <MenuItem fx:id="categorie" mnemonicParsing="false" onAction="#categorie" text="Categories" />
+                              <MenuItem fx:id="location" mnemonicParsing="false" onAction="#location" text="Locations" />
                     <MenuItem fx:id="HotelPrefMenuItem" mnemonicParsing="false" onAction="#HotelPrefMenu" text="Hotel" />
                             <MenuItem fx:id="chefInfoReport" mnemonicParsing="false" onAction="#getChefInfoReport" text="Chef Info" />
                               <MenuItem fx:id="revAccounts" mnemonicParsing="false" onAction="#revAccounts" text="Revenue Accounts" />

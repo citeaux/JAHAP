@@ -40,7 +40,7 @@ import org.jahap.business.base.addressbean;
 import org.jahap.business.base.ratesbean;
 import org.jahap.business.base.roomsbean;
 import org.jahap.entities.base.Rates;
-import org.jahap.entities.Rooms;
+import org.jahap.entities.base.Rooms;
 import static org.jahap.gui.base.AdressGuiFx.addresses;
 import org.jahap.sreport.roomreports;
 

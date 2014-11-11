@@ -47,7 +47,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Cat.findById", query = "SELECT c FROM Cat c WHERE c.id = :id"),
     @NamedQuery(name = "Cat.findByCatName", query = "SELECT c FROM Cat c WHERE c.catName = :catName"),
     @NamedQuery(name = "Cat.findByCatDescription", query = "SELECT c FROM Cat c WHERE c.catDescription = :catDescription")})
-public class Cat implements Serializable {
+public class Cat implements Serializable, cat_ie {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -68,6 +68,7 @@ public class Cat implements Serializable {
         this.id = id;
     }
 
+    @Override
     public Integer getId() {
         return id;
     }
@@ -76,18 +77,22 @@ public class Cat implements Serializable {
         this.id = id;
     }
 
+    @Override
     public String getCatName() {
         return catName;
     }
 
+    @Override
     public void setCatName(String catName) {
         this.catName = catName;
     }
 
+    @Override
     public String getCatDescription() {
         return catDescription;
     }
 
+    @Override
     public void setCatDescription(String catDescription) {
         this.catDescription = catDescription;
     }

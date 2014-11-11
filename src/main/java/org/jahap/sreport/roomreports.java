@@ -39,7 +39,7 @@ import net.sf.jasperreports.swing.JRViewer;
 import net.sf.jasperreports.view.JasperViewer;
 
 
-import org.jahap.entities.Rooms;
+import org.jahap.entities.base.Rooms;
 
 
 /**

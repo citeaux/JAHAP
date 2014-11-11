@@ -48,7 +48,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Location.findByBuilding", query = "SELECT l FROM Location l WHERE l.building = :building"),
     @NamedQuery(name = "Location.findByFloor", query = "SELECT l FROM Location l WHERE l.floor = :floor"),
     @NamedQuery(name = "Location.findByAddressId", query = "SELECT l FROM Location l WHERE l.addressId = :addressId")})
-public class Location implements Serializable {
+public class Location implements Serializable, location_ie {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
@@ -71,6 +71,7 @@ public class Location implements Serializable {
         this.id = id;
     }
 
+    @Override
     public Short getId() {
         return id;
     }
@@ -79,26 +80,32 @@ public class Location implements Serializable {
         this.id = id;
     }
 
+    @Override
     public String getBuilding() {
         return building;
     }
 
+    @Override
     public void setBuilding(String building) {
         this.building = building;
     }
 
+    @Override
     public String getFloor() {
         return floor;
     }
 
+    @Override
     public void setFloor(String floor) {
         this.floor = floor;
     }
 
+    @Override
     public Integer getAddressId() {
         return addressId;
     }
 
+    @Override
     public void setAddressId(Integer addressId) {
         this.addressId = addressId;
     }

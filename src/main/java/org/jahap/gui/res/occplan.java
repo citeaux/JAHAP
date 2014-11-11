@@ -50,7 +50,7 @@ import org.jahap.business.res.occbean;
 import org.jahap.business.res.resbean;
 import org.jahap.entities.res.Occ;
 import org.jahap.entities.res.Res;
-import org.jahap.entities.Rooms;
+import org.jahap.entities.base.Rooms;
 
 /**
  * FXML Controller class

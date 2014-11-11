@@ -32,7 +32,7 @@ import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JRField;
 
 import org.jahap.entities.base.Rates;
-import org.jahap.entities.Rooms;
+import org.jahap.entities.base.Rooms;
 
 /**
  *

@@ -31,14 +31,27 @@ public interface rooms_ie {
 
     String getName();
  
-    String getCategory();
+    Cat getCategory();
 
     String getCode();
+    
+    Location getLocation();
+    
+    boolean isNo_maintenance();
+    
+    boolean isClean();
 
-    void setCategory(String category);
+    void setCategory(Cat category);
 
     void setCode(String code);
 
     void setName(String name);
+    
+    void setLocaton(Location location);
+    
+    void setClean(boolean clean);
+    
+    void setNo_maintenance(boolean no_maintenance);
+    
     
 }

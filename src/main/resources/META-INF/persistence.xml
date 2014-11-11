@@ -3,7 +3,6 @@
   <persistence-unit name="JAHAP" transaction-type="RESOURCE_LOCAL">
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <class>org.jahap.entities.LogAccounting</class>
-    <class>org.jahap.entities.Rooms</class>
     <class>org.jahap.entities.Sequence</class>
     <class>org.jahap.entities.SeqStore</class>
     <class>org.jahap.entities.Reports</class>
@@ -58,5 +57,6 @@
     <class>org.jahap.entities.base.Location</class>
     <class>org.jahap.entities.res.Housekeepingblock</class>
     <class>org.jahap.entities.res.Maintenanceblock</class>
+    <class>org.jahap.entities.base.Rooms</class>
   </persistence-unit>
 </persistence>

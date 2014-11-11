@@ -34,7 +34,7 @@ import org.jahap.entities.acc.Accounts;
 import org.jahap.entities.base.Address;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.res.Res;
-import org.jahap.entities.Rooms;
+import org.jahap.entities.base.Rooms;
 
 /**
  *

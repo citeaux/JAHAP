@@ -41,7 +41,7 @@ import org.jahap.config.WriteConfig;
 import org.jahap.entities.base.Address;
 import org.jahap.entities.res.Occ;
 import org.jahap.entities.res.Res;
-import org.jahap.entities.Rooms;
+import org.jahap.entities.base.Rooms;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
 import org.junit.After;

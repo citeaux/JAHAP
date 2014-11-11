@@ -1,7 +1,7 @@
 /*
  * The MIT License
  *
- * Copyright 2014 Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>.
+ * Copyright 2014 Open Jahap Community.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -21,48 +21,26 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jahap.entities.res;
-
-import org.jahap.entities.acc.Accounts;
-import org.jahap.entities.base.Address;
-import java.util.Date;
-import org.jahap.entities.base.Rooms;
+package org.jahap.entities.base;
 
 /**
  *
  * @author russ
  */
-public interface occ_ie {
+public interface location_ie {
 
-    Date getArrivaldate();
+    Integer getAddressId();
 
-    Date getArrivaltime();
+    String getBuilding();
 
-    Date getDeparturedate();
+    String getFloor();
 
-    Date getDeparturetime();
+    Short getId();
 
-    Res getRes();
+    void setAddressId(Integer addressId);
 
-    Accounts getAccount();
+    void setBuilding(String building);
+
+    void setFloor(String floor);
     
-    Rooms getRoom();
-    
-    Address getGuest();
-
-    void setArrivaldate(Date arrivaldate);
-
-    void setArrivaltime(Date arrivaltime);
-
-    void setDeparturedate(Date departuredate);
-
-    void setDeparturetime(Date departuretime);
-
-    void setRes(Res res);
-
-    void setAccount(Accounts account);
-    
-    void setRoom(Rooms room);
-    
-    void setGuest(Address guest);
 }
