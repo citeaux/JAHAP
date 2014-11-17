@@ -67,9 +67,9 @@ THE SOFTWARE.
       <right>
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_RIGHT">
           <children>
-            <Button id="search" fx:id="printCatdesc" mnemonicParsing="false" onAction="#printCatdesc" prefHeight="36.0" prefWidth="100.0" text="Print" />
-                  <Button id="search" fx:id="newCat" mnemonicParsing="false" onAction="#newCat" prefHeight="36.0" prefWidth="100.0" text="New" />
-                  <Button id="search" fx:id="saveCat" mnemonicParsing="false" onAction="#saveCat" prefHeight="36.0" prefWidth="100.0" text="Save" />
+            <Button id="search" fx:id="printCatdesc" mnemonicParsing="false" onAction="#printLocdesc" prefHeight="36.0" prefWidth="100.0" text="Print" />
+                  <Button id="search" fx:id="newCat" mnemonicParsing="false" onAction="#newLoc" prefHeight="36.0" prefWidth="100.0" text="New" />
+                  <Button id="search" fx:id="saveCat" mnemonicParsing="false" onAction="#saveLoc" prefHeight="36.0" prefWidth="100.0" text="Save" />
           </children>
         </VBox>
       </right>

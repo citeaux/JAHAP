@@ -80,7 +80,7 @@ public class RateListController implements Initializable {
      * Initializes the controller class.
      */
     private boolean isOverviewDialog=false;
-    RateSearchResult searchresult;
+    SearchResult searchresult;
     
     private void initTable(){
         rates= new ratesbean();
@@ -156,7 +156,7 @@ public class RateListController implements Initializable {
     
     public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource){
         //RoomSearchResult searchresult
-          searchresult= new RateSearchResult();
+          searchresult= new SearchResult();
         isOverviewDialog=true;
          this.ResSearchresult=ResSearchresults;
          this.guisource=guisource;
@@ -165,7 +165,7 @@ public class RateListController implements Initializable {
     
     public void init(InterAccSearchResult AccSearchresults,SimpelAccountingController zi,String guisource){
         //RoomSearchResult searchresult
-          searchresult= new RateSearchResult();
+          searchresult= new SearchResult();
         isOverviewDialog=true;
          this.AccSearchresult=AccSearchresults;
          this.guisource=guisource;
@@ -176,7 +176,7 @@ public class RateListController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        searchresult= new RateSearchResult();
+        searchresult= new SearchResult();
         initTable();
         
    }    

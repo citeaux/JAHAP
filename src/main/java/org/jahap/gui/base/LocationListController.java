@@ -23,13 +23,30 @@
  */
 package org.jahap.gui.base;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.util.Callback;
+import org.apache.log4j.Logger;
+import org.jahap.business.base.Locationbean;
+import org.jahap.business.base.addressbean;
+import org.jahap.entities.base.Location;
 
 /**
  * FXML Controller class
@@ -37,30 +54,35 @@ import javafx.scene.input.MouseEvent;
  * @author russ
  */
 public class LocationListController implements Initializable {
+    static Logger log = Logger.getLogger(LocationListController.class.getName());
     @FXML
     private Button PrintButton;
     @FXML
-    private TableView<?> dataTable;
-
+    private TableView dataTable;
+    private Locationbean locbean;
+    private addressbean adbean;
+    private List<Location>searchLocList;
     /**
      * Initializes the controller class.
      */
-    @Override
+   
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        initTable();
     }    
 
       private void initTable(){
         log.debug("Function entry initTable");
-                
-        revAccBean = new revaccountsbean();
-        searchRevAccList=revAccBean.SearchForRevAccount(null);
-        ObservableList<Revaccounts> data= FXCollections.observableList(searchRevAccList);
+        adbean = new addressbean();
+        locbean = new Locationbean();
+        searchLocList=locbean.SearchForLocation(null);
+        ObservableList<Location> data= FXCollections.observableList(searchLocList);
+        
         
         // -----------------  id
-        TableColumn<Revaccounts,String> IdCol = new TableColumn<Revaccounts,String>("Id");
-      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Revaccounts, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Revaccounts, String> p) {
+        TableColumn<Location,String> IdCol = new TableColumn<Location,String>("Id");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Location, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Location, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getId());
      }
      
@@ -70,12 +92,12 @@ public class LocationListController implements Initializable {
      
         
         
-       //----------------------------------- RevAcc Name  ----------------------- 
+       //----------------------------------- Building ----------------------- 
     
-        TableColumn<Revaccounts,String> revAccName = new TableColumn<Revaccounts,String>("Name");
-      revAccName.setCellValueFactory(new Callback<CellDataFeatures<Revaccounts, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Revaccounts, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getName());
+        TableColumn<Location,String> building = new TableColumn<Location,String>("Building");
+     building.setCellValueFactory(new Callback<CellDataFeatures<Location, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Location, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getBuilding());
      }
      
              
@@ -86,33 +108,32 @@ public class LocationListController implements Initializable {
         
       
       
-      dataTable.getColumns().add(revAccName);
+      dataTable.getColumns().add(building );
        //dataTable.getColumns().add(col1);
       
-      //------------------------------------- Name --------------------------------
+      //------------------------------------- Floor --------------------------------
       
-       TableColumn<Revaccounts,String> revAccNumber = new TableColumn<Revaccounts,String>("Number");
-      revAccNumber.setCellValueFactory(new Callback<CellDataFeatures<Revaccounts, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Revaccounts, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getRevaccnumber());
+       TableColumn<Location,String> floor = new TableColumn<Location,String>("Floor");
+     floor.setCellValueFactory(new Callback<CellDataFeatures<Location, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Location, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getFloor());
      }
      
              
       });
-       dataTable.getColumns().add(revAccNumber);
+       dataTable.getColumns().add(floor);
        
        
        //---------------------------------- RevAccGroup --------------------------------
         
-         TableColumn<Revaccounts,String> revAccGroup = new TableColumn<Revaccounts,String>("Group");
-      revAccGroup.setCellValueFactory(new Callback<CellDataFeatures<Revaccounts, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(TableColumn.CellDataFeatures<Revaccounts, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getRev_group());
+      TableColumn<Location,String> address = new TableColumn<Location,String>("Address");
+     address.setCellValueFactory(new Callback<CellDataFeatures<Location, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Location, String> p) {
+         return new ReadOnlyObjectWrapper(adbean.getDataRecord(p.getValue().getAddressId()).getName());
      }
-     
              
       });
-       dataTable.getColumns().add(revAccGroup);
+       dataTable.getColumns().add(address);
        
       
         
@@ -122,7 +143,32 @@ public class LocationListController implements Initializable {
     
     
     @FXML
-    private void MouseClicked(MouseEvent event) {
+    private void MouseClicked(MouseEvent event) throws IOException {
+         log.debug("Function entry MouseClicked");
+        Location reva=(Location) dataTable.getSelectionModel().getSelectedItem();
+        short id;
+        id=reva.getId();
+       if(event.getClickCount()==2){
+       Stage stage = new Stage();
+        String fxmlFile = "/fxml/LocationGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+     
+
+        
+        stage.setScene(scene);
+        locationFx controller= loader.<locationFx>getController();
+       controller.init(id);
+       
+        
+        stage.showAndWait();
+        
+        }
+        log.debug("Function exit MouseClicked");
     }
     
 }

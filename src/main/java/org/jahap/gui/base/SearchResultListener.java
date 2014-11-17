@@ -26,37 +26,12 @@
 
 package org.jahap.gui.base;
 
-import java.util.EventObject;
-import javax.swing.table.TableModel;
+import java.util.EventListener;
 
 /**
  *
  * @author russ
  */
-public class RateSearchResultEvent extends EventObject{
-    
-    private long DbRecordId;
-
-   
-    private String TableNameofSource;
-    
-    
-     public long getDbRecordId() {
-        return DbRecordId;
-    }
-
-    public Object getTableNameofSource() {
-        return TableNameofSource;
-    }
-    
-    
-    public RateSearchResultEvent(Object source, long DataRecordId, String TableNameofSource ){
-        super(source);
-        this.DbRecordId=DataRecordId;
-        this.TableNameofSource=TableNameofSource;
-    }
-    
-    
-    
-    
+interface SearchResultListener extends EventListener{
+    void idinfo(SearchResultEvent e);
 }

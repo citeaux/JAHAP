@@ -23,15 +23,53 @@
  */
 
 
-
 package org.jahap.gui.base;
 
-import java.util.EventListener;
+import javax.swing.event.EventListenerList;
+import javax.swing.table.TableModel;
 
 /**
  *
  * @author russ
  */
-interface RateSearchResultListener extends EventListener{
-    void idinfo(RateSearchResultEvent e);
+public class SearchResult {
+    private long DbRecordId;
+    private String TableNameofSource;
+
+   
+    public long getDbRecordId() {
+        return DbRecordId;
+    }
+    
+
+    public void setDbRecordId(long DataRecordId, String TableNameofSource) {
+        //
+        this.TableNameofSource=TableNameofSource;
+        this.DbRecordId=DataRecordId;
+        notifyId(new SearchResultEvent(this,DataRecordId,TableNameofSource));
+    }
+    
+    private EventListenerList listeners = new  EventListenerList();
+    
+    
+    public void addIDListener( SearchResultListener listener )
+  {
+    listeners.add( SearchResultListener.class, listener );
+  }
+
+  public void removeIDListener( SearchResultListener listener )
+  {
+    listeners.remove( SearchResultListener.class, listener );
+  }
+
+  
+
+    
+    protected synchronized void notifyId(SearchResultEvent event){
+        for ( SearchResultListener l : listeners.getListeners( SearchResultListener.class ) )
+      l.idinfo( event );
+
+    }
 }
+
+

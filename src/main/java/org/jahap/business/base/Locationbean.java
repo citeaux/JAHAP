@@ -94,7 +94,13 @@ public class Locationbean extends DatabaseOperations implements location_i {
         return allrecordlist;
     }  
     
-   
+   public void jumpToFirstRecord(){
+        currentRecordNumber=0;
+    }
+    
+    public void jumpToLastRecord(){
+        currentRecordNumber=numberOfLastRecord;
+    }
     
        public void createNewEmptyRecord() {
           

@@ -43,6 +43,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
+import org.apache.log4j.Logger;
 import org.jahap.CurrentUser;
 
 
@@ -101,7 +102,7 @@ public class MainGuiFx implements Initializable {
     private MenuItem categorie;
     @FXML
     private MenuItem location;
-   
+    static Logger log = Logger.getLogger(MainGuiFx.class.getName());
 
     @FXML
     private void newAddress(ActionEvent event) throws IOException,InvocationTargetException {
@@ -374,7 +375,7 @@ public class MainGuiFx implements Initializable {
     @FXML
     private void location(ActionEvent event) throws IOException {
         Stage stage = new Stage();
-        String fxmlFile = "/fxml/LocationGuiFx.fxml";
+        String fxmlFile = "/fxml/LocationList.fxml";
        
         FXMLLoader loader = new FXMLLoader();
       
@@ -382,7 +383,7 @@ public class MainGuiFx implements Initializable {
            AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
       
             Scene scene = new Scene(page);
-            stage.setTitle("Tax Setup");
+            stage.setTitle("Location Setup");
             stage.setScene(scene);
             stage.show();
     }

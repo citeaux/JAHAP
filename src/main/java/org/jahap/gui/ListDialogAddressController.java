@@ -53,6 +53,7 @@ import org.jahap.business.base.addressbean;
 import org.jahap.entities.base.Address;
 import org.jahap.gui.base.AddressSearchResult;
 import org.jahap.gui.base.AdressGuiFx;
+import org.jahap.gui.base.SearchResult;
 import org.jahap.gui.res.InterResSearchResult;
 import org.jahap.gui.res.ResguiController;
 import org.jahap.sreport.addressreports;
@@ -78,7 +79,7 @@ public class ListDialogAddressController implements Initializable{
     private long id=0;
     private boolean isOverviewDialog=false;
    
-    
+    private SearchResult sk;
     private AddressSearchResult searchresult;
     private InterResSearchResult ResSearchresult;
     private String guisource;
@@ -207,6 +208,18 @@ public class ListDialogAddressController implements Initializable{
         log.debug("Function exit init -adddress");
     }
     
+    public void init(SearchResult searchresults){
+        log.debug("Function entry init -address");
+             isOverviewDialog=false;   
+        
+         isOverviewDialog=true;
+        
+         sk=searchresults;
+        initTable();
+        log.debug("Function exit init -adddress");
+    }
+    
+    
     public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource){
         log.debug("Function entry init -res");
          isOverviewDialog=true;
@@ -283,7 +296,11 @@ public class ListDialogAddressController implements Initializable{
         
     Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
     id=ad.getId();
-    if (isOverviewDialog==false){ searchresult.setDbRecordId(id, "Address");}
+    if (isOverviewDialog==false){ 
+        
+        searchresult.setDbRecordId(id, "Address");
+        sk.setDbRecordId(id, "Address");
+    }
     
     if (event.getClickCount()==2){
         Stage stage = new Stage();

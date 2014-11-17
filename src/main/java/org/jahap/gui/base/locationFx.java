@@ -23,21 +23,30 @@
  */
 package org.jahap.gui.base;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import org.apache.log4j.Logger;
+import org.jahap.business.base.Locationbean;
+import org.jahap.business.base.addressbean;
+import org.jahap.entities.base.Location;
+import org.jahap.gui.ListDialogAddressController;
 
 /**
  * FXML Controller class
  *
  * @author russ
  */
-public class locationFx implements Initializable {
+public class locationFx implements Initializable, SearchResultListener {
     @FXML
     private Button firstRecord_fxbutton;
     @FXML
@@ -62,7 +71,11 @@ public class locationFx implements Initializable {
     private Button newCat;
     @FXML
     private Button saveCat;
-
+     static Logger log = Logger.getLogger(locationFx.class.getName());
+     private Locationbean locbean;
+     private addressbean adbean;
+     private long addressid;
+     private SearchResult sr;
     /**
      * Initializes the controller class.
      */
@@ -71,36 +84,105 @@ public class locationFx implements Initializable {
         // TODO
     }    
 
+    public void init(short id){
+          sr=new SearchResult();
+          sr.addIDListener(this);
+          locbean= new Locationbean();
+          adbean= new addressbean();
+          Location lj=new Location();
+          lj=locbean.getDataRecord(id);
+          building.setText(lj.getBuilding());
+          floor.setText(lj.getFloor());
+          address.setText(adbean.getDataRecord(lj.getAddressId()).getName());
+          addressid=lj.getAddressId();
+    }
+    
+    private void fillDialog(){
+    building.setText(locbean.getBuilding());
+          floor.setText(locbean.getFloor());
+          address.setText(adbean.getDataRecord(locbean.getAddressId()).getName());
+          addressid=locbean.getAddressId();
+    
+        
+    }
+    
+    
     @FXML
     private void goFirstRecord(ActionEvent event) {
+        locbean.jumpToFirstRecord();
+        fillDialog();
     }
 
     @FXML
     private void goOneRecordBackward(ActionEvent event) {
+        locbean.nextRecordBackward();
+        fillDialog();
     }
 
     @FXML
     private void goOneRecordForward(ActionEvent event) {
+        locbean.nextRecordForeward();
+        fillDialog();
+        
     }
 
     @FXML
     private void goLastRecord(ActionEvent event) {
+        locbean.jumpToLastRecord();
+        fillDialog();
+        
     }
 
     @FXML
-    private void searchaddress(ActionEvent event) {
+    private void searchaddress(ActionEvent event) throws IOException {
+         Stage stage = new Stage();
+        String fxmlFile = "/fxml/AddressList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        ListDialogAddressController controller= loader.<ListDialogAddressController>getController();
+       controller.init(sr);
+       
+        
+        stage.showAndWait();
+        
     }
 
     @FXML
-    private void printCatdesc(ActionEvent event) {
+    private void printLocdesc(ActionEvent event) {
     }
 
     @FXML
-    private void newCat(ActionEvent event) {
+    private void newLoc(ActionEvent event) {
+        log.debug("Function entry newRevAcc");
+        locbean.createNewEmptyRecord();
+         building.setText("");
+         floor.setText("");
+        address.setText("");
+        log.debug("Function exit newRevAcc ");
     }
 
     @FXML
-    private void saveCat(ActionEvent event) {
+    private void saveLoc(ActionEvent event) {
+        locbean.setBuilding(building.getText());
+        locbean.setFloor(floor.getText());
+        locbean.setAddressId((int) addressid);
+        locbean.saveRecord();
+    }
+
+    @Override
+    public void idinfo(SearchResultEvent e) {
+        log.debug("Function entry recordid" + e.getDbRecordId());
+        addressid=e.getDbRecordId();
+        address.setText(adbean.getDataRecord(addressid).getName());
+        
     }
     
 }

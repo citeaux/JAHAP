@@ -36,12 +36,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import net.sf.jasperreports.engine.JRException;
-import org.jahap.business.base.addressbean;
-import org.jahap.business.base.ratesbean;
 import org.jahap.business.base.roomsbean;
-import org.jahap.entities.base.Rates;
 import org.jahap.entities.base.Rooms;
-import static org.jahap.gui.base.AdressGuiFx.addresses;
 import org.jahap.sreport.roomreports;
 
 /**
@@ -143,7 +139,7 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
     private void FillWithSelectedData() {
         roomname_fxtextfield.setText(rooms.getName());
         roomcode_fxtextfield.setText(rooms.getCode());
-        roomcategory_fxtextfield.setText(rooms.getCategory());
+        roomcategory_fxtextfield.setText(rooms.getCategory().getCatName());
         
     }
 

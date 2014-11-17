@@ -51,7 +51,7 @@ import org.jahap.sreport.ratereports;
  *
  * @author russ
  */
-public class RateGuiFx implements Initializable, RateSearchResultListener {
+public class RateGuiFx implements Initializable, SearchResultListener {
     @FXML
         private TextField ratecode_fxtextfield;
     @FXML
@@ -65,7 +65,7 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
 
     private static ratesbean rates;
     private List<TextField> textfields;
-    private RateSearchResult searchresults;
+    private SearchResult searchresults;
     private static final long ratesid=0;
     @FXML
     private CheckBox OvernightRate_fxCheckBox;
@@ -105,7 +105,7 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
          textfields.add(RateBasePrice_fxtextfield);
          
          rates= new ratesbean();
-         searchresults = new RateSearchResult();
+         searchresults = new SearchResult();
          searchresults.addIDListener(this);
          cuser= CurrentUser.getCurrentUser();
          if(!cuser.isIsAdmin())saveRate.setVisible(false);
@@ -163,7 +163,7 @@ public class RateGuiFx implements Initializable, RateSearchResultListener {
         
     }
 
-    public void idinfo(RateSearchResultEvent e) {
+    public void idinfo(SearchResultEvent e) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
