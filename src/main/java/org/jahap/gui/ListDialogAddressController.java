@@ -212,7 +212,7 @@ public class ListDialogAddressController implements Initializable{
         log.debug("Function entry init -address");
              isOverviewDialog=false;   
         
-         isOverviewDialog=true;
+         
         
          sk=searchresults;
         initTable();
