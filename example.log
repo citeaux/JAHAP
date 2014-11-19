@@ -543,3 +543,222 @@
 2014-11-18 DEBUG [JavaFX Application Thread] (addressbean.java:280) - Function exit getDataRecord
 2014-11-18 DEBUG [JavaFX Application Thread] (addressbean.java:266) - Function entry getDataRecord
 2014-11-18 DEBUG [JavaFX Application Thread] (addressbean.java:280) - Function exit getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogRevAccController.java:79) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogRevAccController.java:145) - Function exit initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogRevAccController.java:74) - Function exit init 
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogRevAccController.java:150) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogRevAccController.java:174) - Function exit MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogRevAccController.java:150) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (RevGuiFx.java:84) - Function entry init351
+2014-11-19 DEBUG [JavaFX Application Thread] (Choicebean.java:59) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Choicebean.java:85) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (Choicebean.java:100) - Function entry SearchForChoice
+2014-11-19 DEBUG [JavaFX Application Thread] (Choicebean.java:104) - Function exit SearchForChoice 
+2014-11-19 DEBUG [JavaFX Application Thread] (RevGuiFx.java:94) - Function exit init
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogRevAccController.java:174) - Function exit MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (LocationListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2014-11-19 DEBUG [JavaFX Application Thread] (Locationbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Locationbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (Locationbean.java:89) - Function entry SearchForLocation
+2014-11-19 DEBUG [JavaFX Application Thread] (Locationbean.java:93) - Function exit SearchForLocation 
+2014-11-19 DEBUG [JavaFX Application Thread] (LocationListController.java:141) - Function exit initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:266) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:280) - Function exit getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:266) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:280) - Function exit getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:266) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:280) - Function exit getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:266) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:280) - Function exit getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:266) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:280) - Function exit getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:266) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:280) - Function exit getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:266) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:280) - Function exit getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:89) - Function entry SearchForCat
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:93) - Function exit SearchForCat 
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:130) - Function exit initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:136) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:89) - Function entry SearchForCat
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:93) - Function exit SearchForCat 
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:89) - Function entry SearchForCat
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:93) - Function exit SearchForCat 
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:130) - Function exit initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:89) - Function entry SearchForCat
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:93) - Function exit SearchForCat 
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:130) - Function exit initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:89) - Function entry SearchForCat
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:93) - Function exit SearchForCat 
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:130) - Function exit initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:136) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:160) - Function exit MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:136) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:185) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:201) - Function exit getDataRecord 3
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:185) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:201) - Function exit getDataRecord 3
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:132) - Function entry nextRecordBackward
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:137) - Function exit nextRecordBackward
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:132) - Function entry nextRecordBackward
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:137) - Function exit nextRecordBackward
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:132) - Function entry nextRecordBackward
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:137) - Function exit nextRecordBackward
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:132) - Function entry nextRecordBackward
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:137) - Function exit nextRecordBackward
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:160) - Function exit MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:102) - Function entry initialize 
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:111) - Function entry initialize
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:147) - Function exit init  
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:160) - Function exit FillWithSelectedData
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:164) - Function entry   FillWithSelectedData
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:153) - Function entry init
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:75) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:89) - Function entry SearchForCat
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:93) - Function exit SearchForCat 
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:130) - Function exit initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:136) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:160) - Function exit MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:136) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:57) - Function entry countrybean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:83) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:185) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:201) - Function exit getDataRecord 2
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:185) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (Catbean.java:201) - Function exit getDataRecord 2
+2014-11-19 DEBUG [JavaFX Application Thread] (CatListController.java:160) - Function exit MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:102) - Function entry initialize 
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:111) - Function entry initialize
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:147) - Function exit init  
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:160) - Function exit FillWithSelectedData
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:164) - Function entry   FillWithSelectedData
+2014-11-19 DEBUG [JavaFX Application Thread] (RoomGuiFx.java:153) - Function entry init
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogRevAccController.java:79) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogRevAccController.java:145) - Function exit initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogRevAccController.java:74) - Function exit init 
+2014-11-19 DEBUG [JavaFX Application Thread] (VatGuiFx.java:86) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (VatGuiFx.java:134) - Function exit initTabel
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2014-11-19 DEBUG [JavaFX Application Thread] (occbean.java:65) - Function entry Contructor
+2014-11-19 DEBUG [JavaFX Application Thread] (occbean.java:92) - Function exit Contructor
+2014-11-19 DEBUG [JavaFX Application Thread] (ResListController.java:199) - Function entry252
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2014-11-19 DEBUG [JavaFX Application Thread] (occbean.java:65) - Function entry Contructor
+2014-11-19 DEBUG [JavaFX Application Thread] (occbean.java:92) - Function exit Contructor
+2014-11-19 DEBUG [JavaFX Application Thread] (resbean.java:229) - Function entry 2
+2014-11-19 DEBUG [JavaFX Application Thread] (occbean.java:135) - Function entry SearchForOccforRes
+2014-11-19 DEBUG [JavaFX Application Thread] (occbean.java:151) - Function exit SearchForOccforRes
+2014-11-19 DEBUG [JavaFX Application Thread] (AccListController.java:156) - Function enter initialize
+2014-11-19 DEBUG [JavaFX Application Thread] (AccListController.java:78) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (AccListController.java:145) - Function exit initTabel
+2014-11-19 DEBUG [JavaFX Application Thread] (AccListController.java:163) - Function exit initialize
+2014-11-19 DEBUG [JavaFX Application Thread] (AccListController.java:172) - Function enter MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:194) - Function entry
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:195) - Function exit
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:199) - Function entry: init
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:229) - Function entry testinittable
+2014-11-19 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:427) - Function entry buildTable
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:591) - Function exit
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:422) - Function exit testinittable
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:218) - Function exit: init
+2014-11-19 DEBUG [JavaFX Application Thread] (AccListController.java:193) - Function exit MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (AccListController.java:172) - Function enter MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:194) - Function entry
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:195) - Function exit
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:199) - Function entry: init
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:229) - Function entry testinittable
+2014-11-19 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:248) - testinittable 3
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:248) - testinittable 2
+2014-11-19 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 0
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:269) - Function testinittable java.lang.NullPointerException
+2014-11-19 DEBUG [JavaFX Application Thread] (viewAccountPositionsProperty.java:298) - Function setDprice 44.44
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:248) - testinittable 1
+2014-11-19 DEBUG [JavaFX Application Thread] (billbean.java:187) - Function entry getDataRecord
+2014-11-19 DEBUG [JavaFX Application Thread] (billbean.java:203) - Function exit getDataRecord 0
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:269) - Function testinittable java.lang.NullPointerException
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:356) - java.lang.NullPointerException
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:356) - java.lang.NullPointerException
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:427) - Function entry buildTable
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:591) - Function exit
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:422) - Function exit testinittable
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:218) - Function exit: init
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row 05.08.2013
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row 05.08.2013
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row 05.08.2013
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row 05.08.2013
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:446) - Function entry updateItem Table Format row null
+2014-11-19 DEBUG [JavaFX Application Thread] (AccListController.java:193) - Function exit MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (occbean.java:65) - Function entry Contructor
+2014-11-19 DEBUG [JavaFX Application Thread] (occbean.java:92) - Function exit Contructor
+2014-11-19 DEBUG [JavaFX Application Thread] (occbean.java:124) - Function entryWed Nov 19 00:00:00 CET 2014   // Sat Dec 20 00:00:00 CET 2014
+2014-11-19 DEBUG [JavaFX Application Thread] (occplan.java:448) - Function entry create Gridbox
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogAddressController.java:245) - Function entry initialize
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogAddressController.java:90) - Function entry initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2014-11-19 DEBUG [JavaFX Application Thread] (addressbean.java:101) - Function entry SearchForAddress
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogAddressController.java:191) - Function exit initTable
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogAddressController.java:248) - Function exit initialize
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogAddressController.java:294) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogAddressController.java:294) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogAddressController.java:294) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogAddressController.java:294) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogAddressController.java:294) - Function entry MouseClicked
+2014-11-19 DEBUG [JavaFX Application Thread] (ListDialogAddressController.java:294) - Function entry MouseClicked

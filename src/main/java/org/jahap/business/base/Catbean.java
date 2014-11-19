@@ -62,7 +62,7 @@ public class Catbean extends DatabaseOperations implements cat_i {
         try {
            
             query_AllDbRecords = dbhook.getEntity().createQuery("select t from Cat t ORDER BY t.id");
-            List<Catbean>alladdresseslist= query_AllDbRecords.getResultList();
+            List<Cat>alladdresseslist= query_AllDbRecords.getResultList();
             numberOfLastRecord= alladdresseslist.size()-1;
         } catch (Exception e) {
             numberOfLastRecord=0;
@@ -266,6 +266,13 @@ public class Catbean extends DatabaseOperations implements cat_i {
        return null;
     }
 
+     public void jumpToFirstRecord(){
+        currentRecordNumber=0;
+    }    
+     public void jumpToLastRecord(){
+        currentRecordNumber=numberOfLastRecord;
+    }
+    
     @Override
     public String getCatName() {
          if( tabelIsEmpty!=true)   
@@ -295,7 +302,8 @@ public class Catbean extends DatabaseOperations implements cat_i {
          languagebean hh=new languagebean();
         allrecordlist.get(currentRecordNumber).setCatName(catName);
     }
-    
+
+   
     
     
     

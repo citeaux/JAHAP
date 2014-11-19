@@ -197,7 +197,14 @@ public class ${name} extends DatabaseOperations implements ${name?replace('bean'
         return null;
     }
      
-    
+    public void jumpToFirstRecord(){
+        currentRecordNumber=0;
+    }    
+     public void jumpToLastRecord(){
+        currentRecordNumber=numberOfLastRecord;
+    }    
+
+
      private void saveNewRecord(){
           log.debug("Function entry saveNewRecord");
           

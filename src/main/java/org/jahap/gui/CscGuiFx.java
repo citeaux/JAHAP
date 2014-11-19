@@ -24,7 +24,6 @@
 
 package org.jahap.gui;
 
-import org.jahap.gui.acc.viewAccountPositionsProperty;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -41,14 +40,14 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
-import javafx.scene.control.Tooltip;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.util.Callback;
-import org.jahap.business.acc.Accountsbean;
+import org.jahap.business.acc.accountsbean;
 import org.jahap.business.acc.cscbean;
 import org.jahap.business.res.occbean;
 import org.jahap.entities.acc.Csc;
 import org.jahap.entities.res.Occ;
+import org.jahap.gui.acc.viewAccountPositionsProperty;
 
 /**
  * FXML Controller class
@@ -86,7 +85,7 @@ public class CscGuiFx implements Initializable {
 
     private cscbean cscrates;
     private List<Csc> cscpos;
-    private  Accountsbean acc;
+    private  accountsbean acc;
     final ObservableList<viewCSCpositionProperty> datam=FXCollections.observableArrayList();;
     private List<viewCSCpositionProperty> haku = new ArrayList<viewCSCpositionProperty>();
     @FXML
@@ -112,7 +111,7 @@ public class CscGuiFx implements Initializable {
     
     
     public void init(long id){
-         acc=new Accountsbean();
+         acc=new accountsbean();
         acc.getDataRecord(id);
         occ = new occbean();
         List<Occ> occlist=new ArrayList<Occ>();

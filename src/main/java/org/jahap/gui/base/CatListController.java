@@ -23,13 +23,29 @@
  */
 package org.jahap.gui.base;
 
+import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
+import javafx.util.Callback;
+import org.apache.log4j.Logger;
+import org.jahap.business.base.Catbean;
+import org.jahap.entities.base.Cat;
 
 /**
  * FXML Controller class
@@ -37,21 +53,112 @@ import javafx.scene.input.MouseEvent;
  * @author russ
  */
 public class CatListController implements Initializable {
+    static Logger log = Logger.getLogger(CatListController.class.getName());
     @FXML
     private Button PrintButton;
     @FXML
-    private TableView<?> dataTable;
+    private TableView  dataTable;
+    private Catbean catbean;
+    private List<Cat> catlist;
 
     /**
      * Initializes the controller class.
      */
-    @Override
-    public void initialize(URL url, ResourceBundle rb) {
+
+    
+     public void initialize(URL url, ResourceBundle rb) {
         // TODO
+        initTable();
     }    
 
+      private void initTable(){
+        log.debug("Function entry initTable");
+      
+        catbean = new Catbean();
+        catlist=catbean.SearchForCat(null);
+        ObservableList<Cat> data= FXCollections.observableList(catlist);
+        
+        
+        // -----------------  id
+        TableColumn<Cat,String> IdCol = new TableColumn<Cat,String>("Id");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Cat, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Cat, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getId());
+     }
+     
+             
+      });  
+        
+     
+        
+        
+       //----------------------------------- Categorie name ----------------------- 
+    
+        TableColumn<Cat,String> catname = new TableColumn<Cat,String>("Building");
+     catname.setCellValueFactory(new Callback<CellDataFeatures<Cat, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Cat, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getCatName());
+     }
+     
+             
+      });  
+        
+      //TableColumn<Address, String> col1 = new TableColumn<Address, String>("Name");        
+    //col1.setCellValueFactory(new PropertyValueFactory<Address, String>("Name"));  
+        
+      
+      
+      dataTable.getColumns().add(catname );
+       //dataTable.getColumns().add(col1);
+      
+      //------------------------------------- Category Description --------------------------------
+      
+       TableColumn<Cat,String> catDecription = new TableColumn<Cat,String>("Floor");
+     catDecription.setCellValueFactory(new Callback<CellDataFeatures<Cat, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Cat, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getCatDescription());
+     }
+     
+             
+      });
+       dataTable.getColumns().add(catDecription);
+       
+       
+      
+        
+    dataTable.setItems(data);
+        log.debug("Function exit initTable");
+    }
+    
+
     @FXML
-    private void MouseClicked(MouseEvent event) {
+    private void MouseClicked(MouseEvent event) throws IOException {
+           log.debug("Function entry MouseClicked");
+        Cat reva=(Cat) dataTable.getSelectionModel().getSelectedItem();
+        int id;
+        id=reva.getId();
+       if(event.getClickCount()==2){
+       Stage stage = new Stage();
+        String fxmlFile = "/fxml/CatGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+     
+
+        
+        stage.setScene(scene);
+        catguifx controller= loader.<catguifx>getController();
+       controller.init(id);
+       
+        
+        stage.showAndWait();
+        
+        }
+        log.debug("Function exit MouseClicked");
+        
     }
     
 }

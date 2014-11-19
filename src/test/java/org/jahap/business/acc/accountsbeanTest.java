@@ -27,38 +27,32 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.Serializable;
 import java.util.Collection;
-import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
-import java.util.Map;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import org.dbunit.IDatabaseTester;
 import org.dbunit.JdbcDatabaseTester;
 import org.dbunit.dataset.IDataSet;
 import org.dbunit.dataset.xml.FlatXmlDataSetBuilder;
 import org.dbunit.operation.DatabaseOperation;
-import static org.jahap.business.acc.accountspositionbeanTest.getDataSet;
 import org.jahap.business.base.ratesbean;
 import org.jahap.business.res.resbean;
 import org.jahap.config.WriteConfig;
 import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.acc.Bill;
-import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.res.Res;
 import org.junit.After;
 import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
  * @author russ
  */
 public class accountsbeanTest {
-    static Accountsbean instance;
+    static accountsbean instance;
     static resbean instres;
     static ratesbean intrates;
     public accountsbeanTest() {
@@ -119,7 +113,7 @@ public class accountsbeanTest {
         IDataSet dataSet = getDataSet();
         System.out.print(dataSet.getTableNames());
          cleanlyInsertDataset(dataSet);
-           instance = new Accountsbean();
+           instance = new accountsbean();
          intrates=new ratesbean();
         instres= new resbean(); 
     }
@@ -153,7 +147,7 @@ public class accountsbeanTest {
     public void testSearchForOcc() {
         System.out.println("SearchForOcc");
         String searchstring = "";
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         List expResult = null;
         List result = instance.SearchForAcc(searchstring);
         assertEquals(expResult, result);
@@ -190,7 +184,7 @@ public class accountsbeanTest {
     
     public void testNextRecordBackward() {
         System.out.println("nextRecordBackward");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.nextRecordBackward();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -202,7 +196,7 @@ public class accountsbeanTest {
    
     public void testNextRecordForeward() {
         System.out.println("nextRecordForeward");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.nextRecordForeward();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -214,7 +208,7 @@ public class accountsbeanTest {
     
     public void testSaveRecord() {
         System.out.println("saveRecord");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.saveRecord();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -226,7 +220,7 @@ public class accountsbeanTest {
     
     public void testQuitDBaccess() {
         System.out.println("quitDBaccess");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.quitDBaccess();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -259,7 +253,7 @@ public class accountsbeanTest {
         
         long idofPosition=3;
         AccountPosition accpos = new AccountPosition();
-        Accountsbean acc = new Accountsbean();
+        accountsbean acc = new accountsbean();
         ratesbean rc = new ratesbean();
         accountspositionbean acp = new accountspositionbean();
         
@@ -346,7 +340,7 @@ public class accountsbeanTest {
     
     public void testCreateBill() {
         System.out.println("createBill");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.createBill();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -358,7 +352,7 @@ public class accountsbeanTest {
     
     public void testCopyPositonToBill() {
         System.out.println("copyPositonToBill");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.copyPositonToBill();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -370,7 +364,7 @@ public class accountsbeanTest {
     
     public void testMarkPositionAsBilled() {
         System.out.println("markPositionAsBilled");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.markPositionAsBilled();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -382,7 +376,7 @@ public class accountsbeanTest {
     
     public void testGetPrintedAccountReport() {
         System.out.println("getPrintedAccountReport");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.getPrintedAccountReport();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -394,7 +388,7 @@ public class accountsbeanTest {
    
     public void testGetReportDataAccount() {
         System.out.println("getReportDataAccount");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.getReportDataAccount();
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -406,7 +400,7 @@ public class accountsbeanTest {
     
     public void testGetAccountPositionCollection() {
         System.out.println("getAccountPositionCollection");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         Collection expResult = null;
         Collection result = instance.getAccountPositionCollection();
         assertEquals(expResult, result);
@@ -420,7 +414,7 @@ public class accountsbeanTest {
     
     public void testGetBalance() {
         System.out.println("getBalance");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         double expResult = 0;
         double result = instance.getBalance();
         assertEquals(expResult, result);
@@ -434,7 +428,7 @@ public class accountsbeanTest {
     
     public void testGetCheckin() {
         System.out.println("getCheckin");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         Serializable expResult = null;
         Serializable result = instance.getCheckin();
         assertEquals(expResult, result);
@@ -448,7 +442,7 @@ public class accountsbeanTest {
    
     public void testGetCheckindate() {
         System.out.println("getCheckindate");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         String expResult = "";
         String result = instance.getCheckindate();
         assertEquals(expResult, result);
@@ -462,7 +456,7 @@ public class accountsbeanTest {
     
     public void testGetCheckout() {
         System.out.println("getCheckout");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         Serializable expResult = null;
         Serializable result = instance.getCheckout();
         assertEquals(expResult, result);
@@ -476,7 +470,7 @@ public class accountsbeanTest {
     
     public void testGetCheckoutdate() {
         System.out.println("getCheckoutdate");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         String expResult = "";
         String result = instance.getCheckoutdate();
         assertEquals(expResult, result);
@@ -490,7 +484,7 @@ public class accountsbeanTest {
     
     public void testGetId() {
         System.out.println("getId");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         Long expResult = null;
         Long result = instance.getId();
         assertEquals(expResult, result);
@@ -504,7 +498,7 @@ public class accountsbeanTest {
     
     public void testGetReservation() {
         System.out.println("getReservation");
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         Res expResult = null;
         Res result = instance.getReservation();
         assertEquals(expResult, result);
@@ -519,7 +513,7 @@ public class accountsbeanTest {
     public void testSetAccountPositionCollection() {
         System.out.println("setAccountPositionCollection");
         Collection<AccountPosition> accountPositionCollection = null;
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.setAccountPositionCollection(accountPositionCollection);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -532,7 +526,7 @@ public class accountsbeanTest {
     public void testSetBalance() {
         System.out.println("setBalance");
         Integer balance = null;
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.setBalance(balance);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -545,7 +539,7 @@ public class accountsbeanTest {
     public void testSetBill() {
         System.out.println("setBill");
         Bill bill = null;
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.setBill(bill);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -558,7 +552,7 @@ public class accountsbeanTest {
     public void testSetCheckin() {
         System.out.println("setCheckin");
         Serializable checkin = null;
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.setCheckin(checkin);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -571,7 +565,7 @@ public class accountsbeanTest {
     public void testSetCheckindate() {
         System.out.println("setCheckindate");
         String checkindate = "";
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.setCheckindate(checkindate);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -584,7 +578,7 @@ public class accountsbeanTest {
     public void testSetCheckout() {
         System.out.println("setCheckout");
         Serializable checkout = null;
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
        // instance.setCheckout(checkout);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -597,7 +591,7 @@ public class accountsbeanTest {
     public void testSetCheckoutdate() {
         System.out.println("setCheckoutdate");
         String checkoutdate = "";
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.setCheckoutdate(checkoutdate);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
@@ -610,7 +604,7 @@ public class accountsbeanTest {
     public void testSetReservation() {
         System.out.println("setReservation");
         Res reservation = null;
-        Accountsbean instance = new Accountsbean();
+        accountsbean instance = new accountsbean();
         instance.setReservation(reservation);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");

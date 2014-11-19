@@ -358,7 +358,7 @@ public class MainGuiFx implements Initializable {
     @FXML
     private void categorie(ActionEvent event) throws IOException {
         Stage stage = new Stage();
-        String fxmlFile = "/fxml/CatGuiFx.fxml";
+        String fxmlFile = "/fxml/CatList.fxml";
        
         FXMLLoader loader = new FXMLLoader();
       
@@ -366,7 +366,7 @@ public class MainGuiFx implements Initializable {
            AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
       
             Scene scene = new Scene(page);
-            stage.setTitle("Tax Setup");
+            stage.setTitle("Category Setup");
             stage.setScene(scene);
             stage.show();
         

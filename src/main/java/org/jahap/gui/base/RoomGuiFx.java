@@ -34,8 +34,12 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
+import javafx.scene.control.ToggleButton;
+import javafx.scene.control.ToggleGroup;
 import net.sf.jasperreports.engine.JRException;
+import org.apache.log4j.Logger;
 import org.jahap.business.base.roomsbean;
 import org.jahap.entities.base.Rooms;
 import org.jahap.sreport.roomreports;
@@ -51,7 +55,7 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
     @FXML
     private TextField roomname_fxtextfield;
     @FXML
-    private TextField roomcategory_fxtextfield;
+    private ChoiceBox<?> roomcategory_fxtextfield;
     
     @FXML
     private Button firstRecord_fxbutton;
@@ -74,22 +78,37 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
     private Button newRoom;
     @FXML
     private Button saveRoom;
-    
+    static Logger log = Logger.getLogger(RoomGuiFx.class.getName());
+    @FXML
+    private ToggleButton Housekeeping_dirty;
+    @FXML
+    private ToggleGroup HouseKeeping;
+    @FXML
+    private ToggleButton Housekeeping_clean;
+    @FXML
+    private ToggleButton maintenance_blocked;
+    @FXML
+    private ToggleGroup maintenance;
+    @FXML
+    private ToggleButton maintenance_free;
+    @FXML
+    private ChoiceBox<String> location;
     
     /**
      * Initializes the controller class.
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+        log.debug("Function entry initialize ");
         textfields=new ArrayList<TextField>();
-         textfields.add(roomcategory_fxtextfield);
+         
          textfields.add(roomcode_fxtextfield);
          textfields.add(roomname_fxtextfield);
        
          rooms= new roomsbean();
          searchresults = new RoomSearchResult();
          searchresults.addIDListener(this);
-         
+         log.debug("Function entry initialize");
     }    
 
     @FXML
@@ -125,22 +144,24 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
     
     
     public void init(long id){
+        log.debug("Function exit init  ");
         rooms = new roomsbean();
         rooms.setDataRecordId(id);
                       
               FillWithSelectedData();
         
-        
+        log.debug("Function entry init");  
         
     }
 
     
 
     private void FillWithSelectedData() {
+        log.debug("Function exit FillWithSelectedData");
         roomname_fxtextfield.setText(rooms.getName());
         roomcode_fxtextfield.setText(rooms.getCode());
-        roomcategory_fxtextfield.setText(rooms.getCategory().getCatName());
         
+        log.debug("Function entry   FillWithSelectedData");
     }
 
     public void idinfo(RoomSearchResultEvent e) {

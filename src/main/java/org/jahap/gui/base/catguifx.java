@@ -31,6 +31,8 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import org.apache.log4j.Logger;
+import org.jahap.business.base.Catbean;
 
 /**
  * FXML Controller class
@@ -38,6 +40,7 @@ import javafx.scene.layout.AnchorPane;
  * @author russ
  */
 public class catguifx implements Initializable {
+    static Logger log = Logger.getLogger(catguifx.class.getName());
     @FXML
     private Button firstRecord_fxbutton;
     @FXML
@@ -58,7 +61,7 @@ public class catguifx implements Initializable {
     private Button newCat;
     @FXML
     private Button saveCat;
-
+    private Catbean catbean;
     /**
      * Initializes the controller class.
      */
@@ -66,21 +69,43 @@ public class catguifx implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    public void init(int id){
+        catbean= new Catbean();
+        catname.setText(catbean.getDataRecord((long)id).getCatName());
+        catdescription.setText(catbean.getDataRecord((long) id).getCatDescription());
+    }
 
+    private void fillDialog(){
+        catname.setText(catbean.getCatName());
+        catdescription.setText(catbean.getCatDescription());
+    }
+    
     @FXML
     private void goFirstRecord(ActionEvent event) {
+        catbean.jumpToFirstRecord();
+        fillDialog();
+        
     }
 
     @FXML
     private void goOneRecordBackward(ActionEvent event) {
+        catbean.nextRecordBackward();
+        fillDialog();
     }
 
     @FXML
     private void goOneRecordForward(ActionEvent event) {
+        catbean.nextRecordForeward();
+        fillDialog();
+        
     }
 
     @FXML
     private void goLastRecord(ActionEvent event) {
+        catbean.jumpToLastRecord();
+        fillDialog();
+        
     }
 
     @FXML
@@ -89,10 +114,22 @@ public class catguifx implements Initializable {
 
     @FXML
     private void newCat(ActionEvent event) {
+          log.debug("Function entry newCat");
+        catbean.createNewEmptyRecord();
+         catname.setText("");
+         catdescription.setText("");
+        
+        log.debug("Function exit newCat ");
+        
+        
     }
 
     @FXML
     private void saveCat(ActionEvent event) {
+        log.debug("Function entry saveCat");
+        catbean.setCatDescription(catdescription.getText());
+        catbean.setCatName(catname.getText());
+        
     }
     
 }
