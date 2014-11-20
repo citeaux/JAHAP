@@ -30,6 +30,8 @@ import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -40,6 +42,8 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import net.sf.jasperreports.engine.JRException;
 import org.apache.log4j.Logger;
+import org.jahap.business.base.Catbean;
+import org.jahap.business.base.Locationbean;
 import org.jahap.business.base.roomsbean;
 import org.jahap.entities.base.Rooms;
 import org.jahap.sreport.roomreports;
@@ -55,7 +59,7 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
     @FXML
     private TextField roomname_fxtextfield;
     @FXML
-    private ChoiceBox<?> roomcategory_fxtextfield;
+    private ChoiceBox<String> roomcategory_fxtextfield;
     
     @FXML
     private Button firstRecord_fxbutton;
@@ -93,6 +97,8 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
     private ToggleButton maintenance_free;
     @FXML
     private ChoiceBox<String> location;
+    private Catbean cbean;
+    private Locationbean lbean;
     
     /**
      * Initializes the controller class.
@@ -101,7 +107,12 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
     public void initialize(URL url, ResourceBundle rb) {
         log.debug("Function entry initialize ");
         textfields=new ArrayList<TextField>();
-         
+         cbean= new Catbean();
+         lbean= new Locationbean();
+         ObservableList<String> datas=FXCollections.observableList(lbean.SearchForLocation());
+         ObservableList<String> data=FXCollections.observableList(cbean.SearchForCat());
+         roomcategory_fxtextfield.setItems(data);
+         location.setItems(datas);
          textfields.add(roomcode_fxtextfield);
          textfields.add(roomname_fxtextfield);
        

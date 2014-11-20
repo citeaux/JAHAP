@@ -3,6 +3,7 @@ package org.jahap.business.base;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Cat;
@@ -84,6 +85,25 @@ public class Catbean extends DatabaseOperations implements cat_i {
         
     }
     
+    /**
+     * Return Catnames
+     * @return categorienames
+     */
+    public List<String>SearchForCat(){
+        
+         log.debug("Function entry SearchForCat");
+      
+         
+        
+        log.debug("Function exit SearchForCat ");
+        return allrecordlist.stream().map(Cat->Cat.getCatName()).collect(Collectors.toList());
+    }  
+    
+    /**
+     *
+     * @param searchstring
+     * @return list with all Categories
+     */
     public List<Cat>SearchForCat(String searchstring){
         
          log.debug("Function entry SearchForCat");
@@ -93,10 +113,11 @@ public class Catbean extends DatabaseOperations implements cat_i {
         log.debug("Function exit SearchForCat ");
         return allrecordlist;
     }  
-    
    
-    
-       public void createNewEmptyRecord() {
+    /**
+     *
+     */
+    public void createNewEmptyRecord() {
           
           log.debug("Function entry createNewEmptyRecord");
           if(tabelIsEmpty==true){
@@ -122,11 +143,9 @@ public class Catbean extends DatabaseOperations implements cat_i {
           log.debug("Function exit createNewEmptyRecord");
     }
      
-     
-     
-     
-    
-
+    /**
+     *
+     */
     @Override
     public void nextRecordBackward() {
          log.debug("Function entry nextRecordBackward");
@@ -137,6 +156,9 @@ public class Catbean extends DatabaseOperations implements cat_i {
         log.debug("Function exit nextRecordBackward");
     }
 
+    /**
+     *
+     */
     @Override
     public void nextRecordForeward() {
         log.debug("Function entry nextRecordForeward");
@@ -148,6 +170,9 @@ public class Catbean extends DatabaseOperations implements cat_i {
         log.debug("Function exit nextRecordForeward ");
     }
 
+    /**
+     *
+     */
     @Override
     public void saveRecord() {
        log.debug("Function entry saveRecord");
@@ -179,8 +204,12 @@ public class Catbean extends DatabaseOperations implements cat_i {
          log.debug("Function exit RefreshAllRecords");
     }
     
-    
-     public Cat getDataRecord(long id){
+    /**
+     *
+     * @param id
+     * @return
+     */
+    public Cat getDataRecord(long id){
         if(id==0)return null;
         log.debug("Function entry getDataRecord");
        int inl=-1;
@@ -203,6 +232,10 @@ public class Catbean extends DatabaseOperations implements cat_i {
         
    }
     
+    /**
+     *
+     * @return
+     */
     public Cat getLastPosition(){
           log.debug("Function entry getLastPosition(");
              if( tabelIsEmpty!=true){ 
@@ -236,8 +269,9 @@ public class Catbean extends DatabaseOperations implements cat_i {
         }
      }
     
-     
-     
+    /**
+     *
+     */
     @Override
     public void quitDBaccess() {
        log.debug("Function entry quitDBaccess");
@@ -259,6 +293,10 @@ public class Catbean extends DatabaseOperations implements cat_i {
            log.debug("Function exit saveOldRecord");
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String getCatDescription() {
          if( tabelIsEmpty!=true)   
@@ -266,13 +304,24 @@ public class Catbean extends DatabaseOperations implements cat_i {
        return null;
     }
 
-     public void jumpToFirstRecord(){
+    /**
+     *
+     */
+    public void jumpToFirstRecord(){
         currentRecordNumber=0;
     }    
-     public void jumpToLastRecord(){
+
+    /**
+     *
+     */
+    public void jumpToLastRecord(){
         currentRecordNumber=numberOfLastRecord;
     }
     
+    /**
+     *
+     * @return
+     */
     @Override
     public String getCatName() {
          if( tabelIsEmpty!=true)   
@@ -280,6 +329,10 @@ public class Catbean extends DatabaseOperations implements cat_i {
        return null;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public Integer getId() {
          if( tabelIsEmpty!=true)   
@@ -287,6 +340,10 @@ public class Catbean extends DatabaseOperations implements cat_i {
        return null;
     }
 
+    /**
+     *
+     * @param catDescription
+     */
     @Override
     public void setCatDescription(String catDescription) {
        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
@@ -295,6 +352,10 @@ public class Catbean extends DatabaseOperations implements cat_i {
         allrecordlist.get(currentRecordNumber).setCatDescription(catDescription);
     }
 
+    /**
+     *
+     * @param catName
+     */
     @Override
     public void setCatName(String catName) {
         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();

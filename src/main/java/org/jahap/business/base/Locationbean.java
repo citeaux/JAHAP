@@ -3,6 +3,7 @@ package org.jahap.business.base;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Location;
@@ -84,6 +85,11 @@ public class Locationbean extends DatabaseOperations implements location_i {
         
     }
     
+    /**
+     *
+     * @param searchstring
+     * @return
+     */
     public List<Location>SearchForLocation (String searchstring){
         
          log.debug("Function entry SearchForLocation");
@@ -94,15 +100,40 @@ public class Locationbean extends DatabaseOperations implements location_i {
         return allrecordlist;
     }  
     
-   public void jumpToFirstRecord(){
+    
+    /**
+     *
+     * 
+     * @return
+     */
+    public List<String>SearchForLocation (){
+        
+         log.debug("Function entry SearchForLocation");
+      
+         
+        
+        log.debug("Function exit SearchForLocation ");
+        return allrecordlist.stream().map(Location->Location.getFloor()).collect(Collectors.toList());
+    }  
+    
+    /**
+     *
+     */
+    public void jumpToFirstRecord(){
         currentRecordNumber=0;
     }
     
+    /**
+     *
+     */
     public void jumpToLastRecord(){
         currentRecordNumber=numberOfLastRecord;
     }
     
-       public void createNewEmptyRecord() {
+    /**
+     *
+     */
+    public void createNewEmptyRecord() {
           
           log.debug("Function entry createNewEmptyRecord");
           if(tabelIsEmpty==true){
@@ -128,11 +159,9 @@ public class Locationbean extends DatabaseOperations implements location_i {
           log.debug("Function exit createNewEmptyRecord");
     }
      
-     
-     
-     
-    
-
+    /**
+     *
+     */
     @Override
     public void nextRecordBackward() {
          log.debug("Function entry nextRecordBackward");
@@ -143,6 +172,9 @@ public class Locationbean extends DatabaseOperations implements location_i {
         log.debug("Function exit nextRecordBackward");
     }
 
+    /**
+     *
+     */
     @Override
     public void nextRecordForeward() {
         log.debug("Function entry nextRecordForeward");
@@ -154,6 +186,9 @@ public class Locationbean extends DatabaseOperations implements location_i {
         log.debug("Function exit nextRecordForeward ");
     }
 
+    /**
+     *
+     */
     @Override
     public void saveRecord() {
        log.debug("Function entry saveRecord");
@@ -185,8 +220,12 @@ public class Locationbean extends DatabaseOperations implements location_i {
          log.debug("Function exit RefreshAllRecords");
     }
     
-    
-     public Location getDataRecord(long id){
+    /**
+     *
+     * @param id
+     * @return
+     */
+    public Location getDataRecord(long id){
         if(id==0)return null;
         log.debug("Function entry getDataRecord");
        int inl=-1;
@@ -209,6 +248,10 @@ public class Locationbean extends DatabaseOperations implements location_i {
         
    }
     
+    /**
+     *
+     * @return
+     */
     public Location getLastPosition(){
           log.debug("Function entry getLastPosition(");
              if( tabelIsEmpty!=true){ 
@@ -242,8 +285,9 @@ public class Locationbean extends DatabaseOperations implements location_i {
         }
      }
     
-     
-     
+    /**
+     *
+     */
     @Override
     public void quitDBaccess() {
        log.debug("Function entry quitDBaccess");
@@ -265,6 +309,10 @@ public class Locationbean extends DatabaseOperations implements location_i {
            log.debug("Function exit saveOldRecord");
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public Integer getAddressId() {
         if( tabelIsEmpty!=true)   
@@ -272,6 +320,10 @@ public class Locationbean extends DatabaseOperations implements location_i {
        return null;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String getBuilding() {
         if( tabelIsEmpty!=true)   
@@ -279,6 +331,10 @@ public class Locationbean extends DatabaseOperations implements location_i {
        return null;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String getFloor() {
         if( tabelIsEmpty!=true)   
@@ -286,6 +342,10 @@ public class Locationbean extends DatabaseOperations implements location_i {
        return null;
     }
 
+    /**
+     *
+     * @return
+     */
     @Override
     public Short getId() {
        if( tabelIsEmpty!=true)   
@@ -293,6 +353,10 @@ public class Locationbean extends DatabaseOperations implements location_i {
        return null;
     }
 
+    /**
+     *
+     * @param addressId
+     */
     @Override
     public void setAddressId(Integer addressId) {
         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
@@ -301,6 +365,10 @@ public class Locationbean extends DatabaseOperations implements location_i {
         allrecordlist.get(currentRecordNumber).setAddressId(addressId);
     }
 
+    /**
+     *
+     * @param building
+     */
     @Override
     public void setBuilding(String building) {
         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
@@ -309,6 +377,10 @@ public class Locationbean extends DatabaseOperations implements location_i {
         allrecordlist.get(currentRecordNumber).setBuilding(building);
     }
 
+    /**
+     *
+     * @param floor
+     */
     @Override
     public void setFloor(String floor) {
         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
