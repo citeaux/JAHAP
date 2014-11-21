@@ -136,13 +136,13 @@ public class ${name} extends DatabaseOperations implements ${name?replace('bean'
     public void saveRecord() {
        log.debug("Function entry saveRecord");
          
-         if (newEmptyRecordCreated=true){
+         if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           RefreshAllRecords();
         
          }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
         log.debug("Function exit saveRecord ");

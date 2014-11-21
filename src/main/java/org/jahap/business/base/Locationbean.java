@@ -193,13 +193,13 @@ public class Locationbean extends DatabaseOperations implements location_i {
     public void saveRecord() {
        log.debug("Function entry saveRecord");
          
-         if (newEmptyRecordCreated=true){
+         if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           RefreshAllRecords();
         
          }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
         log.debug("Function exit saveRecord ");
@@ -361,7 +361,7 @@ public class Locationbean extends DatabaseOperations implements location_i {
     public void setAddressId(Integer addressId) {
         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
          
-         languagebean hh=new languagebean();
+         
         allrecordlist.get(currentRecordNumber).setAddressId(addressId);
     }
 
@@ -373,7 +373,7 @@ public class Locationbean extends DatabaseOperations implements location_i {
     public void setBuilding(String building) {
         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
          
-         languagebean hh=new languagebean();
+         
         allrecordlist.get(currentRecordNumber).setBuilding(building);
     }
 
@@ -385,7 +385,7 @@ public class Locationbean extends DatabaseOperations implements location_i {
     public void setFloor(String floor) {
         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
          
-         languagebean hh=new languagebean();
+        
         allrecordlist.get(currentRecordNumber).setFloor(floor);
     }
     

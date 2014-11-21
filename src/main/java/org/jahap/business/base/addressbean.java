@@ -30,11 +30,11 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import org.apache.log4j.Logger;
-import org.jahap.entities.base.Address;
+import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Bill;
+import org.jahap.entities.base.Address;
 import org.jahap.entities.base.Country;
 import org.jahap.entities.base.Currency;
-import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Language;
 import org.jahap.entities.res.Res;
         
@@ -120,40 +120,49 @@ public class addressbean extends DatabaseOperations implements address_i {
      */
     @Override
     public void createNewEmptyRecord(){
-         log.debug("Function entry createNewEmptyRecord");
-         if(numberOfLastRecord==-1){
-            allrecordlist = new ArrayList();
+          log.debug("Function entry createNewEmptyRecord");
+          if(tabelIsEmpty==true){
+            allrecordlist = new ArrayList<Address>();
             numberOfLastRecord++;
+            currentRecordNumber=numberOfLastRecord;
             
         }
         
-         if(numberOfLastRecord>-1){
-             numberOfLastRecord++;
-         }
-        Address emptyaddress = new Address();
+        if(tabelIsEmpty==false){
+            RefreshAllRecords();
+            numberOfLastRecord++;
+        }
+        
+               Address emptyacc = new Address();
         
        
-        allrecordlist.add(emptyaddress);
+        allrecordlist.add(emptyacc);
         currentRecordNumber=numberOfLastRecord;
+       
         setNewEmptyRecordCreadted();
         tabelIsInit=true; // Set Tabel iniated - List is connected
-        log.debug("Function exit createNewEmptyRecord ");
+          log.debug("Function exit createNewEmptyRecord");
     }
    
     private void saveNewRecord(){
         log.debug("Function entry createNewEmptyRecord");
-        if ( newEmptyRecordCreated==true){
+       if ( newEmptyRecordCreated=true){
             try{
             dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().persist(allrecordlist.get(currentRecordNumber));
+            dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
+            System.out.printf(dbhook.getEntity().getProperties().toString());
             dbhook.getEntity().getTransaction().commit();
             newEmptyRecordCreated=false;
+            allrecordlist.clear();
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Address t ORDER BY t.id"); // Refresh list
+            allrecordlist= query_AllDbRecords.getResultList();
+            //currentRecordNumber++;
             }
             catch (Exception e){
-                  e.printStackTrace();   
+                  log.error("SaveNewRecord " );
+                     e.printStackTrace();
             }
         }
-        log.debug("Function exit createNewEmptyRecord");
         }
       
     private void saveOldRecord(){
@@ -177,7 +186,7 @@ public class addressbean extends DatabaseOperations implements address_i {
       if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
-          
+           RefreshAllRecords();
       }
       if (newEmptyRecordCreated==false){
           saveOldRecord();
@@ -187,6 +196,21 @@ public class addressbean extends DatabaseOperations implements address_i {
   }        
 
        
+  private void RefreshAllRecords(){
+         
+         log.debug("Function entry RefreshAllRecords");
+        try {
+            allrecordlist.clear();
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Address t ORDER BY t.id");
+            allrecordlist = query_AllDbRecords.getResultList();
+            numberOfLastRecord=allrecordlist.size()-1;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+         log.debug("Function exit RefreshAllRecords");
+    }
+  
     /**
      * moves the selctor to the next address record
      */
@@ -589,7 +613,7 @@ public class addressbean extends DatabaseOperations implements address_i {
     public void setTitel(String title) {
         if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
         
-         languagebean hh=new languagebean();
+         
         allrecordlist.get(currentRecordNumber).setTitel(title);
     }
 
@@ -597,7 +621,7 @@ public class addressbean extends DatabaseOperations implements address_i {
     public void setHomepage(String homepage) {
          if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
          
-         languagebean hh=new languagebean();
+        
         allrecordlist.get(currentRecordNumber).setHomepage(homepage);
     }
 
@@ -605,7 +629,7 @@ public class addressbean extends DatabaseOperations implements address_i {
     public void setAddresstype(String addresstype) {
         if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
             
-         languagebean hh=new languagebean();
+       
         allrecordlist.get(currentRecordNumber).setRemarks(addresstype);
     }
 
@@ -613,7 +637,7 @@ public class addressbean extends DatabaseOperations implements address_i {
     public void setRemarks(String remarks) {
          if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
          
-         languagebean hh=new languagebean();
+         
         allrecordlist.get(currentRecordNumber).setRemarks(remarks);
     }
 
@@ -621,7 +645,7 @@ public class addressbean extends DatabaseOperations implements address_i {
     public void setGreeting(String greeting) {
         if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
         
-         languagebean hh=new languagebean();
+        
         allrecordlist.get(currentRecordNumber).setGreeting(greeting);
     }
 
@@ -629,7 +653,7 @@ public class addressbean extends DatabaseOperations implements address_i {
     public void setSalutation(String salutation) {
          if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
          
-         languagebean hh=new languagebean();
+        
         allrecordlist.get(currentRecordNumber).setSalutation(salutation);
     }
     

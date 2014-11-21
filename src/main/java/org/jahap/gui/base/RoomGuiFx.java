@@ -124,6 +124,8 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
 
     @FXML
     private void goFirstRecord(ActionEvent event) {
+        rooms.jumpToFirstRecord();
+        FillWithSelectedData();
     }
 
     @FXML
@@ -142,6 +144,9 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
 
     @FXML
     private void goLastRecord(ActionEvent event) {
+        rooms.jumpToLastRecord();
+        FillWithSelectedData();
+        
     }
        @FXML
         private void printRoom(ActionEvent event) throws JRException {
@@ -171,7 +176,21 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
         log.debug("Function exit FillWithSelectedData");
         roomname_fxtextfield.setText(rooms.getName());
         roomcode_fxtextfield.setText(rooms.getCode());
+        location.setValue(rooms.getLocation().getFloor());
+        roomcategory_fxtextfield.setValue(rooms.getCategory().getCatName());
+        if(rooms.isClean()){
+            Housekeeping_clean.setSelected(true);
+        }else if(!rooms.isClean()){
+            Housekeeping_dirty.setSelected(true);
+        }
         
+        if(rooms.isNo_maintenance()){
+            maintenance_free.setSelected(true);
+            
+        }else if(!rooms.isNo_maintenance()){
+           
+            maintenance_blocked.setSelected(true);
+        }
         log.debug("Function entry   FillWithSelectedData");
     }
 
@@ -185,10 +204,34 @@ public class RoomGuiFx implements Initializable, RoomSearchResultListener {
 
     @FXML
     private void newRoom(ActionEvent event) {
+        log.debug("Function entry newroom");
+        rooms.createNewEmptyRecord();
+        location.setValue("");
+        roomcategory_fxtextfield.setValue("");
+        roomcode_fxtextfield.setText("");
+        roomname_fxtextfield.setText("");
+        HouseKeeping.selectToggle(Housekeeping_dirty);
+        maintenance.selectToggle(maintenance_blocked);
+        
+        log.debug("Function exit newroom");  
     }
 
     @FXML
     private void saveRoom(ActionEvent event) {
+        log.debug("Function entry saveroom");
+        rooms.setCode(roomcode_fxtextfield.getText());
+        rooms.setName(roomname_fxtextfield.getText());
+        rooms.setCategory(cbean.getDataRecord(roomcategory_fxtextfield.getSelectionModel().getSelectedIndex()+1));
+        rooms.setLocaton(lbean.getDataRecord(location.getSelectionModel().getSelectedIndex()+1));
+        if(HouseKeeping.getSelectedToggle().equals(Housekeeping_clean)){
+        rooms.setClean(true);
+        }
+        if(maintenance.getSelectedToggle().equals(maintenance_free)){
+            rooms.setNo_maintenance(true);
+        }
+        rooms.saveRecord();
+        log.debug("Function exit saveroom");
+        
     }
 
 

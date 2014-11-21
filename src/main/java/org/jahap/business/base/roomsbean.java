@@ -27,6 +27,7 @@
 package org.jahap.business.base;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Cat;
 import org.jahap.entities.base.Location;
@@ -37,7 +38,7 @@ import org.jahap.entities.base.Rooms;
  * @author russ
  */
 public class roomsbean extends DatabaseOperations  implements rooms_i {
-
+   static Logger log = Logger.getLogger(roomsbean.class.getName());
    JahapDatabaseConnector dbhook;
     private static List<Rooms> allrecordlist; 
     public roomsbean(){
@@ -75,24 +76,44 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
        
    }
     
-    
+   private void RefreshAllRecords(){
+         
+         log.debug("Function entry RefreshAllRecords");
+        try {
+            allrecordlist.clear();
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Rooms t ORDER BY t.id");
+            allrecordlist = query_AllDbRecords.getResultList();
+            numberOfLastRecord=allrecordlist.size()-1;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+         log.debug("Function exit RefreshAllRecords");
+    } 
     
    public void createNewEmptyRecord() {
-                   if(numberOfLastRecord==-1){
-            allrecordlist = new ArrayList();
+                    log.debug("Function entry createNewEmptyRecord");
+          if(tabelIsEmpty==true){
+            allrecordlist = new ArrayList<Rooms>();
+            numberOfLastRecord++;
+            currentRecordNumber=numberOfLastRecord;
+            
+        }
+        
+        if(tabelIsEmpty==false){
+            RefreshAllRecords();
             numberOfLastRecord++;
         }
         
-         if(numberOfLastRecord>-1){
-             numberOfLastRecord++;
-         }
-        Rooms emptyroom = new Rooms();
+               Rooms emptyacc = new Rooms();
         
        
-        allrecordlist.add(emptyroom);
+        allrecordlist.add(emptyacc);
         currentRecordNumber=numberOfLastRecord;
+       
         setNewEmptyRecordCreadted();
-        tabelIsInit=true; // Set Tabel iniated - List is connected     
+        tabelIsInit=true; // Set Tabel iniated - List is connected
+          log.debug("Function exit createNewEmptyRecord");
         
     }
    
@@ -101,15 +122,23 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
    }
    
    private void saveNewRecord(){
+       log.debug("Function entry saveNewRecord");
+          
         if ( newEmptyRecordCreated=true){
             try{
             dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().persist(allrecordlist.get(currentRecordNumber));
+            dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
+            System.out.printf(dbhook.getEntity().getProperties().toString());
             dbhook.getEntity().getTransaction().commit();
             newEmptyRecordCreated=false;
+            allrecordlist.clear();
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Rooms t ORDER BY t.id"); // Refresh list
+            allrecordlist= query_AllDbRecords.getResultList();
+            //currentRecordNumber++;
             }
             catch (Exception e){
-                  e.printStackTrace();   
+                  log.error("SaveNewRecord " );
+                     e.printStackTrace();
             }
         }
         }
@@ -152,25 +181,32 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
    
    
     public void saveRecord() {
+         log.debug("Function entry saveRecord");
+         
          if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
-          
-      }
+          RefreshAllRecords();
+        
+         }
       if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
+        log.debug("Function exit saveRecord ");
       
     }
    
        private void saveOldRecord(){
-       if(newEmptyRecordCreated==false){
+       log.debug("Function entry saveOldRecord");
+        if(newEmptyRecordCreated=false){
             dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().find(Rooms.class,allrecordlist.get(currentRecordNumber).getId() );
+            dbhook.getEntity().refresh(dbhook.getEntity().find(Rooms.class,allrecordlist.get(currentRecordNumber).getId() ));
             
             
             dbhook.getEntity().getTransaction().commit();
         }
+        
+           log.debug("Function exit saveOldRecord");
     } 
   
    
@@ -190,7 +226,17 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
             currentRecordNumber++;
         }
     }
+   
+        public void jumpToFirstRecord(){
+        currentRecordNumber=0;
+    }
     
+    /**
+     *
+     */
+    public void jumpToLastRecord(){
+        currentRecordNumber=numberOfLastRecord;
+    }
     
      public List<Rooms>getCurrentRoom(){
         List<Rooms>hh=new ArrayList<Rooms>();
@@ -223,23 +269,19 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
     }
 
     public void setCategory(Cat category) {
-       if(tabelIsInit==false|| tabelIsEmpty!=true)
-            if(newEmptyRecordCreated!=true){createNewEmptyRecord();
-            }        
+        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+        
             allrecordlist.get(currentRecordNumber).setCategory(category);
     }
 
     public void setCode(String code) {
-        if(tabelIsInit==false || tabelIsEmpty!=true)
-            if(newEmptyRecordCreated!=true){createNewEmptyRecord();
-            }    
+         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
+         
             allrecordlist.get(currentRecordNumber).setCode(code);
     }
 
     public void setName(String name) {
-        if(tabelIsInit==false || tabelIsEmpty!=true)
-            if(newEmptyRecordCreated!=true){createNewEmptyRecord();
-            }    
+         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();   
         
             allrecordlist.get(currentRecordNumber).setName(name);
     }
@@ -273,7 +315,7 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
     public void setLocaton(Location location) {
         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
          
-         languagebean hh=new languagebean();
+       
         allrecordlist.get(currentRecordNumber).setLocation(location);
     }
 
@@ -281,7 +323,7 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
     public void setClean(boolean clean) {
         if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
          
-         languagebean hh=new languagebean();
+         
         allrecordlist.get(currentRecordNumber).setClean(clean);
     }
 
@@ -289,7 +331,7 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
     public void setNo_maintenance(boolean no_maintenance) {
        if (tabelIsInit==false|| tabelIsEmpty==true) createNewEmptyRecord();
          
-         languagebean hh=new languagebean();
+         
         allrecordlist.get(currentRecordNumber).setNo_maintenance(no_maintenance);
     }
     

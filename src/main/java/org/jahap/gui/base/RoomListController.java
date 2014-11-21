@@ -35,7 +35,6 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.EventType;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -49,13 +48,10 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import net.sf.jasperreports.engine.JRException;
-
 import org.jahap.business.base.roomsbean;
-
 import org.jahap.entities.base.Rooms;
 import org.jahap.gui.res.InterResSearchResult;
 import org.jahap.gui.res.ResguiController;
-import org.jahap.sreport.ratereports;
 import org.jahap.sreport.roomreports;
 
 /**
@@ -130,17 +126,35 @@ public class RoomListController implements Initializable {
         TableColumn<Rooms,String> CatCol = new TableColumn<Rooms,String>("Category");
       CatCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getCategory());
+         return new ReadOnlyObjectWrapper(p.getValue().getCategory().getCatName());
      }
      
       
              
       });  
       
+      
+      
       dataTable.getColumns().add(CatCol);
         
+          TableColumn<Rooms,String> LocCol = new TableColumn<Rooms,String>("Location");
+      LocCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getLocation().getFloor());
+     }
+     
+      
+             
+      });  
+      
+      
+      
+      dataTable.getColumns().add(LocCol);
+      
+      
        dataTable.setItems(data);
-            
+    
+       
     
     
     }
