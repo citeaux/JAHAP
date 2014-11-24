@@ -31,7 +31,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jahap.gui.base.RateGuiFx">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="516.0" prefWidth="719.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jahap.gui.res.housekeepinggui">
   <children>
     <BorderPane prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <bottom>
@@ -75,9 +75,9 @@ THE SOFTWARE.
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_RIGHT">
           <children>
             <Button fx:id="search" mnemonicParsing="false" onAction="#searchAdress" prefHeight="36.0" prefWidth="100.0" text="Search" />
-            <Button id="search" fx:id="printRate" mnemonicParsing="false" onAction="#printAdress" prefHeight="36.0" prefWidth="100.0" text="Print" />
-                  <Button id="search" fx:id="newRate" mnemonicParsing="false" onAction="#newRate" prefHeight="36.0" prefWidth="100.0" text="New" />
-                  <Button id="search" fx:id="saveRate" mnemonicParsing="false" onAction="#saveRate" prefHeight="36.0" prefWidth="100.0" text="Save" />
+            <Button id="search" fx:id="printBlock" mnemonicParsing="false" onAction="#printBlock" prefHeight="36.0" prefWidth="100.0" text="Print" />
+                  <Button id="search" fx:id="newRate" mnemonicParsing="false" onAction="#newBlock" prefHeight="36.0" prefWidth="100.0" text="New" />
+                  <Button id="search" fx:id="saveRate" mnemonicParsing="false" onAction="#saveBlock" prefHeight="36.0" prefWidth="100.0" text="Save" />
           </children>
         </VBox>
       </right>

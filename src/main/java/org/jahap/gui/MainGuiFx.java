@@ -336,11 +336,36 @@ public class MainGuiFx implements Initializable {
     }
 
     @FXML
-    private void openRoomCleaning(ActionEvent event) {
+    private void openRoomCleaning(ActionEvent event) throws IOException {
+          Stage stage = new Stage();
+        String fxmlFile = "/fxml/HousKeepingList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setTitle("Category Setup");
+            stage.setScene(scene);
+            stage.show();
     }
 
     @FXML
-    private void openRoomMaintenance(ActionEvent event) {
+    private void openRoomMaintenance(ActionEvent event) throws IOException {
+        Stage stage = new Stage();
+        String fxmlFile = "/fxml/MainTenanceList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene scene = new Scene(page);
+            stage.setTitle("Category Setup");
+            stage.setScene(scene);
+            stage.show();
+        
     }
 
     @FXML

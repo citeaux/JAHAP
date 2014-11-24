@@ -30,7 +30,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 -->
 
-<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="924.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8" fx:controller="org.jahap.gui.ListDialogAddressController">
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="726.0" prefWidth="924.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.jahap.gui.res.ListHousekeepingController">
   <children>
     <TabPane prefHeight="726.0" prefWidth="924.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
       <tabs>
@@ -48,9 +48,9 @@ THE SOFTWARE.
             <VBox prefHeight="200.0" prefWidth="100.0">
               <children>
                 <Button fx:id="PrintButton" mnemonicParsing="false" onAction="#PrintReport" prefHeight="47.0" prefWidth="100.0" text="Print" />
-                        <Button mnemonicParsing="false" onAction="#setDirty" prefHeight="46.0" prefWidth="109.0" text="Set Dirty" />
-                        <Button mnemonicParsing="false" onAction="#setClean" prefHeight="46.0" prefWidth="105.0" text="Set Clean" />
-                        <Button mnemonicParsing="false" onAction="#blockRoom" prefHeight="45.0" prefWidth="106.0" text="Block Room" />
+                        <Button fx:id="setDirty" mnemonicParsing="false" onAction="#setDirty" prefHeight="46.0" prefWidth="109.0" text="Set Dirty" />
+                        <Button fx:id="setClean" mnemonicParsing="false" onAction="#setClean" prefHeight="46.0" prefWidth="105.0" text="Set Clean" />
+                        <Button fx:id="blockRoom" mnemonicParsing="false" onAction="#blockRoom" prefHeight="45.0" prefWidth="106.0" text="Block Room" />
               </children>
             </VBox>
             <Pane prefHeight="614.0" prefWidth="734.0">

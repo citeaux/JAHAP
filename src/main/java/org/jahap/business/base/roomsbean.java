@@ -121,6 +121,76 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
        return allrecordlist;
    }
    
+   public void setRoomsinListclean(List<Rooms>rooms){
+       log.debug("Function entry setRoomsinListclean ");
+       int i,p;
+       for(i=0;i<=allrecordlist.size()-1;i++){
+           for(p=0;p<=rooms.size()-1;p++){
+           
+           if(allrecordlist.get(i).getId()==rooms.get(p).getId()){
+                      allrecordlist.get(i).setClean(true);
+                      currentRecordNumber=i;
+                      saveRecord();
+                }
+           }
+       }  
+       log.debug("Function exit setRoomsinListclean");
+     }
+   
+   
+    public void setRoomsinListdirty(List<Rooms>rooms){
+        log.debug("Function entry setRoomsinListdirty");
+       int i,p;
+       for(i=0;i<=allrecordlist.size()-1;i++){
+           for(p=0;p<=rooms.size()-1;p++){
+           
+           if(allrecordlist.get(i).getId()==rooms.get(p).getId()){
+                      allrecordlist.get(i).setClean(false);
+                      currentRecordNumber=i;
+                      saveRecord();
+                }
+           }
+       }   
+        log.debug("Function exit setRoomsinListdirty");
+     }
+    
+    
+    
+    
+    public void setRoomsinListNotunderMaintenance(List<Rooms>rooms){
+       log.debug("Function entry setRoomsinListNotunderMaintenance ");
+       int i,p;
+       for(i=0;i<=allrecordlist.size()-1;i++){
+           for(p=0;p<=rooms.size()-1;p++){
+           
+           if(allrecordlist.get(i).getId()==rooms.get(p).getId()){
+                      allrecordlist.get(i).setNo_maintenance(true);
+                      currentRecordNumber=i;
+                      saveRecord();
+                }
+           }
+       }  
+       log.debug("Function exit setRoomsinListNotunderMaintenance");
+     }
+   
+   
+    public void setRoomsinListunderMaintenance(List<Rooms>rooms){
+        log.debug("Function entry setRoomsinListunderMaintenance");
+       int i,p;
+       for(i=0;i<=allrecordlist.size()-1;i++){
+           for(p=0;p<=rooms.size()-1;p++){
+           
+           if(allrecordlist.get(i).getId()==rooms.get(p).getId()){
+                      allrecordlist.get(i).setNo_maintenance(false);
+                      currentRecordNumber=i;
+                      saveRecord();
+                }
+           }
+       }   
+        log.debug("Function exit setRoomsinListunderMaintenance");
+     }
+    
+   
    private void saveNewRecord(){
        log.debug("Function entry saveNewRecord");
           
@@ -201,7 +271,7 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
         if(newEmptyRecordCreated=false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().refresh(dbhook.getEntity().find(Rooms.class,allrecordlist.get(currentRecordNumber).getId() ));
-            
+          
             
             dbhook.getEntity().getTransaction().commit();
         }
