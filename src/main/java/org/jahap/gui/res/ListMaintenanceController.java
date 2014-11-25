@@ -160,7 +160,10 @@ public class ListMaintenanceController implements Initializable {
 
     @FXML
     private void setMaintenace(ActionEvent event) {
-        
+        log.debug("Function entry setMaintenace");
+         ObservableList<Rooms> rms=dataTable.getSelectionModel().getSelectedItems();
+        rbean.setRoomsinListunderMaintenance(rms);
+        log.debug("Function exit setMaintenace");  
     }
 
     @FXML
@@ -173,10 +176,7 @@ public class ListMaintenanceController implements Initializable {
 
     @FXML
     private void blockRoom(ActionEvent event) {
-        log.debug("Function entry setMaintenace");
-         ObservableList<Rooms> rms=dataTable.getSelectionModel().getSelectedItems();
-        rbean.setRoomsinListunderMaintenance(rms);
-        log.debug("Function exit setMaintenace");  
+        
     }
 
     @FXML

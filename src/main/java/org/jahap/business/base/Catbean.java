@@ -177,13 +177,13 @@ public class Catbean extends DatabaseOperations implements cat_i {
     public void saveRecord() {
        log.debug("Function entry saveRecord");
          
-         if (newEmptyRecordCreated=true){
+         if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           RefreshAllRecords();
         
          }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
         log.debug("Function exit saveRecord ");
@@ -250,7 +250,7 @@ public class Catbean extends DatabaseOperations implements cat_i {
      private void saveNewRecord(){
           log.debug("Function entry saveNewRecord");
           
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));

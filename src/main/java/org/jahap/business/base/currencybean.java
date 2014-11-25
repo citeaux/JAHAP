@@ -25,12 +25,10 @@
 package org.jahap.business.base;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import org.apache.log4j.Logger;
-import org.jahap.entities.base.Currency;
 import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.base.Currency;
 
 /**
  *
@@ -161,13 +159,13 @@ public class currencybean extends DatabaseOperations implements currency_i  {
     public void saveRecord() {
        log.debug("Function entry saveRecord");
          
-         if (newEmptyRecordCreated=true){
+         if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           RefreshAllRecords();
         
          }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
         log.debug("Function exit saveRecord ");
@@ -226,7 +224,7 @@ public class currencybean extends DatabaseOperations implements currency_i  {
      private void saveNewRecord(){
           log.debug("Function entry saveNewRecord");
           
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));

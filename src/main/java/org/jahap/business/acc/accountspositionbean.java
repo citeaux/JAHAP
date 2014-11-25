@@ -24,24 +24,19 @@
 
 package org.jahap.business.acc;
 
-import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Date;
 import java.util.List;
-import javax.swing.text.html.HTMLDocument;
 import org.apache.log4j.Logger;
+import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.acc.Accounts;
-import org.jahap.entities.base.Address;
-import org.jahap.entities.acc.Bill;
-import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Payed;
-import org.jahap.entities.base.Rates;
 import org.jahap.entities.acc.Revenue;
 import org.jahap.entities.acc.Vat;
-import org.jahap.entities.acc.accountsposition_ie;
+import org.jahap.entities.base.Rates;
 
 /**
  *
@@ -176,13 +171,13 @@ public class accountspositionbean extends DatabaseOperations implements accounts
      *
      */
     public void saveRecord() {
-        if (newEmptyRecordCreated=true){
+        if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           RefreshAllRecords();
                 
       }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           
           saveOldRecord();
       }
@@ -365,7 +360,7 @@ public class accountspositionbean extends DatabaseOperations implements accounts
     
      private void saveNewRecord(){
          log.debug("Function entry savenewrecord");
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
                AccountPosition merge = dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));

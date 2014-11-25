@@ -146,7 +146,7 @@ public class addressbean extends DatabaseOperations implements address_i {
    
     private void saveNewRecord(){
         log.debug("Function entry createNewEmptyRecord");
-       if ( newEmptyRecordCreated=true){
+       if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));

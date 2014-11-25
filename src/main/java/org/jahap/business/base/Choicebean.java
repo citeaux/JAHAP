@@ -3,10 +3,8 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
-import org.jahap.business.base.DatabaseOperations;
-import org.jahap.business.base.choice_i;
-import org.jahap.entities.base.Choice;
 import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.base.Choice;
 import org.jahap.entities.base.Language;
 
 
@@ -168,13 +166,13 @@ public class Choicebean extends DatabaseOperations implements choice_i {
     public void saveRecord() {
        log.debug("Function entry saveRecord");
          
-         if (newEmptyRecordCreated=true){
+         if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           RefreshAllRecords();
         
          }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
         log.debug("Function exit saveRecord ");
@@ -233,7 +231,7 @@ public class Choicebean extends DatabaseOperations implements choice_i {
      private void saveNewRecord(){
           log.debug("Function entry saveNewRecord");
           
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));

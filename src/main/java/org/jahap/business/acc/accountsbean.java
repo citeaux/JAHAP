@@ -26,22 +26,15 @@ package org.jahap.business.acc;
 
 
 import java.io.Serializable;
- import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Collection;
-import java.util.Date;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Set;
-import javafx.beans.property.SimpleStringProperty;
-import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import org.apache.log4j.Logger;
 
 import org.jahap.business.acc.DatabaseOperations;
-import org.jahap.business.base.ratesbean;
 import org.jahap.business.base.vattypesbean;
 import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.acc.Accounts;
@@ -49,7 +42,6 @@ import org.jahap.entities.base.Address;
 import org.jahap.entities.acc.Bill;
 import org.jahap.entities.acc.Csc;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.res.Occ;
 import org.jahap.entities.acc.Payed;
 import org.jahap.entities.base.Rates;
 import org.jahap.entities.res.Res;
@@ -224,12 +216,12 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
      *
      */
     public void saveRecord() {
-         if (newEmptyRecordCreated=true){
+         if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           
       }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
       RefreshAllRecords();
@@ -237,7 +229,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
 
     
      private void saveOldRecord(){
-        if(newEmptyRecordCreated=false){
+        if(newEmptyRecordCreated==false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().find(Accounts.class,allrecordlist.get(this.currentRecordNumber).getId() );
             
@@ -248,7 +240,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
     
     
      private void saveNewRecord(){
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().persist(allrecordlist.get(this.currentRecordNumber));

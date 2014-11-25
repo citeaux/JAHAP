@@ -25,11 +25,8 @@
 package org.jahap.business.acc;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 import org.apache.log4j.Logger;
-import static org.jahap.business.acc.billbean.log;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Payed;
 import org.jahap.entities.acc.Paymenttypes;
@@ -147,13 +144,13 @@ public class payedbean extends DatabaseOperations implements payed_i{
     public void saveRecord() {
       log.debug("Function entry saveRecord");
          
-         if (newEmptyRecordCreated=true){
+         if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           RefreshAllRecords();
         
          }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
         log.debug("Function exit saveRecord ");
@@ -212,7 +209,7 @@ public class payedbean extends DatabaseOperations implements payed_i{
     private void saveNewRecord(){
           log.debug("Function entry saveNewRecord");
           
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));

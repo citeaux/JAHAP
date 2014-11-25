@@ -2,13 +2,11 @@ package org.jahap.business.base;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
-import org.jahap.business.base.DatabaseOperations;
-import org.jahap.business.base.hotel_i;
+import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Address;
 import org.jahap.entities.base.Country;
 import org.jahap.entities.base.Currency;
 import org.jahap.entities.base.Hotel;
-import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Language;
 
 
@@ -156,13 +154,13 @@ public class Hotelbean extends DatabaseOperations implements hotel_i {
     public void saveRecord() {
        log.debug("Function entry saveRecord");
          
-         if (newEmptyRecordCreated=true){
+         if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           RefreshAllRecords();
         
          }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
         log.debug("Function exit saveRecord ");
@@ -221,7 +219,7 @@ public class Hotelbean extends DatabaseOperations implements hotel_i {
      private void saveNewRecord(){
           log.debug("Function entry saveNewRecord");
           
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));

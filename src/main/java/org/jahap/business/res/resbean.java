@@ -29,12 +29,9 @@ package org.jahap.business.res;
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
-import org.jahap.business.res.DatabaseOperations;
-import org.jahap.entities.acc.Accounts;
-import org.jahap.entities.base.Address;
 import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.base.Address;
 import org.jahap.entities.res.Res;
-import org.jahap.entities.base.Rooms;
 
 /**
  *
@@ -151,7 +148,7 @@ public class resbean extends DatabaseOperations implements res_i {
     }
    
      private void saveNewRecord(){
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().persist(allrecordlist.get(currentRecordNumber));
@@ -289,12 +286,12 @@ public class resbean extends DatabaseOperations implements res_i {
      }
    
        private void saveOldRecord(){
-        if (newEmptyRecordCreated=true){
+        if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           
       }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
     } 

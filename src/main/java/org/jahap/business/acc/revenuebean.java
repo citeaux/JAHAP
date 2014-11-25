@@ -30,8 +30,8 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
-import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.acc.Revaccounts;
 import org.jahap.entities.acc.Revenue;
 
@@ -156,7 +156,7 @@ public class revenuebean extends DatabaseOperations  implements revenue_i {
         }
         
         
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
@@ -175,12 +175,12 @@ public class revenuebean extends DatabaseOperations  implements revenue_i {
      } 
 
     public void saveRecord() {
-       if (newEmptyRecordCreated=true){
+       if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           
       }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
     }

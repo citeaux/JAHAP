@@ -194,7 +194,7 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
    private void saveNewRecord(){
        log.debug("Function entry saveNewRecord");
           
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
@@ -268,10 +268,10 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
    
        private void saveOldRecord(){
        log.debug("Function entry saveOldRecord");
-        if(newEmptyRecordCreated=false){
+        if(newEmptyRecordCreated==false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().refresh(dbhook.getEntity().find(Rooms.class,allrecordlist.get(currentRecordNumber).getId() ));
-          
+           dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

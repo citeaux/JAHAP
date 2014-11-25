@@ -156,12 +156,12 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
     }
 
     public void saveRecord() {
-         if (newEmptyRecordCreated=true){
+         if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
           
       }
-      if (newEmptyRecordCreated=false){
+      if (newEmptyRecordCreated==false){
           saveOldRecord();
       }
     }
@@ -169,7 +169,7 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
    
 
      private void saveNewRecord(){
-        if ( newEmptyRecordCreated=true){
+        if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
