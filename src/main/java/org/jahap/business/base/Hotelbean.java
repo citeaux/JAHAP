@@ -252,8 +252,8 @@ public class Hotelbean extends DatabaseOperations implements hotel_i {
            log.debug("Function entry saveOldRecord");
         if(newEmptyRecordCreated=false){
             dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().refresh(dbhook.getEntity().find(Hotel.class,allrecordlist.get(currentRecordNumber).getId() ));
-            
+            dbhook.getEntity().find(Hotel.class,allrecordlist.get(currentRecordNumber).getId() );
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

@@ -30,11 +30,11 @@ import java.util.Collection;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.jahap.business.acc.revaccountsbean;
+import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.acc.Csc;
-import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.base.Rates;
 import org.jahap.entities.acc.Revaccounts;
+import org.jahap.entities.base.Rates;
 import org.jahap.entities.base.Vattype;
 
 
@@ -147,7 +147,7 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
         if(newEmptyRecordCreated==false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().find(Rates.class,allrecordlist.get(currentRecordNumber).getId() );
-            
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

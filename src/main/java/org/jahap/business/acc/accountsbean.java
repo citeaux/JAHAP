@@ -33,20 +33,18 @@ import java.util.Iterator;
 import java.util.List;
 import javafx.collections.ObservableList;
 import org.apache.log4j.Logger;
-
-import org.jahap.business.acc.DatabaseOperations;
 import org.jahap.business.base.vattypesbean;
+import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.acc.Accounts;
-import org.jahap.entities.base.Address;
 import org.jahap.entities.acc.Bill;
 import org.jahap.entities.acc.Csc;
-import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Payed;
-import org.jahap.entities.base.Rates;
-import org.jahap.entities.res.Res;
 import org.jahap.entities.acc.Revenue;
 import org.jahap.entities.acc.Vat;
+import org.jahap.entities.base.Address;
+import org.jahap.entities.base.Rates;
+import org.jahap.entities.res.Res;
 
 /**
  *
@@ -232,7 +230,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
         if(newEmptyRecordCreated==false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().find(Accounts.class,allrecordlist.get(this.currentRecordNumber).getId() );
-            
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

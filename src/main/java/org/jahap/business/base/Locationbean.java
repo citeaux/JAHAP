@@ -300,8 +300,8 @@ public class Locationbean extends DatabaseOperations implements location_i {
            log.debug("Function entry saveOldRecord");
         if(newEmptyRecordCreated=false){
             dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().refresh(dbhook.getEntity().find(Location.class,allrecordlist.get(currentRecordNumber).getId() ));
-            
+            dbhook.getEntity().find(Location.class,allrecordlist.get(currentRecordNumber).getId() );
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

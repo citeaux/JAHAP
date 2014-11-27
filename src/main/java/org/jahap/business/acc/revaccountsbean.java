@@ -191,7 +191,7 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
         if(newEmptyRecordCreated=false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().find(Revaccounts.class,allrecordlist.get(currentRecordNumber).getId() );
-            
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

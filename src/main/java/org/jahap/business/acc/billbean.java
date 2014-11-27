@@ -297,8 +297,8 @@ public class billbean extends DatabaseOperations implements bill_i{
            log.debug("Function entry saveOldRecord");
         if(newEmptyRecordCreated=false){
             dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().refresh(dbhook.getEntity().find(Bill.class,allrecordlist.get(currentRecordNumber).getId() ));
-            
+          dbhook.getEntity().find(Bill.class,allrecordlist.get(currentRecordNumber).getId() );
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

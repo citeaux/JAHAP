@@ -30,7 +30,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.base.Rates;
 import org.jahap.entities.acc.Vat;
 import org.jahap.entities.base.Vattype;
 
@@ -127,7 +126,7 @@ public class vattypesbean extends DatabaseOperations  implements vattypes_i{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().find(Vattype.class,allrecordlist.get(currentRecordNumber).getId() );
             
-            
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             dbhook.getEntity().getTransaction().commit();
         }
     } 

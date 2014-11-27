@@ -49,6 +49,7 @@ public class resbean extends DatabaseOperations implements res_i {
      * gets all reservation records available
      */
     public resbean(){
+        log.debug("Function entry constructor");
         long testg;
         dbhook = JahapDatabaseConnector.getConnector();
          
@@ -75,8 +76,7 @@ public class resbean extends DatabaseOperations implements res_i {
         
         
         
-       System.out.println("=========>dbconnection");
-           // If the table is yet empty, init List 
+        log.debug("Function exit constructor");
         
     }
     
@@ -88,6 +88,7 @@ public class resbean extends DatabaseOperations implements res_i {
      * @return
      */
     public  long getNewResNumber(){
+        log.debug("Function entry getNewResNumber");
         
         // DEV: Number Area has to be implemented
         long resno=0;
@@ -101,7 +102,7 @@ public class resbean extends DatabaseOperations implements res_i {
         
         
         resno=resno+1;
-        
+        log.debug("Function exit get NewResNumber:" + String.valueOf(resno));
         return resno;
     }
     
@@ -112,6 +113,7 @@ public class resbean extends DatabaseOperations implements res_i {
      *
      */
     public void createNewEmptyRecord() {
+        log.debug("Function entry createNewEmptyRecord");
         if(numberOfLastRecord>-1){
              numberOfLastRecord++;
          }
@@ -130,7 +132,7 @@ public class resbean extends DatabaseOperations implements res_i {
         setNewEmptyRecordCreadted();
         tabelIsInit=true; // Set Tabel iniated - List is connected 
         
-        
+        log.debug("Function exit createNewEmptyRecord");
     }
 
       /**
@@ -139,15 +141,17 @@ public class resbean extends DatabaseOperations implements res_i {
      * @return
      */
     public List<Res>SearchForReservations(String searchstring){
+        log.debug("Function entry List<Res>SearchForReservations");
        return allrecordlist;
    }
     
     public Res GetCurrentRes(){
-        
+        log.debug("Function entry GetCurrentRes");
         return allrecordlist.get(currentRecordNumber);
     }
    
      private void saveNewRecord(){
+         log.debug("Function entry saveNewRecord");
         if ( newEmptyRecordCreated==true){
             try{
             dbhook.getEntity().getTransaction().begin();
@@ -163,6 +167,7 @@ public class resbean extends DatabaseOperations implements res_i {
                   e.printStackTrace();   
             }
         }
+         log.debug("Function exit saveNewRecord");
         }
       
       
@@ -172,6 +177,7 @@ public class resbean extends DatabaseOperations implements res_i {
      * @return
      */
     public Res getDataRecord(long id){
+        log.debug("Function entry getDataRecord");
          int inl=-1;
         
         try {
@@ -187,6 +193,7 @@ public class resbean extends DatabaseOperations implements res_i {
             e.printStackTrace();
             
         }
+        log.debug("Function exit getDataRecord");
         return allrecordlist.get(currentRecordNumber);
        
         
@@ -240,6 +247,7 @@ public class resbean extends DatabaseOperations implements res_i {
     }
     
      private void RefreshAllRecords(){
+         log.debug("Function entry RefreshAllRecords ");
         try {
             allrecordlist.clear();
             query_AllDbRecords = dbhook.getEntity().createQuery("select t from Res t ORDER BY t.id");
@@ -248,7 +256,7 @@ public class resbean extends DatabaseOperations implements res_i {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+         log.debug("Function exit RefreshAllRecords");
     }
     
     
@@ -256,6 +264,7 @@ public class resbean extends DatabaseOperations implements res_i {
      *
      */
     public void saveRecord() {
+        log.debug("Function entry saveRecord");
           if (newEmptyRecordCreated==true){
           saveNewRecord();
           setNewEmptyRecordSaved();
@@ -263,11 +272,10 @@ public class resbean extends DatabaseOperations implements res_i {
           
       }
       if (newEmptyRecordCreated==false){
-          dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
-            dbhook.getEntity().getTransaction().commit();
+          saveOldRecord();
       }
       
+        log.debug("Function exit saveRecord");
       
     }
 
@@ -277,23 +285,27 @@ public class resbean extends DatabaseOperations implements res_i {
      *
      */
     public void removeCurrentRecord(){
+            log.debug("Function entry removeCurrentRecord");
            
            currentRecordNumber=allrecordlist.size()-1;
            dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().remove(allrecordlist.get(currentRecordNumber));
             dbhook.getEntity().getTransaction().commit();
            RefreshAllRecords();
+           log.debug("Function entry removeCurrentRecord");
+           
      }
    
-       private void saveOldRecord(){
-        if (newEmptyRecordCreated==true){
-          saveNewRecord();
-          setNewEmptyRecordSaved();
-          
-      }
-      if (newEmptyRecordCreated==false){
-          saveOldRecord();
-      }
+   private void saveOldRecord(){
+       log.debug("Function entry saveOldRecord ");
+         if(newEmptyRecordCreated=false){
+            dbhook.getEntity().getTransaction().begin();
+          dbhook.getEntity().find(Res.class,allrecordlist.get(currentRecordNumber).getId() );
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
+            
+            dbhook.getEntity().getTransaction().commit();
+        }
+         log.debug("Function exit saveOldRecord");
     } 
     
     /**

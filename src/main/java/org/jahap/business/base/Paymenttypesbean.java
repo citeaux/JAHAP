@@ -26,7 +26,6 @@ package org.jahap.business.base;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import static java.util.stream.Collectors.toList;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Payed;
 import org.jahap.entities.acc.Paymenttypes;
@@ -130,7 +129,7 @@ public class Paymenttypesbean extends DatabaseOperations  implements Paymenttype
         if(newEmptyRecordCreated==false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().find(Paymenttypes.class,allrecordlist.get(currentRecordNumber).getId() );
-            
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

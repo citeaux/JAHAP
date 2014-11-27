@@ -197,6 +197,9 @@ public class ListDialogAddressController implements Initializable{
      * Initializes the controller class. Call from a Address Dialog,
      * Sets selected Address ID in Oberver
      */
+    
+    
+    
     public void init(AddressSearchResult searchresults,AdressGuiFx zi){
         log.debug("Function entry init -address");
                 
@@ -297,12 +300,21 @@ public class ListDialogAddressController implements Initializable{
     Address ad=(Address) dataTable.getSelectionModel().getSelectedItem();
     id=ad.getId();
     if (isOverviewDialog==false){ 
-        
-        searchresult.setDbRecordId(id, "Address");
-        sk.setDbRecordId(id, "Address");
+        log.debug("no overview dialog");
+        try {
+            searchresult.setDbRecordId(id, "Address");
+        } catch (Exception e) {
+            log.debug(e.getCause());
+        }
+        try {
+            sk.setDbRecordId(id, "Address");
+        } catch (Exception e) {
+            log.debug(e.getCause());
+        }
     }
     
     if (event.getClickCount()==2){
+        log.debug("double click / dialog call");
         Stage stage = new Stage();
         String fxmlFile = "/fxml/AdressGuiFx.fxml";
        

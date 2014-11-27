@@ -170,7 +170,7 @@ public class addressbean extends DatabaseOperations implements address_i {
         if(newEmptyRecordCreated==false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().find(Address.class,allrecordlist.get(currentRecordNumber).getId() );
-            
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

@@ -257,8 +257,8 @@ public class currencybean extends DatabaseOperations implements currency_i  {
            log.debug("Function entry saveOldRecord");
         if(newEmptyRecordCreated=false){
             dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().refresh(dbhook.getEntity().find(Currency.class,allrecordlist.get(currentRecordNumber).getId() ));
-            
+      dbhook.getEntity().find(Currency.class,allrecordlist.get(currentRecordNumber).getId() );
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

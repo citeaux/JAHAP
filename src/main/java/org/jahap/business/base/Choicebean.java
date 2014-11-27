@@ -264,8 +264,8 @@ public class Choicebean extends DatabaseOperations implements choice_i {
            log.debug("Function entry saveOldRecord");
         if(newEmptyRecordCreated=false){
             dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().refresh(dbhook.getEntity().find(Choice.class,allrecordlist.get(currentRecordNumber).getId() ));
-            
+            dbhook.getEntity().find(Choice.class,allrecordlist.get(currentRecordNumber).getId() );
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }

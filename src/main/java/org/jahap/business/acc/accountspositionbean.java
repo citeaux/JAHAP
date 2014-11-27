@@ -387,8 +387,8 @@ public class accountspositionbean extends DatabaseOperations implements accounts
          log.debug("Function entry saveoldRecord");
         if(newEmptyRecordCreated=false){
             dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().refresh(dbhook.getEntity().find(AccountPosition.class,allrecordlist.get(currentRecordNumber).getId() ));
-            
+           dbhook.getEntity().find(AccountPosition.class,allrecordlist.get(currentRecordNumber).getId() );
+             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
             
             dbhook.getEntity().getTransaction().commit();
         }
