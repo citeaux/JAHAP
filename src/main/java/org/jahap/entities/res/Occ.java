@@ -25,8 +25,6 @@
 
 package org.jahap.entities.res;
 
-import org.jahap.entities.acc.Accounts;
-import org.jahap.entities.base.Address;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Basic;
@@ -42,8 +40,9 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
-import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
+import org.jahap.entities.acc.Accounts;
+import org.jahap.entities.base.Address;
 import org.jahap.entities.base.Rooms;
 
 /**
@@ -91,7 +90,13 @@ public class Occ implements Serializable, occ_ie {
     @JoinColumn(name="ACCOUNT", referencedColumnName = "ID")
     @ManyToOne
     private Accounts account;
-
+    @JoinColumn(name="HOUSEKEEPING", referencedColumnName = "ID")
+    @OneToOne
+    private Housekeepingblock housekeepingblock;
+    @JoinColumn(name="MAINTENANCE", referencedColumnName = "ID")
+    @OneToOne
+    private Maintenanceblock maintenanceblock;
+    
     public Accounts getAccount() {
         return account;
     }
@@ -184,8 +189,24 @@ public class Occ implements Serializable, occ_ie {
     public void setRes(Res res) {
         this.res = res;
     }
+        @Override
+	public Housekeepingblock getHousekeepingblock() {
+		return housekeepingblock;
+	}
+        @Override
+	public void setHousekeepingblock(Housekeepingblock housekeepingblock) {
+		this.housekeepingblock = housekeepingblock;
+	}
+        @Override
+	public Maintenanceblock getMaintenanceblock() {
+		return maintenanceblock;
+	}
+        @Override
+	public void setMaintenanceblock(Maintenanceblock maintenanceblock) {
+		this.maintenanceblock = maintenanceblock;
+	}
 
- 
+     
 
     @Override
     public int hashCode() {

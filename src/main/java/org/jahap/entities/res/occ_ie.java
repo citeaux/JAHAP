@@ -23,9 +23,9 @@
  */
 package org.jahap.entities.res;
 
+import java.util.Date;
 import org.jahap.entities.acc.Accounts;
 import org.jahap.entities.base.Address;
-import java.util.Date;
 import org.jahap.entities.base.Rooms;
 
 /**
@@ -49,6 +49,11 @@ public interface occ_ie {
     Rooms getRoom();
     
     Address getGuest();
+    
+    Housekeepingblock getHousekeepingblock();
+    
+    Maintenanceblock getMaintenanceblock();
+	    
 
     void setArrivaldate(Date arrivaldate);
 
@@ -59,6 +64,10 @@ public interface occ_ie {
     void setDeparturetime(Date departuretime);
 
     void setRes(Res res);
+    
+    void setHousekeepingblock(Housekeepingblock housekeepingblock);
+    
+    void setMaintenanceblock(Maintenanceblock maintenanceblock); 
 
     void setAccount(Accounts account);
     

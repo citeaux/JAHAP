@@ -198,7 +198,8 @@ public class ListDialogAddressController implements Initializable{
      * Sets selected Address ID in Oberver
      */
     
-    
+ 
+	
     
     public void init(AddressSearchResult searchresults,AdressGuiFx zi){
         log.debug("Function entry init -address");
@@ -312,6 +313,8 @@ public class ListDialogAddressController implements Initializable{
             log.debug(e.getCause());
         }
     }
+    
+    
     
     if (event.getClickCount()==2){
         log.debug("double click / dialog call");

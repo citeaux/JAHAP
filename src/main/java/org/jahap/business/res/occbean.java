@@ -27,21 +27,20 @@
 package org.jahap.business.res;
 
 
-import java.math.BigInteger;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import org.apache.log4j.Logger;
-
-import org.jahap.business.res.DatabaseOperations;
+import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Accounts;
 import org.jahap.entities.base.Address;
-import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.base.Rooms;
+import org.jahap.entities.res.Housekeepingblock;
+import org.jahap.entities.res.Maintenanceblock;
 import org.jahap.entities.res.Occ;
 import org.jahap.entities.res.Res;
-import org.jahap.entities.base.Rooms;
 
 /*
  * To change this template, choose Tools | Templates
@@ -826,5 +825,51 @@ public class occbean extends  DatabaseOperations implements occ_i{
                 allrecordlist.get(currentRecordNumber).setAccount(account);
            } 
     }
+
+	@Override
+	public Housekeepingblock getHousekeepingblock() {
+		if( tabelIsEmpty!=true) 
+              return allrecordlist.get(currentRecordNumber).getHousekeepingblock();
+        return null;
+	}
+
+	@Override
+	public Maintenanceblock getMaintenanceblock() {
+		if( tabelIsEmpty!=true) 
+              return allrecordlist.get(currentRecordNumber).getMaintenanceblock();
+        return null;
+	}
+
+	@Override
+	public void setHousekeepingblock(Housekeepingblock housekeepingblock) {
+		if(tabelIsInit==false || tabelIsEmpty==true){
+            if(newEmptyRecordCreated!=true){
+                createNewEmptyRecord();
+                allrecordlist.get(currentRecordNumber).setHousekeepingblock(housekeepingblock);
+            }
+           
+        }
+        
+        if(tabelIsInit==true || tabelIsEmpty==false){
+            allrecordlist.get(currentRecordNumber).setHousekeepingblock(housekeepingblock);
+        }
+		
+		
+	}
+
+	@Override
+	public void setMaintenanceblock(Maintenanceblock maintenanceblock) {
+		if(tabelIsInit==false || tabelIsEmpty==true){
+            if(newEmptyRecordCreated!=true){
+                createNewEmptyRecord();
+                allrecordlist.get(currentRecordNumber).setMaintenanceblock(maintenanceblock);
+            }
+           
+        }
+        
+        if(tabelIsInit==true || tabelIsEmpty==false){
+            allrecordlist.get(currentRecordNumber).setMaintenanceblock(maintenanceblock);
+        }
+	}
     
 }
