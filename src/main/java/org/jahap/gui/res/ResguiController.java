@@ -362,6 +362,8 @@ public class ResguiController implements Initializable, InterResSearchResultList
         
         log.debug("Function entry Save, CreateNewRecord=" + createNewRecord);
         
+	//*********************** If  res exits ******************
+	
         if(createNewRecord=false){
             log.debug("Function Save: oldrecord");
         Date SaveFromDate=occ.getArrivaldate();
@@ -407,7 +409,10 @@ public class ResguiController implements Initializable, InterResSearchResultList
              cscs.setRate(rate.getDataRecord(rateid));
         }
         
-        
+        // checks for overlaps 
+	
+	
+	
          List<String>overlaps=new ArrayList<String>();  
          overlaps=occ.CheckForOverlappingReservations();  
          if(overlaps==null){
@@ -460,6 +465,8 @@ public class ResguiController implements Initializable, InterResSearchResultList
             log.debug("Function Save:OldRecord exit");
         }
         
+	// ************************ If Res does not exits already ************************
+	
          if(createNewRecord=true){
              log.debug("Function Save: Newrecord");
         Date SaveFromDate=occ.getArrivaldate();

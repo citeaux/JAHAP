@@ -27,11 +27,11 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -47,13 +47,13 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Housekeepingblock.findById", query = "SELECT h FROM Housekeepingblock h WHERE h.id = :id"),
     @NamedQuery(name = "Housekeepingblock.findByName", query = "SELECT h FROM Housekeepingblock h WHERE h.name = :name"),
     @NamedQuery(name = "Housekeepingblock.findByComment", query = "SELECT h FROM Housekeepingblock h WHERE h.comment = :comment")})
-public class Housekeepingblock implements Serializable {
+public class Housekeepingblock implements Serializable, Housekeepingblock_ie {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
-    @Column(name = "id")
-    private Integer id;
+    @GeneratedValue
+    @Column(name = "ID")
+    private Long id;
     @Size(max = 100)
     @Column(name = "name")
     private String name;
@@ -64,30 +64,35 @@ public class Housekeepingblock implements Serializable {
     public Housekeepingblock() {
     }
 
-    public Housekeepingblock(Integer id) {
+    public Housekeepingblock(Long id) {
         this.id = id;
     }
 
-    public Integer getId() {
+	@Override
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
+	@Override
     public String getName() {
         return name;
     }
 
+	@Override
     public void setName(String name) {
         this.name = name;
     }
 
+	@Override
     public String getComment() {
         return comment;
     }
 
+	@Override
     public void setComment(String comment) {
         this.comment = comment;
     }

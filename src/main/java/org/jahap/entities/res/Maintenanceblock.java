@@ -27,11 +27,11 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -47,13 +47,13 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Maintenanceblock.findById", query = "SELECT m FROM Maintenanceblock m WHERE m.id = :id"),
     @NamedQuery(name = "Maintenanceblock.findByName", query = "SELECT m FROM Maintenanceblock m WHERE m.name = :name"),
     @NamedQuery(name = "Maintenanceblock.findByComment", query = "SELECT m FROM Maintenanceblock m WHERE m.comment = :comment")})
-public class Maintenanceblock implements Serializable {
+public class Maintenanceblock implements Serializable, Maintenanceblock_ie {
     private static final long serialVersionUID = 1L;
     @Id
     @Basic(optional = false)
-    @NotNull
-    @Column(name = "id")
-    private Integer id;
+    @GeneratedValue
+    @Column(name = "ID")
+    private Long id;
     @Size(max = 100)
     @Column(name = "name")
     private String name;
@@ -64,38 +64,43 @@ public class Maintenanceblock implements Serializable {
     public Maintenanceblock() {
     }
 
-    public Maintenanceblock(Integer id) {
+    public Maintenanceblock(Long id) {
         this.id = id;
     }
 
-    public Integer getId() {
+	@Override
+    public long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
+	@Override
     public String getName() {
         return name;
     }
 
+	@Override
     public void setName(String name) {
         this.name = name;
     }
 
+	@Override
     public String getComment() {
         return comment;
     }
 
+	@Override
     public void setComment(String comment) {
         this.comment = comment;
     }
 
     @Override
     public int hashCode() {
-        int hash = 0;
-        hash += (id != null ? id.hashCode() : 0);
+            int hash = 0;
+         hash += (id != null ? id.hashCode() : 0);
         return hash;
     }
 

@@ -32,6 +32,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.jahap.business.res.HousekeepingBean;
+import org.jahap.business.res.occbean;
 
 /**
  * FXML Controller class
@@ -63,7 +65,11 @@ public class housekeepinggui implements Initializable {
     private Button newRate;
     @FXML
     private Button saveRate;
-
+    
+    private HousekeepingBean hskbean;
+    private occbean occbean;
+    private boolean blockcreated=false;
+    
     /**
      * Initializes the controller class.
      */
