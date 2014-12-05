@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dictionary>
+  <item>
+    <key>
+      <SnippetKey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Category>Lamdas</Category>
+        <Language>JAVA</Language>
+        <Public>false</Public>
+        <Name>Stream Collection</Name>
+        <Group>My Snippets</Group>
+      </SnippetKey>
+    </key>
+    <value>
+      <SnippetValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Key>
+          <Category>Lamdas</Category>
+          <Language>JAVA</Language>
+          <Public>false</Public>
+          <Name>Stream Collection</Name>
+          <Group>My Snippets</Group>
+        </Key>
+        <Keywords />
+        <Imports />
+        <Code>allrecordlist.stream().map(Revaccounts-&gt;Revaccounts.getName()).collect(Collectors.toList());</Code>
+      </SnippetValue>
+    </value>
+  </item>
+  <item>
+    <key>
+      <SnippetKey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Category>JavaFx</Category>
+        <Language>JAVA</Language>
+        <Public>false</Public>
+        <Name>Table filling </Name>
+        <Group>My Snippets</Group>
+      </SnippetKey>
+    </key>
+    <value>
+      <SnippetValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Key>
+          <Category>JavaFx</Category>
+          <Language>JAVA</Language>
+          <Public>false</Public>
+          <Name>Table filling </Name>
+          <Group>My Snippets</Group>
+        </Key>
+        <Keywords />
+        <Imports />
+        <Code>TableColumn&lt;Vattype,String&gt; percentage = new TableColumn&lt;Vattype,String&gt;("%");
+      percentage.setCellValueFactory(new Callback&lt;CellDataFeatures&lt;Vattype, String&gt;, ObservableValue&lt;String&gt;&gt;() {
+     public ObservableValue&lt;String&gt; call(CellDataFeatures&lt;Vattype, String&gt; p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getPercentage());
+     }
+     
+             
+      });  
+      
+      vatTable.getColumns().add(percentage);
+      
+     
+      
+      
+     vatTable.setItems(cc);</Code>
+      </SnippetValue>
+    </value>
+  </item>
+  <item>
+    <key>
+      <SnippetKey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Category>JavaFx</Category>
+        <Language>JAVA</Language>
+        <Public>false</Public>
+        <Name>Observable List</Name>
+        <Group>My Snippets</Group>
+      </SnippetKey>
+    </key>
+    <value>
+      <SnippetValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Key>
+          <Category>JavaFx</Category>
+          <Language>JAVA</Language>
+          <Public>false</Public>
+          <Name>Observable List</Name>
+          <Group>My Snippets</Group>
+        </Key>
+        <Keywords />
+        <Imports />
+        <Code> ObservableList&lt;Vattype&gt; cc=FXCollections.observableList(vatTypeBean.SearchForVatType(null));</Code>
+      </SnippetValue>
+    </value>
+  </item>
+  <item>
+    <key>
+      <SnippetKey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Category>DateTime</Category>
+        <Language>JAVA</Language>
+        <Public>false</Public>
+        <Name>NewDateTime</Name>
+        <Group>My Snippets</Group>
+      </SnippetKey>
+    </key>
+    <value>
+      <SnippetValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Key>
+          <Category>DateTime</Category>
+          <Language>JAVA</Language>
+          <Public>false</Public>
+          <Name>NewDateTime</Name>
+          <Group>My Snippets</Group>
+        </Key>
+        <Keywords />
+        <Imports />
+        <Code>DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy");
+LocalDate today=LocalDate.now();
+today.plusDays(k).format(formatter).toString()
+today.format(formatter).toString()
+today.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()
+today.plusDays(31).atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()</Code>
+      </SnippetValue>
+    </value>
+  </item>
+  <item>
+    <key>
+      <SnippetKey xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Category>Loging</Category>
+        <Language>JAVA</Language>
+        <Public>false</Public>
+        <Name>Logger</Name>
+        <Group>My Snippets</Group>
+      </SnippetKey>
+    </key>
+    <value>
+      <SnippetValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Key>
+          <Category>Loging</Category>
+          <Language>JAVA</Language>
+          <Public>false</Public>
+          <Name>Logger</Name>
+          <Group>My Snippets</Group>
+        </Key>
+        <Keywords />
+        <Imports />
+        <Code>static Logger log = Logger.getLogger(Hotelbean.class.getName());</Code>
+      </SnippetValue>
+    </value>
+  </item>
+</dictionary>

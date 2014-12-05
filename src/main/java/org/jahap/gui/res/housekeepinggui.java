@@ -24,6 +24,8 @@
 package org.jahap.gui.res;
 
 import java.net.URL;
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -32,6 +34,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.jahap.business.base.roomsbean;
 import org.jahap.business.res.HousekeepingBean;
 import org.jahap.business.res.occbean;
 
@@ -65,10 +68,12 @@ public class housekeepinggui implements Initializable {
     private Button newRate;
     @FXML
     private Button saveRate;
-    
+    private roomsbean rbean;
     private HousekeepingBean hskbean;
     private occbean occbean;
     private boolean blockcreated=false;
+    private   Date FromDate;
+    private	    Date ToDate;
     
     /**
      * Initializes the controller class.
@@ -77,21 +82,48 @@ public class housekeepinggui implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+    
+    public void filldialog(){
+	    
+	    
+	    
+    }
+    
+    
+    public void init(long roomid){
+	    LocalDate today=LocalDate.now();
+	    hskbean = new HousekeepingBean();
+	    occbean= new occbean();
+	    rbean = new roomsbean();
+	    room.setText(rbean.getDataRecord(roomid).getCode());
+	    block_from.setValue(today);
+	    block_to.setValue(today.plusDays(1));
+	    
+    }
 
     @FXML
     private void goFirstRecord(ActionEvent event) {
+	    hskbean.jumpToFirstRecord();
+	    filldialog();
     }
 
     @FXML
     private void goOneRecordBackward(ActionEvent event) {
+	    hskbean.nextRecordBackward();
+	    filldialog();
     }
 
     @FXML
     private void goOneRecordForward(ActionEvent event) {
+	    hskbean.nextRecordForeward();
+	    filldialog();
     }
 
     @FXML
     private void goLastRecord(ActionEvent event) {
+	    hskbean.jumpToLastRecord();
+	    filldialog();
+	    
     }
 
     @FXML

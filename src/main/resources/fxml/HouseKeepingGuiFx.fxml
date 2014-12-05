@@ -74,10 +74,10 @@ THE SOFTWARE.
       <right>
         <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="TOP_RIGHT">
           <children>
-            <Button fx:id="search" mnemonicParsing="false" onAction="#searchAdress" prefHeight="36.0" prefWidth="100.0" text="Search" />
+            <Button fx:id="search" mnemonicParsing="false" onAction="#searchHskblock" prefHeight="36.0" prefWidth="100.0" text="Search" />
             <Button id="search" fx:id="printBlock" mnemonicParsing="false" onAction="#printBlock" prefHeight="36.0" prefWidth="100.0" text="Print" />
-                  <Button id="search" fx:id="newRate" mnemonicParsing="false" onAction="#newBlock" prefHeight="36.0" prefWidth="100.0" text="New" />
-                  <Button id="search" fx:id="saveRate" mnemonicParsing="false" onAction="#saveBlock" prefHeight="36.0" prefWidth="100.0" text="Save" />
+                  <Button id="search" fx:id="newBlock" mnemonicParsing="false" onAction="#newBlock" prefHeight="36.0" prefWidth="100.0" text="New" />
+                  <Button id="search" fx:id="saveBlock" mnemonicParsing="false" onAction="#saveBlock" prefHeight="36.0" prefWidth="100.0" text="Save" />
           </children>
         </VBox>
       </right>
