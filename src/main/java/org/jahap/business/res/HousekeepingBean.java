@@ -1,9 +1,13 @@
 package org.jahap.business.res;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Query;
 import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.base.Rooms;
 import org.jahap.entities.res.Housekeepingblock;
 
 
@@ -38,13 +42,19 @@ import org.jahap.entities.res.Housekeepingblock;
  */
 
 
-public class HousekeepingBean extends DatabaseOperations implements housekeeping_i {
+public class HousekeepingBean  implements housekeeping_i {
 
  JahapDatabaseConnector dbhook;
 	
 
 
-
+    int currentRecordNumber=0;
+     int numberOfLastRecord;
+     Query query_AllDbRecords;
+    boolean newEmptyRecordCreated=false;
+     boolean tabelIsEmpty=true; 
+     private occbean occbean;
+    boolean tabelIsInit=false; // Set Tabel iniated - List is connected
     private static List<Housekeepingblock> allrecordlist;
      static Logger log = Logger.getLogger(HousekeepingBean.class.getName());
 
@@ -56,7 +66,7 @@ public class HousekeepingBean extends DatabaseOperations implements housekeeping
          log.debug("Function entry HousekeepingBean");
         long testg;
         dbhook = JahapDatabaseConnector.getConnector();
-         
+         occbean = new occbean();
          
         try {
            
@@ -101,6 +111,25 @@ public class HousekeepingBean extends DatabaseOperations implements housekeeping
     }  
     
    
+    public void adjustHousekeepingBlock(LocalDate from, LocalDate to, long roomid, String comment,long blockid){
+	    
+    }
+    
+    
+    public void newHouskeepingBlock(LocalDate from, LocalDate to, long roomid, String comment){
+	    createNewEmptyRecord();
+	    this.setComment(comment);
+	    occbean.createNewEmptyRecord();
+	    occbean.setArrivaldate(from.atStartOfDay().atZone(ZoneId.systemDefault()).to);
+	    
+	    
+    }
+    
+    public void newHouskeepingBlock(LocalDate from, LocalDate to, Rooms room, String comment){
+	    
+    }
+    
+    
     
        public void createNewEmptyRecord() {
           
@@ -129,6 +158,16 @@ public class HousekeepingBean extends DatabaseOperations implements housekeeping
     }
      
      
+    
+    
+          void setNewEmptyRecordCreadted() {
+        this.newEmptyRecordCreated = true;
+        this.tabelIsEmpty=false;
+    }
+    
+    void setNewEmptyRecordSaved(){
+        this.newEmptyRecordCreated = false;
+    }
      
      
     

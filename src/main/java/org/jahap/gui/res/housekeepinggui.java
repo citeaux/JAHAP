@@ -25,6 +25,7 @@ package org.jahap.gui.res;
 
 import java.net.URL;
 import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.Date;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -71,7 +72,7 @@ public class housekeepinggui implements Initializable {
     private roomsbean rbean;
     private HousekeepingBean hskbean;
     private occbean occbean;
-    private boolean blockcreated=false;
+    private boolean newblockcreated=false;
     private   Date FromDate;
     private	    Date ToDate;
     
@@ -84,8 +85,10 @@ public class housekeepinggui implements Initializable {
     }    
     
     public void filldialog(){
-	    
-	    
+	  room.setText(occbean.getRoom().getCode());
+	    block_from.setValue(occbean.getArrivaldate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());
+	    block_to.setValue(occbean.getDeparturedate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate());  
+	    blockReason.setText(occbean.getHousekeepingblock().getComment());
 	    
     }
     
@@ -136,6 +139,10 @@ public class housekeepinggui implements Initializable {
 
     @FXML
     private void newBlock(ActionEvent event) {
+	    hskbean.createNewEmptyRecord();
+	    occbean.createNewEmptyRecord();
+		   
+	    
     }
 
     @FXML
