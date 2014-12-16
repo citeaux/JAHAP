@@ -23,6 +23,7 @@
  */
 package org.jahap.gui.res;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -32,13 +33,17 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.roomsbean;
@@ -168,10 +173,10 @@ public class ListHousekeepingController implements Initializable {
 
     @FXML
     private void setDirty(ActionEvent event) {
-         log.debug("Function entry blockRoom");
+         log.debug("Function entry setDirty");
          ObservableList<Rooms> rms=dataTable.getSelectionModel().getSelectedItems();
         rbean.setRoomsinListdirty(rms);
-        log.debug("Function exit blockroom");  
+        log.debug("Function exit setDirty");  
         
     }
 
@@ -185,8 +190,28 @@ public class ListHousekeepingController implements Initializable {
     }
 
     @FXML
-    private void blockRoom(ActionEvent event) {
-         
+    private void blockRoom(ActionEvent event) throws IOException {
+	    log.debug("Function entry blockRoom");
+	     Rooms rms=(Rooms) dataTable.getSelectionModel().getSelectedItem();
+	     Stage stage = new Stage();
+        String fxmlFile = "/fxml/HousekeepingGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        housekeepinggui controller;
+		controller= loader.<housekeepinggui>getController();
+       controller.init(rms.getId(),true);
+       
+        
+        stage.showAndWait();
+         log.debug("Function exit blockRoom");  
     }
 
     @FXML

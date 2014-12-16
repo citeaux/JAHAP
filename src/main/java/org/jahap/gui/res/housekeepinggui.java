@@ -35,6 +35,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.apache.log4j.Logger;
 import org.jahap.business.base.roomsbean;
 import org.jahap.business.res.HousekeepingBean;
 import org.jahap.business.res.occbean;
@@ -45,6 +46,8 @@ import org.jahap.business.res.occbean;
  * @author russ
  */
 public class housekeepinggui implements Initializable {
+	
+     static Logger log = Logger.getLogger(housekeepinggui.class.getName());	
     @FXML
     private Button firstRecord_fxbutton;
     @FXML
@@ -65,17 +68,17 @@ public class housekeepinggui implements Initializable {
     private Button search;
     @FXML
     private Button printBlock;
-    @FXML
-    private Button newRate;
-    @FXML
-    private Button saveRate;
     private roomsbean rbean;
     private HousekeepingBean hskbean;
     private occbean occbean;
     private boolean newblockcreated=false;
     private   Date FromDate;
     private	    Date ToDate;
-    
+   private long roomid;
+	@FXML
+	private Button newBlock;
+	@FXML
+	private Button saveBlock;
     /**
      * Initializes the controller class.
      */
@@ -93,14 +96,19 @@ public class housekeepinggui implements Initializable {
     }
     
     
-    public void init(long roomid){
+    public void init(long roomid,boolean createNewBlock){
 	    LocalDate today=LocalDate.now();
 	    hskbean = new HousekeepingBean();
 	    occbean= new occbean();
 	    rbean = new roomsbean();
+	    this.roomid=roomid;
 	    room.setText(rbean.getDataRecord(roomid).getCode());
 	    block_from.setValue(today);
 	    block_to.setValue(today.plusDays(1));
+	    if(createNewBlock==true){
+		    newblockcreated=true;
+		    
+	    }
 	    
     }
 
@@ -129,9 +137,6 @@ public class housekeepinggui implements Initializable {
 	    
     }
 
-    @FXML
-    private void searchAdress(ActionEvent event) {
-    }
 
     @FXML
     private void printBlock(ActionEvent event) {
@@ -139,14 +144,32 @@ public class housekeepinggui implements Initializable {
 
     @FXML
     private void newBlock(ActionEvent event) {
-	    hskbean.createNewEmptyRecord();
-	    occbean.createNewEmptyRecord();
-		   
-	    
+	     LocalDate today=LocalDate.now();
+	    block_from.setValue(today);
+	    block_to.setValue(today.plusDays(1));
+	    room.setText(rbean.getDataRecord(roomid).getCode());	   
+	     blockReason.setText("");
+	     newblockcreated=true;
     }
 
     @FXML
     private void saveBlock(ActionEvent event) {
+	    String message;
+	    log.debug("Function entry saveBlock");
+	    if(newblockcreated==false){
+		    log.debug("newblockcreated false");
+		    hskbean.adjustHousekeepingBlock(LocalDate.MIN, LocalDate.MIN, roomid, null, roomid);
+	    }else if(newblockcreated==true){
+		    log.debug("newblockcreated true");
+		    message=hskbean.newHouskeepingBlock(this.block_from.getValue(), this.block_to.getValue(), 
+			    roomid,this.blockReason.getText());
+	    }
+	    
+	    log.debug("Function exit saveBlock ");
     }
+
+	@FXML
+	private void searchHskblock(ActionEvent event) {
+	}
     
 }

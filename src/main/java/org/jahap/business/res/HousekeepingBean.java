@@ -7,10 +7,12 @@ import java.util.Date;
 import java.util.List;
 import javax.persistence.Query;
 import org.apache.log4j.Logger;
+import org.jahap.business.base.Hotelbean;
 import org.jahap.business.base.roomsbean;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Rooms;
 import org.jahap.entities.res.Housekeepingblock;
+import org.jahap.entities.res.Occ;
 
 
 /*
@@ -70,7 +72,7 @@ public class HousekeepingBean  implements housekeeping_i {
         long testg;
         dbhook = JahapDatabaseConnector.getConnector();
          occbean = new occbean();
-         
+         rbean=new roomsbean();
         try {
            
             query_AllDbRecords = dbhook.getEntity().createQuery("select t from Housekeepingblock t ORDER BY t.id");
@@ -103,6 +105,12 @@ public class HousekeepingBean  implements housekeeping_i {
         currentRecordNumber=numberOfLastRecord;
     }
 
+     public List<Occ>getHousekeepingblocksForThisRoom(long roomid){
+	     
+	     
+	     return null;     
+     }
+     
     public List<Housekeepingblock>SearchForHousekeepingBlock(String searchstring){
         
          log.debug("Function entry SearchForHousekeepingBlock");
@@ -122,20 +130,32 @@ public class HousekeepingBean  implements housekeeping_i {
     
     
     public String newHouskeepingBlock(LocalDate from, LocalDate to, long roomid, String comment){
+	    log.debug("Function entry newHouskeepingBlock");
+	    Hotelbean hotelbean=new Hotelbean();
 	    createNewEmptyRecord();
 	    this.setComment(comment);
 	    occbean.createNewEmptyRecord();
+	    log.trace(from);
+	    log.trace(to);
+	    
 	    occbean.setArrivaldate(Date.from(from.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()));
+	    log.trace("set Departuredate");
 	    occbean.setDeparturedate(Date.from(to.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()));
+	    log.trace("setRoom");
 	    occbean.setRoom(rbean.getDataRecord(roomid));
+	    log.trace("init overlaplist");
+	    occbean.setGuest(hotelbean.getHotelAdress());  // the guestadress in the occtable must not be null
 	    List<String>overlaps=new ArrayList<String>();
+	    log.trace("get overlap");
 	    overlaps=occbean.CheckForOverlappingReservations();
 	    if(overlaps==null){
+		    log.debug("overlaps== null");
 		    this.saveRecord();
 		    occbean.setHousekeepingblock(this.getLastPosition());
 		    overlaps=occbean.saveRecord(true);
 		    
 	    }else if(overlaps!=null){
+		    log.debug("overlaps!=null");
 		    String Test=overlaps.get(1);
 		    if(overlaps.size()>=1){
                             
@@ -144,7 +164,8 @@ public class HousekeepingBean  implements housekeeping_i {
                                Test=Test+ ", " +overlaps.get(i);
                             }
 		    }
-		    return "Room blockt bei reservation: " + Test; 
+		    log.debug("Room blockt at reservation: " + Test);
+		    return "Room blockt at reservation: " + Test; 
 	    }
 	    
 	    

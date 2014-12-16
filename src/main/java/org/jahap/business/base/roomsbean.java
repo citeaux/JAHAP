@@ -232,6 +232,7 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
    }
     
     public Rooms  getDataRecord(Long id){
+	    log.debug("Function entry getDataRecord");
         int inl=-1;
         
         try {
@@ -245,6 +246,7 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
         } catch (Exception e) {
             e.printStackTrace();  
         }
+	    log.debug("Function exit getDataRecord");
         return allrecordlist.get(currentRecordNumber);
    }
    

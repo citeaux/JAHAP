@@ -160,11 +160,11 @@ public class occbean extends  DatabaseOperations implements occ_i{
         
         log.debug("Function entry createNewEmptyRecord");
         if(tabelIsEmpty==true){
+		log.trace(tabelIsEmpty==true);
             allrecordlist = new ArrayList<Occ>();
             //numberOfLastRecord++;
-        }
-        
-        if(tabelIsEmpty==false){
+        }else if(tabelIsEmpty==false){
+            log.trace("tabelIsEmpty==false");
             RefreshAllRecords();
             numberOfLastRecord++;
         }
@@ -416,6 +416,7 @@ public class occbean extends  DatabaseOperations implements occ_i{
        
         log.debug("Function entry saveRecord");
          if (newEmptyRecordCreated==false){
+		 log.trace("newEmptyRecordCreated==false");
           saveOldRecord();    // Validation for old Record is needed
       }
         
@@ -423,23 +424,27 @@ public class occbean extends  DatabaseOperations implements occ_i{
         System.out.println(" ->:" + String.valueOf(this.newEmptyRecordCreated));
         
          if (newEmptyRecordCreated==true){
+		 log.trace("newEmptyRecordCreated==true");
             if(!tabelIsEmpty){    // Validate Date only if there are Records
                   hh=saveNewRecord();
                   
                  try {
                     if(hh!=null){
                          if (!hh.isEmpty()) {
-                            if (hh.size() == 1) {                            
+                            if (hh.size() == 1) {   
+				    log.trace(hh.size());
 
                                 setNewEmptyRecordSaved();
                             }
-                            if (hh.size() > 2) {                            
+                            if (hh.size() > 2) {      
+				     log.trace(hh.size());
                                 RefreshAllRecords(); // Reload Data from Database
                                 return hh;
 
                             }
                         }
                         if (hh.isEmpty()) {
+				 log.trace(hh.size());
                             setNewEmptyRecordSaved();
                             return null;
                         }
@@ -625,6 +630,8 @@ public class occbean extends  DatabaseOperations implements occ_i{
      * @param room
      */
     public void setRoom(Rooms room) {
+	    log.debug("Function entry setRoom");
+		    
         if(tabelIsInit==false || tabelIsEmpty==true){
             if(newEmptyRecordCreated!=true){
                 createNewEmptyRecord();
@@ -634,6 +641,7 @@ public class occbean extends  DatabaseOperations implements occ_i{
         if(tabelIsInit==true || tabelIsEmpty==false){
             allrecordlist.get(currentRecordNumber).setRoom(room);
     }
+      log.debug("Function exit setRoom");
     }
    
     /**
@@ -643,6 +651,7 @@ public class occbean extends  DatabaseOperations implements occ_i{
 
     @Override 
     public void setArrivaldate(Date arrivaldate){
+	    log.debug("Function entry setArrivaldate");
          if(tabelIsInit==false || tabelIsEmpty==true){
             if(newEmptyRecordCreated!=true){
                     createNewEmptyRecord();
@@ -654,12 +663,14 @@ public class occbean extends  DatabaseOperations implements occ_i{
             allrecordlist.get(currentRecordNumber).setArrivaldate(arrivaldate);
             setArrivaltime("12:01");
          }  
+	    log.debug("Function entry setArrivaldate");
     }
     /**
      *
      * @param arrivaldate dd.MM.yyyy
      */
     public void setArrivaldate(String arrivaldate) {
+	    log.debug("Function entry setArrivaldate");
             Date dt = new Date();
             SimpleDateFormat df = new SimpleDateFormat( "dd.MM.yyyy" );
         try {
@@ -678,7 +689,7 @@ public class occbean extends  DatabaseOperations implements occ_i{
                     allrecordlist.get(currentRecordNumber).setArrivaldate(dt);
                         setArrivaltime("12:01");
              }       
-                    
+          log.debug("Function exit setArrivaldate");          
     }
 
     /**
@@ -687,6 +698,7 @@ public class occbean extends  DatabaseOperations implements occ_i{
      */
     
     @Override public void setDeparturedate(Date departuredate){
+	    log.debug("Function entry setDeparturedate");
           if (tabelIsInit==false || tabelIsEmpty==true){
                 if(newEmptyRecordCreated!=true){
                     createNewEmptyRecord();
@@ -698,13 +710,14 @@ public class occbean extends  DatabaseOperations implements occ_i{
                  allrecordlist.get(currentRecordNumber).setDeparturedate(departuredate);
             setDeparturetime("12:00");
             }
-    
+     log.debug("Function exit setDeparturedate");
     }
     /**
      *
      * @param departuredate dd.MM.yyyy
      */
     public void setDeparturedate(String departuredate) {
+	    log.debug("Function entry setDeparturedate");
          Date dt = new Date();
             SimpleDateFormat df = new SimpleDateFormat( "dd.MM.yyyy" );
         try {
@@ -724,15 +737,18 @@ public class occbean extends  DatabaseOperations implements occ_i{
          if(tabelIsInit==true || tabelIsEmpty==false){
              allrecordlist.get(currentRecordNumber).setDeparturedate(dt);
                     setDeparturetime("12:00");
-         }
-         
+         log.debug("Function exit setDeparturedate");
     }
-
+    }
     /**
      *
      * @param arrivaltime
      */
-    @Override public void setArrivaltime(Date arrivaltime) {}
+    @Override 
+    public void setArrivaltime(Date arrivaltime){
+	    
+    }
+    
     /**
      *
      * @param arrivaltime
