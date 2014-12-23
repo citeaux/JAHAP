@@ -133,10 +133,34 @@
                 </compilerArguments>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>javancss-maven-plugin</artifactId>
+                <version>2.1</version>
+            </plugin>
         </plugins>
     </build>
-    
-    
+    <reporting>
+    <plugins>
+     <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>javancss-maven-plugin</artifactId>
+                <version>2.1</version>
+                <configuration>
+          
+          <excludes>
+            <exclude>**/revaccountsbean.java</exclude>
+            <exclude>**/Catbean.java</exclude> 
+            <exclude>**/Locationbean.java</exclude>
+            <exclude>**/vattypesbean.java</exclude>
+            <exclude>**/occbean.java</exclude>
+            <exclude>**/PaymentguiController.java</exclude>
+          </excludes>
+        </configuration>
+                
+            </plugin>
+        </plugins>
+    </reporting>
     <repositories>
         <repository>
              <id>sonatype-snapshots</id>

@@ -566,3 +566,15 @@
 2014-12-16 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
 2014-12-16 DEBUG [JavaFX Application Thread] (occbean.java:64) - Function entry Contructor
 2014-12-16 DEBUG [JavaFX Application Thread] (occbean.java:91) - Function exit Contructor
+2014-12-23 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:86) - Function entry initTable
+2014-12-23 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:165) - Function exit initTable
+2014-12-23 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:194) - Function entry blockRoom
+2014-12-23 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:71) - Function entry HousekeepingBean
+2014-12-23 DEBUG [JavaFX Application Thread] (occbean.java:64) - Function entry Contructor
+2014-12-23 DEBUG [JavaFX Application Thread] (occbean.java:91) - Function exit Contructor
+2014-12-23 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:97) - Function entry billbean
+2014-12-23 DEBUG [JavaFX Application Thread] (occbean.java:64) - Function entry Contructor
+2014-12-23 DEBUG [JavaFX Application Thread] (occbean.java:91) - Function exit Contructor
+2014-12-23 DEBUG [JavaFX Application Thread] (roomsbean.java:235) - Function entry getDataRecord
+2014-12-23 DEBUG [JavaFX Application Thread] (roomsbean.java:249) - Function exit getDataRecord
+2014-12-23 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:214) - Function exit blockRoom

@@ -121,6 +121,7 @@ public class HousekeepingBean  implements housekeeping_i {
         return allrecordlist;
     }  
     
+    
    
     public void adjustHousekeepingBlock(LocalDate from, LocalDate to, long roomid, String comment,long blockid){
 	    
