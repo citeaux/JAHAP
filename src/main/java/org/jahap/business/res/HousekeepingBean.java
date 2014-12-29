@@ -13,6 +13,7 @@ import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Rooms;
 import org.jahap.entities.res.Housekeepingblock;
 import org.jahap.entities.res.Occ;
+import org.jahap.entities.views.Housekeeping;
 
 
 /*
@@ -97,6 +98,27 @@ public class HousekeepingBean  implements housekeeping_i {
         log.debug("Function entry billbean");    
         
     }
+    
+    public List<Housekeeping>getHousekeepingOverview(){
+	   Query queryView;
+	   List<Housekeeping>allrooms=null;
+	   int lines=0;
+	   try {
+           
+            queryView = dbhook.getEntity().createQuery("select t from Housekeeping t ORDER BY t.code");
+            allrooms= queryView.getResultList();
+	    lines=allrooms.size()-1;
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+	   if(lines<0){
+		   return null;
+	   }    
+        }
+	return allrooms;  
+    }
+    
    
     public void jumpToFirstRecord(){
         currentRecordNumber=0;

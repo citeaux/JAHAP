@@ -46,8 +46,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.apache.log4j.Logger;
-import org.jahap.business.base.roomsbean;
+import org.jahap.business.res.HousekeepingBean;
 import org.jahap.entities.base.Rooms;
+import org.jahap.entities.views.Housekeeping;
 
 /**
  * FXML Controller class
@@ -70,8 +71,9 @@ public class ListHousekeepingController implements Initializable {
     private Button Ok;
     @FXML
     private Button Cancel;
-    private  List<Rooms> rList;
-    private roomsbean rbean;
+    private  List<Housekeeping> rList;
+   
+    private HousekeepingBean rbean;
     
     /**
      * Initializes the controller class.
@@ -84,16 +86,16 @@ public class ListHousekeepingController implements Initializable {
     
     void initTable(){
         log.debug("Function entry initTable");
-        rbean= new roomsbean();
-        rList=rbean.SearchForRooms(null);
+        rbean= new HousekeepingBean();
+        rList= rbean.getHousekeepingOverview();
         
-         ObservableList<Rooms> data= FXCollections.observableList(rList);
+         ObservableList<Housekeeping> data= FXCollections.observableList(rList);
         
         
         // -----------------  id
-        TableColumn<Rooms,String> IdCol = new TableColumn<Rooms,String>("Id");
-      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+        TableColumn<Housekeeping,String> IdCol = new TableColumn<Housekeeping,String>("Id");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Housekeeping, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Housekeeping, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getId());
      }
      
@@ -105,9 +107,9 @@ public class ListHousekeepingController implements Initializable {
         
        //----------------------------------- roomcode ----------------------- 
     
-        TableColumn<Rooms,String> roomcode = new TableColumn<Rooms,String>("Room");
-     roomcode.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+        TableColumn<Housekeeping,String> roomcode = new TableColumn<Housekeeping,String>("Room");
+     roomcode.setCellValueFactory(new Callback<CellDataFeatures<Housekeeping, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Housekeeping, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getCode());
      }
      
@@ -124,10 +126,10 @@ public class ListHousekeepingController implements Initializable {
       
       //------------------------------------- roomlocation --------------------------------
       
-       TableColumn<Rooms,String> roomlocation = new TableColumn<Rooms,String>("Floor");
-     roomlocation.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getLocation().getFloor());
+       TableColumn<Housekeeping,String> roomlocation = new TableColumn<Housekeeping,String>("Floor");
+     roomlocation.setCellValueFactory(new Callback<CellDataFeatures<Housekeeping, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Housekeeping, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getFloor());
      }
      
              
@@ -137,10 +139,10 @@ public class ListHousekeepingController implements Initializable {
        
         //------------------------------------- roomcat --------------------------------
       
-       TableColumn<Rooms,String> roomcat = new TableColumn<Rooms,String>("Category");
-      roomcat.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getCategory().getCatName());
+       TableColumn<Housekeeping,String> roomcat = new TableColumn<Housekeeping,String>("Category");
+      roomcat.setCellValueFactory(new Callback<CellDataFeatures<Housekeeping, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Housekeeping, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getCatName());
      }
      
              
@@ -149,15 +151,26 @@ public class ListHousekeepingController implements Initializable {
        
        //------------------------------------- hsk state --------------------------------
       
-       TableColumn<Rooms,String> cleaningstate = new TableColumn<Rooms,String>("Cleaning state");
-      cleaningstate.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().isClean());
+       TableColumn<Housekeeping,String> cleaningstate = new TableColumn<Housekeeping,String>("Cleaning state");
+      cleaningstate.setCellValueFactory(new Callback<CellDataFeatures<Housekeeping, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Housekeeping, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getClean());
      }
      
              
       });
-       dataTable.getColumns().add( cleaningstate);
+      
+      //------------------------------------- hsk state --------------------------------
+      
+       TableColumn<Housekeeping,String> blocks = new TableColumn<Housekeeping,String>("Blocks");
+      cleaningstate.setCellValueFactory(new Callback<CellDataFeatures<Housekeeping, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Housekeeping, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getBlocks());
+     }
+     
+             
+      });
+       dataTable.getColumns().add( blocks);
        
        dataTable.getSelectionModel().setSelectionMode(SelectionMode.MULTIPLE);
         
@@ -175,7 +188,7 @@ public class ListHousekeepingController implements Initializable {
     private void setDirty(ActionEvent event) {
          log.debug("Function entry setDirty");
          ObservableList<Rooms> rms=dataTable.getSelectionModel().getSelectedItems();
-        rbean.setRoomsinListdirty(rms);
+       // rbean.setRoomsinListdirty(rms);
         log.debug("Function exit setDirty");  
         
     }
@@ -184,7 +197,7 @@ public class ListHousekeepingController implements Initializable {
     private void setClean(ActionEvent event) {
         log.debug("Function entry setClean");
         ObservableList<Rooms> rms=dataTable.getSelectionModel().getSelectedItems();
-        rbean.setRoomsinListclean(rms);
+        // rbean.setRoomsinListclean(rms);
         
         log.debug("Function exit setclean");
     }

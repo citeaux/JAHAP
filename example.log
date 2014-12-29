@@ -578,3 +578,72 @@
 2014-12-23 DEBUG [JavaFX Application Thread] (roomsbean.java:235) - Function entry getDataRecord
 2014-12-23 DEBUG [JavaFX Application Thread] (roomsbean.java:249) - Function exit getDataRecord
 2014-12-23 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:214) - Function exit blockRoom
+2014-12-29 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:86) - Function entry initTable
+2014-12-29 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:165) - Function exit initTable
+2014-12-29 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:194) - Function entry blockRoom
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:71) - Function entry HousekeepingBean
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:64) - Function entry Contructor
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:91) - Function exit Contructor
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:97) - Function entry billbean
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:64) - Function entry Contructor
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:91) - Function exit Contructor
+2014-12-29 DEBUG [JavaFX Application Thread] (roomsbean.java:235) - Function entry getDataRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (roomsbean.java:249) - Function exit getDataRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (housekeepinggui.java:158) - Function entry saveBlock
+2014-12-29 DEBUG [JavaFX Application Thread] (housekeepinggui.java:163) - newblockcreated true
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:134) - Function entry newHouskeepingBlock
+2014-12-29 DEBUG [JavaFX Application Thread] (Hotelbean.java:59) - Function entry countrybean
+2014-12-29 DEBUG [JavaFX Application Thread] (Hotelbean.java:85) - Function entry billbean
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:210) - Function entry createNewEmptyRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:288) - Function entry RefreshAllRecords
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:298) - Function exit RefreshAllRecords
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:231) - Function exit createNewEmptyRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:161) - Function entry createNewEmptyRecord
+2014-12-29 TRACE [JavaFX Application Thread] (occbean.java:167) - tabelIsEmpty==false
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:95) - Function entry RefreshAllRecords
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:105) - Function exit RefreshAllRecords
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:188) - Function exit createNewEmptyRecord
+2014-12-29 TRACE [JavaFX Application Thread] (HousekeepingBean.java:139) - 2014-12-29
+2014-12-29 TRACE [JavaFX Application Thread] (HousekeepingBean.java:140) - 2014-12-30
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:654) - Function entry setArrivaldate
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:666) - Function entry setArrivaldate
+2014-12-29 TRACE [JavaFX Application Thread] (HousekeepingBean.java:143) - set Departuredate
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:701) - Function entry setDeparturedate
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:713) - Function exit setDeparturedate
+2014-12-29 TRACE [JavaFX Application Thread] (HousekeepingBean.java:145) - setRoom
+2014-12-29 DEBUG [JavaFX Application Thread] (roomsbean.java:235) - Function entry getDataRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (roomsbean.java:249) - Function exit getDataRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:633) - Function entry setRoom
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:644) - Function exit setRoom
+2014-12-29 TRACE [JavaFX Application Thread] (HousekeepingBean.java:147) - init overlaplist
+2014-12-29 TRACE [JavaFX Application Thread] (HousekeepingBean.java:150) - get overlap
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:263) - Function entry checkForOverlappingReservations
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:206) - Function entry validateRoom
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:252) - Function exit validateRoom
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:300) - Function exit checkForOverlappingReservations
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:153) - overlaps== null
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:272) - Function entry saveRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:337) - Function entry saveNewRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:288) - Function entry RefreshAllRecords
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:298) - Function exit RefreshAllRecords
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:369) - Function entry saveOldRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:378) - Function exit saveOldRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:283) - Function exit saveRecord 
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:326) - Function entry getLastPosition(
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:328) - Function exit getLastPosition
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:417) - Function entry saveRecord
+2014-12-29 TRACE [JavaFX Application Thread] (occbean.java:427) - newEmptyRecordCreated==true
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:308) - Function entry saveNewRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:206) - Function entry validateRoom
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:252) - Function exit validateRoom
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:467) - Function exit saveRecord
+2014-12-29 DEBUG [JavaFX Application Thread] (housekeepinggui.java:168) - Function exit saveBlock 
+2014-12-29 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:214) - Function exit blockRoom
+2014-12-29 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:86) - Function entry initTable
+2014-12-29 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:165) - Function exit initTable
+2014-12-29 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:88) - Function entry initTable
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:72) - Function entry HousekeepingBean
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:64) - Function entry Contructor
+2014-12-29 DEBUG [JavaFX Application Thread] (occbean.java:91) - Function exit Contructor
+2014-12-29 DEBUG [JavaFX Application Thread] (HousekeepingBean.java:98) - Function entry billbean
+2014-12-29 DEBUG [JavaFX Application Thread] (ListHousekeepingController.java:178) - Function exit initTable
