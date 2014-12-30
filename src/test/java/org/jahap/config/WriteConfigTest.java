@@ -25,10 +25,11 @@ package org.jahap.config;
 
 import org.junit.After;
 import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -64,7 +65,7 @@ public class WriteConfigTest {
         String configFile = "";
         WriteConfig instance = new WriteConfig();
         instance.setFile(configFile);
-        // TODO review the generated test code and remove the default call to fail.
+       
         fail("The test case is a prototype.");
     }
 
@@ -78,7 +79,7 @@ public class WriteConfigTest {
         String expResult = "";
         String result = instance.getPersistenceUnit();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+       
         fail("The test case is a prototype.");
     }
 
@@ -91,7 +92,7 @@ public class WriteConfigTest {
         String PersistenceUnit = "";
         WriteConfig instance = new WriteConfig();
         instance.setPersistenceUnit(PersistenceUnit);
-        // TODO review the generated test code and remove the default call to fail.
+       
         fail("The test case is a prototype.");
     }
 
@@ -108,7 +109,7 @@ public class WriteConfigTest {
         instance.saveConfig();
         
         instance.saveConfig();
-        // TODO review the generated test code and remove the default call to fail.
+        
        // fail("The test case is a prototype.");
     }
     

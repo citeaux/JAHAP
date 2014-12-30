@@ -41,16 +41,11 @@ import javafx.scene.control.DatePicker;
 import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.Border;
-import javafx.scene.shape.Rectangle;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.roomsbean;
 import org.jahap.business.res.occbean;
-import org.jahap.business.res.resbean;
-import org.jahap.entities.res.Occ;
-import org.jahap.entities.res.Res;
 import org.jahap.entities.base.Rooms;
+import org.jahap.entities.res.Occ;
 
 /**
  * FXML Controller class
@@ -160,7 +155,8 @@ public class occplan implements Initializable {
     private String xPosEndByXHeader;
     private String yPosEndByYHeader;
     private int yPosEndByYHeaderPercentOfbox=50;
-
+    private String colorcode;
+    private String tooltiptext;
         /**
          *
          * @param xPosStartByXHeader
@@ -168,7 +164,7 @@ public class occplan implements Initializable {
          * @param yPosStartByYHeader
          * @param text
          */
-        public occbox(String xPosStartByXHeader,String xPosEndByXHeader, String yPosStartByYHeader,String text ){
+        public occbox(String xPosStartByXHeader,String xPosEndByXHeader, String yPosStartByYHeader,String text,String colorcode ){
         this.xPosStartByXHeader=xPosStartByXHeader;
         this.xPosEndByXHeader=xPosEndByXHeader;
         this.yPosStartByYHeader=yPosStartByYHeader;

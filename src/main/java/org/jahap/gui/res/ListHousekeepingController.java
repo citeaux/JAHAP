@@ -46,8 +46,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.apache.log4j.Logger;
+import org.jahap.business.base.roomsbean;
 import org.jahap.business.res.HousekeepingBean;
-import org.jahap.entities.base.Rooms;
 import org.jahap.entities.views.Housekeeping;
 
 /**
@@ -159,11 +159,12 @@ public class ListHousekeepingController implements Initializable {
      
              
       });
+       dataTable.getColumns().add(cleaningstate);
       
-      //------------------------------------- hsk state --------------------------------
+      //------------------------------------- hsk blocks --------------------------------
       
        TableColumn<Housekeeping,String> blocks = new TableColumn<Housekeeping,String>("Blocks");
-      cleaningstate.setCellValueFactory(new Callback<CellDataFeatures<Housekeeping, String>, ObservableValue<String>>() {
+      blocks.setCellValueFactory(new Callback<CellDataFeatures<Housekeeping, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Housekeeping, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getBlocks());
      }
@@ -187,8 +188,9 @@ public class ListHousekeepingController implements Initializable {
     @FXML
     private void setDirty(ActionEvent event) {
          log.debug("Function entry setDirty");
-         ObservableList<Rooms> rms=dataTable.getSelectionModel().getSelectedItems();
-       // rbean.setRoomsinListdirty(rms);
+         ObservableList<Housekeeping> rms=dataTable.getSelectionModel().getSelectedItems();
+	  roomsbean jj=new roomsbean();
+       jj.setRoomsinListdirtyHSK(rms);
         log.debug("Function exit setDirty");  
         
     }
@@ -196,8 +198,9 @@ public class ListHousekeepingController implements Initializable {
     @FXML
     private void setClean(ActionEvent event) {
         log.debug("Function entry setClean");
-        ObservableList<Rooms> rms=dataTable.getSelectionModel().getSelectedItems();
-        // rbean.setRoomsinListclean(rms);
+        ObservableList<Housekeeping> rms=dataTable.getSelectionModel().getSelectedItems();
+        roomsbean jj=new roomsbean();
+	jj.setRoomsinListcleanHSK(rms);
         
         log.debug("Function exit setclean");
     }
@@ -205,7 +208,7 @@ public class ListHousekeepingController implements Initializable {
     @FXML
     private void blockRoom(ActionEvent event) throws IOException {
 	    log.debug("Function entry blockRoom");
-	     Rooms rms=(Rooms) dataTable.getSelectionModel().getSelectedItem();
+	     Housekeeping rms=(Housekeeping) dataTable.getSelectionModel().getSelectedItem();
 	     Stage stage = new Stage();
         String fxmlFile = "/fxml/HousekeepingGuiFx.fxml";
        

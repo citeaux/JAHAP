@@ -32,6 +32,8 @@ import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Cat;
 import org.jahap.entities.base.Location;
 import org.jahap.entities.base.Rooms;
+import org.jahap.entities.views.Housekeeping;
+import org.jahap.entities.views.Maintenance;
 
 /**
  *
@@ -136,9 +138,26 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
        }  
        log.debug("Function exit setRoomsinListclean");
      }
+    
+   public void setRoomsinListcleanHSK(List<Housekeeping>rooms){
+       log.debug("Function entry setRoomsinListclean ");
+       int i,p;
+       for(i=0;i<=allrecordlist.size()-1;i++){
+           for(p=0;p<=rooms.size()-1;p++){
+           
+           if(allrecordlist.get(i).getId()==rooms.get(p).getId()){
+                      allrecordlist.get(i).setClean(true);
+                      currentRecordNumber=i;
+                      saveRecord();
+                }
+           }
+       }  
+       log.debug("Function exit setRoomsinListclean");
+     }
    
    
-    public void setRoomsinListdirty(List<Rooms>rooms){
+   
+    public void setRoomsinListdirtyHSK(List<Housekeeping>rooms){
         log.debug("Function entry setRoomsinListdirty");
        int i,p;
        for(i=0;i<=allrecordlist.size()-1;i++){
@@ -154,6 +173,21 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
         log.debug("Function exit setRoomsinListdirty");
      }
     
+    public void setRoomsinListdirty(List<Rooms>rooms){
+        log.debug("Function entry setRoomsinListdirty");
+       int i,p;
+       for(i=0;i<=allrecordlist.size()-1;i++){
+           for(p=0;p<=rooms.size()-1;p++){
+           
+           if(allrecordlist.get(i).getId()==rooms.get(p).getId()){
+                      allrecordlist.get(i).setClean(false);
+                      currentRecordNumber=i;
+                      saveRecord();
+                }
+           }
+       }   
+        log.debug("Function exit setRoomsinListdirty");
+     }
     
     
     
@@ -174,7 +208,39 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
      }
    
    
+     public void setRoomsinListNotunderMaintenanceMN(List<Maintenance>rooms){
+       log.debug("Function entry setRoomsinListNotunderMaintenance ");
+       int i,p;
+       for(i=0;i<=allrecordlist.size()-1;i++){
+           for(p=0;p<=rooms.size()-1;p++){
+           
+           if(allrecordlist.get(i).getId()==rooms.get(p).getId()){
+                      allrecordlist.get(i).setNo_maintenance(true);
+                      currentRecordNumber=i;
+                      saveRecord();
+                }
+           }
+       }  
+       log.debug("Function exit setRoomsinListNotunderMaintenance");
+     }
+    
     public void setRoomsinListunderMaintenance(List<Rooms>rooms){
+        log.debug("Function entry setRoomsinListunderMaintenance");
+       int i,p;
+       for(i=0;i<=allrecordlist.size()-1;i++){
+           for(p=0;p<=rooms.size()-1;p++){
+           
+           if(allrecordlist.get(i).getId()==rooms.get(p).getId()){
+                      allrecordlist.get(i).setNo_maintenance(false);
+                      currentRecordNumber=i;
+                      saveRecord();
+                }
+           }
+       }   
+        log.debug("Function exit setRoomsinListunderMaintenance");
+     }
+    
+     public void setRoomsinListunderMaintenanceMN(List<Maintenance>rooms){
         log.debug("Function entry setRoomsinListunderMaintenance");
        int i,p;
        for(i=0;i<=allrecordlist.size()-1;i++){

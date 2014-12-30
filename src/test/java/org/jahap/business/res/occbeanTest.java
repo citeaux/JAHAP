@@ -37,19 +37,18 @@ import org.dbunit.operation.DatabaseOperation;
 import org.jahap.business.base.addressbean;
 import org.jahap.business.base.roomsbean;
 import org.jahap.config.WriteConfig;
-
 import org.jahap.entities.base.Address;
+import org.jahap.entities.base.Rooms;
 import org.jahap.entities.res.Occ;
 import org.jahap.entities.res.Res;
-import org.jahap.entities.base.Rooms;
 import org.joda.time.DateTime;
 import org.joda.time.Period;
 import org.junit.After;
 import org.junit.AfterClass;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import org.junit.Before;
 import org.junit.BeforeClass;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
 /**
  *
@@ -515,7 +514,7 @@ public class occbeanTest {
         Date arrivaltime = new Date();
         occbean instance = new occbean();
         instance.setArrivaltime(arrivaltime);
-        // TODO review the generated test code and remove the default call to fail.
+        
         fail("The test case is a prototype.");
     }
 
@@ -528,7 +527,7 @@ public class occbeanTest {
         String arrivaltime = "";
         occbean instance = new occbean();
         instance.setArrivaltime(arrivaltime);
-        // TODO review the generated test code and remove the default call to fail.
+    
         fail("The test case is a prototype.");
     }
 
@@ -541,7 +540,7 @@ public class occbeanTest {
         Date departuretime = null;
         occbean instance = new occbean();
         instance.setDeparturetime(departuretime);
-        // TODO review the generated test code and remove the default call to fail.
+       
         fail("The test case is a prototype.");
     }
 
@@ -554,7 +553,7 @@ public class occbeanTest {
         String departuretime = "";
         occbean instance = new occbean();
         instance.setDeparturetime(departuretime);
-        // TODO review the generated test code and remove the default call to fail.
+  
         fail("The test case is a prototype.");
     }
 
@@ -568,7 +567,7 @@ public class occbeanTest {
         Address expResult = null;
         Address result = instance.getGuest();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+       
         fail("The test case is a prototype.");
     }
 
@@ -581,7 +580,7 @@ public class occbeanTest {
         Address guest = null;
         occbean instance = new occbean();
         instance.setGuest(guest);
-        // TODO review the generated test code and remove the default call to fail.
+       
         fail("The test case is a prototype.");
     }
 }

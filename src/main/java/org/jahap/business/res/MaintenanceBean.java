@@ -1,10 +1,18 @@
 package org.jahap.business.res;
 
+import java.time.LocalDate;
+import java.time.ZoneId;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
+import javax.persistence.Query;
 import org.apache.log4j.Logger;
+import org.jahap.business.base.Hotelbean;
+import org.jahap.business.base.roomsbean;
 import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.base.Rooms;
 import org.jahap.entities.res.Maintenanceblock;
+import org.jahap.entities.views.Maintenance;
 
 
 /*
@@ -47,16 +55,18 @@ public class MaintenanceBean extends DatabaseOperations implements maintenance_i
 
     private static List<Maintenanceblock> allrecordlist;
      static Logger log = Logger.getLogger(MaintenanceBean.class.getName());
-
+    private occbean occbean;
+    private roomsbean rbean;
     /**
      *
      */
     public MaintenanceBean(){
        
-         log.debug("Function entry countrybean");
+         log.debug("Function entry MaintenanceBean");
         long testg;
         dbhook = JahapDatabaseConnector.getConnector();
-         
+         occbean= new occbean();
+	 rbean= new roomsbean();
          
         try {
            
@@ -79,7 +89,7 @@ public class MaintenanceBean extends DatabaseOperations implements maintenance_i
         }
     
           
-        log.debug("Function entry billbean");    
+        log.debug("Function exit MaintenanceBean");    
         
     }
    
@@ -218,7 +228,86 @@ public class MaintenanceBean extends DatabaseOperations implements maintenance_i
              log.debug("Function exit getLastPosition with Null");
         return null;
     }
+    
+        public String newMaintenanceBlock(LocalDate from, LocalDate to, long roomid, String comment){
+	    log.debug("Function entry newHouskeepingBlock");
+	    Hotelbean hotelbean=new Hotelbean();
+	    createNewEmptyRecord();
+	    this.setComment(comment);
+	    occbean.createNewEmptyRecord();
+	    log.trace(from);
+	    log.trace(to);
+	    
+	    occbean.setArrivaldate(Date.from(from.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()));
+	    log.trace("set Departuredate");
+	    occbean.setDeparturedate(Date.from(to.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()));
+	    log.trace("setRoom");
+	    occbean.setRoom(rbean.getDataRecord(roomid));
+	    log.trace("init overlaplist");
+	    occbean.setGuest(hotelbean.getHotelAdress());  // the guestadress in the occtable must not be null
+	    List<String>overlaps=new ArrayList<String>();
+	    log.trace("get overlap");
+	    overlaps=occbean.CheckForOverlappingReservations();
+	    if(overlaps==null){
+		    log.debug("overlaps== null");
+		    this.saveRecord();
+		    occbean.setMaintenanceblock(this.getLastPosition());
+		    overlaps=occbean.saveRecord(true);
+		    
+	    }else if(overlaps!=null){
+		    log.debug("overlaps!=null");
+		    String Test=overlaps.get(1);
+		    if(overlaps.size()>=1){
+                            
+                            int i;
+                            for (i=0;i==overlaps.size();i++){
+                               Test=Test+ ", " +overlaps.get(i);
+                            }
+		    }
+		    log.debug("Room blockt at reservation: " + Test);
+		    return "Room blockt at reservation: " + Test; 
+	    }
+	    
+	    
+	   return ""; 
+    }
      
+	 public String newHouskeepingBlock(LocalDate from, LocalDate to, Rooms room, String comment){
+	       createNewEmptyRecord();
+	    this.setComment(comment);
+	    occbean.createNewEmptyRecord();
+	    occbean.setArrivaldate(Date.from(from.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()));
+	    occbean.setDeparturedate(Date.from(to.atStartOfDay().atZone(ZoneId.systemDefault()).toInstant()));
+	    occbean.setRoom(room);
+	    List<String>overlaps=new ArrayList<String>();
+	    overlaps=occbean.CheckForOverlappingReservations();
+	    if(overlaps==null){
+		    this.saveRecord();
+		    occbean.setMaintenanceblock(this.getLastPosition());
+		    overlaps=occbean.saveRecord(true);
+		    
+	    }else if(overlaps!=null){
+		    String Test=overlaps.get(1);
+		    if(overlaps.size()>=1){
+                            
+                            int i;
+                            for (i=0;i==overlaps.size();i++){
+                               Test=Test+ ", " +overlaps.get(i);
+                            }
+		    }
+		    return "Room blockt bei reservation: " + Test; 
+	    }
+	    
+	    
+	   return "";
+    }
+	
+	 
+	  public void adjustMaintenanceBlock(LocalDate from, LocalDate to, long roomid, String comment,long blockid){
+	    
+	    
+	    
+    } 
     
      private void saveNewRecord(){
           log.debug("Function entry saveNewRecord");
@@ -242,7 +331,27 @@ public class MaintenanceBean extends DatabaseOperations implements maintenance_i
         }
      }
     
-     
+      public List<Maintenance>getMaintenanceOverview(){
+	      log.debug("Function entry getMaintenanceOverview");
+	   Query queryView;
+	   List<Maintenance>allrooms=null;
+	   int lines=0;
+	   try {
+           
+            queryView = dbhook.getEntity().createQuery("SELECT m FROM Maintenance m ORDER BY t.code");
+            allrooms= queryView.getResultList();
+	    lines=allrooms.size()-1;
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+	   if(lines<0){
+		   return null;
+	   }    
+        }
+	      log.debug("Function exit getMaintenanceOverview");
+	return allrooms;  
+    }
      
     
     public void quitDBaccess() {

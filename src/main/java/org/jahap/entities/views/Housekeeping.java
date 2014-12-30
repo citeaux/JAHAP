@@ -24,7 +24,6 @@
 package org.jahap.entities.views;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -53,7 +52,7 @@ public class Housekeeping implements Serializable {
 	private static final long serialVersionUID = 1L;
 	@Column(name = "id")
 	@Id
-	private BigInteger id;
+	private long id;
 	@Size(max = 255)
         @Column(name = "code")
 	private String code;
@@ -72,11 +71,11 @@ public class Housekeeping implements Serializable {
 	public Housekeeping() {
 	}
 
-	public BigInteger getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(BigInteger id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

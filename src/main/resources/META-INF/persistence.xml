@@ -59,5 +59,6 @@
     <class>org.jahap.entities.res.Maintenanceblock</class>
     <class>org.jahap.entities.base.Rooms</class>
     <class>org.jahap.entities.views.Housekeeping</class>
+    <class>org.jahap.entities.views.Maintenance</class>
   </persistence-unit>
 </persistence>

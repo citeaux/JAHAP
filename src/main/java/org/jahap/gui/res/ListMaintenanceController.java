@@ -23,6 +23,7 @@
  */
 package org.jahap.gui.res;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -32,17 +33,22 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.roomsbean;
-import org.jahap.entities.base.Rooms;
+import org.jahap.business.res.MaintenanceBean;
+import org.jahap.entities.views.Maintenance;
 
 /**
  * FXML Controller class
@@ -59,8 +65,8 @@ public class ListMaintenanceController implements Initializable {
     private Button Ok;
     @FXML
     private Button Cancel;
-     private  List<Rooms> rList;
-    private roomsbean rbean;
+     private  List<Maintenance> mList;
+    private MaintenanceBean mbean;
     /**
      * Initializes the controller class.
      */
@@ -71,16 +77,16 @@ public class ListMaintenanceController implements Initializable {
 
      void initTable(){
         log.debug("Function entry initTable");
-        rbean= new roomsbean();
-        rList=rbean.SearchForRooms(null);
+        mbean= new MaintenanceBean();
+        mList=mbean.getMaintenanceOverview();
         
-         ObservableList<Rooms> data= FXCollections.observableList(rList);
+         ObservableList<Maintenance> data= FXCollections.observableList(mList);
         
         
         // -----------------  id
-        TableColumn<Rooms,String> IdCol = new TableColumn<Rooms,String>("Id");
-      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+        TableColumn<Maintenance,String> IdCol = new TableColumn<Maintenance,String>("Id");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Maintenance, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Maintenance, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getId());
      }
      
@@ -92,9 +98,9 @@ public class ListMaintenanceController implements Initializable {
         
        //----------------------------------- roomcode ----------------------- 
     
-        TableColumn<Rooms,String> roomcode = new TableColumn<Rooms,String>("Room");
-     roomcode.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+        TableColumn<Maintenance,String> roomcode = new TableColumn<Maintenance,String>("Room");
+     roomcode.setCellValueFactory(new Callback<CellDataFeatures<Maintenance, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Maintenance, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getCode());
      }
      
@@ -111,10 +117,10 @@ public class ListMaintenanceController implements Initializable {
       
       //------------------------------------- roomlocation --------------------------------
       
-       TableColumn<Rooms,String> roomlocation = new TableColumn<Rooms,String>("Floor");
-     roomlocation.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getLocation().getFloor());
+       TableColumn<Maintenance,String> roomlocation = new TableColumn<Maintenance,String>("Floor");
+     roomlocation.setCellValueFactory(new Callback<CellDataFeatures<Maintenance, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Maintenance, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getFloor());
      }
      
              
@@ -124,22 +130,35 @@ public class ListMaintenanceController implements Initializable {
        
         //------------------------------------- roomcat --------------------------------
       
-       TableColumn<Rooms,String> roomcat = new TableColumn<Rooms,String>("Category");
-      roomcat.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().getCategory().getCatName());
+       TableColumn<Maintenance,String> roomcat = new TableColumn<Maintenance,String>("Category");
+      roomcat.setCellValueFactory(new Callback<CellDataFeatures<Maintenance, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Maintenance, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getCatName());
      }
      
              
       });
        dataTable.getColumns().add( roomcat);
        
-       //------------------------------------- hsk state --------------------------------
+       //------------------------------------- mainetenacne state --------------------------------
       
-       TableColumn<Rooms,String> cleaningstate = new TableColumn<Rooms,String>("Maintenance state");
-      cleaningstate.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
-     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
-         return new ReadOnlyObjectWrapper(p.getValue().isNo_maintenance());
+       TableColumn<Maintenance,String> mblock = new TableColumn<Maintenance,String>("Maintenance state");
+      mblock.setCellValueFactory(new Callback<CellDataFeatures<Maintenance, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Maintenance, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getBlocks());
+     }
+     
+             
+      });
+       dataTable.getColumns().add( mblock);
+       
+        //------------------------------------- mainetenacne state --------------------------------
+      
+       TableColumn<Maintenance,String> cleaningstate = new TableColumn<Maintenance,String>("Maintenance state");
+       
+      cleaningstate.setCellValueFactory(new Callback<CellDataFeatures<Maintenance, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Maintenance, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getNoMaintenance());
      }
      
              
@@ -161,22 +180,44 @@ public class ListMaintenanceController implements Initializable {
     @FXML
     private void setMaintenace(ActionEvent event) {
         log.debug("Function entry setMaintenace");
-         ObservableList<Rooms> rms=dataTable.getSelectionModel().getSelectedItems();
-        rbean.setRoomsinListunderMaintenance(rms);
+         ObservableList<Maintenance> rms=dataTable.getSelectionModel().getSelectedItems();
+	 roomsbean rbean= new roomsbean();
+        rbean.setRoomsinListunderMaintenanceMN(rms);
         log.debug("Function exit setMaintenace");  
     }
 
     @FXML
     private void setFree(ActionEvent event) {
         log.debug("Function entry setFree");
-         ObservableList<Rooms> rms=dataTable.getSelectionModel().getSelectedItems();
-        rbean.setRoomsinListNotunderMaintenance(rms);
+         ObservableList<Maintenance> rms=dataTable.getSelectionModel().getSelectedItems();
+	 roomsbean rbean= new roomsbean();
+        rbean.setRoomsinListNotunderMaintenanceMN(rms);
         log.debug("Function exit setFree");  
     }
 
     @FXML
-    private void blockRoom(ActionEvent event) {
+    private void blockRoom(ActionEvent event) throws IOException {
+        log.debug("Function entry blockRoom");
+	     Maintenance rms=(Maintenance) dataTable.getSelectionModel().getSelectedItem();
+	     Stage stage = new Stage();
+        String fxmlFile = "/fxml/MaintenanceGuiFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
         
+        Scene scene = new Scene(page);
+       
+
+        
+        stage.setScene(scene);
+        housekeepinggui controller;
+		controller= loader.<housekeepinggui>getController();
+       controller.init(rms.getId(),true);
+       
+        
+        stage.showAndWait();
+         log.debug("Function exit blockRoom");  
     }
 
     @FXML
