@@ -205,7 +205,7 @@ public class occbeanTest {
         List expResult = null;
         List result = instance.SearchForOcc(searchstring);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -220,7 +220,7 @@ public class occbeanTest {
         List expResult = null;
         List result = instance.SearchForOccforRes(res);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -232,7 +232,7 @@ public class occbeanTest {
         System.out.println("createNewEmptyRecord");
         occbean instance = new occbean();
         instance.createNewEmptyRecord();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -246,7 +246,7 @@ public class occbeanTest {
         List expResult = null;
         List result = instance.CheckForOverlappingReservations();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -258,7 +258,7 @@ public class occbeanTest {
         System.out.println("nextRecordBackward");
         occbean instance = new occbean();
         instance.nextRecordBackward();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -270,7 +270,7 @@ public class occbeanTest {
         System.out.println("nextRecordForeward");
         occbean instance = new occbean();
         instance.nextRecordForeward();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -282,7 +282,7 @@ public class occbeanTest {
         System.out.println("saveRecord");
         occbean instance = new occbean();
         instance.saveRecord();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -297,7 +297,7 @@ public class occbeanTest {
         List expResult = null;
         List result = instance.saveRecord(test);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -311,7 +311,7 @@ public class occbeanTest {
         Long expResult = null;
         Long result = instance.getId();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -324,7 +324,7 @@ public class occbeanTest {
         Long id = null;
         occbean instance = new occbean();
         instance.setDataRecordId(id);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -339,7 +339,7 @@ public class occbeanTest {
         Occ expResult = null;
         Occ result = instance.getDataRecord(id);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -353,7 +353,7 @@ public class occbeanTest {
         Date expResult = null;
         Date result = instance.getArrivaltime();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -367,7 +367,7 @@ public class occbeanTest {
         Date expResult = null;
         Date result = instance.getDeparturetime();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -381,7 +381,7 @@ public class occbeanTest {
         Res expResult = null;
         Res result = instance.getRes();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -395,7 +395,7 @@ public class occbeanTest {
         Rooms expResult = null;
         Rooms result = instance.getRoom();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -409,7 +409,7 @@ public class occbeanTest {
         Date expResult = null;
         Date result = instance.getArrivaldate();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -423,7 +423,7 @@ public class occbeanTest {
         Date expResult = null;
         Date result = instance.getDeparturedate();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -436,7 +436,7 @@ public class occbeanTest {
         Res res = null;
         occbean instance = new occbean();
         instance.setRes(res);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -449,7 +449,7 @@ public class occbeanTest {
         Rooms room = null;
         occbean instance = new occbean();
         instance.setRoom(room);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -462,7 +462,7 @@ public class occbeanTest {
         Date arrivaldate = null;
         occbean instance = new occbean();
         instance.setArrivaldate(arrivaldate);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -475,7 +475,7 @@ public class occbeanTest {
         String arrivaldate = "";
         occbean instance = new occbean();
         instance.setArrivaldate(arrivaldate);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -488,7 +488,7 @@ public class occbeanTest {
         Date departuredate = null;
         occbean instance = new occbean();
         instance.setDeparturedate(departuredate);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -501,7 +501,7 @@ public class occbeanTest {
         String departuredate = "";
         occbean instance = new occbean();
         instance.setDeparturedate(departuredate);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 

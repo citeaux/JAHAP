@@ -75,7 +75,7 @@ public class accountspositionbean extends DatabaseOperations implements accounts
               tabelIsEmpty=true;
         }
     
-          System.out.println("=========>dbconnection");
+          log.trace("DB connected"); 
            // If the table is yet empty, init List 
         
     }

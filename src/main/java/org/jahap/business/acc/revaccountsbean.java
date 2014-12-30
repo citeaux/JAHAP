@@ -29,6 +29,7 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.stream.Collectors;
+import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Revaccounts;
 import org.jahap.entities.acc.Revenue;
@@ -38,7 +39,7 @@ import org.jahap.entities.acc.Revenue;
  * @author russ
  */
 public class revaccountsbean extends DatabaseOperations implements revaccounts_i{
-    
+    static Logger log = Logger.getLogger(revaccountsbean.class.getName());
      private static List<Revaccounts> allrecordlist;
     JahapDatabaseConnector dbhook;
         public revaccountsbean(){
@@ -66,7 +67,7 @@ public class revaccountsbean extends DatabaseOperations implements revaccounts_i
               tabelIsEmpty=true;
         }
     
-          System.out.println("=========>dbconnection");
+          log.trace("DB connected"); 
            // If the table is yet empty, init List 
         
     }

@@ -77,7 +77,7 @@ public class ratesbean  extends DatabaseOperations  implements rates_i{
         
         
         
-       System.out.println("=========>dbconnection");
+       log.trace("DB connected"); 
            // If the table is yet empty, init List 
         
 

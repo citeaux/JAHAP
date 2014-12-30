@@ -81,7 +81,7 @@ public class locationFx implements Initializable, SearchResultListener {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+         
     }    
 
     public void init(short id){

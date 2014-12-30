@@ -27,9 +27,10 @@ package org.jahap.business.acc;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import org.apache.log4j.Logger;
 import org.jahap.business.base.vattypesbean;
-import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.acc.Vat;
 import org.jahap.entities.base.Vattype;
 
@@ -38,7 +39,7 @@ import org.jahap.entities.base.Vattype;
  * @author russ
  */
 public class vatbean extends DatabaseOperations  implements vat_i{
-
+  static Logger log = Logger.getLogger(vatbean.class.getName());
   
 
       JahapDatabaseConnector dbhook;
@@ -69,7 +70,7 @@ public class vatbean extends DatabaseOperations  implements vat_i{
         } catch (Exception e) {
               tabelIsEmpty=true;
         }
-         System.out.println("=========>dbconnection");
+         log.trace("DB connected"); 
            // If the table is yet empty, init List     
         
         

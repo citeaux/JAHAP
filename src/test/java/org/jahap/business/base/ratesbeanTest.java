@@ -70,7 +70,7 @@ public class ratesbeanTest {
         System.out.println("createNewEmptyRecord");
          
         instance.createNewEmptyRecord();
-        // TODO review the generated test code and remove the default call to fail.
+         
         instance.setCode("DBL");
         instance.setName("Double room logis");
         instance.setPrice(76.55);
@@ -87,7 +87,7 @@ public class ratesbeanTest {
         System.out.println("nextRecordBackward");
         ratesbean instance = new ratesbean();
         instance.nextRecordBackward();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -99,7 +99,7 @@ public class ratesbeanTest {
         System.out.println("nextRecordForeward");
         ratesbean instance = new ratesbean();
         instance.nextRecordForeward();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -111,7 +111,7 @@ public class ratesbeanTest {
         System.out.println("saveRecord");
         ratesbean instance = new ratesbean();
         instance.saveRecord();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -124,7 +124,7 @@ public class ratesbeanTest {
         Long id = null;
         ratesbean instance = new ratesbean();
         instance.setDataRecordId(id);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -139,7 +139,7 @@ public class ratesbeanTest {
         Rates expResult = null;
         Rates result = instance.getDataRecord(id);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -151,7 +151,7 @@ public class ratesbeanTest {
         System.out.println("quitDBaccess");
         ratesbean instance = new ratesbean();
         instance.quitDBaccess();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -165,7 +165,7 @@ public class ratesbeanTest {
         Collection expResult = null;
         Collection result = instance.getAccountPositionCollection();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -179,7 +179,7 @@ public class ratesbeanTest {
         String expResult = "";
         String result = instance.getCode();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -193,7 +193,7 @@ public class ratesbeanTest {
         Long expResult = null;
         Long result = instance.getId();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -207,7 +207,7 @@ public class ratesbeanTest {
         String expResult = "";
         String result = instance.getName();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -221,7 +221,7 @@ public class ratesbeanTest {
         double expResult = 0.0F;
         double result = instance.getPrice();
         assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -234,7 +234,7 @@ public class ratesbeanTest {
         Collection<AccountPosition> accountPositionCollection = null;
         ratesbean instance = new ratesbean();
         instance.setAccountPositionCollection(accountPositionCollection);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -247,7 +247,7 @@ public class ratesbeanTest {
         String code = "";
         ratesbean instance = new ratesbean();
         instance.setCode(code);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -260,7 +260,7 @@ public class ratesbeanTest {
         String name = "";
         ratesbean instance = new ratesbean();
         instance.setName(name);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -273,7 +273,7 @@ public class ratesbeanTest {
         float price = 0.0F;
         ratesbean instance = new ratesbean();
         instance.setPrice(price);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -286,7 +286,7 @@ public class ratesbeanTest {
         Long id = null;
         ratesbean instance = new ratesbean();
         instance.setId(id);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 }

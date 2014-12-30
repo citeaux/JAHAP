@@ -77,7 +77,7 @@ public class RevGuiFx implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+         
     }    
 
     public void init(long id){

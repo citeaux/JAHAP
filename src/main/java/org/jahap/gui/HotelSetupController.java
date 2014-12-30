@@ -114,7 +114,7 @@ public class HotelSetupController implements Initializable, InterResSearchResult
                 
               
                         
-        // TODO
+         
         addresses= new addressbean();
         hbean =  new Hotelbean();
          ressearchresult=new InterResSearchResult();

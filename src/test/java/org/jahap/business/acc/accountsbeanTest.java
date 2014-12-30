@@ -151,7 +151,7 @@ public class accountsbeanTest {
         List expResult = null;
         List result = instance.SearchForAcc(searchstring);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -186,7 +186,7 @@ public class accountsbeanTest {
         System.out.println("nextRecordBackward");
         accountsbean instance = new accountsbean();
         instance.nextRecordBackward();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -198,7 +198,7 @@ public class accountsbeanTest {
         System.out.println("nextRecordForeward");
         accountsbean instance = new accountsbean();
         instance.nextRecordForeward();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -210,7 +210,7 @@ public class accountsbeanTest {
         System.out.println("saveRecord");
         accountsbean instance = new accountsbean();
         instance.saveRecord();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -222,7 +222,7 @@ public class accountsbeanTest {
         System.out.println("quitDBaccess");
         accountsbean instance = new accountsbean();
         instance.quitDBaccess();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -275,7 +275,7 @@ public class accountsbeanTest {
         System.out.print(acp.getDataRecord(3).getVatCollection().toString());
         System.out.println("adjustPosition");
         
-        // TODO review the generated test code and remove the default call to fail.
+         
         //fail("The test case is a prototype.");
     }
 
@@ -295,7 +295,7 @@ public class accountsbeanTest {
         //assertNull(lp);
         System.out.println(lp);
         System.out.println(instance.getId());
-        // TODO review the generated test code and remove the default call to fail.
+         
         //fail("The test case is a prototype.");
     }
     
@@ -342,7 +342,7 @@ public class accountsbeanTest {
         System.out.println("createBill");
         accountsbean instance = new accountsbean();
         instance.createBill();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -354,7 +354,7 @@ public class accountsbeanTest {
         System.out.println("copyPositonToBill");
         accountsbean instance = new accountsbean();
         instance.copyPositonToBill();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -366,7 +366,7 @@ public class accountsbeanTest {
         System.out.println("markPositionAsBilled");
         accountsbean instance = new accountsbean();
         instance.markPositionAsBilled();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -378,7 +378,7 @@ public class accountsbeanTest {
         System.out.println("getPrintedAccountReport");
         accountsbean instance = new accountsbean();
         instance.getPrintedAccountReport();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -390,7 +390,7 @@ public class accountsbeanTest {
         System.out.println("getReportDataAccount");
         accountsbean instance = new accountsbean();
         instance.getReportDataAccount();
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -404,7 +404,7 @@ public class accountsbeanTest {
         Collection expResult = null;
         Collection result = instance.getAccountPositionCollection();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -418,7 +418,7 @@ public class accountsbeanTest {
         double expResult = 0;
         double result = instance.getBalance();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -432,7 +432,7 @@ public class accountsbeanTest {
         Serializable expResult = null;
         Serializable result = instance.getCheckin();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -446,7 +446,7 @@ public class accountsbeanTest {
         String expResult = "";
         String result = instance.getCheckindate();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -460,7 +460,7 @@ public class accountsbeanTest {
         Serializable expResult = null;
         Serializable result = instance.getCheckout();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -474,7 +474,7 @@ public class accountsbeanTest {
         String expResult = "";
         String result = instance.getCheckoutdate();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -488,7 +488,7 @@ public class accountsbeanTest {
         Long expResult = null;
         Long result = instance.getId();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -502,7 +502,7 @@ public class accountsbeanTest {
         Res expResult = null;
         Res result = instance.getReservation();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -515,7 +515,7 @@ public class accountsbeanTest {
         Collection<AccountPosition> accountPositionCollection = null;
         accountsbean instance = new accountsbean();
         instance.setAccountPositionCollection(accountPositionCollection);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -528,7 +528,7 @@ public class accountsbeanTest {
         Integer balance = null;
         accountsbean instance = new accountsbean();
         instance.setBalance(balance);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -541,7 +541,7 @@ public class accountsbeanTest {
         Bill bill = null;
         accountsbean instance = new accountsbean();
         instance.setBill(bill);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -554,7 +554,7 @@ public class accountsbeanTest {
         Serializable checkin = null;
         accountsbean instance = new accountsbean();
         instance.setCheckin(checkin);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -567,7 +567,7 @@ public class accountsbeanTest {
         String checkindate = "";
         accountsbean instance = new accountsbean();
         instance.setCheckindate(checkindate);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -580,7 +580,7 @@ public class accountsbeanTest {
         Serializable checkout = null;
         accountsbean instance = new accountsbean();
        // instance.setCheckout(checkout);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -593,7 +593,7 @@ public class accountsbeanTest {
         String checkoutdate = "";
         accountsbean instance = new accountsbean();
         instance.setCheckoutdate(checkoutdate);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -606,7 +606,7 @@ public class accountsbeanTest {
         Res reservation = null;
         accountsbean instance = new accountsbean();
         instance.setReservation(reservation);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 }

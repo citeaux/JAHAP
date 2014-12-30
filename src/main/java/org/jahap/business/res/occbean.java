@@ -86,7 +86,7 @@ public class occbean extends  DatabaseOperations implements occ_i{
               tabelIsEmpty=true;
         }
     
-          System.out.println("=========>dbconnection");
+          log.trace("DB connected"); 
            // If the table is yet empty, init List 
         log.debug("Function exit Contructor");
     }

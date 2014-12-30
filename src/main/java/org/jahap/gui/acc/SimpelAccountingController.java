@@ -190,7 +190,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+         
         log.debug("Function entry");
         log.debug("Function exit");
     }    

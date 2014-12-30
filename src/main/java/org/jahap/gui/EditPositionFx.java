@@ -85,7 +85,7 @@ public class EditPositionFx implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+         
     }    
     
     public void init(InterAccSearchResult AccSearchresults,SimpelAccountingController zi,String guisource, viewAccountPositionsProperty jm){

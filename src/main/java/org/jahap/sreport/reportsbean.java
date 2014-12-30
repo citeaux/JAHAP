@@ -26,11 +26,9 @@ package org.jahap.sreport;
 
 import java.io.File;
 import java.io.IOException;
-import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
+import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Language;
 import org.jahap.entities.Reports;
@@ -40,7 +38,7 @@ import org.jahap.entities.Reports;
  * @author Sebastian Russ <citeaux at https://github.com/citeaux/JAHAP>
  */
 public class reportsbean  extends DatabaseOperations  implements reports_i{
-
+   static Logger log = Logger.getLogger(reportsbean.class.getName());
      JahapDatabaseConnector dbhook;
     private static List<Reports> allrecordlist; 
 
@@ -71,7 +69,7 @@ public class reportsbean  extends DatabaseOperations  implements reports_i{
         
         
         
-       System.out.println("=========>dbconnection");
+       log.trace("DB connected"); 
            // If the table is yet empty, init List 
         
 

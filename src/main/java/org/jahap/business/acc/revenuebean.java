@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.AccountPosition;
 import org.jahap.entities.acc.Revaccounts;
@@ -40,7 +41,7 @@ import org.jahap.entities.acc.Revenue;
  * @author russ
  */
 public class revenuebean extends DatabaseOperations  implements revenue_i {
-
+    static Logger log = Logger.getLogger(revenuebean.class.getName());
     JahapDatabaseConnector dbhook;
     private static List<Revenue> allrecordlist; 
     
@@ -71,7 +72,7 @@ public class revenuebean extends DatabaseOperations  implements revenue_i {
         
         
         
-       System.out.println("=========>dbconnection");
+       log.trace("DB connected"); 
            // If the table is yet empty, init List 
         
 

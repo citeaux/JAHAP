@@ -26,6 +26,7 @@ package org.jahap.business.base;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Payed;
 import org.jahap.entities.acc.Paymenttypes;
@@ -36,7 +37,7 @@ import org.jahap.entities.acc.Paymenttypes;
  * @author russ
  */
 public class Paymenttypesbean extends DatabaseOperations  implements Paymenttypes_i {
-
+   static Logger log = Logger.getLogger(Paymenttypesbean.class.getName());
     JahapDatabaseConnector dbhook;
     private static List<Paymenttypes> allrecordlist; 
 
@@ -67,7 +68,7 @@ public class Paymenttypesbean extends DatabaseOperations  implements Paymenttype
         
         
         
-       System.out.println("=========>dbconnection");
+       log.trace("DB connected"); 
            // If the table is yet empty, init List 
         
 

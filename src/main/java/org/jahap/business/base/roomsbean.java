@@ -70,7 +70,7 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
         
         
         
-       System.out.println("=========>dbconnection");
+       log.trace("DB connected"); 
            // If the table is yet empty, init List 
         
 

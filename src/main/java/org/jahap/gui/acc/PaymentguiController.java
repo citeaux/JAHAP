@@ -64,7 +64,7 @@ public class PaymentguiController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+         
     }    
     
     public void init(double totalamount, InterAccSearchResult iAccResult){

@@ -65,7 +65,7 @@ public class MainAppTest {
         System.out.println("main");
         String[] args = null;
         MainApp.main(args);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
 
@@ -78,7 +78,7 @@ public class MainAppTest {
         Stage stage = null;
         MainApp instance = new MainApp();
         instance.start(stage);
-        // TODO review the generated test code and remove the default call to fail.
+         
         fail("The test case is a prototype.");
     }
     
