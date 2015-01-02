@@ -28,6 +28,7 @@ package org.jahap.gui.base;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.beans.property.ReadOnlyObjectWrapper;
@@ -49,6 +50,7 @@ import javafx.stage.Stage;
 import javafx.util.Callback;
 import net.sf.jasperreports.engine.JRException;
 import org.jahap.business.base.roomsbean;
+import org.jahap.business.res.occbean;
 import org.jahap.entities.base.Rooms;
 import org.jahap.gui.res.InterResSearchResult;
 import org.jahap.gui.res.ResguiController;
@@ -70,6 +72,7 @@ public class RoomListController implements Initializable {
     private Button Cancel;
     private roomsbean rooms;
     private List RoomsSearchResult;
+    private occbean occ;
     private long id=0;
     private boolean isOverviewDialog=false;
     /**
@@ -159,7 +162,86 @@ public class RoomListController implements Initializable {
     
     }
     
+    private void initTable(Date from,Date to){
+        rooms= new roomsbean();
+	//TODO:add free room finding
+	occ= new occbean();
+        
+	RoomsSearchResult= rooms.SearchForRooms("*");
+        ObservableList<Rooms> data= FXCollections.observableList(RoomsSearchResult);
+        
+        // -----------------  id
+        TableColumn<Rooms,String> IdCol = new TableColumn<Rooms,String>("Id");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getId());
+     }
+     
+             
+      });  
+      
+      //dataTable.getColumns().add(IdCol);
+      
+      // -----------------  Code
+        TableColumn<Rooms,String> CodeCol = new TableColumn<Rooms,String>("Code");
+      CodeCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getCode());
+     }
+     
+             
+      });  
+      
+      dataTable.getColumns().add(CodeCol);
+      
+       // -----------------  Name
+        TableColumn<Rooms,String> NameCol = new TableColumn<Rooms,String>("Name");
+      NameCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getName());
+     }
+     
+             
+      });  
+      
+      dataTable.getColumns().add(NameCol);
+      
+       // -----------------  Category
+        TableColumn<Rooms,String> CatCol = new TableColumn<Rooms,String>("Category");
+      CatCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getCategory().getCatName());
+     }
+     
+      
+             
+      });  
+      
+      
+      
+      dataTable.getColumns().add(CatCol);
+        
+          TableColumn<Rooms,String> LocCol = new TableColumn<Rooms,String>("Location");
+      LocCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getLocation().getFloor());
+     }
+     
+      
+             
+      });  
+      
+      
+      
+      dataTable.getColumns().add(LocCol);
+      
+      
+       dataTable.setItems(data);
     
+       
+    
+    
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -167,6 +249,15 @@ public class RoomListController implements Initializable {
         initTable();
    }    
     
+    public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource,Date from,Date to){
+        //RoomSearchResult searchresult with check for occ
+          searchresult= new RoomSearchResult();
+        isOverviewDialog=true;
+         this.ResSearchresult=ResSearchresults;
+         this.guisource=guisource;
+        initTable(from,to);
+    }
+ 
     public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource){
         //RoomSearchResult searchresult
           searchresult= new RoomSearchResult();
@@ -175,7 +266,7 @@ public class RoomListController implements Initializable {
          this.guisource=guisource;
         initTable();
     }
- 
+    
     @FXML
     private void PrintReport(ActionEvent event) throws JRException {
         List<Rooms> jj=new ArrayList<Rooms>();

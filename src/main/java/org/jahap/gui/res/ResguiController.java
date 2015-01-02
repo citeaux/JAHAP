@@ -30,6 +30,7 @@ import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.util.ArrayList;
@@ -198,12 +199,12 @@ public class ResguiController implements Initializable, InterResSearchResultList
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        
+        LocalDate today=LocalDate.now();
         textfields=new ArrayList<TextField>();
-        
-        
-        
-        
+        DASH_ResArrival_fxtxt.setText(today.toString());
+        DASH_ResDeparture_fxtxt.setText(today.plusDays(1).toString());
+        datapickerFrom.setValue(today);
+        datapickerTo.setValue(today.plusDays(1));
         res = new resbean();
         address=new addressbean();
         occ=new occbean();

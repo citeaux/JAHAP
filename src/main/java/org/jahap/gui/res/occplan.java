@@ -155,7 +155,7 @@ public class occplan implements Initializable {
     private String xPosEndByXHeader;
     private String yPosEndByYHeader;
     private int yPosEndByYHeaderPercentOfbox=50;
-    private String colorcode;
+    private occplancolors colorcode;
     private String tooltiptext;
         /**
          *
@@ -164,12 +164,34 @@ public class occplan implements Initializable {
          * @param yPosStartByYHeader
          * @param text
          */
-        public occbox(String xPosStartByXHeader,String xPosEndByXHeader, String yPosStartByYHeader,String text,String colorcode ){
+        public occbox(String xPosStartByXHeader,String xPosEndByXHeader, String yPosStartByYHeader,String text,occplancolors colorcode ){
         this.xPosStartByXHeader=xPosStartByXHeader;
         this.xPosEndByXHeader=xPosEndByXHeader;
         this.yPosStartByYHeader=yPosStartByYHeader;
         this.xPosStartByXHeaderPercentOfbox=50;
         this.setText(text);
+	
+	if(colorcode==colorcode.green){
+		
+		this.setStyle("-fx-background-color:green");
+		
+	}else if(colorcode==colorcode.grey){
+		this.setStyle("-fx-background-color:#808080");
+		
+		
+	}
+	
+	
+    }
+	
+	public occbox(String xPosStartByXHeader,String xPosEndByXHeader, String yPosStartByYHeader,String text,occplancolors colorcode,String tooltip ){
+        this.xPosStartByXHeader=xPosStartByXHeader;
+        this.xPosEndByXHeader=xPosEndByXHeader;
+        this.yPosStartByYHeader=yPosStartByYHeader;
+        this.xPosStartByXHeaderPercentOfbox=50;
+        this.setText(text);
+	this.colorcode=colorcode;
+	this.tooltiptext=tooltip;
     }
 
         /**
@@ -212,6 +234,24 @@ public class occplan implements Initializable {
         return xPosStartByXHeaderPercentOfbox;
     }
 
+		public occplancolors getColorcode() {
+			return colorcode;
+		}
+
+		public void setColorcode(occplancolors colorcode) {
+			this.colorcode = colorcode;
+		}
+
+		public String getTooltiptext() {
+			return tooltiptext;
+		}
+
+		public void setTooltiptext(String tooltiptext) {
+			this.tooltiptext = tooltiptext;
+		}
+
+	
+	
         /**
          *
          * @param xPosStartByXHeaderPercentOfbox
@@ -524,9 +564,10 @@ public class occplan implements Initializable {
                   OccDataList.get(occcounter).setMinWidth(wideness); // Standard Y Size
                   OccDataList.get(occcounter).setMinHeight(yDim);
                   
-                  OccDataList.get(occcounter).setStyle("-fx-border-color: black");
+                 
                   OccDataList.get(occcounter).setVisible(true);
-                  OccDataList.get(occcounter).setStyle("-fx-background-color:red");
+		  log.debug("Background color: " + OccDataList.get(occcounter).getStyle());
+                  //OccDataList.get(occcounter).setStyle("-fx-background-color:red");)
                  //OccDataList.get(occcounter).setOpaque(true);
                  // OccDataList.get(occcounter).addMouseListener(OccDataList.get(occcounter).getClass());
                   
@@ -573,8 +614,21 @@ public class occplan implements Initializable {
        occs=occl.SearchForOcc(tt,tk);
        for(Occ rs:occs){
            occbox kk = null;
+	   String guest;
+	   occplancolors color;
            try {
-               kk = new occbox(new SimpleDateFormat("dd.MM.yy").format(rs.getArrivaldate()), new SimpleDateFormat("dd.MM.yy").format(rs.getDeparturedate()), rs.getRoom().getCode(), rs.getGuest().getName());
+		if(rs.getHousekeepingblock()!=null){
+			color=occplancolors.grey;
+			guest="Housekeeping";
+		}else if(rs.getMaintenanceblock()!=null){
+			color=occplancolors.grey;
+			guest="Maintenance";
+		}else{
+			color=occplancolors.green;
+			guest=rs.getGuest().getName();
+		}
+		   
+               kk = new occbox(new SimpleDateFormat("dd.MM.yy").format(rs.getArrivaldate()), new SimpleDateFormat("dd.MM.yy").format(rs.getDeparturedate()), rs.getRoom().getCode(), guest,color);
            } catch (Exception e) {
                System.err.printf("#2");
            }

@@ -32,6 +32,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Query;
 import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Accounts;
@@ -153,6 +154,21 @@ public class occbean extends  DatabaseOperations implements occ_i{
     
         //-----------------------------------------------
     
+     public List<Rooms>searchforfreerooms(Date from, Date to){
+	     Query rooms;
+	     List<Rooms>allfreerooms = null;
+	     try {
+           //TODO: test and add freerooms
+            rooms = dbhook.getEntity().createQuery("select t from Rooms t, Occ k where (t.id=k.room and (k.arrivaldate>" + from.toString() + "or k.departuredate<" + to.toString()+ "))  ORDER BY t.id");
+            allfreerooms= rooms.getResultList();
+            numberOfLastRecord= allfreerooms.size()-1;
+        } catch (Exception e) {
+            numberOfLastRecord=0;
+        }
+	    return allfreerooms;
+     } 
+     
+     
     /**
      *
      */
