@@ -29,9 +29,12 @@ package org.jahap.business.res;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Objects;
 import javax.persistence.Query;
 import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
@@ -132,18 +135,22 @@ public class occbean extends  DatabaseOperations implements occ_i{
     }
     
      public List<Occ>SearchForOccforRes(Res res){
-         log.debug("Function entry SearchForOccforRes");
+         log.debug("Function entry SearchForOccforRes" + String.valueOf(res));
         List<Occ>hl=new ArrayList<Occ>();
-    int ind=-1;
+    int ind=0;
       if(allrecordlist.size()>0) {
-          do{
-              ind++;
-              if(allrecordlist.get(ind).getRes().getId()==res.getId()){
-                    hl.add(allrecordlist.get(ind));
-              }
+          for(ind=0;allrecordlist.size()>ind;ind++){
               
-          }while(allrecordlist.size()!=ind+1);
-      }
+              try {
+		      log.debug("Function entry xx" + String.valueOf(ind));
+			  if (Objects.equals(allrecordlist.get(ind).getRes().getId(), res.getId())) {
+				  hl.add(allrecordlist.get(ind));
+			  }
+		  } catch (Exception e) {
+			  log.error("No Reservation for Occ " + String.valueOf(allrecordlist.get(ind).getId()) + " Record found");
+		  }
+              
+          }
            
         
         
@@ -151,19 +158,23 @@ public class occbean extends  DatabaseOperations implements occ_i{
          log.debug("Function exit SearchForOccforRes");
         return hl;
     }
-    
+      return null;
+     }
         //-----------------------------------------------
     
-     public List<Rooms>searchforfreerooms(Date from, Date to){
+     public List<Rooms>searchforfreerooms(LocalDate from, LocalDate to){
+	     log.debug("Function entry searchforfreerooms From: " + from.format(DateTimeFormatter.ISO_DATE) + " to: " + to.format(DateTimeFormatter.ISO_DATE) );
 	     Query rooms;
 	     List<Rooms>allfreerooms = null;
 	     try {
            //TODO: test and add freerooms
-            rooms = dbhook.getEntity().createQuery("select t from Rooms t, Occ k where (t.id=k.room and (k.arrivaldate>" + from.toString() + "or k.departuredate<" + to.toString()+ "))  ORDER BY t.id");
+		     
+            rooms = dbhook.getEntity().createQuery("select  t from Rooms t, Occ k where (t.id=k.room and (k.arrivaldate>'" + from.format(DateTimeFormatter.ISO_DATE) + "' or k.departuredate<'" + to.format(DateTimeFormatter.ISO_DATE)+ "'))");
             allfreerooms= rooms.getResultList();
             numberOfLastRecord= allfreerooms.size()-1;
         } catch (Exception e) {
             numberOfLastRecord=0;
+	    e.printStackTrace();
         }
 	    return allfreerooms;
      } 

@@ -199,6 +199,9 @@ public class ResguiController implements Initializable, InterResSearchResultList
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
+	    log.debug("Function entry initialize");
+		    
+	    
         LocalDate today=LocalDate.now();
         textfields=new ArrayList<TextField>();
         DASH_ResArrival_fxtxt.setText(today.toString());
@@ -215,10 +218,12 @@ public class ResguiController implements Initializable, InterResSearchResultList
         ressearchresult=new InterResSearchResult();
         createNewRecord=true;
          ressearchresult.addIDListener(this);
+	    log.debug("Function exit initialize");
     }    
 
     @FXML
     private void Search_Orderer(ActionEvent event) throws IOException {
+	    log.debug("Function entry Search_Orderer");  
         Stage stage = new Stage();
         String fxmlFile = "/fxml/AddressList.fxml";
        
@@ -237,11 +242,13 @@ public class ResguiController implements Initializable, InterResSearchResultList
         
         stage.showAndWait();
         
+	    log.debug("Function exit Search_Orderer");
         
     }
 
     @FXML
     private void Details_Orderer(ActionEvent event) throws IOException {
+	    log.debug("Function entry Details_Orderer");
            Stage stage = new Stage();
         String fxmlFile = "/fxml/AdressGuiFx.fxml";
        
@@ -261,12 +268,13 @@ public class ResguiController implements Initializable, InterResSearchResultList
         stage.showAndWait();
         
         
-        
+        log.debug("Function entry Details_Orderer");
         
     }
 
     @FXML
     private void Search_Guest(ActionEvent event) throws IOException {
+	    log.debug("Function entry Search_Guest ");
         Stage stage = new Stage();
         String fxmlFile = "/fxml/AddressList.fxml";
        
@@ -284,12 +292,13 @@ public class ResguiController implements Initializable, InterResSearchResultList
        
         
         stage.showAndWait();
-        
+        log.debug("Function exit Search_Guest");
     }
 
     @FXML
     private void Details_guest(ActionEvent event) throws IOException {
         
+	    log.debug("Function entry Details_guest");
          Stage stage = new Stage();
         String fxmlFile = "/fxml/AdressGuiFx.fxml";
        
@@ -307,11 +316,13 @@ public class ResguiController implements Initializable, InterResSearchResultList
        
         
         stage.showAndWait();
-        
+       log.debug("Function exit Details_guest");	
     }
 
     @FXML
     private void Search_room(ActionEvent event) throws IOException {
+	    log.debug("Function entry Search_room");
+	    
          Stage stage = new Stage();
         String fxmlFile = "/fxml/RoomList.fxml";
        
@@ -325,16 +336,18 @@ public class ResguiController implements Initializable, InterResSearchResultList
         
         stage.setScene(scene);
         RoomListController controller= loader.<RoomListController>getController();
-       controller.init(ressearchresult,this,"rooms");
+       controller.init(ressearchresult,this,"rooms",datapickerFrom.getValue().atStartOfDay().toLocalDate(),datapickerTo.getValue().atStartOfDay().toLocalDate());
        
+   
         
         stage.showAndWait();
+	    log.debug("Function exit Search_room");
     }
 
     @FXML
     private void Open_Account(ActionEvent event) throws IOException {
         
-
+        log.debug("Function entry Open_Account");
         
          Stage stage = new Stage();
         String fxmlFile = "/fxml/simpelAccounting.fxml";
@@ -354,7 +367,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
        
         stage.showAndWait();
         
-        
+        log.debug("Function exit Open_Account");
     }
 
     @FXML
@@ -600,7 +613,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
      * @param id
      */
     public void init(long id){
-
+     log.debug("Function entry init id" + String.valueOf(id));
         textfields=new ArrayList<TextField>();
         
         
@@ -638,13 +651,13 @@ public class ResguiController implements Initializable, InterResSearchResultList
           
           
           
-          
+          log.debug("Function exit init");
         
     }
 
     private void FillWithSelectedData() {
         // init DASH Board
-        
+        log.debug("Function entry FillWithSelectedData ");
         DASH_ResArrival_fxtxt.setText(res.getArrivaldate());
         DASH_ResDeparture_fxtxt.setText(res.getDeparturedate());
         DASH_ResNo_fxtxt.setText(res.getResno());
@@ -659,10 +672,12 @@ public class ResguiController implements Initializable, InterResSearchResultList
        
         fillGuest();
         //Res
-        Occ gh=new Occ();
-        gh=occ.SearchForOccforRes(res.GetCurrentRes()).get(0);
+        List<Occ> gh=new ArrayList<Occ>();
+	Occ mb= new Occ();
+        gh=occ.SearchForOccforRes(res.GetCurrentRes());
+	mb=gh.get(0);
         roomid=occ.getRoom().getId();
-        Room_Code_fxtxtfield.setText(gh.getRoom().getCode()+" "+gh.getRoom().getName());
+        Room_Code_fxtxtfield.setText(mb.getRoom().getCode()+" "+mb.getRoom().getName());
         
         //RATE_Name_fxtxtfield.setText(;
         fillDates();
@@ -680,19 +695,27 @@ public class ResguiController implements Initializable, InterResSearchResultList
         ACC_No_fxtxtfield.setText(accs.getId().toString() + " " + accs.getAddress().getName() );
         this.rateid=cscs.getRate().getId();
         this.accountid=accs.getId();
+	
+	    log.debug("Function exit FillWithSelectedData");
        
     }
 
     private void fillOrderer(){
+	    log.debug("Function entry fillOrderer");   
+	    
          Orderer_Name_fxtxtfield.setText(res.getAddresses().getName());
         Orderer_FirstName_fxtxtfield.setText(res.getAddresses().getChristianname());
         Orderer_Street_fxtxtfield.setText(res.getAddresses().getStreet());
         Orderer_ZipCode_fxtxtfield.setText(res.getAddresses().getZipcode());
         Orderer_City_fxtxtfield.setText(res.getAddresses().getCity());
         ordererid=res.getAddresses().getId();
+	
+	    log.debug("Function exit fillOrderer");
     }
     
     private void fillOrderer(long addressid){
+	    
+	    log.debug("Function entry fillOrderer" + String.valueOf(addressid));
         
          Orderer_Name_fxtxtfield.setText(address.getDataRecord(addressid).getName());
         Orderer_FirstName_fxtxtfield.setText(address.getDataRecord(addressid).getChristianname());
@@ -700,26 +723,30 @@ public class ResguiController implements Initializable, InterResSearchResultList
         Orderer_ZipCode_fxtxtfield.setText(address.getDataRecord(addressid).getZipcode());
         Orderer_City_fxtxtfield.setText(address.getDataRecord(addressid).getCity());
         ordererid=addressid;
+	    log.debug("Function exit fillOrderer");
     }
     
     
     private void fillGuest(){
+	    log.debug("Function entry fillGuest ");
          Guest_Name_fxtxtfield.setText(occ.getGuest().getName());
         Guest_firstName_fxtxtfield.setText(occ.getGuest().getChristianname());
         Guest_Street_fxtxtfield.setText(occ.getGuest().getStreet());
         Guest_ZipCode_fxtxtfield.setText(occ.getGuest().getZipcode());
         Guest_City_fxtxtfield.setText(occ.getGuest().getCity());
         guestid=occ.getGuest().getId();
-              
+              log.debug("Function exit fillGuest");
     }
     
     private void fillGuest(long addressid){
+	    log.debug("Function entry fillGuest" + String.valueOf(addressid));
          Guest_Name_fxtxtfield.setText(address.getDataRecord(addressid).getName());
         Guest_firstName_fxtxtfield.setText(address.getDataRecord(addressid).getChristianname());
         Guest_Street_fxtxtfield.setText(address.getDataRecord(addressid).getStreet());
         Guest_ZipCode_fxtxtfield.setText(address.getDataRecord(addressid).getZipcode());
         Guest_City_fxtxtfield.setText(address.getDataRecord(addressid).getCity());
        guestid=addressid;
+       log.debug("Function exit fillGuest");
     }
     
     private void fillRoom(long roomid){
@@ -775,6 +802,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
 
     @FXML
     private void SearchForRate(ActionEvent event) throws IOException {
+	    log.debug("Function entry SearchForRate");
         Stage stage = new Stage();
         String fxmlFile = "/fxml/RatesList.fxml";
        
@@ -792,10 +820,12 @@ public class ResguiController implements Initializable, InterResSearchResultList
        
         
         stage.showAndWait();
+	    log.debug("Function exit SearchForRate");
     }
 
     @FXML
     private void RateDetails(ActionEvent event) throws IOException {
+	    log.debug("Function entry RateDetails ");
         Stage stage = new Stage();
         String fxmlFile = "/fxml/RateGuiFx.fxml";
        
@@ -813,6 +843,7 @@ public class ResguiController implements Initializable, InterResSearchResultList
        
         
         stage.showAndWait();
+	    log.debug("Function exit RateDetails");
         
         
     }

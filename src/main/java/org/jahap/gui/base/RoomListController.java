@@ -27,8 +27,8 @@ package org.jahap.gui.base;
 
 import java.io.IOException;
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 import javafx.beans.property.ReadOnlyObjectWrapper;
@@ -49,6 +49,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import javafx.util.Callback;
 import net.sf.jasperreports.engine.JRException;
+import org.apache.log4j.Logger;
 import org.jahap.business.base.roomsbean;
 import org.jahap.business.res.occbean;
 import org.jahap.entities.base.Rooms;
@@ -62,6 +63,7 @@ import org.jahap.sreport.roomreports;
  * @author russ
  */
 public class RoomListController implements Initializable {
+	static Logger log = Logger.getLogger(RoomListController.class.getName());
     @FXML
     private Button PrintButton;
     @FXML
@@ -85,6 +87,7 @@ public class RoomListController implements Initializable {
     
     
     private void initTable(){
+	    log.debug("Function entry initTable");
         rooms= new roomsbean();
         RoomsSearchResult= rooms.SearchForRooms("*");
         ObservableList<Rooms> data= FXCollections.observableList(RoomsSearchResult);
@@ -162,12 +165,13 @@ public class RoomListController implements Initializable {
     
     }
     
-    private void initTable(Date from,Date to){
+    private void initTable(LocalDate from,LocalDate to){
+	    log.debug("Function entry initTable from: " + from.toString() + " to: " + to.toString());
         rooms= new roomsbean();
 	//TODO:add free room finding
 	occ= new occbean();
         
-	RoomsSearchResult= rooms.SearchForRooms("*");
+	RoomsSearchResult= occ.searchforfreerooms(from, to);
         ObservableList<Rooms> data= FXCollections.observableList(RoomsSearchResult);
         
         // -----------------  id
@@ -249,7 +253,7 @@ public class RoomListController implements Initializable {
         initTable();
    }    
     
-    public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource,Date from,Date to){
+    public void init(InterResSearchResult ResSearchresults,ResguiController zi,String guisource,LocalDate from,LocalDate to){
         //RoomSearchResult searchresult with check for occ
           searchresult= new RoomSearchResult();
         isOverviewDialog=true;
