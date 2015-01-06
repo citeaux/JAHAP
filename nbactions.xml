@@ -74,4 +74,16 @@
                 <goal>site</goal>
             </goals>
         </action>
+        <action>
+            <actionName>CUSTOM-G</actionName>
+            <displayName>G</displayName>
+            <goals>
+                <goal>clean</goal>
+                <goal>install</goal>
+                
+            </goals>
+            <properties>
+                <g></g>
+            </properties>
+        </action>
     </actions>

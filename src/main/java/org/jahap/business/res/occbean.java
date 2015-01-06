@@ -33,10 +33,13 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Objects;
 import javax.persistence.Query;
 import org.apache.log4j.Logger;
+import org.jahap.business.base.Catbean;
+import org.jahap.business.base.Locationbean;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Accounts;
 import org.jahap.entities.base.Address;
@@ -164,13 +167,35 @@ public class occbean extends  DatabaseOperations implements occ_i{
     
      public List<Rooms>searchforfreerooms(LocalDate from, LocalDate to){
 	     log.debug("Function entry searchforfreerooms From: " + from.format(DateTimeFormatter.ISO_DATE) + " to: " + to.format(DateTimeFormatter.ISO_DATE) );
+	   
 	     Query rooms;
-	     List<Rooms>allfreerooms = null;
+	     List<Object[]>jj=null;
+	     List<Rooms>allfreerooms = new ArrayList<Rooms>();
 	     try {
            //TODO: test and add freerooms
 		     
-            rooms = dbhook.getEntity().createQuery("select  t from Rooms t, Occ k where (t.id=k.room and (k.arrivaldate>'" + from.format(DateTimeFormatter.ISO_DATE) + "' or k.departuredate<'" + to.format(DateTimeFormatter.ISO_DATE)+ "'))");
-            allfreerooms= rooms.getResultList();
+		     
+            rooms = dbhook.getEntity().createNativeQuery("select  distinct t.id,t.category,t.code,t.name,t.cat,t.location,t.clean,t.no_maintenance from Rooms t, Occ k where (t.id=k.room and (k.arrivaldate>'" + from.format(DateTimeFormatter.ISO_DATE) + "' or k.departuredate<'" + to.format(DateTimeFormatter.ISO_DATE)+ "'))");
+	    jj=rooms.getResultList();
+	    Catbean gg=new Catbean();
+	    Locationbean jkl=new Locationbean();
+	    
+	    Object[] rol=null;
+	    Rooms kk=null;
+            Iterator itr = jj.iterator();
+	    while(itr.hasNext()){
+		  kk=new Rooms(); 
+		   rol=(Object[])itr.next();
+                   kk.setId((long)rol[0]);
+		   
+		   kk.setClean((Boolean)rol[6]);
+		   kk.setCode((String)rol[2]);
+	           kk.setName((String)rol[3]);
+		   kk.setLocation(jkl.getDataRecord((Integer)rol[5]));
+		   kk.setNo_maintenance((Boolean)rol[7]);
+		   allfreerooms.add(kk);
+	    }
+	    
             numberOfLastRecord= allfreerooms.size()-1;
         } catch (Exception e) {
             numberOfLastRecord=0;

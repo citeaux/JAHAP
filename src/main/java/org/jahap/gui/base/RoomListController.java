@@ -25,37 +25,24 @@
 
 package org.jahap.gui.base;
 
-import java.io.IOException;
-import java.net.URL;
 import java.time.LocalDate;
-import java.util.ArrayList;
 import java.util.List;
-import java.util.ResourceBundle;
 import javafx.beans.property.ReadOnlyObjectWrapper;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
-import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import javafx.util.Callback;
-import net.sf.jasperreports.engine.JRException;
 import org.apache.log4j.Logger;
 import org.jahap.business.base.roomsbean;
 import org.jahap.business.res.occbean;
 import org.jahap.entities.base.Rooms;
 import org.jahap.gui.res.InterResSearchResult;
-import org.jahap.gui.res.ResguiController;
-import org.jahap.sreport.roomreports;
 
 /**
  * FXML Controller class
@@ -105,7 +92,8 @@ public class RoomListController implements Initializable {
       //dataTable.getColumns().add(IdCol);
       
       // -----------------  Code
-        TableColumn<Rooms,String> CodeCol = new TableColumn<Rooms,String>("Code");
+    
+      TableColumn<Rooms,String> CodeCol = new TableColumn<Rooms,String>("Code");
       CodeCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getCode());
@@ -127,7 +115,7 @@ public class RoomListController implements Initializable {
       });  
       
       dataTable.getColumns().add(NameCol);
-      
+     /* 
        // -----------------  Category
         TableColumn<Rooms,String> CatCol = new TableColumn<Rooms,String>("Category");
       CatCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
@@ -142,7 +130,7 @@ public class RoomListController implements Initializable {
       
       
       dataTable.getColumns().add(CatCol);
-        
+        */
           TableColumn<Rooms,String> LocCol = new TableColumn<Rooms,String>("Location");
       LocCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
@@ -209,14 +197,14 @@ public class RoomListController implements Initializable {
       });  
       
       dataTable.getColumns().add(NameCol);
-      
+      /*
        // -----------------  Category
         TableColumn<Rooms,String> CatCol = new TableColumn<Rooms,String>("Category");
       CatCol.setCellValueFactory(new Callback<CellDataFeatures<Rooms, String>, ObservableValue<String>>() {
      public ObservableValue<String> call(CellDataFeatures<Rooms, String> p) {
          return new ReadOnlyObjectWrapper(p.getValue().getCategory().getCatName());
      }
-     
+     */
       
              
       });  
