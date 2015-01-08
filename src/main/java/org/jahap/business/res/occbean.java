@@ -187,7 +187,7 @@ public class occbean extends  DatabaseOperations implements occ_i{
 		  kk=new Rooms(); 
 		   rol=(Object[])itr.next();
                    kk.setId((long)rol[0]);
-		   
+		   kk.setCategory(gg.getDataRecord((Integer)rol[4]));
 		   kk.setClean((Boolean)rol[6]);
 		   kk.setCode((String)rol[2]);
 	           kk.setName((String)rol[3]);

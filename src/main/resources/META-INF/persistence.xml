@@ -60,5 +60,6 @@
     <class>org.jahap.entities.base.Rooms</class>
     <class>org.jahap.entities.views.Housekeeping</class>
     <class>org.jahap.entities.views.Maintenance</class>
+    <class>org.jahap.entities.views.Reservations</class>
   </persistence-unit>
 </persistence>
