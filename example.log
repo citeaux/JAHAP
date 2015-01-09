@@ -683,3 +683,245 @@
 2015-01-07 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:422) - Function exit testinittable
 2015-01-07 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:218) - Function exit: init
 2015-01-07 DEBUG [JavaFX Application Thread] (ResguiController.java:370) - Function exit Open_Account
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:144) - Function entry List<Res>SearchForReservations
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:205) - Function entry initialize
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:71) - Function entry Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (occbean.java:96) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:98) - Function exit Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (roomsbean.java:73) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:224) - Function exit initialize
+2015-01-09 DEBUG [JavaFX Application Thread] (ResListController.java:199) - Function entry1052
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:622) - Function entry init id1052
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:71) - Function entry Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (occbean.java:96) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:98) - Function exit Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (roomsbean.java:73) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:233) - Function entry 6
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:666) - Function entry FillWithSelectedData 
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:710) - Function entry fillOrderer
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:719) - Function exit fillOrderer
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:737) - Function entry fillGuest 
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:744) - Function exit fillGuest
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:149) - Function entry GetCurrentRes
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:141) - Function entry SearchForOccforResorg.arnea.jahap.standalone.entities.Res[ id=1052 ]
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx0
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx1
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx2
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx3
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx4
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx5
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx6
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:161) - Function exit SearchForOccforRes
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:149) - Function entry GetCurrentRes
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:705) - Function exit FillWithSelectedData
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:660) - Function exit init
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:144) - Function entry List<Res>SearchForReservations
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:205) - Function entry initialize
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:71) - Function entry Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (occbean.java:96) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:98) - Function exit Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (roomsbean.java:73) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:224) - Function exit initialize
+2015-01-09 DEBUG [JavaFX Application Thread] (ResListController.java:199) - Function entry1052
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:622) - Function entry init id1052
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:71) - Function entry Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (occbean.java:96) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:98) - Function exit Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (roomsbean.java:73) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:233) - Function entry 6
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:666) - Function entry FillWithSelectedData 
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:710) - Function entry fillOrderer
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:719) - Function exit fillOrderer
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:737) - Function entry fillGuest 
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:744) - Function exit fillGuest
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:149) - Function entry GetCurrentRes
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:141) - Function entry SearchForOccforResorg.arnea.jahap.standalone.entities.Res[ id=1052 ]
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx0
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx1
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx2
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx3
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx4
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx5
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx6
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:161) - Function exit SearchForOccforRes
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:149) - Function entry GetCurrentRes
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:705) - Function exit FillWithSelectedData
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:660) - Function exit init
+2015-01-09 TRACE [JavaFX Application Thread] (reportsbean.java:72) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:144) - Function entry List<Res>SearchForReservations
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:205) - Function entry initialize
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:71) - Function entry Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (occbean.java:96) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:98) - Function exit Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (roomsbean.java:73) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:224) - Function exit initialize
+2015-01-09 DEBUG [JavaFX Application Thread] (ResListController.java:199) - Function entry1052
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:622) - Function entry init id1052
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:71) - Function entry Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (occbean.java:96) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:98) - Function exit Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (roomsbean.java:73) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:233) - Function entry 6
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:666) - Function entry FillWithSelectedData 
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:710) - Function entry fillOrderer
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:719) - Function exit fillOrderer
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:737) - Function entry fillGuest 
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:744) - Function exit fillGuest
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:149) - Function entry GetCurrentRes
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:141) - Function entry SearchForOccforResorg.arnea.jahap.standalone.entities.Res[ id=1052 ]
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx0
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx1
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx2
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx3
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx4
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx5
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx6
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:161) - Function exit SearchForOccforRes
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:149) - Function entry GetCurrentRes
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:705) - Function exit FillWithSelectedData
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:660) - Function exit init
+2015-01-09 TRACE [JavaFX Application Thread] (reportsbean.java:72) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:144) - Function entry List<Res>SearchForReservations
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:205) - Function entry initialize
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:71) - Function entry Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (occbean.java:96) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:98) - Function exit Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (roomsbean.java:73) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:224) - Function exit initialize
+2015-01-09 DEBUG [JavaFX Application Thread] (ResListController.java:199) - Function entry1052
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:622) - Function entry init id1052
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:71) - Function entry Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (occbean.java:96) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:98) - Function exit Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (roomsbean.java:73) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:233) - Function entry 6
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:666) - Function entry FillWithSelectedData 
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:710) - Function entry fillOrderer
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:719) - Function exit fillOrderer
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:737) - Function entry fillGuest 
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:744) - Function exit fillGuest
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:149) - Function entry GetCurrentRes
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:141) - Function entry SearchForOccforResorg.arnea.jahap.standalone.entities.Res[ id=1052 ]
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx0
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx1
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx2
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx3
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx4
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx5
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx6
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:161) - Function exit SearchForOccforRes
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:149) - Function entry GetCurrentRes
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:705) - Function exit FillWithSelectedData
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:660) - Function exit init
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:144) - Function entry List<Res>SearchForReservations
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:205) - Function entry initialize
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:71) - Function entry Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (occbean.java:96) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:98) - Function exit Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (roomsbean.java:73) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:224) - Function exit initialize
+2015-01-09 DEBUG [JavaFX Application Thread] (ResListController.java:199) - Function entry1052
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:622) - Function entry init id1052
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:52) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:79) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:63) - Function entry constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:88) - Function exit constructor
+2015-01-09 DEBUG [JavaFX Application Thread] (addressbean.java:90) - Function Exit newrecordcreated:false
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:71) - Function entry Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (occbean.java:96) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:98) - Function exit Contructor
+2015-01-09 TRACE [JavaFX Application Thread] (roomsbean.java:73) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-01-09 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:233) - Function entry 6
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:666) - Function entry FillWithSelectedData 
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:710) - Function entry fillOrderer
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:719) - Function exit fillOrderer
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:737) - Function entry fillGuest 
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:744) - Function exit fillGuest
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:149) - Function entry GetCurrentRes
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:141) - Function entry SearchForOccforResorg.arnea.jahap.standalone.entities.Res[ id=1052 ]
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx0
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx1
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx2
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx3
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx4
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx5
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:148) - Function entry xx6
+2015-01-09 DEBUG [JavaFX Application Thread] (occbean.java:161) - Function exit SearchForOccforRes
+2015-01-09 DEBUG [JavaFX Application Thread] (resbean.java:149) - Function entry GetCurrentRes
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:705) - Function exit FillWithSelectedData
+2015-01-09 DEBUG [JavaFX Application Thread] (ResguiController.java:660) - Function exit init

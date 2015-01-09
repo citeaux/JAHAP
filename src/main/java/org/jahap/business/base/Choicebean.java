@@ -2,6 +2,7 @@ package org.jahap.business.base;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Query;
 import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Choice;
@@ -60,10 +61,12 @@ public class Choicebean extends DatabaseOperations implements choice_i {
          
          
         try {
-           
+            
             query_AllDbRecords = dbhook.getEntity().createQuery("select t from Choice t ORDER BY t.id");
             List<Choicebean>alladdresseslist= query_AllDbRecords.getResultList();
             numberOfLastRecord= alladdresseslist.size()-1;
+	    Query hh;
+	    hh.getResultList().
         } catch (Exception e) {
             numberOfLastRecord=0;
         }

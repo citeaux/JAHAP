@@ -29,6 +29,7 @@ package org.jahap.gui.res;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
+import java.sql.SQLException;
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -51,6 +52,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 import javafx.stage.Stage;
 import javax.swing.JOptionPane;
+import net.sf.jasperreports.engine.JRException;
 import org.apache.log4j.Logger;
 import org.jahap.business.acc.accountsbean;
 import org.jahap.business.acc.cscbean;
@@ -67,6 +69,7 @@ import org.jahap.gui.base.AdressGuiFx;
 import org.jahap.gui.base.RateGuiFx;
 import org.jahap.gui.base.RateListController;
 import org.jahap.gui.base.RoomListController;
+import org.jahap.sreport.resreports;
 
 /**
  * FXML Controller class
@@ -580,7 +583,10 @@ public class ResguiController implements Initializable, InterResSearchResultList
     }
 
     @FXML
-    private void Print(ActionEvent event) {
+    private void Print(ActionEvent event) throws JRException, SQLException {
+	    resreports k=new resreports();
+	    k.singleResReport(res.getResno());
+	    
     }
 
     @FXML

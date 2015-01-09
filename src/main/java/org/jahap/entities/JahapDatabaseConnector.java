@@ -26,6 +26,9 @@
 
 
 package org.jahap.entities;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -49,6 +52,7 @@ public  final class JahapDatabaseConnector {
   private static EntityManagerFactory factory;
     private static EntityManager EntManager;
     private static JahapDatabaseConnector databaseConnector=null;
+    private static  Connection classicConnection; 
      private String DBUSER;
      private String DBPASS;
     
@@ -82,12 +86,17 @@ public  final class JahapDatabaseConnector {
         properties.put("javax.persistence.jdbc.driver", "org.postgresql.Driver");
         
         factory=Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME,properties);
-        
+        getclassicConnection();
         EntManager=factory.createEntityManager();
         
     }
     
-    
+    private void getclassicConnection(){
+	    try {
+		    classicConnection = DriverManager.getConnection(DB_URL + "?user=" + DBUSER + "&password=" + DBPASS);
+	    } catch (SQLException sQLException) {
+	    }
+    }
     
     
     public static EntityManagerFactory getFactory() {
@@ -111,7 +120,16 @@ public  final class JahapDatabaseConnector {
           return databaseConnector;
      }
     
-   
+     
+     
+   public static Connection GetClassicDbConnection() {
+	   
+	   
+	   
+	  return  classicConnection;
+   }
+     
+     
     public EntityManager getEntity(){
        
         return EntManager;

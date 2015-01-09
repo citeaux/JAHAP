@@ -3,9 +3,7 @@
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
-	<queryString>
-		<![CDATA[Select * from Reservations]]>
-	</queryString>
+	
 	<field name="orderer_christianname" class="java.lang.String"/>
 	<field name="orderer_city" class="java.lang.String"/>
 	<field name="orderer_email" class="java.lang.String"/>
