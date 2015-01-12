@@ -66,7 +66,8 @@ public class resreports {
 		resultSet = statement.executeQuery(querys);  
 		JRResultSetDataSource resultSetDataSource = new  
 		JRResultSetDataSource(resultSet);  
-		log.trace(resultSet.toString());
+		
+		
 	        // Get Report form Database
 	        reportsbean rbean=new reportsbean();
 
@@ -75,12 +76,14 @@ public class resreports {
 		parameter.put("aParameter", "Hallo Welt");
 		
 	        JasperPrint jp= new JasperPrint();
-		ByteArrayInputStream bis = new ByteArrayInputStream(rbean.SearchForReport("Rate").getReport());               try {
-		    jp = JasperFillManager.fillReport("reports/Reservation.jasper", new HashMap(), resultSetDataSource);
+		ByteArrayInputStream bis = new ByteArrayInputStream(rbean.SearchForReport("Res").getReport());               try {
+		    jp = JasperFillManager.fillReport(bis, new HashMap(), resultSetDataSource);
             
 		    
 		     //http://www.coderanch.com/t/523321/open-source/JasperReport-Dynamic-SQL-Query-queryString
 		
+		
+		    
 		} catch (JRException jRException) {
         }
                         
@@ -102,7 +105,8 @@ public class resreports {
               
                         
                JasperViewer.viewReport(jp,false);
-        
+       
+		//log.trace(resultSet.getArray("orderer_name"));
         
     } 
     
