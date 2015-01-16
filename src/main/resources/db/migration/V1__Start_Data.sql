@@ -217,6 +217,7 @@ CREATE TABLE  HOTEL
    HOTEL_COUNTRY           INTEGER,
    HOTEL_CURRENCY          INTEGER,
    HOTEL_FOOTERTEXT        VARCHAR(200)
+   operationdate           date,
 );
 
 ALTER TABLE  HOTEL

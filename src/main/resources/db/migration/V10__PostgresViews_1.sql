@@ -54,7 +54,7 @@ GRANT REFERENCES, INSERT, TRIGGER, UPDATE, SELECT, DELETE, TRUNCATE ON Maintenan
 
 
 CREATE OR REPLACE VIEW reservations AS 
- SELECT orderer.christianname AS orderer_christianname,
+  SELECT orderer.christianname AS orderer_christianname,
     orderer.city AS orderer_city,
     orderer.email AS orderer_email,
     orderer.name AS orderer_name,
@@ -95,7 +95,8 @@ CREATE OR REPLACE VIEW reservations AS
     hotel.hotel_code,
     hotel.hotel_bankaccountdata1,
     hotel.hotel_bankaccountdata2,
-    hotel.hotel_footertext
+    hotel.hotel_footertext,
+    occ.id
    FROM accounts
      LEFT JOIN csc services ON accounts.cscservice = services.id,
     occ

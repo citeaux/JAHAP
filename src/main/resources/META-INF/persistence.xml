@@ -61,5 +61,8 @@
     <class>org.jahap.entities.views.Housekeeping</class>
     <class>org.jahap.entities.views.Maintenance</class>
     <class>org.jahap.entities.views.Reservations</class>
+    <class>org.jahap.entities.jobs.Jobscheduler</class>
+    <class>org.jahap.entities.jobs.Jobs</class>
+    <class>org.jahap.entities.jobs.JobJobscheduler</class>
   </persistence-unit>
 </persistence>

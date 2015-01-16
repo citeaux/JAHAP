@@ -4,9 +4,6 @@
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
 	<scriptlet name="scriptlet1" class="net.sf.jasperreports.engine.JRDefaultScriptlet"/>
-	<queryString>
-		<![CDATA[select * from Reservations t where t.resno='1003']]>
-	</queryString>
 	<field name="orderer_christianname" class="java.lang.String"/>
 	<field name="orderer_city" class="java.lang.String"/>
 	<field name="orderer_email" class="java.lang.String"/>
