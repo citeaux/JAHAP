@@ -29,12 +29,12 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -52,11 +52,11 @@ import javax.xml.bind.annotation.XmlTransient;
 	@NamedQuery(name = "Jobs.findByType", query = "SELECT j FROM Jobs j WHERE j.type = :type"),
 	@NamedQuery(name = "Jobs.findByName", query = "SELECT j FROM Jobs j WHERE j.name = :name"),
 	@NamedQuery(name = "Jobs.findByDefinition", query = "SELECT j FROM Jobs j WHERE j.definition = :definition")})
-public class Jobs implements Serializable {
+public class Jobs implements Serializable, Jobs_ie {
 	private static final long serialVersionUID = 1L;
 	@Id
         @Basic(optional = false)
-        @NotNull
+        @GeneratedValue
         @Column(name = "id")
 	private Long id;
 	@Size(max = 50)
@@ -78,43 +78,53 @@ public class Jobs implements Serializable {
 		this.id = id;
 	}
 
+	@Override
 	public Long getId() {
 		return id;
 	}
+
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
+	@Override
 	public String getType() {
 		return type;
 	}
 
+	@Override
 	public void setType(String type) {
 		this.type = type;
 	}
 
+	@Override
 	public String getName() {
 		return name;
 	}
 
+	@Override
 	public void setName(String name) {
 		this.name = name;
 	}
 
+	@Override
 	public String getDefinition() {
 		return definition;
 	}
 
+	@Override
 	public void setDefinition(String definition) {
 		this.definition = definition;
 	}
 
 	@XmlTransient
+	@Override
 	public Collection<JobJobscheduler> getJobJobschedulerCollection() {
 		return jobJobschedulerCollection;
 	}
 
+	@Override
 	public void setJobJobschedulerCollection(Collection<JobJobscheduler> jobJobschedulerCollection) {
 		this.jobJobschedulerCollection = jobJobschedulerCollection;
 	}

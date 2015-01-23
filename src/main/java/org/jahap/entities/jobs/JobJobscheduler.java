@@ -27,13 +27,13 @@ import java.io.Serializable;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.xml.bind.annotation.XmlRootElement;
 
 /**
@@ -47,11 +47,11 @@ import javax.xml.bind.annotation.XmlRootElement;
 	@NamedQuery(name = "JobJobscheduler.findAll", query = "SELECT j FROM JobJobscheduler j"),
 	@NamedQuery(name = "JobJobscheduler.findById", query = "SELECT j FROM JobJobscheduler j WHERE j.id = :id"),
 	@NamedQuery(name = "JobJobscheduler.findByPosition", query = "SELECT j FROM JobJobscheduler j WHERE j.position = :position")})
-public class JobJobscheduler implements Serializable {
+public class JobJobscheduler implements Serializable, JobJobscheduler_ie {
 	private static final long serialVersionUID = 1L;
 	@Id
         @Basic(optional = false)
-        @NotNull
+        @GeneratedValue
         @Column(name = "id")
 	private Long id;
 	@Column(name = "position")
@@ -70,34 +70,42 @@ public class JobJobscheduler implements Serializable {
 		this.id = id;
 	}
 
+	@Override
 	public Long getId() {
 		return id;
 	}
 
+	
 	public void setId(Long id) {
 		this.id = id;
 	}
 
+	@Override
 	public Integer getPosition() {
 		return position;
 	}
 
+	@Override
 	public void setPosition(Integer position) {
 		this.position = position;
 	}
 
+	@Override
 	public Jobs getIdJob() {
 		return idJob;
 	}
 
+	@Override
 	public void setIdJob(Jobs idJob) {
 		this.idJob = idJob;
 	}
 
+	@Override
 	public Jobscheduler getIdJobscheduler() {
 		return idJobscheduler;
 	}
 
+	@Override
 	public void setIdJobscheduler(Jobscheduler idJobscheduler) {
 		this.idJobscheduler = idJobscheduler;
 	}

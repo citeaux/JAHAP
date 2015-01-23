@@ -1,17 +1,18 @@
-package org.jahap.business.base;
-import java.math.BigDecimal;
+package org.jahap.jobs;
+
 import java.util.ArrayList;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.base.Choice;
-import org.jahap.entities.base.Language;
+import org.jahap.entities.jobs.JobJobscheduler;
+import org.jahap.entities.jobs.Jobs;
+import org.jahap.entities.jobs.Jobscheduler;
 
 
 /*
  * The MIT License
  *
- * Copyright 2014 Open Jahap Community.
+ * Copyright 2015 Open Jahap Community.
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
@@ -39,20 +40,20 @@ import org.jahap.entities.base.Language;
  */
 
 
-public class Choicebean extends DatabaseOperations implements choice_i {
+public class JobJobschedulerbean extends DatabaseOperations implements JobJobscheduler_i {
 
  JahapDatabaseConnector dbhook;
 	
 
 
 
-    private static List<Choice> allrecordlist;
-     static Logger log = Logger.getLogger(Choicebean.class.getName());
+    private static List<JobJobscheduler> allrecordlist;
+     static Logger log = Logger.getLogger(JobJobschedulerbean.class.getName());
 
     /**
      *
      */
-    public Choicebean(){
+    public JobJobschedulerbean(){
        
          log.debug("Function entry countrybean");
         long testg;
@@ -60,16 +61,15 @@ public class Choicebean extends DatabaseOperations implements choice_i {
          
          
         try {
-            
-            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Choice t ORDER BY t.id");
-            List<Choicebean>alladdresseslist= query_AllDbRecords.getResultList();
+           
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from JobJobscheduler t ORDER BY t.id");
+            List<JobJobschedulerbean>alladdresseslist= query_AllDbRecords.getResultList();
             numberOfLastRecord= alladdresseslist.size()-1;
-	   
         } catch (Exception e) {
             numberOfLastRecord=0;
         }
         
-        query_AllDbRecords = dbhook.getEntity().createQuery("select t from  Choice t ORDER BY t.id");
+        query_AllDbRecords = dbhook.getEntity().createQuery("select t from  JobJobscheduler t ORDER BY t.id");
             allrecordlist= query_AllDbRecords.getResultList();
         
         try {
@@ -84,38 +84,31 @@ public class Choicebean extends DatabaseOperations implements choice_i {
         log.debug("Function entry billbean");    
         
     }
-    
-    public List<Choice>SearchForChoice(choicegroups group){
+   
+    public void jumpToFirstRecord(){
+        currentRecordNumber=0;
+    }    
+     public void jumpToLastRecord(){
+        currentRecordNumber=numberOfLastRecord;
+    }
+
+    public List<JobJobscheduler>SearchForJobJobscheduler(String searchstring){
         
-         log.debug("Function entry SearchForChoice");
+         log.debug("Function entry SearchForJobJobscheduler");
       
          
         
-        log.debug("Function exit SearchForChoice ");
+        log.debug("Function exit SearchForJobJobscheduler ");
         return allrecordlist;
     }  
     
-    public List<String>SearchForChoiceString(choicegroups group){
-        log.debug("Function entry SearchForChoice");
-        
-        
-         query_AllDbRecords = dbhook.getEntity().createQuery("select t.choicetext from Choice t where t.groupname='"+ group.toString() + "' ORDER BY t.id");
-          log.debug("Function exit SearchForChoice ");
-           return query_AllDbRecords.getResultList();
-        
-        
-         
-         
-       
-        
-    }  
    
     
        public void createNewEmptyRecord() {
           
           log.debug("Function entry createNewEmptyRecord");
           if(tabelIsEmpty==true){
-            allrecordlist = new ArrayList<Choice>();
+            allrecordlist = new ArrayList<JobJobscheduler>();
             numberOfLastRecord++;
             currentRecordNumber=numberOfLastRecord;
             
@@ -126,7 +119,7 @@ public class Choicebean extends DatabaseOperations implements choice_i {
             numberOfLastRecord++;
         }
         
-               Choice emptyacc = new Choice();
+               JobJobscheduler emptyacc = new JobJobscheduler();
         
        
         allrecordlist.add(emptyacc);
@@ -184,7 +177,7 @@ public class Choicebean extends DatabaseOperations implements choice_i {
          log.debug("Function entry RefreshAllRecords");
         try {
             allrecordlist.clear();
-            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Choice t ORDER BY t.id");
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from JobJobscheduler t ORDER BY t.id");
             allrecordlist = query_AllDbRecords.getResultList();
             numberOfLastRecord=allrecordlist.size()-1;
         } catch (Exception e) {
@@ -195,7 +188,7 @@ public class Choicebean extends DatabaseOperations implements choice_i {
     }
     
     
-     public Choice getDataRecord(long id){
+     public JobJobscheduler getDataRecord(long id){
         if(id==0)return null;
         log.debug("Function entry getDataRecord");
        int inl=-1;
@@ -218,7 +211,7 @@ public class Choicebean extends DatabaseOperations implements choice_i {
         
    }
     
-    public Choice getLastPosition(){
+    public JobJobscheduler getLastPosition(){
           log.debug("Function entry getLastPosition(");
              if( tabelIsEmpty!=true){ 
                  log.debug("Function exit getLastPosition");   
@@ -232,7 +225,7 @@ public class Choicebean extends DatabaseOperations implements choice_i {
      private void saveNewRecord(){
           log.debug("Function entry saveNewRecord");
           
-        if ( newEmptyRecordCreated==true){
+        if ( newEmptyRecordCreated=true){
             try{
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
@@ -240,7 +233,7 @@ public class Choicebean extends DatabaseOperations implements choice_i {
             dbhook.getEntity().getTransaction().commit();
             newEmptyRecordCreated=false;
             allrecordlist.clear();
-            query_AllDbRecords = dbhook.getEntity().createQuery("select t from Choice t ORDER BY t.id"); // Refresh list
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from JobJobscheduler t ORDER BY t.id"); // Refresh list
             allrecordlist= query_AllDbRecords.getResultList();
             //currentRecordNumber++;
             }
@@ -265,8 +258,8 @@ public class Choicebean extends DatabaseOperations implements choice_i {
            log.debug("Function entry saveOldRecord");
         if(newEmptyRecordCreated=false){
             dbhook.getEntity().getTransaction().begin();
-            dbhook.getEntity().find(Choice.class,allrecordlist.get(currentRecordNumber).getId() );
-             dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
+            dbhook.getEntity().refresh(dbhook.getEntity().find(JobJobscheduler.class,allrecordlist.get(currentRecordNumber).getId() ));
+            
             
             dbhook.getEntity().getTransaction().commit();
         }
@@ -274,90 +267,55 @@ public class Choicebean extends DatabaseOperations implements choice_i {
            log.debug("Function exit saveOldRecord");
     }
 
-    @Override
-    public String getChoicecode() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public Long getId() {
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
 
-    @Override
-    public BigDecimal getChoicefloat() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public Jobs getIdJob() {
+		if( tabelIsEmpty!=true){ 
+              return allrecordlist.get(currentRecordNumber).getIdJob();
+        }
+        return null;
+	}
 
-    @Override
-    public Integer getChoiceint() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public Jobscheduler getIdJobscheduler() {
+		if( tabelIsEmpty!=true){ 
+              return allrecordlist.get(currentRecordNumber).getIdJobscheduler();
+        }
+        return null;
+	}
 
-    @Override
-    public String getChoicetext() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public Integer getPosition() {
+		if( tabelIsEmpty!=true){ 
+              return allrecordlist.get(currentRecordNumber).getPosition();
+        }
+        return null;
+	}
 
-    @Override
-    public String getGroupcode() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public void setIdJob(Jobs idJob) {
+		if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+         
+        allrecordlist.get(currentRecordNumber).setIdJob(idJob);
+	}
 
-    @Override
-    public Integer getGroupid() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public void setIdJobscheduler(Jobscheduler idJobscheduler) {
+		if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+         
+        allrecordlist.get(currentRecordNumber).setIdJobscheduler(idJobscheduler);
+	}
 
-    @Override
-    public String getGroupname() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Long getId() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Language getLanguage() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setChoicecode(String choicecode) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setChoicefloat(BigDecimal choicefloat) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setChoiceint(Integer choiceint) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setChoicetext(String choicetext) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setGroupcode(String groupcode) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setGroupid(Integer groupid) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setGroupname(String groupname) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void setLanguage(Language language) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+	@Override
+	public void setPosition(Integer position) {
+		if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
+         
+        allrecordlist.get(currentRecordNumber).setPosition(position);
+	}
     
     
     

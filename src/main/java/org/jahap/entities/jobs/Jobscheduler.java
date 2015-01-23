@@ -29,12 +29,12 @@ import javax.persistence.Basic;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
@@ -51,11 +51,11 @@ import javax.xml.bind.annotation.XmlTransient;
 	@NamedQuery(name = "Jobscheduler.findById", query = "SELECT j FROM Jobscheduler j WHERE j.id = :id"),
 	@NamedQuery(name = "Jobscheduler.findByTyp", query = "SELECT j FROM Jobscheduler j WHERE j.typ = :typ"),
 	@NamedQuery(name = "Jobscheduler.findByName", query = "SELECT j FROM Jobscheduler j WHERE j.name = :name")})
-public class Jobscheduler implements Serializable {
+public class Jobscheduler implements Serializable, Jobscheduler_ie {
 	private static final long serialVersionUID = 1L;
 	@Id
         @Basic(optional = false)
-        @NotNull
+        @GeneratedValue
         @Column(name = "id")
 	private Long id;
 	@Size(max = 50)
@@ -74,6 +74,7 @@ public class Jobscheduler implements Serializable {
 		this.id = id;
 	}
 
+	@Override
 	public Long getId() {
 		return id;
 	}
@@ -82,27 +83,33 @@ public class Jobscheduler implements Serializable {
 		this.id = id;
 	}
 
+	@Override
 	public String getTyp() {
 		return typ;
 	}
 
+	@Override
 	public void setTyp(String typ) {
 		this.typ = typ;
 	}
 
+	@Override
 	public String getName() {
 		return name;
 	}
 
+	@Override
 	public void setName(String name) {
 		this.name = name;
 	}
 
 	@XmlTransient
+	@Override
 	public Collection<JobJobscheduler> getJobJobschedulerCollection() {
 		return jobJobschedulerCollection;
 	}
 
+	@Override
 	public void setJobJobschedulerCollection(Collection<JobJobscheduler> jobJobschedulerCollection) {
 		this.jobJobschedulerCollection = jobJobschedulerCollection;
 	}
