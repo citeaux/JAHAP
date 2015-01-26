@@ -320,6 +320,8 @@ public class Jobschedulerbean extends DatabaseOperations implements Jobscheduler
 		if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
          
         allrecordlist.get(currentRecordNumber).setTyp(typ);
+	
+	
 	}
     
     

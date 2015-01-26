@@ -1,5 +1,6 @@
 package org.jahap.business.base;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
@@ -8,6 +9,7 @@ import org.jahap.entities.base.Country;
 import org.jahap.entities.base.Currency;
 import org.jahap.entities.base.Hotel;
 import org.jahap.entities.base.Language;
+import org.joda.time.LocalDate;
 
 
 /*
@@ -436,7 +438,31 @@ public class Hotelbean extends DatabaseOperations implements hotel_i {
          
         allrecordlist.get(currentRecordNumber).setHotelName(hotelName);
     }
+
     
+    @Override
+     public Date getOperationdate() {
+		  if( tabelIsEmpty!=true){ 
+              return allrecordlist.get(currentRecordNumber).getOperationdate();
+        }
+        return null;
+		
+	}
+
+	@Override
+	public void setOperationdate(Date operationdate) {
+		throw new UnsupportedOperationException("Not supported yet."); 
+		
+		// can't be set by the gui!!!
+	}
+    
+	public void incrementOperationdate(){
+		LocalDate hotelday=LocalDate.fromDateFields(allrecordlist.get(currentRecordNumber).getOperationdate());
+		allrecordlist.get(currentRecordNumber).setOperationdate(hotelday.plusDays(1).toDate());
+		
+		
+		
+	}
     
     
     

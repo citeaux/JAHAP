@@ -23,8 +23,7 @@
  */
 package org.jahap.entities.base;
 
-import org.jahap.entities.base.Address;
-import org.jahap.entities.base.Country;
+import java.util.Date;
 
 /**
  *
@@ -51,6 +50,10 @@ public interface Hotel_ie {
     String getHotelName();
 
     Integer getId();
+    
+    Date getOperationdate();
+    
+    void setOperationdate(Date operationdate);
 
     void setHotelAdress(Address hotelAdress);
 

@@ -23,18 +23,31 @@
  */
 package org.jahap.jobs;
 
+import java.util.List;
+import javax.persistence.Query;
+
 /**
  *
  * @author russ
  */
-public enum Jobtypes {
-	
-	dayclose,
-	report,
-	backup,
-	servicecharging,
-	changehotelday,
-	etl,
-	changeroomstate
-	
+public class Dayclose extends JobJobschedulerbean {
+	public List<Dayclose>getHousekeepingOverview(){
+	   Query queryView;
+	   List<Dayclose>alljobs=null;
+	   int lines=0;
+	   try {
+           
+            queryView = dbhook.getEntity().createQuery("select t from Dayclose t ORDER BY t.position");
+            alljobs= queryView.getResultList();
+	    lines=alljobs.size()-1;
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }finally{
+	   if(lines<0){
+		   return null;
+	   }    
+        }
+	return alljobs;  
+    }
 }

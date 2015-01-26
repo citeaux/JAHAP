@@ -196,3 +196,7 @@
 2015-01-13 DEBUG [JavaFX Application Thread] (DeduplicableRegistry.java:85) - Added object net.sf.jasperreports.engine.fill.JRTemplateText@30a14d0c
 2015-01-13 DEBUG [JavaFX Application Thread] (JRFillTextField.java:434) - created net.sf.jasperreports.engine.fill.JRTemplateText@30a14d0c for (null, null)
 2015-01-13 DEBUG [JavaFX Application Thread] (JRBaseFiller.java:942) - Fill 1: ended
+2015-01-26 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-01-26 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-01-26 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-01-26 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean

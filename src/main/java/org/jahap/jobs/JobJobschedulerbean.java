@@ -53,7 +53,7 @@ public class JobJobschedulerbean extends DatabaseOperations implements JobJobsch
     /**
      *
      */
-    public JobJobschedulerbean(){
+    protected JobJobschedulerbean(){
        
          log.debug("Function entry countrybean");
         long testg;
@@ -85,14 +85,14 @@ public class JobJobschedulerbean extends DatabaseOperations implements JobJobsch
         
     }
    
-    public void jumpToFirstRecord(){
+    protected void jumpToFirstRecord(){
         currentRecordNumber=0;
     }    
-     public void jumpToLastRecord(){
+     protected void jumpToLastRecord(){
         currentRecordNumber=numberOfLastRecord;
     }
 
-    public List<JobJobscheduler>SearchForJobJobscheduler(String searchstring){
+    protected List<JobJobscheduler>SearchForJobJobscheduler(String searchstring){
         
          log.debug("Function entry SearchForJobJobscheduler");
       
@@ -308,6 +308,8 @@ public class JobJobschedulerbean extends DatabaseOperations implements JobJobsch
 		if (tabelIsInit==false|| tabelIsEmpty==true)createNewEmptyRecord();
          
         allrecordlist.get(currentRecordNumber).setIdJobscheduler(idJobscheduler);
+	
+	
 	}
 
 	@Override

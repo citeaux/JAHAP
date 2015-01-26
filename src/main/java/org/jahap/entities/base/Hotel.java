@@ -23,10 +23,8 @@
  */
 package org.jahap.entities.base;
 
-import org.jahap.entities.base.Address;
-import org.jahap.entities.base.Country;
 import java.io.Serializable;
-import java.math.BigInteger;
+import java.util.Date;
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -37,7 +35,8 @@ import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 
@@ -94,6 +93,9 @@ public class Hotel implements Serializable, Hotel_ie {
     @Size(max = 200)
     @Column(name = "HOTEL_FOOTERTEXT")
     private String hotelFootertext;
+    @Column(name = "OPERATIONDATE")
+    @Temporal(TemporalType.DATE)
+    private Date operationdate;
 
     public Hotel() {
     }
@@ -225,5 +227,17 @@ public class Hotel implements Serializable, Hotel_ie {
     public String toString() {
         return "org.jahap.entities.Hotel[ id=" + id + " ]";
     }
+
+    @Override
+	public Date getOperationdate() {
+		return operationdate;
+	}
+
+    @Override
+	public void setOperationdate(Date operationdate) {
+		this.operationdate = operationdate;
+	}
+    
+    
     
 }

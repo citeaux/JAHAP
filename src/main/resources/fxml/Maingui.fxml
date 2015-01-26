@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.geometry.*?>
@@ -35,17 +36,7 @@ THE SOFTWARE.
   <children>
     <BorderPane layoutX="-1.0" layoutY="-1.0" prefHeight="766.0" prefWidth="940.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-1.0" AnchorPane.rightAnchor="-5.0" AnchorPane.topAnchor="-1.0">
       <bottom>
-        <HBox alignment="TOP_RIGHT" prefHeight="58.0" prefWidth="919.0000999999975" BorderPane.alignment="TOP_RIGHT">
-          <children>
-            <ListView prefHeight="58.0" prefWidth="844.0" HBox.hgrow="ALWAYS">
-              <HBox.margin>
-                <Insets />
-              </HBox.margin>
-            </ListView>
-            <Separator orientation="VERTICAL" prefHeight="58.0" prefWidth="37.0" />
-            <ProgressIndicator progress="0.0" />
-          </children>
-        </HBox>
+        <HBox alignment="TOP_RIGHT" prefHeight="58.0" prefWidth="919.0000999999975" BorderPane.alignment="TOP_RIGHT" />
       </bottom>
       <padding>
         <Insets />
@@ -125,6 +116,17 @@ THE SOFTWARE.
           </children>
         </VBox>
       </top>
+         <center>
+            <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label fx:id="hotelday" layoutX="171.0" layoutY="209.0" prefHeight="141.0" prefWidth="563.0" text="Label" textAlignment="CENTER">
+                     <font>
+                        <Font size="96.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </center>
     </BorderPane>
   </children>
 </AnchorPane>

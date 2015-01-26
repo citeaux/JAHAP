@@ -64,5 +64,6 @@
     <class>org.jahap.entities.jobs.Jobscheduler</class>
     <class>org.jahap.entities.jobs.Jobs</class>
     <class>org.jahap.entities.jobs.JobJobscheduler</class>
+    <class>org.jahap.entities.views.Dayclose</class>
   </persistence-unit>
 </persistence>

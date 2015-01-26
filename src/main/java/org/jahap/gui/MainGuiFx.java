@@ -34,17 +34,21 @@ package org.jahap.gui;
 import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
+import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
+import javafx.scene.control.Label;
 import javafx.scene.control.MenuItem;
 import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import org.apache.log4j.Logger;
 import org.jahap.CurrentUser;
+import org.jahap.business.base.Hotelbean;
+import org.joda.time.LocalDate;
 
 
 public class MainGuiFx implements Initializable {
@@ -103,6 +107,8 @@ public class MainGuiFx implements Initializable {
     @FXML
     private MenuItem location;
     static Logger log = Logger.getLogger(MainGuiFx.class.getName());
+	@FXML
+	private Label hotelday;
 
     @FXML
     private void newAddress(ActionEvent event) throws IOException,InvocationTargetException {
@@ -124,7 +130,12 @@ public class MainGuiFx implements Initializable {
     }
 
     public void initialize(URL url, ResourceBundle rb) {
+	    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yy");
          CurrentUser cu=CurrentUser.getCurrentUser();
+	 Hotelbean hbean=new Hotelbean();
+	 LocalDate hdate= LocalDate.fromDateFields(hbean.getOperationdate());
+	 this.hotelday.setText(hdate.toString("dd.MM.yy"));
+	 
          System.out.print(cu.isIsAdmin());
          
          System.out.print(com.sun.javafx.runtime.VersionInfo.getVersion());

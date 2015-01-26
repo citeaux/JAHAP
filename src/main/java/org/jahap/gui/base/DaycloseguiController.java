@@ -21,20 +21,61 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jahap.jobs;
+package org.jahap.gui.base;
+
+import java.net.URL;
+import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.scene.control.TableView;
 
 /**
+ * FXML Controller class
  *
  * @author russ
  */
-public enum Jobtypes {
-	
-	dayclose,
-	report,
-	backup,
-	servicecharging,
-	changehotelday,
-	etl,
-	changeroomstate
+public class DaycloseguiController implements Initializable {
+	@FXML
+	private TableView<?> jobtabel;
+	@FXML
+	private Button start;
+	@FXML
+	private Button addjob;
+	@FXML
+	private Button removejob;
+	@FXML
+	private Button cancel;
+	@FXML
+	private Button save;
+
+	/**
+	 * Initializes the controller class.
+	 */
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
+		// TODO
+	}	
+
+	@FXML
+	private void startDayclose(ActionEvent event) {
+	}
+
+	@FXML
+	private void addjob(ActionEvent event) {
+	}
+
+	@FXML
+	private void removejob(ActionEvent event) {
+	}
+
+	@FXML
+	private void cancel(ActionEvent event) {
+	}
+
+	@FXML
+	private void save(ActionEvent event) {
+	}
 	
 }

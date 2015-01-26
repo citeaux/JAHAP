@@ -101,3 +101,22 @@ CREATE INDEX fki_jobscheduler
   ON job_jobscheduler
   USING btree
   (id_jobscheduler);
+
+
+
+CREATE OR REPLACE VIEW dayclose AS 
+ SELECT jobs.type,
+    jobs.name,
+    job_jobscheduler."position",
+    job_jobscheduler.id_jobscheduler,
+    job_jobscheduler.id_job,
+    job_jobscheduler.id,
+    jobs.definition
+   FROM job_jobscheduler,
+    jobs,
+    jobscheduler
+  WHERE job_jobscheduler.id_job = jobs.id AND job_jobscheduler.id_jobscheduler = jobscheduler.id AND jobscheduler.typ = 'dayclose'::bpchar
+  ORDER BY job_jobscheduler."position";
+
+ALTER TABLE dayclose
+  OWNER TO "JAHAP";
