@@ -23,6 +23,7 @@
  */
 package org.jahap.jobs;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Query;
 
@@ -31,13 +32,22 @@ import javax.persistence.Query;
  * @author russ
  */
 public class Dayclose extends JobJobschedulerbean {
-	public List<Dayclose>getHousekeepingOverview(){
+        List<Dayclose>alljobs = new ArrayList<>();
+	public Dayclose() {
+		this.alljobs=getListOfDaycloseJobs();
+		
+		
+	}
+	
+	
+	
+	public List<Dayclose>getListOfDaycloseJobs(){
 	   Query queryView;
 	   List<Dayclose>alljobs=null;
 	   int lines=0;
 	   try {
            
-            queryView = dbhook.getEntity().createQuery("select t from Dayclose t ORDER BY t.position");
+            queryView = dbhook.getEntity().createQuery("select t from Dayclose t WHERE t.idJobscheduler=1 ORDER BY t.position");
             alljobs= queryView.getResultList();
 	    lines=alljobs.size()-1;
             
@@ -50,4 +60,24 @@ public class Dayclose extends JobJobschedulerbean {
         }
 	return alljobs;  
     }
+	
+	void addNewJob(long JobId){
+		createNewEmptyRecord();
+		Jobsbean kk= new Jobsbean();
+		Jobschedulerbean kl = new Jobschedulerbean();
+		this.setIdJob(kk.getDataRecord(JobId));
+		this.setIdJobscheduler(kl.getDataRecord(1));
+		int h=this.alljobs.get(this.alljobs.size()-1).getPosition();
+		h++;
+		this.setPosition(h);
+	}
+	
+	void deleteJob(long jobjobid){
+		
+	}
+	
+	void changePosition(int jobid,int position){
+		
+	}
+	
 }
