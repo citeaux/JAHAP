@@ -26,14 +26,15 @@ package org.jahap.jobs;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Query;
+import org.jahap.entities.views.Dayclose;
 
 /**
  *
  * @author russ
  */
-public class Dayclose extends JobJobschedulerbean {
+public class Dayclosebean extends JobJobschedulerbean {
         List<Dayclose>alljobs = new ArrayList<>();
-	public Dayclose() {
+	public Dayclosebean() {
 		this.alljobs=getListOfDaycloseJobs();
 		
 		
@@ -70,14 +71,11 @@ public class Dayclose extends JobJobschedulerbean {
 		int h=this.alljobs.get(this.alljobs.size()-1).getPosition();
 		h++;
 		this.setPosition(h);
+		this.saveRecord();
 	}
 	
-	void deleteJob(long jobjobid){
-		
-	}
 	
-	void changePosition(int jobid,int position){
-		
-	}
+	
+	
 	
 }

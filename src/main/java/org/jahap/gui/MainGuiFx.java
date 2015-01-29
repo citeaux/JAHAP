@@ -109,6 +109,8 @@ public class MainGuiFx implements Initializable {
     static Logger log = Logger.getLogger(MainGuiFx.class.getName());
 	@FXML
 	private Label hotelday;
+	@FXML
+	private MenuItem Jobs;
 
     @FXML
     private void newAddress(ActionEvent event) throws IOException,InvocationTargetException {
@@ -236,7 +238,20 @@ public class MainGuiFx implements Initializable {
     }
 
     @FXML
-    private void DayClose(ActionEvent event) {
+    private void DayClose(ActionEvent event) throws IOException {
+	     Stage tage = new Stage();
+        String fxmlFile = "/fxml/Dayclosegui.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene tene = new Scene(page);
+            tage.setTitle("Dayclose");
+            tage.setScene(tene);
+            tage.show();
+	    
     }
 
     @FXML
@@ -423,5 +438,22 @@ public class MainGuiFx implements Initializable {
             stage.setScene(scene);
             stage.show();
     }
+
+	@FXML
+	private void Jobs(ActionEvent event) throws IOException {
+		Stage tage = new Stage();
+        String fxmlFile = "/fxml/JobsList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+      
+        
+           AnchorPane page = (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+      
+            Scene tene = new Scene(page);
+            tage.setTitle("Rates");
+            tage.setScene(tene);
+            tage.show();
+		
+	}
     
 }

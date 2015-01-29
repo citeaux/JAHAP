@@ -37,6 +37,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import net.sf.jasperreports.engine.JRException;
 import org.jahap.CurrentUser;
@@ -52,22 +53,16 @@ import org.jahap.sreport.ratereports;
  * @author russ
  */
 public class RateGuiFx implements Initializable, SearchResultListener {
-    @FXML
         private TextField ratecode_fxtextfield;
-    @FXML
         private TextField ratename_fxtextfield;
-    @FXML
         private TextField RateBasePrice_fxtextfield;
     @FXML
     private Button search;
-    @FXML
-    private Button printAdress;
 
     private static ratesbean rates;
     private List<TextField> textfields;
     private SearchResult searchresults;
     private static final long ratesid=0;
-    @FXML
     private CheckBox OvernightRate_fxCheckBox;
     @FXML
     private Button firstRecord_fxbutton;
@@ -78,9 +73,7 @@ public class RateGuiFx implements Initializable, SearchResultListener {
     @FXML
     private Button lastRecord_fxbutton;
     private CurrentUser cuser;
-    @FXML
     private ChoiceBox<String> revAccount;
-    @FXML
     private ChoiceBox<String> vat;
     @FXML
     private Button newRate;
@@ -89,6 +82,14 @@ public class RateGuiFx implements Initializable, SearchResultListener {
     private revaccountsbean revAccbean;
     
     private vattypesbean vbean;
+	@FXML
+	private TextField name;
+	@FXML
+	private ChoiceBox<?> type;
+	@FXML
+	private TextArea jobdefinition;
+	@FXML
+	private Button printRate;
     /**
      * Initializes the controller class.
      */

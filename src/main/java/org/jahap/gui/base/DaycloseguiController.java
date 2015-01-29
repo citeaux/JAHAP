@@ -24,12 +24,23 @@
 package org.jahap.gui.base;
 
 import java.net.URL;
+import java.util.List;
 import java.util.ResourceBundle;
+import javafx.beans.property.ReadOnlyObjectWrapper;
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
+import javafx.util.Callback;
+import org.apache.log4j.Logger;
+import org.jahap.entities.views.Dayclose;
+import org.jahap.jobs.Dayclosebean;
 
 /**
  * FXML Controller class
@@ -37,8 +48,10 @@ import javafx.scene.control.TableView;
  * @author russ
  */
 public class DaycloseguiController implements Initializable {
+	 static Logger log = Logger.getLogger(CatListController.class.getName());
+	
 	@FXML
-	private TableView<?> jobtabel;
+	private TableView  jobtabel;
 	@FXML
 	private Button start;
 	@FXML
@@ -49,15 +62,99 @@ public class DaycloseguiController implements Initializable {
 	private Button cancel;
 	@FXML
 	private Button save;
-
+        List<Dayclose>dclist;
+	
+	Dayclosebean dayclose;
 	/**
 	 * Initializes the controller class.
 	 */
 	@Override
 	public void initialize(URL url, ResourceBundle rb) {
-		// TODO
+		initTable();// TODO
+		
 	}	
 
+	 private void initTable(){
+        log.debug("Function entry initTable");
+      
+        dayclose = new Dayclosebean();
+        dclist=dayclose.getListOfDaycloseJobs();
+        ObservableList<Dayclose> data= FXCollections.observableList(dclist);
+        
+        
+        // -----------------  id
+        TableColumn<Dayclose,String> IdCol = new TableColumn<Dayclose,String>("Id");
+      IdCol.setCellValueFactory(new Callback<CellDataFeatures<Dayclose, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Dayclose, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getId());
+     }
+     
+             
+      });  
+        
+     
+        
+        
+       //----------------------------------- Job name ----------------------- 
+    
+        TableColumn<Dayclose,String> jobname = new TableColumn<Dayclose,String>("Job");
+     jobname.setCellValueFactory(new Callback<CellDataFeatures<Dayclose, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Dayclose, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getName());
+     }
+     
+             
+      });  
+        
+      //TableColumn<Address, String> col1 = new TableColumn<Address, String>("Name");        
+    //col1.setCellValueFactory(new PropertyValueFactory<Address, String>("Name"));  
+        
+      
+      
+      jobtabel.getColumns().add(jobname );
+       //dataTable.getColumns().add(col1);
+      
+      //------------------------------------- Jobdef-id --------------------------------
+      
+       TableColumn<Dayclose,String> jobid = new TableColumn<Dayclose,String>("Floor");
+     jobid.setCellValueFactory(new Callback<CellDataFeatures<Dayclose, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Dayclose, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getIdJob());
+     }
+     
+             
+      });
+      
+       
+        //------------------------------------- Jobscheduler-id --------------------------------
+      
+       TableColumn<Dayclose,String> jobschedulerid = new TableColumn<Dayclose,String>("Floor");
+     jobschedulerid.setCellValueFactory(new Callback<CellDataFeatures<Dayclose, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Dayclose, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getIdJobscheduler());
+     }
+     
+             
+      });
+      
+     
+        //------------------------------------- Position number--------------------------------
+      
+       TableColumn<Dayclose,String> position = new TableColumn<Dayclose,String>("Floor");
+    position.setCellValueFactory(new Callback<CellDataFeatures<Dayclose, String>, ObservableValue<String>>() {
+     public ObservableValue<String> call(CellDataFeatures<Dayclose, String> p) {
+         return new ReadOnlyObjectWrapper(p.getValue().getPosition());
+     }
+     
+             
+      });
+    
+     
+        
+   jobtabel.setItems(data);
+        log.debug("Function exit initTable");
+    }
+	
 	@FXML
 	private void startDayclose(ActionEvent event) {
 	}

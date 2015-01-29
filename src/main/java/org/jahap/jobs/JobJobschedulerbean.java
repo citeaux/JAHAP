@@ -171,6 +171,24 @@ public class JobJobschedulerbean extends DatabaseOperations implements JobJobsch
       }
         log.debug("Function exit saveRecord ");
     }
+    
+    protected void deleteRecord( int id){
+	    dbhook.getEntity().getTransaction().begin();
+	    for(int ik=0;ik<=allrecordlist.size()-1;ik++){
+		    if(allrecordlist.get(ik).getId()==id){
+			    id=ik;
+		    }
+	    }
+	    
+            dbhook.getEntity().remove(allrecordlist.get(id));
+            System.out.printf(dbhook.getEntity().getProperties().toString());
+            dbhook.getEntity().getTransaction().commit();
+          
+            allrecordlist.clear();
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from JobJobscheduler t ORDER BY t.id"); // Refresh list
+            allrecordlist= query_AllDbRecords.getResultList();
+    }
+    
 
     private void RefreshAllRecords(){
          
@@ -221,6 +239,25 @@ public class JobJobschedulerbean extends DatabaseOperations implements JobJobsch
         return null;
     }
      
+    protected void changePosition(int jobjobid, int newPosition){
+	     dbhook.getEntity().getTransaction().begin();
+	    for(int ik=0;ik<=allrecordlist.size()-1;ik++){
+		    if(allrecordlist.get(ik).getId()==jobjobid){
+			    jobjobid=ik;
+		    }
+	    }
+	    allrecordlist.get(jobjobid).setPosition(newPosition);
+	    
+            dbhook.getEntity().merge(allrecordlist.get(jobjobid));
+            System.out.printf(dbhook.getEntity().getProperties().toString());
+            dbhook.getEntity().getTransaction().commit();
+          
+            allrecordlist.clear();
+            query_AllDbRecords = dbhook.getEntity().createQuery("select t from JobJobscheduler t ORDER BY t.id"); // Refresh list
+            allrecordlist= query_AllDbRecords.getResultList();
+	    
+    }
+    
     
      private void saveNewRecord(){
           log.debug("Function entry saveNewRecord");

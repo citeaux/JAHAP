@@ -71,6 +71,12 @@ public class AccListController implements Initializable {
  
     
     private  accountsbean accbean;
+	@FXML
+	private Button newJob;
+	@FXML
+	private Button deleteJob;
+	@FXML
+	private Button editJob;
       
               
     
@@ -200,5 +206,17 @@ public class AccListController implements Initializable {
     @FXML
     private void CancelAction(ActionEvent event) {
     }
+
+	@FXML
+	private void newJob(ActionEvent event) {
+	}
+
+	@FXML
+	private void deleteJob(ActionEvent event) {
+	}
+
+	@FXML
+	private void editJob(ActionEvent event) {
+	}
     
 }

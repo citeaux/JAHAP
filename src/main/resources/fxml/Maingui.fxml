@@ -103,6 +103,7 @@ THE SOFTWARE.
                     <MenuItem fx:id="HotelPrefMenuItem" mnemonicParsing="false" onAction="#HotelPrefMenu" text="Hotel" />
                             <MenuItem fx:id="chefInfoReport" mnemonicParsing="false" onAction="#getChefInfoReport" text="Chef Info" />
                               <MenuItem fx:id="revAccounts" mnemonicParsing="false" onAction="#revAccounts" text="Revenue Accounts" />
+                              <MenuItem fx:id="Jobs" mnemonicParsing="false" onAction="#Jobs" text="Jobs" />
                               <MenuItem fx:id="taxes" mnemonicParsing="false" onAction="#taxes" text="Taxes" />
                           </items>
                         </Menu>
