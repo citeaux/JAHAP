@@ -23,6 +23,7 @@
  */
 package org.jahap.gui.base;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -32,12 +33,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.apache.log4j.Logger;
 import org.jahap.entities.jobs.Jobs;
@@ -64,7 +69,7 @@ public class joblistcontroller implements Initializable {
 	private Button Ok;
 	@FXML
 	private Button Cancel;
-        
+        private SearchResult jobsearchresult;
 	Jobsbean jbean;
 	List<Jobs> jobs;
 	/**
@@ -134,13 +139,43 @@ public class joblistcontroller implements Initializable {
         log.debug("Function exit initTable");
     }
 	
+	public void init(SearchResult jobSearchResult){
+		this.jobsearchresult=jobSearchResult;
+	}
 	
 	@FXML
 	private void PrintReport(ActionEvent event) {
 	}
 
 	@FXML
-	private void MouseClicked(MouseEvent event) {
+	private void MouseClicked(MouseEvent event) throws IOException {
+		long id;
+		Jobs ad=(Jobs) dataTable.getSelectionModel().getSelectedItem();
+                id=ad.getId();
+      //if(isOverviewDialog==false){searchresult.setDbRecordId(id, "Rooms");}
+       
+       if(event.getClickCount()==2){
+             Stage stage = new Stage();
+             String fxmlFile = "/fxml/JobConfigFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+     
+
+        
+        stage.setScene(scene);
+        JobsController controller= loader.<JobsController>getController();
+       controller.init(id);
+       
+        
+        stage.showAndWait();
+      
+      
+       }
+		
 	}
 
 	@FXML
@@ -157,6 +192,25 @@ public class joblistcontroller implements Initializable {
 
 	@FXML
 	private void OkAction(ActionEvent event) {
+		long id;
+//	   if(isOverviewDialog==false){
+//            Stage stage = (Stage) Ok.getScene().getWindow();
+//            stage.close();
+//        }
+        
+       //if(isOverviewDialog==true){
+           Jobs ad=(Jobs) dataTable.getSelectionModel().getSelectedItem();
+    id=ad.getId();
+    
+          try {
+                jobsearchresult.setDbRecordId(id,"w");
+            } catch (Exception e) {
+            }
+            Stage stage = (Stage) Ok.getScene().getWindow();
+        stage.close();
+       //}
+		
+		
 	}
 
 	@FXML

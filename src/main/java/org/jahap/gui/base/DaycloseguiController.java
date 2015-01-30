@@ -23,6 +23,7 @@
  */
 package org.jahap.gui.base;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
@@ -32,11 +33,16 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableColumn.CellDataFeatures;
 import javafx.scene.control.TableView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 import javafx.util.Callback;
 import org.apache.log4j.Logger;
 import org.jahap.entities.views.Dayclose;
@@ -47,7 +53,7 @@ import org.jahap.jobs.Dayclosebean;
  *
  * @author russ
  */
-public class DaycloseguiController implements Initializable {
+public class DaycloseguiController implements Initializable, SearchResultListener {
 	 static Logger log = Logger.getLogger(CatListController.class.getName());
 	
 	@FXML
@@ -63,7 +69,7 @@ public class DaycloseguiController implements Initializable {
 	@FXML
 	private Button save;
         List<Dayclose>dclist;
-	
+	SearchResult jobSearchResult;
 	Dayclosebean dayclose;
 	/**
 	 * Initializes the controller class.
@@ -160,7 +166,25 @@ public class DaycloseguiController implements Initializable {
 	}
 
 	@FXML
-	private void addjob(ActionEvent event) {
+	private void addjob(ActionEvent event) throws IOException {
+		
+		Stage stage = new Stage();
+             String fxmlFile = "/fxml/JobsList.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+     
+
+        
+        stage.setScene(scene);
+        joblistcontroller controller= loader.<joblistcontroller>getController();
+       controller.init(jobSearchResult);
+       
+        
+        stage.showAndWait();
 	}
 
 	@FXML
@@ -173,6 +197,37 @@ public class DaycloseguiController implements Initializable {
 
 	@FXML
 	private void save(ActionEvent event) {
+	}
+
+	@Override
+	public void idinfo(SearchResultEvent e) {
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@FXML
+	private void TabelMouseclicked(MouseEvent event) throws IOException {
+		long id;
+		Dayclose ad=(Dayclose) jobtabel.getSelectionModel().getSelectedItem();
+                id=Long.valueOf(ad.getId());
+		
+		Stage stage = new Stage();
+             String fxmlFile = "/fxml/JobConfigFx.fxml";
+       
+        FXMLLoader loader = new FXMLLoader();
+        AnchorPane page= (AnchorPane) loader.load(getClass().getResourceAsStream(fxmlFile));
+
+        
+        Scene scene = new Scene(page);
+     
+
+        
+        stage.setScene(scene);
+        JobsController controller= loader.<JobsController>getController();
+       controller.init(id);
+       
+        
+        stage.showAndWait();
+		
 	}
 	
 }

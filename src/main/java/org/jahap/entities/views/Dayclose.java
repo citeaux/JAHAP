@@ -24,7 +24,6 @@
 package org.jahap.entities.views;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -61,12 +60,12 @@ public class Dayclose implements Serializable {
 	@Column(name = "position")
 	private Integer position;
 	@Column(name = "id_jobscheduler")
-	private BigInteger idJobscheduler;
+	private long idJobscheduler;
 	@Column(name = "id_job")
-	private BigInteger idJob;
+	private long idJob;
 	@Column(name = "id")
 	@Id
-	private BigInteger id;
+	private long id;
 	@Size(max = 2147483647)
         @Column(name = "definition")
 	private String definition;
@@ -98,27 +97,27 @@ public class Dayclose implements Serializable {
 		this.position = position;
 	}
 
-	public BigInteger getIdJobscheduler() {
+	public long getIdJobscheduler() {
 		return idJobscheduler;
 	}
 
-	public void setIdJobscheduler(BigInteger idJobscheduler) {
+	public void setIdJobscheduler(long idJobscheduler) {
 		this.idJobscheduler = idJobscheduler;
 	}
 
-	public BigInteger getIdJob() {
+	public long getIdJob() {
 		return idJob;
 	}
 
-	public void setIdJob(BigInteger idJob) {
+	public void setIdJob(long idJob) {
 		this.idJob = idJob;
 	}
 
-	public BigInteger getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(BigInteger id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 

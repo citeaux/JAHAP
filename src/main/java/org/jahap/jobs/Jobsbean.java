@@ -1,6 +1,7 @@
 package org.jahap.jobs;
 
 
+import edu.emory.mathcs.backport.java.util.Arrays;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -245,6 +246,16 @@ public class Jobsbean extends DatabaseOperations implements Jobs_i {
         }
      }
     
+      public List<String>SearchForJobtypes(){
+	      Jobtypes dd;
+        List<String>hh=new ArrayList<String>();
+         log.debug("Function entry SearchForCountry" );
+	 
+	hh=Arrays.asList(Jobtypes.values());
+       
+            return hh;
+        }
+     
      
      
     @Override

@@ -25,6 +25,8 @@ package org.jahap.gui.base;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -32,6 +34,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import org.jahap.jobs.Jobsbean;
 
 /**
  * FXML Controller class
@@ -50,7 +53,7 @@ public class JobsController implements Initializable {
 	@FXML
 	private TextField name;
 	@FXML
-	private ChoiceBox<?> type;
+	private ChoiceBox<String> type;
 	@FXML
 	private TextArea jobdefinition;
 	@FXML
@@ -61,6 +64,8 @@ public class JobsController implements Initializable {
 	private Button newRate;
 	@FXML
 	private Button saveRate;
+	
+	private Jobsbean jbean;
 
 	/**
 	 * Initializes the controller class.
@@ -70,20 +75,55 @@ public class JobsController implements Initializable {
 		// TODO
 	}	
 
+	
+	public void init(long id ){
+		
+		jbean=new Jobsbean();
+		filldialog(id);
+		ObservableList<String> data= FXCollections.observableList(jbean.SearchForJobtypes());
+		this.type.setItems(data);
+	}
+	
+	private void filldialog(){
+		
+		this.name.setText(jbean.getName());
+		this.jobdefinition.setText(jbean.getDefinition());
+		this.type.setValue(jbean.getType());
+	}
+	
+	private void filldialog(long id){
+		
+		String h=jbean.getDataRecord(id).getName();
+		this.name.setText(jbean.getName());
+		this.jobdefinition.setText(jbean.getDefinition());
+		this.type.setValue(jbean.getType());
+	}
+	
 	@FXML
 	private void goFirstRecord(ActionEvent event) {
+		jbean.jumpToFirstRecord();
+		filldialog();
 	}
 
 	@FXML
 	private void goOneRecordBackward(ActionEvent event) {
+		jbean.nextRecordBackward();
+		filldialog();
+		
 	}
 
 	@FXML
 	private void goOneRecordForward(ActionEvent event) {
+		jbean.nextRecordForeward();
+		filldialog();
+		
 	}
 
 	@FXML
 	private void goLastRecord(ActionEvent event) {
+		jbean.jumpToLastRecord();
+		filldialog();
+		
 	}
 
 	@FXML
