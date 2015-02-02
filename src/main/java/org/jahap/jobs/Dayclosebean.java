@@ -75,7 +75,14 @@ public class Dayclosebean extends JobJobschedulerbean {
 	}
 	
 	
-	
+	public void startDayclosJobs(){
+		Jobsbean jjl=new Jobsbean();
+		JobProcessorFactory factory= new JobProcessorFactory();
+		for(Dayclose k:this.getListOfDaycloseJobs()){
+		  JobProcessor jj=factory.getJobProcessor(k.getType());
+		  jj.exceute(jjl.getDataRecord(k.getIdJob()));
+	        }
+	}
 	
 	
 }

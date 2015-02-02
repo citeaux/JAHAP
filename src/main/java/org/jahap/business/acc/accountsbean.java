@@ -27,12 +27,12 @@ package org.jahap.business.acc;
 
 import java.io.Serializable;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import javafx.collections.ObservableList;
 import org.apache.log4j.Logger;
+import org.jahap.business.base.Hotelbean;
 import org.jahap.business.base.vattypesbean;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.AccountPosition;
@@ -52,7 +52,7 @@ import org.jahap.entities.res.Res;
  */
 public class accountsbean extends DatabaseOperations implements accounts_i{
     static Logger log = Logger.getLogger(accountsbean.class.getName());
-    
+    Hotelbean hbean=new Hotelbean();
     private ObservableList<AccountInfo> k;
     JahapDatabaseConnector dbhook;
     private static List<Accounts> allrecordlist;
@@ -104,10 +104,11 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
         return allrecordlist;
     }
     
-    
-
-    
-    public List getAccOverview(){
+	/**
+	 *
+	 * @return
+	 */
+	public List getAccOverview(){
         
         List<AccountInfo> k=new ArrayList<AccountInfo>();
           
@@ -196,8 +197,11 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
         
     }
     
-   
-      public Accounts getLastRecord(){
+	/**
+	 *
+	 * @return
+	 */
+	public Accounts getLastRecord(){
              return  allrecordlist.get(allrecordlist.size()-1);
         
     }
@@ -266,8 +270,12 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
        dbhook.getEntity().close();
    } 
      
-     
-     public Accounts getDataRecord(long id){
+	/**
+	 *
+	 * @param id
+	 * @return
+	 */
+	public Accounts getDataRecord(long id){
        int inl=-1;
         
         try {
@@ -287,9 +295,17 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
     
     
      
+	
+	
      
     // ########################## Position handling ###############
      
+	/**
+	 *
+	 * @param idofPosition
+	 * @param AdjustLikePosition
+	 */
+	     
      public  void adjustPosition(Long idofPosition,AccountPosition AdjustLikePosition ){
         accountspositionbean test=new accountspositionbean();
         revenuebean rev=new revenuebean();
@@ -405,11 +421,21 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
         
    }
      
-    
-    public void  addPosition(Rates r,int amount, double price,String positioname){
+	/**
+	 * Charges a service to a specific account
+	 * The Recordpointer has to be set to the specific account
+	 * 
+	 * @param acc Accounts - The account to which charge
+ 	 * @param r Rates - The Rate to charge
+	 * @param amount Integer - How often the rate shall be charged
+	 * @param price  Double - the Price, if not given the standard Price will be charged
+	 * @param positioname String - How it will apear in the bill or on the Account
+	 */
+	public void  addPosition(Accounts acc, Rates r,int amount, double price,String positioname){
         log.debug("Function entry addposition " + String.valueOf(r.getId()) + "/ amount: " + String.valueOf(amount)  + "/ price: " +  String.valueOf(price) + "/Posname: " + String.valueOf(positioname) );
-            
-       Calendar cal  = Calendar.getInstance();
+        Accounts testo=this.getDataRecord(acc.getId());
+	
+       
        
         accountspositionbean test = null;
         double vatamount = 0;
@@ -442,7 +468,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
       test.setAccount(allrecordlist.get(this.currentRecordNumber));
       test.setAmount(amount);
       test.setPrice(price);
-      test.setRatedate(cal.getTime());
+      test.setRatedate(hbean.getOperationdate());
       
       
       if (price==0){
@@ -476,7 +502,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
       vat.createNewEmptyRecord();
       vat.setVattype(r.getVattype());
       vat.setAmount(vatamount);
-      vat.setDate(cal.getTime());
+      vat.setDate(hbean.getOperationdate());
         log.debug("LastPositionOf AccPos used as Key for VAT Table  " + String.valueOf(test.getLastPosition()));
       vat.setAccountposition(test.getLastPosition());
       
@@ -498,9 +524,116 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
         log.debug("Function exit addPosition ");
     }
     
-    public  void addPayment(Payed pm){
+		/**
+	 * Charges a service to a specific account
+	 * The Recordpointer has to be set to the specific account
+	 * 
+ 	 * @param r Rates - The Rate to charge
+	 * @param amount Integer - How often the rate shall be charged
+	 * @param price  Double - the Price, if not given the standard Price will be charged
+	 * @param positioname String - How it will apear in the bill or on the Account
+	 */
+	public void  addPositionToCurrentAccount(Rates r,int amount, double price,String positioname){
+        log.debug("Function entry addposition " + String.valueOf(r.getId()) + "/ amount: " + String.valueOf(amount)  + "/ price: " +  String.valueOf(price) + "/Posname: " + String.valueOf(positioname) );
+            
+      
+       
+        accountspositionbean test = null;
+        double vatamount = 0;
+        double revWihoutVat = 0;
+        vatbean vat = null;
+        revenuebean rev = null;
+        try {
+// ACC Mainbooking
+            test = new accountspositionbean();
+            // REV CounterBooking
+            rev = new revenuebean();
+            // VAT CounterBooking
+            vat = new vatbean();
+            vatamount = 0.0;
+            revWihoutVat = 0.0;
+        } catch (Exception e) {
+            log.debug("addposition");
+            e.printStackTrace();
+        }
+      
+      
+      
+      
+     
+      // in Revenues is only the total amount registered
+     
+      
+      
+      test.createNewEmptyRecord();
+      test.setAccount(allrecordlist.get(this.currentRecordNumber));
+      test.setAmount(amount);
+      test.setPrice(price);
+      test.setRatedate(hbean.getOperationdate());
+      
+      
+      if (price==0){
+            test.setPrice(r.getPrice());
+            if(amount==0){
+                       
+                       test.setAmount(1);
+               }
+      }
+      
+      if(price!=0){
+             if(amount==0){
+                  
+                  test.setAmount(1);
+             }
+      }
+      
+      test.setPositionname(positioname);
+      if (positioname==""){
+            test.setPositionname(r.getName());      
+            
+      }
+      
+      
+      vatamount=(test.getPrice()*test.getAmount())/(r.getVattype().getPercentage()+100);
+      vatamount=vatamount*r.getVattype().getPercentage();
+      revWihoutVat=(test.getPrice()*test.getAmount())-vatamount;
+      
+       
+      
+      vat.createNewEmptyRecord();
+      vat.setVattype(r.getVattype());
+      vat.setAmount(vatamount);
+      vat.setDate(hbean.getOperationdate());
+        log.debug("LastPositionOf AccPos used as Key for VAT Table  " + String.valueOf(test.getLastPosition()));
+      vat.setAccountposition(test.getLastPosition());
+      
+     
+      
+      test.setRate(r);
+      test.saveRecord();
+      
+       rev.createNewEmptyRecord(); 
+       rev.setAmount(revWihoutVat);
+      rev.setRevaccount(r.getRevaccount());
+      log.debug("LastPositionOf AccPos used as Key for REV Table  " + String.valueOf(test.getLastPosition()));
+      rev.setAccountposition(test.getLastPosition());
+      rev.saveRecord();
+      
+      vat.setAccountposition(test.getLastPosition());
+      vat.saveRecord();
+     
+        log.debug("Function exit addPosition ");
+    }
+	
+	
+	
+	/**
+	 *
+	 * @param pm
+	 */
+	public  void addPayment(Payed pm){
         log.debug("Function entry addPayment");
-           Calendar cal  = Calendar.getInstance();
+          
            accountspositionbean test = new accountspositionbean();
            test.createNewEmptyRecord();
            test.setAccount(allrecordlist.get(this.currentRecordNumber));
@@ -508,16 +641,22 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
            test.setPrice(pm.getTotal());
            test.setDebit(!pm.getDebit());// if in payment is debit it mus be cedit in pos
            test.setPositionname(pm.getPaymenttype().getName() + " Receipt:" + pm.getId());
-           test.setRatedate(cal.getTime());
+           test.setRatedate(hbean.getOperationdate());
            
            test.saveRecord();
            log.debug("Function exit addPayment");
     }
     
-    
-    
-     public void  cancelPosition(Rates r,int amount, long canceledposition, double price,String positioname){
-      Calendar cal  = Calendar.getInstance();
+	/**
+	 *
+	 * @param r
+	 * @param amount
+	 * @param canceledposition
+	 * @param price
+	 * @param positioname
+	 */
+	public void  cancelPosition(Rates r,int amount, long canceledposition, double price,String positioname){
+      
          accountspositionbean test=new accountspositionbean();
            revenuebean rev=new revenuebean();
       vatbean vat=new vatbean();
@@ -576,11 +715,11 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
       
       vat.setVattype(r.getVattype());
       vat.setDebit(true);
-      vat.setDate(cal.getTime());
+      vat.setDate(hbean.getOperationdate());
       vat.setAccountposition(test.getDataRecord(canceledposition));
       
      
-      rev.setRevdate(cal.getTime());
+      rev.setRevdate(hbean.getOperationdate());
       rev.setAccountposition(test.getDataRecord(canceledposition));
       
       rev.setRevaccount(r.getRevaccount());
@@ -597,7 +736,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
       test.setPrice(price);
       test.setDebit(true);
       test.setCanceledposition(canceledposition);
-      test.setRatedate(cal.getTime());
+      test.setRatedate(hbean.getOperationdate());
       
       
       
@@ -621,9 +760,13 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
       
     }
     
-    
-    
-    @Deprecated
+	/**
+	 *
+	 * @param ToAdjustPosition
+	 * @param AdjustLikePosition
+	 * @deprecated
+	 */
+	@Deprecated
     // currently not used
     public void  adjustPosition(AccountPosition ToAdjustPosition,AccountPosition AdjustLikePosition ){
          accountspositionbean test=new accountspositionbean();
@@ -713,7 +856,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
      * @param accountPosNr
      */
     public void copyPositionsIntoThisAccount(long fromAccountNr,long accountPosNr[]) {
-           Calendar cal  = Calendar.getInstance();
+           
          
            for(int k=0;k<allrecordlist.size()-1;){  //search for the Account
                   if(allrecordlist.get(k).getId()==fromAccountNr){
@@ -744,7 +887,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
     }
     
     private AccountPosition copyPos(AccountPosition getit){
-        Calendar cal  = Calendar.getInstance();
+       
           revenuebean rev=new revenuebean();
 
       accountspositionbean ulo= new accountspositionbean();
@@ -756,7 +899,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
            ulo.setDebit(getit.getDebit());
            ulo.setPositionname(getit.getPositionname());
            ulo.setRate(getit.getRate());
-           ulo.setRatedate(cal.getTime());
+           ulo.setRatedate(hbean.getOperationdate());
            ulo.setPrice(getit.getPrice());
                   
           
@@ -884,6 +1027,11 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
     
     //###################### RES Search ##########
     
+	/**
+	 *
+	 * @param res
+	 */
+	    
     public void moveToRecordwithRes(Res res){
           int index=-1; 
         
@@ -992,7 +1140,11 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
         
     }
     
-    public Accounts getAccount(){
+	/**
+	 *
+	 * @return
+	 */
+	public Accounts getAccount(){
         return allrecordlist.get(currentRecordNumber);
     }
     
@@ -1023,8 +1175,11 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
         return 0;
     }
 
-    
-    public double getSumofCreditsPos(){
+	/**
+	 *
+	 * @return
+	 */
+	public double getSumofCreditsPos(){
          double h=0;   
          AccountPosition acP=new AccountPosition();
         if( tabelIsEmpty!=true){
@@ -1046,7 +1201,11 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
         
     }
 
-    public double getSumofDebitsPos(){
+	/**
+	 *
+	 * @return
+	 */
+	public double getSumofDebitsPos(){
          double h=0;   
          AccountPosition acP=new AccountPosition();
         if( tabelIsEmpty!=true){
@@ -1210,16 +1369,21 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
             allrecordlist.get(currentRecordNumber).setCheckout(checkout);
     }
 
-  
-   
-
-    public Address getAddress() {
+	/**
+	 *
+	 * @return
+	 */
+	public Address getAddress() {
        if( tabelIsEmpty!=true) 
               return allrecordlist.get(currentRecordNumber).getAddress();
         return null;
     }
 
-    public void setAddress(Address address) {
+	/**
+	 *
+	 * @param address
+	 */
+	public void setAddress(Address address) {
         if(tabelIsInit==false|| tabelIsEmpty==true)
             createNewEmptyRecord();
         
@@ -1227,13 +1391,21 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
     
     }
 
-    public Collection<Csc> getCscCollection() {
+	/**
+	 *
+	 * @return
+	 */
+	public Collection<Csc> getCscCollection() {
           if( tabelIsEmpty!=true) 
               return allrecordlist.get(currentRecordNumber).getCscCollection();
         return null;
     }
 
-    public void setCscCollection(Collection<Csc> cscCollection) {
+	/**
+	 *
+	 * @param cscCollection
+	 */
+	public void setCscCollection(Collection<Csc> cscCollection) {
          if(tabelIsInit==false|| tabelIsEmpty==true)
             createNewEmptyRecord();
         

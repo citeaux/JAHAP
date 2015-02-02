@@ -23,12 +23,17 @@
  */
 package org.jahap.business.acc;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.persistence.Query;
+import org.jahap.business.base.Hotelbean;
+import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Accounts;
 import org.jahap.entities.acc.Csc;
-import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Rates;
 
 /**
@@ -280,6 +285,21 @@ public class cscbean extends DatabaseOperations implements csc_i {
             createNewEmptyRecord();
         }
         allrecordlist.get(currentRecordNumber).setService(service);
+    }
+    
+    public void chargeServiceForCurrentOperationDate(Accounts acc){
+	    Hotelbean hbean= new Hotelbean();
+	    accountsbean abean = new accountsbean();
+	    LocalDateTime ldate;
+	    Instant instant=Instant.from(hbean.getOperationdate().toInstant());
+	    ldate=LocalDateTime.ofInstant(instant, null);
+	    
+	   Query currentcsc= dbhook.getEntity().createQuery("select t from Csc t where  t.account="+acc.getId() + " AND t.fromdate<='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' AND t.todate=>'" + ldate.format(DateTimeFormatter.ISO_DATE) + "' ORDER BY t.id");
+            List<Csc> clist = currentcsc.getResultList();
+	    for(Csc kl:clist){
+	    abean.addPosition(acc,kl.getRate(),kl.getAmount(),kl.getPrice(),kl.getService());
+	    }
+	    
     }
 
 }
