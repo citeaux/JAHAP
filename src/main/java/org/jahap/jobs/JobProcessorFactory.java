@@ -39,7 +39,7 @@ public class JobProcessorFactory {
 		}
 		
 		if(type.equals(Jobtypes.servicecharging)){
-			return new ChangeHotelDayJob();
+			return new ServiceChargerJob();
 		}
 		
 		return null;

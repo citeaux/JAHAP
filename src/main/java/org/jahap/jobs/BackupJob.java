@@ -29,6 +29,11 @@ import org.jahap.entities.jobs.Jobs;
  *
  * @author russ
  */
-public interface JobProcessor {
-	void execute(Jobs job);
+public class BackupJob implements JobProcessor  {
+
+	@Override
+	public void execute(Jobs job) {
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+	
 }

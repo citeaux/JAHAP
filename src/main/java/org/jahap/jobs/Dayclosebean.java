@@ -80,7 +80,7 @@ public class Dayclosebean extends JobJobschedulerbean {
 		JobProcessorFactory factory= new JobProcessorFactory();
 		for(Dayclose k:this.getListOfDaycloseJobs()){
 		  JobProcessor jj=factory.getJobProcessor(k.getType());
-		  jj.exceute(jjl.getDataRecord(k.getIdJob()));
+		  jj.execute(jjl.getDataRecord(k.getIdJob()));
 	        }
 	}
 	

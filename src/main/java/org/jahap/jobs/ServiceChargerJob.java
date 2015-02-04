@@ -23,17 +23,40 @@
  */
 package org.jahap.jobs;
 
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.List;
+import javax.persistence.Query;
+import org.jahap.business.acc.accountsbean;
+import org.jahap.business.acc.cscbean;
+import org.jahap.business.base.Hotelbean;
+import org.jahap.entities.JahapDatabaseConnector;
+import org.jahap.entities.acc.Accounts;
 import org.jahap.entities.jobs.Jobs;
 
 /**
  *
  * @author russ
  */
-public class ServiceChargerJob implements JobProcessor{
-
+public class ServiceChargerJob extends org.jahap.jobs.DatabaseOperations implements JobProcessor{
+        JahapDatabaseConnector dbhook;
 	@Override
-	public void exceute(Jobs job) {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	public void execute(Jobs job) {
+		cscbean cbean=new cscbean();
+		 Hotelbean hbean= new Hotelbean();
+	    accountsbean abean = new accountsbean();
+	    LocalDateTime ldate;
+	    Instant instant=Instant.from(hbean.getOperationdate().toInstant());
+	    ldate=LocalDateTime.ofInstant(instant, null);
+	    
+	   Query accounts= dbhook.getEntity().createQuery("select t from Accounts t where t.checkindate<='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' AND t.checkoutdate=>'" + ldate.format(DateTimeFormatter.ISO_DATE) + "' ORDER BY t.id");
+            List<Accounts> alist = accounts.getResultList();
+	    for(Accounts j:alist){
+		    cbean.chargeServiceForCurrentOperationDate(j);
+	    }
+	    
+	    
 	}
 	
 }

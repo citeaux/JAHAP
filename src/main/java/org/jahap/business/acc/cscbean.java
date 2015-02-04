@@ -298,7 +298,9 @@ public class cscbean extends DatabaseOperations implements csc_i {
             List<Csc> clist = currentcsc.getResultList();
 	    for(Csc kl:clist){
 	    abean.addPosition(acc,kl.getRate(),kl.getAmount(),kl.getPrice(),kl.getService());
+	    abean.saveRecord();
 	    }
+	    
 	    
     }
 

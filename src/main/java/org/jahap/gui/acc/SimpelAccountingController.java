@@ -28,7 +28,6 @@ package org.jahap.gui.acc;
 
 
 
-import org.jahap.gui.base.RateListController;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
@@ -72,8 +71,7 @@ import org.jahap.entities.acc.Bill;
 import org.jahap.entities.base.Rates;
 import org.jahap.gui.CscGuiFx;
 import org.jahap.gui.EditPositionFx;
-//import static org.jahap.gui.BillTabs.log;
-
+import org.jahap.gui.base.RateListController;
 /**
  * FXML Controller class
  *
@@ -805,7 +803,7 @@ public class SimpelAccountingController implements Initializable, InterAccSearch
            datam.add(ml);
            datam.add(ml);
            datam.remove(ml);
-           acc.addPosition(rate,1,rate.getPrice(),rate.getName());
+           acc.addPositionToCurrentAccount(rate,1,rate.getPrice(),rate.getName());
              balance_fxtextbox.setText(String.valueOf(acc.getBalance()));
         balance_textbox_fxtooltip.setText("Total Credits: " + String.valueOf(acc.getSumofCreditsPos()) + "\n" + "Total Debits: " + 
                  String.valueOf(acc.getSumofDebitsPos()));

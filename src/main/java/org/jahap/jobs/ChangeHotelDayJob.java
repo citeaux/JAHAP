@@ -33,7 +33,7 @@ import org.jahap.entities.jobs.Jobs;
 public class ChangeHotelDayJob implements JobProcessor {
 
 	@Override
-	public void exceute(Jobs job) {
+	public void execute(Jobs job) {
 	        Hotelbean hbean= new Hotelbean();
 		hbean.incrementOperationdate();
 	}
