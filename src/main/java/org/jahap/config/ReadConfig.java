@@ -29,7 +29,6 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-
 import javax.xml.stream.XMLEventReader;
 import javax.xml.stream.XMLInputFactory;
 import javax.xml.stream.XMLStreamException;
@@ -47,6 +46,8 @@ public class ReadConfig {
     static final String PERSISTENCE_UNIT = "persitence_unit";
     static final String DATABASE_URL = "database_url";
     static final String DATABASE = "database";
+    static final String DATABASE_TYPE = "database_type";
+    static final String DATABASE_PATH = "database_path";
 
     @SuppressWarnings({"unchecked", "null"})
     public List<ConfigItem> readConfig(String configFile) {
@@ -91,6 +92,20 @@ public class ReadConfig {
               item.setDatabase_url(event.asCharacters().getData());
               continue;
             }
+	    if (event.asStartElement().getName().getLocalPart()
+                .equals(DATABASE_TYPE)) {
+              event = eventReader.nextEvent();
+              item.setDatabase_type(event.asCharacters().getData());
+              continue;
+            }
+	    
+	    if (event.asStartElement().getName().getLocalPart()
+                .equals(DATABASE_PATH)) {
+              event = eventReader.nextEvent();
+              item.setDatabase_path(event.asCharacters().getData());
+              continue;
+            }
+	    
           }
                 
                 

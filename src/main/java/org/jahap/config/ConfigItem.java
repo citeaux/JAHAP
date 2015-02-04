@@ -33,6 +33,8 @@ public class ConfigItem {
 
   private String persitence_unit; 
    private String database_url; 
+   private String database_type;
+   private String database_path;
 
     public String getDatabase_url() {
         return database_url;
@@ -49,6 +51,22 @@ public class ConfigItem {
     public void setPersitence_unit(String persitence_unit) {
         this.persitence_unit = persitence_unit;
     }
+
+	public String getDatabase_type() {
+		return database_type;
+	}
+
+	public void setDatabase_type(String database_type) {
+		this.database_type = database_type;
+	}
+
+	public String getDatabase_path() {
+		return database_path;
+	}
+
+	public void setDatabase_path(String database_path) {
+		this.database_path = database_path;
+	}
      
   
   

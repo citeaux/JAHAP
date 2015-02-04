@@ -21,27 +21,22 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jahap.jobs;
-
-import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.databasetypes.databaseCommands;
-import org.jahap.entities.jobs.Jobs;
+package org.jahap.entities.databasetypes;
 
 /**
  *
  * @author russ
  */
-public class BackupJob implements JobProcessor  {
-        JahapDatabaseConnector hhh;
-	String dbpath;
-	databaseCommands kkk;
-	
-	@Override
-	public void execute(Jobs job) {
-	     String j;
-		kkk=JahapDatabaseConnector.getDBCommmands();
-             dbpath=JahapDatabaseConnector.
-             j=kkk.getBackupCommand(JahapDatabaseConnector.getDBPath(), "ww2");
+public class DatabaseCommandFactory {
+	public databaseCommands getDatabaseCommands(String databasetype){
+		
+		if(databasetype==null){
+			return null;
+		}
+		if(databasetype=="postgres"){
+			return new postgres();
+		}
+		
+		return null;
 	}
-	
 }

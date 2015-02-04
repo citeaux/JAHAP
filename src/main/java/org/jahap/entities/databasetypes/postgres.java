@@ -21,27 +21,24 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jahap.jobs;
+package org.jahap.entities.databasetypes;
 
-import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.databasetypes.databaseCommands;
-import org.jahap.entities.jobs.Jobs;
 
 /**
  *
  * @author russ
  */
-public class BackupJob implements JobProcessor  {
-        JahapDatabaseConnector hhh;
-	String dbpath;
-	databaseCommands kkk;
-	
+public class postgres implements databaseCommands{
+
 	@Override
-	public void execute(Jobs job) {
-	     String j;
-		kkk=JahapDatabaseConnector.getDBCommmands();
-             dbpath=JahapDatabaseConnector.
-             j=kkk.getBackupCommand(JahapDatabaseConnector.getDBPath(), "ww2");
+	public void getBackupCommand(String Path, String BackupFilename) {
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	}
+
+	@Override
+	public void getRestoreCommand(String Path, String RestoreFilename) {
+		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 	
 }

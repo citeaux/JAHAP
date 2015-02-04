@@ -37,6 +37,8 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import org.jahap.config.ConfigItem;
 import org.jahap.config.ReadConfig;
+import org.jahap.entities.databasetypes.DatabaseCommandFactory;
+import org.jahap.entities.databasetypes.databaseCommands;
 
 /**
  *
@@ -55,6 +57,8 @@ public  final class JahapDatabaseConnector {
     private static  Connection classicConnection; 
      private String DBUSER;
      private String DBPASS;
+     private static databaseCommands DBCommands;
+     private static String DBPath;
     
 //    private JahapDatabaseConnector() {
 //        ReadConfig config = new ReadConfig();
@@ -76,6 +80,10 @@ public  final class JahapDatabaseConnector {
         List<ConfigItem> result = config.readConfig("config.xml");
       PERSISTENCE_UNIT_NAME = result.get(0).getPersitence_unit();
         DB_URL= result.get(0).getDatabase_url();
+	DBPath=result.get(0).getDatabase_path();
+	DatabaseCommandFactory k=new DatabaseCommandFactory();
+	DBCommands=k.getDatabaseCommands(result.get(0).getDatabase_type());
+	
         Map properties = new HashMap();
         DBPASS=password;
         DBUSER=user;
@@ -120,7 +128,13 @@ public  final class JahapDatabaseConnector {
           return databaseConnector;
      }
     
-     
+    public static databaseCommands getDBCommmands(){
+	    return DBCommands;
+    }
+    
+     public static String getDBPath(){
+	    return DBPath;
+    }
      
    public static Connection GetClassicDbConnection() {
 	   
