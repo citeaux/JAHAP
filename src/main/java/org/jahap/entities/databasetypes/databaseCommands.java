@@ -28,7 +28,7 @@ package org.jahap.entities.databasetypes;
  * @author russ
  */
 public interface databaseCommands {
-	void getBackupCommand(String Path, String BackupFilename);
-	void getRestoreCommand(String Path, String RestoreFilename);
+	String getBackupCommand(String Path, String BackupFilename);
+	String getRestoreCommand(String Path, String RestoreFilename);
 	
 }

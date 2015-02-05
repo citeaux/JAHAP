@@ -21,33 +21,42 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
  * THE SOFTWARE.
  */
-package org.jahap.jobs;
+package org.jahap.System;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import org.apache.log4j.Logger;
-import org.jahap.System.ExecuteShellCommand;
-import org.jahap.entities.JahapDatabaseConnector;
-import org.jahap.entities.databasetypes.databaseCommands;
-import org.jahap.entities.jobs.Jobs;
 
 /**
  *
  * @author russ
  */
-public class BackupJob implements JobProcessor  {
-	 static Logger log = Logger.getLogger(BackupJob.class.getName());
-        JahapDatabaseConnector hhh;
+public class ExecuteShellCommand {
 	
-	databaseCommands kkk;
+	static Logger log = Logger.getLogger(ExecuteShellCommand.class.getName());
 	
-	@Override
-	public void execute(Jobs job) {
-	     ExecuteShellCommand shell= new ExecuteShellCommand();
-		String j,t;
-		kkk=JahapDatabaseConnector.getDBCommmands();
-             
-             j=kkk.getBackupCommand(job.getDefinition(), "JahapBackup.sql");
-	     t=shell.executeCommand(j);
-	     log.debug("Function exit BackupJob " + t);
+	public String executeCommand(String command) {
+		log.debug("Function entry ExecuteShellCommand");
+ 
+		StringBuffer output = new StringBuffer();
+ 
+		Process p;
+		try {
+			p = Runtime.getRuntime().exec(command);
+			p.waitFor();
+			BufferedReader reader = 
+                            new BufferedReader(new InputStreamReader(p.getInputStream()));
+ 
+                        String line = "";			
+			while ((line = reader.readLine())!= null) {
+				output.append(line + "\n");
+			}
+ 
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+                 log.debug("Function exit ExecuteShellCommand");
+		return output.toString();
+ 
 	}
-	
 }

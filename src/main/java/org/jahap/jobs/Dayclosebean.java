@@ -26,6 +26,7 @@ package org.jahap.jobs;
 import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.Query;
+import org.apache.log4j.Logger;
 import org.jahap.entities.views.Dayclose;
 
 /**
@@ -33,6 +34,7 @@ import org.jahap.entities.views.Dayclose;
  * @author russ
  */
 public class Dayclosebean extends JobJobschedulerbean {
+	 static Logger log = Logger.getLogger(Dayclosebean.class.getName());
         List<Dayclose>alljobs = new ArrayList<>();
 	public Dayclosebean() {
 		this.alljobs=getListOfDaycloseJobs();

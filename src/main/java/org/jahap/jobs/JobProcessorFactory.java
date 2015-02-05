@@ -34,11 +34,11 @@ public class JobProcessorFactory {
 			return null;
 			
 		}
-		if(type.equals(Jobtypes.changehotelday)){
+		if(type.equals(Jobtypes.changehotelday.toString())){
 			return new ChangeHotelDayJob();
 		}
 		
-		if(type.equals(Jobtypes.servicecharging)){
+		if(type.equals(Jobtypes.servicecharging.toString())){
 			return new ServiceChargerJob();
 		}
 		

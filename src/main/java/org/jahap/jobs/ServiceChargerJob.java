@@ -25,6 +25,7 @@ package org.jahap.jobs;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import javax.persistence.Query;
@@ -48,9 +49,13 @@ public class ServiceChargerJob extends org.jahap.jobs.DatabaseOperations impleme
 	    accountsbean abean = new accountsbean();
 	    LocalDateTime ldate;
 	    Instant instant=Instant.from(hbean.getOperationdate().toInstant());
-	    ldate=LocalDateTime.ofInstant(instant, null);
+	    ldate=LocalDateTime.ofInstant(instant,ZoneId.systemDefault());
 	    
-	   Query accounts= dbhook.getEntity().createQuery("select t from Accounts t where t.checkindate<='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' AND t.checkoutdate=>'" + ldate.format(DateTimeFormatter.ISO_DATE) + "' ORDER BY t.id");
+	   Query accounts =null;
+		try {
+			accounts = dbhook.getEntity().createQuery("select t from Accounts t where t.checkindate<='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' AND t.checkoutdate>='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' ORDER BY t.id");
+		} catch (Exception e) {
+		}
             List<Accounts> alist = accounts.getResultList();
 	    for(Accounts j:alist){
 		    cbean.chargeServiceForCurrentOperationDate(j);

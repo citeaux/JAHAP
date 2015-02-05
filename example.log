@@ -359,3 +359,107 @@
 2015-01-30 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
 2015-01-30 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 5
 2015-01-30 DEBUG [JavaFX Application Thread] (Jobsbean.java:252) - Function entry SearchForCountry
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-05 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-05 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean

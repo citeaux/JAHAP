@@ -30,6 +30,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 import javax.persistence.Query;
+import org.apache.log4j.Logger;
 import org.jahap.business.base.Hotelbean;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.acc.Accounts;
@@ -41,7 +42,7 @@ import org.jahap.entities.base.Rates;
  * @author russ
  */
 public class cscbean extends DatabaseOperations implements csc_i {
-
+       static Logger log = Logger.getLogger(cscbean.class.getName());
     JahapDatabaseConnector dbhook;
     private static List<Csc> allrecordlist;
 

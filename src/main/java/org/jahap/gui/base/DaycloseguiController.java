@@ -163,6 +163,7 @@ public class DaycloseguiController implements Initializable, SearchResultListene
 	
 	@FXML
 	private void startDayclose(ActionEvent event) {
+		dayclose.startDayclosJobs();
 	}
 
 	@FXML

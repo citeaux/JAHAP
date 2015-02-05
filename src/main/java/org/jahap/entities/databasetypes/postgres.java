@@ -23,21 +23,27 @@
  */
 package org.jahap.entities.databasetypes;
 
-import org.jahap.entities.databasetypes.databaseCommands;
+import org.jahap.entities.JahapDatabaseConnector;
 
 /**
  *
  * @author russ
  */
 public class postgres implements databaseCommands{
-
+        JahapDatabaseConnector hhh;
+	         String dbpath;
+		 
 	@Override
-	public void getBackupCommand(String Path, String BackupFilename) {
-		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+	public String getBackupCommand(String Path, String BackupFilename) {
+		String Backupcommand;
+		
+		dbpath=JahapDatabaseConnector.getDBPath();
+		Backupcommand=dbpath + "\\App\\PgSql\\bin\\pg_dumpall -f=" + Path + BackupFilename;
+		return Backupcommand;
 	}
 
 	@Override
-	public void getRestoreCommand(String Path, String RestoreFilename) {
+	public String getRestoreCommand(String Path, String RestoreFilename) {
 		throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
 	}
 	
