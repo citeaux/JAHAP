@@ -23,28 +23,24 @@
  */
 package org.jahap.entities.acc;
 
-import org.jahap.entities.base.Address;
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.Collection;
+import java.util.Date;
 import javax.persistence.Basic;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
 import javax.persistence.Table;
-import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
+import org.jahap.entities.base.Address;
 import org.jahap.entities.res.Res;
 
 /**
@@ -77,10 +73,10 @@ public class Accounts implements Serializable, accounts_ie {
     private double balance;
     @Size(max = 50)
     @Column(name = "CHECKINDATE")
-    private String checkindate;
+    private Date checkindate;
     @Size(max = 50)
     @Column(name = "CHECKOUTDATE")
-    private String checkoutdate;
+    private Date checkoutdate;
     @JoinColumn(name = "RESERVATION",referencedColumnName = "ID")
     @ManyToOne
     private Res reservation;
@@ -139,22 +135,22 @@ public class Accounts implements Serializable, accounts_ie {
     }
 
     @Override
-    public String getCheckindate() {
+    public Date getCheckindate() {
         return checkindate;
     }
 
     @Override
-    public void setCheckindate(String checkindate) {
+    public void setCheckindate(Date checkindate) {
         this.checkindate = checkindate;
     }
 
     @Override
-    public String getCheckoutdate() {
+    public Date getCheckoutdate() {
         return checkoutdate;
     }
 
     @Override
-    public void setCheckoutdate(String checkoutdate) {
+    public void setCheckoutdate(Date checkoutdate) {
         this.checkoutdate = checkoutdate;
     }
 

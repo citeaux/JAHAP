@@ -23,12 +23,11 @@
  */
 package org.jahap.entities.acc;
 
-import org.jahap.entities.res.Res;
-import org.jahap.entities.acc.AccountPosition;
-import org.jahap.entities.base.Address;
-import java.io.Serializable;
 import java.util.Collection;
+import java.util.Date;
 import javax.xml.bind.annotation.XmlTransient;
+import org.jahap.entities.base.Address;
+import org.jahap.entities.res.Res;
 
 /**
  *
@@ -42,13 +41,13 @@ public interface accounts_ie {
 
     double getBalance();
 
-    String getCheckindate();
+    Date getCheckindate();
 
     boolean getCheckout();
 
     
     
-    String getCheckoutdate();
+    Date getCheckoutdate();
 
     Long getId();
     
@@ -65,13 +64,13 @@ public interface accounts_ie {
 
     void setBalance(double balance);
 
-    void setCheckindate(String checkindate);
+    void setCheckindate(Date checkindate);
 
     void setCheckout(boolean checkout);
     
     void setCscCollection(Collection<Csc> cscCollection);
     
-    void setCheckoutdate(String checkoutdate);
+    void setCheckoutdate(Date checkoutdate);
 
     void setReservation(Res reservation);
     

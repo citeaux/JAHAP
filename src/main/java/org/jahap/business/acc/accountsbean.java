@@ -28,6 +28,7 @@ package org.jahap.business.acc;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Date;
 import java.util.Iterator;
 import java.util.List;
 import javafx.collections.ObservableList;
@@ -1239,7 +1240,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
      *
      * @return
      */
-    public String getCheckindate() {
+    public Date getCheckindate() {
         if( tabelIsEmpty!=true) 
               return allrecordlist.get(currentRecordNumber).getCheckindate();
         return null;
@@ -1260,7 +1261,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
      *
      * @return
      */
-    public String getCheckoutdate() {
+    public Date getCheckoutdate() {
         if( tabelIsEmpty!=true) 
               return allrecordlist.get(currentRecordNumber).getCheckoutdate();
         return null;
@@ -1328,7 +1329,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
      *
      * @param checkindate
      */
-    public void setCheckindate(String checkindate) {
+    public void setCheckindate(Date checkindate) {
          if(tabelIsInit==false|| tabelIsEmpty==true)
             createNewEmptyRecord();
         
@@ -1340,7 +1341,7 @@ public class accountsbean extends DatabaseOperations implements accounts_i{
      *
      * @param checkoutdate
      */
-    public void setCheckoutdate(String checkoutdate) {
+    public void setCheckoutdate(Date checkoutdate) {
          if(tabelIsInit==false|| tabelIsEmpty==true)
             createNewEmptyRecord();
         
