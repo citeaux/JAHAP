@@ -25,6 +25,7 @@ package org.jahap.business.acc;
 
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
@@ -289,20 +290,32 @@ public class cscbean extends DatabaseOperations implements csc_i {
     }
     
     public void chargeServiceForCurrentOperationDate(Accounts acc){
+	    log.debug("Function entry chargeServiceForCurrentOperationDate");
 	    Hotelbean hbean= new Hotelbean();
 	    accountsbean abean = new accountsbean();
 	    LocalDateTime ldate;
 	    Instant instant=Instant.from(hbean.getOperationdate().toInstant());
-	    ldate=LocalDateTime.ofInstant(instant, null);
+	    ldate=LocalDateTime.ofInstant(instant,ZoneId.systemDefault());
 	    
-	   Query currentcsc= dbhook.getEntity().createQuery("select t from Csc t where  t.account="+acc.getId() + " AND t.fromdate<='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' AND t.todate=>'" + ldate.format(DateTimeFormatter.ISO_DATE) + "' ORDER BY t.id");
-            List<Csc> clist = currentcsc.getResultList();
+	    Query currentcsc = null;
+	    try {
+		    log.trace("select t from Csc t JOIN t.account k where k.id=" + acc.getId() + " AND t.fromdate<='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' AND t.todate>='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' ORDER BY t.id");
+		    currentcsc = dbhook.getEntity().createQuery("select t from Csc t JOIN t.account k where k.id=" + acc.getId() + " AND t.fromdate<='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' AND t.todate>='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' ORDER BY t.id");
+	    } catch (Exception e) {
+		    log.debug("Query Fault");
+		    e.printStackTrace();
+	    }
+            List<Csc> clist = null;
+	    try {
+		    clist = currentcsc.getResultList();
+	    } catch (Exception e) {
+	    }
 	    for(Csc kl:clist){
 	    abean.addPosition(acc,kl.getRate(),kl.getAmount(),kl.getPrice(),kl.getService());
 	    abean.saveRecord();
 	    }
 	    
-	    
+	    log.debug("Function exit chargeServiceForCurrentOperationDate");
     }
 
 }

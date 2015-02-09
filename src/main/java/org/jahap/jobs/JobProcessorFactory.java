@@ -42,6 +42,14 @@ public class JobProcessorFactory {
 			return new ServiceChargerJob();
 		}
 		
+		
+		
+		if(type.equals(Jobtypes.backup.toString())){
+			return new BackupJob();
+		}
+		
+		
+		
 		return null;
 	}
 	

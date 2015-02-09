@@ -252,7 +252,7 @@ public class Hotelbean extends DatabaseOperations implements hotel_i {
 
      private void saveOldRecord(){
            log.debug("Function entry saveOldRecord");
-        if(newEmptyRecordCreated=false){
+        if(newEmptyRecordCreated==false){
             dbhook.getEntity().getTransaction().begin();
             dbhook.getEntity().find(Hotel.class,allrecordlist.get(currentRecordNumber).getId() );
              dbhook.getEntity().merge(allrecordlist.get(currentRecordNumber));
@@ -459,7 +459,7 @@ public class Hotelbean extends DatabaseOperations implements hotel_i {
 	public void incrementOperationdate(){
 		LocalDate hotelday=LocalDate.fromDateFields(allrecordlist.get(currentRecordNumber).getOperationdate());
 		allrecordlist.get(currentRecordNumber).setOperationdate(hotelday.plusDays(1).toDate());
-		
+		this.saveRecord();
 		
 		
 	}

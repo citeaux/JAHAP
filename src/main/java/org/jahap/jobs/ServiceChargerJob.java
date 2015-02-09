@@ -29,6 +29,7 @@ import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import javax.persistence.Query;
+import org.apache.log4j.Logger;
 import org.jahap.business.acc.accountsbean;
 import org.jahap.business.acc.cscbean;
 import org.jahap.business.base.Hotelbean;
@@ -41,21 +42,25 @@ import org.jahap.entities.jobs.Jobs;
  * @author russ
  */
 public class ServiceChargerJob extends org.jahap.jobs.DatabaseOperations implements JobProcessor{
+	 static Logger log = Logger.getLogger(ServiceChargerJob.class.getName());
         JahapDatabaseConnector dbhook;
 	@Override
 	public void execute(Jobs job) {
+		dbhook = JahapDatabaseConnector.getConnector();
 		cscbean cbean=new cscbean();
 		 Hotelbean hbean= new Hotelbean();
 	    accountsbean abean = new accountsbean();
 	    LocalDateTime ldate;
 	    Instant instant=Instant.from(hbean.getOperationdate().toInstant());
 	    ldate=LocalDateTime.ofInstant(instant,ZoneId.systemDefault());
-	    
-	   Query accounts =null;
+	    log.trace( "select t from Accounts t where t.checkindate<='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' AND t.checkoutdate>='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' ORDER BY t.id");
+	  Query accounts = null;
 		try {
 			accounts = dbhook.getEntity().createQuery("select t from Accounts t where t.checkindate<='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' AND t.checkoutdate>='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' ORDER BY t.id");
+				
 		} catch (Exception e) {
 		}
+		
             List<Accounts> alist = accounts.getResultList();
 	    for(Accounts j:alist){
 		    cbean.chargeServiceForCurrentOperationDate(j);

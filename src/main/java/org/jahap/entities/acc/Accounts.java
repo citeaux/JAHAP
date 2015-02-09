@@ -37,7 +37,8 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.validation.constraints.Size;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlTransient;
 import org.jahap.entities.base.Address;
@@ -71,11 +72,13 @@ public class Accounts implements Serializable, accounts_ie {
     private Long id;
     @Column(name = "BALANCE")
     private double balance;
-    @Size(max = 50)
+   
     @Column(name = "CHECKINDATE")
+   @Temporal(TemporalType.DATE)
     private Date checkindate;
-    @Size(max = 50)
+   
     @Column(name = "CHECKOUTDATE")
+    @Temporal(TemporalType.DATE)
     private Date checkoutdate;
     @JoinColumn(name = "RESERVATION",referencedColumnName = "ID")
     @ManyToOne
