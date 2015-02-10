@@ -1,609 +1,307 @@
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t where  t.account=1001 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-01-26' AND t.checkoutdate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 4  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1101 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 5  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1104 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-01-26' AND t.checkoutdate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 6  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1151 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 7  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1154 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:263) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:168) - Function exit saveRecord 
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-01-26' AND t.checkoutdate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 8  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1201 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 9  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1204 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:263) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:168) - Function exit saveRecord 
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-01-26' AND t.checkoutdate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 10  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1251 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 11  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1254 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-01-26' AND t.checkoutdate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 12  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1301 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-01-26' AND t.todate>='2015-01-26' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 13  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1304 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:263) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:168) - Function exit saveRecord 
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-01-27' AND t.checkoutdate>='2015-01-27' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-01-27' AND t.todate>='2015-01-27' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 14  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1351 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-01-27' AND t.todate>='2015-01-27' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 15  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1354 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:263) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:168) - Function exit saveRecord 
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-01-28' AND t.checkoutdate>='2015-01-28' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-01-28' AND t.todate>='2015-01-28' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 16  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1401 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-01-28' AND t.todate>='2015-01-28' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 17  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1404 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:263) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:168) - Function exit saveRecord 
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-01-29' AND t.checkoutdate>='2015-01-29' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-01-29' AND t.todate>='2015-01-29' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 18  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1451 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-01-29' AND t.todate>='2015-01-29' ORDER BY t.id
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
-2015-02-09 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 19  --  null
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1454 ]
-2015-02-09 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
-2015-02-09 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
-2015-02-09 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
-2015-02-09 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:263) - Function exit saveOldRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Hotelbean.java:168) - Function exit saveRecord 
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-09 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
+2015-02-10 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-02-03' AND t.todate>='2015-02-03' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
+2015-02-10 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 28  --  null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1651 ]
+2015-02-10 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-02-03' AND t.todate>='2015-02-03' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
+2015-02-10 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 29  --  null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1654 ]
+2015-02-10 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:263) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:168) - Function exit saveRecord 
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
+2015-02-10 DEBUG [JavaFX Application Thread] (ExecuteShellCommand.java:39) - Function entry ExecuteShellCommand
+2015-02-10 DEBUG [JavaFX Application Thread] (ExecuteShellCommand.java:59) - Function exit ExecuteShellCommand
+2015-02-10 DEBUG [JavaFX Application Thread] (BackupJob.java:50) - Function exit BackupJob 
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 5
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
+2015-02-10 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-02-04' AND t.checkoutdate>='2015-02-04' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-02-04' AND t.todate>='2015-02-04' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
+2015-02-10 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 30  --  null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1701 ]
+2015-02-10 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-02-04' AND t.todate>='2015-02-04' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
+2015-02-10 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 31  --  null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1704 ]
+2015-02-10 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:263) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:168) - Function exit saveRecord 
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
+2015-02-10 DEBUG [JavaFX Application Thread] (ExecuteShellCommand.java:39) - Function entry ExecuteShellCommand
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
+2015-02-10 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-02-05' AND t.checkoutdate>='2015-02-05' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-02-05' AND t.todate>='2015-02-05' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
+2015-02-10 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 32  --  null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1751 ]
+2015-02-10 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-02-05' AND t.todate>='2015-02-05' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
+2015-02-10 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 33  --  null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1754 ]
+2015-02-10 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:263) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:168) - Function exit saveRecord 
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
+2015-02-10 DEBUG [JavaFX Application Thread] (ExecuteShellCommand.java:39) - Function entry ExecuteShellCommand
+2015-02-10 TRACE [JavaFX Application Thread] (ExecuteShellCommand.java:64) - 1
+2015-02-10 DEBUG [JavaFX Application Thread] (ExecuteShellCommand.java:69) - Function exit ExecuteShellCommand
+2015-02-10 DEBUG [JavaFX Application Thread] (BackupJob.java:50) - Function exit BackupJob 
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 5
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
+2015-02-10 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:60) - Function entry Jobsbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:86) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 3
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 TRACE [JavaFX Application Thread] (ServiceChargerJob.java:56) - select t from Accounts t where t.checkindate<='2015-02-06' AND t.checkoutdate>='2015-02-06' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1001 AND t.fromdate<='2015-02-06' AND t.todate>='2015-02-06' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 3/ price: 70.89/Posname: 1
+2015-02-10 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 34  --  null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1801 ]
+2015-02-10 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:293) - Function entry chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 TRACE [JavaFX Application Thread] (cscbean.java:302) - select t from Csc t JOIN t.account k where k.id=1051 AND t.fromdate<='2015-02-06' AND t.todate>='2015-02-06' ORDER BY t.id
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:436) - Function entry addposition 1/ amount: 1/ price: 56.58/Posname: Bed &  Breakfast
+2015-02-10 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:507) - LastPositionOf AccPos used as Key for VAT Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=null ]
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 35  --  null
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:518) - LastPositionOf AccPos used as Key for REV Table  org.arnea.jahap.standalone.entities.AccountPosition[ id=1804 ]
+2015-02-10 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-10 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-10 DEBUG [JavaFX Application Thread] (accountsbean.java:525) - Function exit addPosition 
+2015-02-10 DEBUG [JavaFX Application Thread] (cscbean.java:318) - Function exit chargeServiceForCurrentOperationDate
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 0
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:157) - Function entry saveRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:254) - Function entry saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:263) - Function exit saveOldRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Hotelbean.java:168) - Function exit saveRecord 
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 2
+2015-02-10 DEBUG [JavaFX Application Thread] (ExecuteShellCommand.java:39) - Function entry ExecuteShellCommand
+2015-02-10 TRACE [JavaFX Application Thread] (ExecuteShellCommand.java:46) - C:\Users\russ\Desktop\PostgreSQLPortable-9.3\App\PgSql\bin\pg_dumpall >C:\Users\russ\Desktop\Backup\JahapBackup.sql
+2015-02-10 TRACE [JavaFX Application Thread] (ExecuteShellCommand.java:64) - 1
+2015-02-10 DEBUG [JavaFX Application Thread] (ExecuteShellCommand.java:69) - Function exit ExecuteShellCommand
+2015-02-10 DEBUG [JavaFX Application Thread] (BackupJob.java:50) - Function exit BackupJob 
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
+2015-02-10 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 5

@@ -33,7 +33,8 @@ public class DatabaseCommandFactory {
 		if(databasetype==null){
 			return null;
 		}
-		if(databasetype=="postgres"){
+		if(databasetype.equals("postgres")){
+		
 			return new postgres();
 		}
 		

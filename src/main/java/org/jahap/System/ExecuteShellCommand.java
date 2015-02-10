@@ -39,18 +39,29 @@ public class ExecuteShellCommand {
 		log.debug("Function entry ExecuteShellCommand");
  
 		StringBuffer output = new StringBuffer();
- 
+                
 		Process p;
-		try {
+		try {   
+			
+                         log.trace(command);
 			p = Runtime.getRuntime().exec(command);
-			p.waitFor();
-			BufferedReader reader = 
-                            new BufferedReader(new InputStreamReader(p.getInputStream()));
+			BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			 BufferedReader bre = new BufferedReader(new InputStreamReader(p.getErrorStream()));
+			
+			 
  
-                        String line = "";			
+                        String line = "";
+			while ((line = bre.readLine()) != null) {
+        System.out.println(line);
+      }
+			bre.close();
 			while ((line = reader.readLine())!= null) {
 				output.append(line + "\n");
+				log.trace(reader.readLine());
 			}
+			reader.close();
+			p.waitFor();
+			log.trace(p.exitValue());
  
 		} catch (Exception e) {
 			e.printStackTrace();

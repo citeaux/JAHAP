@@ -38,7 +38,7 @@ public class postgres implements databaseCommands{
 		String Backupcommand;
 		
 		dbpath=JahapDatabaseConnector.getDBPath();
-		Backupcommand=dbpath + "\\App\\PgSql\\bin\\pg_dumpall -f=" + Path + BackupFilename;
+		Backupcommand=dbpath + "\\App\\PgSql\\bin\\pg_dumpall >" + Path + BackupFilename;
 		return Backupcommand;
 	}
 
