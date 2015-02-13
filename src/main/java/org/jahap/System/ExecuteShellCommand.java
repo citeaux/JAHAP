@@ -41,11 +41,15 @@ public class ExecuteShellCommand {
 		StringBuffer output = new StringBuffer();
                 
 		Process p;
+		ProcessBuilder kl;
 		try {   
 			
                          log.trace(command);
-			p = Runtime.getRuntime().exec(command);
-			BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
+			//p = Runtime.getRuntime().exec(command);
+			kl=new ProcessBuilder("cmd","/c",command);
+			kl.redirectErrorStream(true);
+			p=kl.start();
+			 BufferedReader reader = new BufferedReader(new InputStreamReader(p.getInputStream()));
 			 BufferedReader bre = new BufferedReader(new InputStreamReader(p.getErrorStream()));
 			
 			 
@@ -61,9 +65,10 @@ public class ExecuteShellCommand {
 			}
 			reader.close();
 			p.waitFor();
-			log.trace(p.exitValue());
+			log.trace("Exit VAlue " + p.exitValue());
  
 		} catch (Exception e) {
+			log.trace("Exception execution");
 			e.printStackTrace();
 		}
                  log.debug("Function exit ExecuteShellCommand");
