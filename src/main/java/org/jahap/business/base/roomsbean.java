@@ -25,8 +25,13 @@
 
 
 package org.jahap.business.base;
+import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Query;
 import org.apache.log4j.Logger;
 import org.jahap.entities.JahapDatabaseConnector;
 import org.jahap.entities.base.Cat;
@@ -471,6 +476,29 @@ public class roomsbean extends DatabaseOperations  implements rooms_i {
          
          
         allrecordlist.get(currentRecordNumber).setNo_maintenance(no_maintenance);
+    }
+    
+    public void setCheckedinRoomsDirty(){
+	    log.debug("Function entry setCheckedinRoomsDirty");
+	    
+	     Hotelbean hbean= new Hotelbean();
+	      LocalDateTime ldate;
+	    Instant instant=Instant.from(hbean.getOperationdate().toInstant());
+	    ldate=LocalDateTime.ofInstant(instant,ZoneId.systemDefault());
+	    List<Rooms> Lroom= new ArrayList<>();
+	    Query checkedinRooms=null;
+	    try{
+		    checkedinRooms=dbhook.getEntity().createQuery("select t from Rooms t JOIN t.occCollection k where k.arrivaldate<='" + ldate.format(DateTimeFormatter.ISO_DATE) + "' AND k.departuredate>='" + ldate.format(DateTimeFormatter.ISO_DATE) +"' ORDER BY t.id");
+	    }catch(Exception e){
+		    
+	    }
+	    
+	    
+	    Lroom=checkedinRooms.getResultList();
+            log.trace("setCheckedinRoomsDirty Rooms Amount:" + Lroom.size());
+	    setRoomsinListdirty(Lroom);
+		    
+	    
     }
     
 }

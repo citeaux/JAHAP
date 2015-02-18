@@ -627,8 +627,22 @@ public class occplan implements Initializable {
 			color=occplancolors.green;
 			guest=rs.getGuest().getName();
 		}
-		   
-               kk = new occbox(new SimpleDateFormat("dd.MM.yy").format(rs.getArrivaldate()), new SimpleDateFormat("dd.MM.yy").format(rs.getDeparturedate()), rs.getRoom().getCode(), guest,color);
+	       String arrivaldateS=null;
+		  String     departuredateS=null;
+	       if(tt.after(rs.getArrivaldate())){
+		       arrivaldateS=new SimpleDateFormat("dd.MM.yy").format(tt);
+	       }else{
+		       arrivaldateS=new SimpleDateFormat("dd.MM.yy").format(rs.getArrivaldate());
+	       }
+		       
+	       if(tk.before(rs.getDeparturedate())){
+		       departuredateS=new SimpleDateFormat("dd.MM.yy").format(tk);
+	       }else{
+		  departuredateS=new SimpleDateFormat("dd.MM.yy").format(rs.getDeparturedate());     
+	       }
+	       
+	       
+               kk = new occbox(arrivaldateS, departuredateS, rs.getRoom().getCode(), guest,color);
            } catch (Exception e) {
                System.err.printf("#2");
            }

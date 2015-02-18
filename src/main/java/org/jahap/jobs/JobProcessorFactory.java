@@ -49,6 +49,10 @@ public class JobProcessorFactory {
 		}
 		
 		
+		if(type.equals(Jobtypes.changeroomstate.toString())){
+			return new ChangeroomstateJob();
+		}
+		
 		
 		return null;
 	}

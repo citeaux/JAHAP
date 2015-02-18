@@ -1,6 +1,764 @@
-2015-02-13 DEBUG [JavaFX Application Thread] (Jobsbean.java:195) - Function entry getDataRecord
-2015-02-13 DEBUG [JavaFX Application Thread] (Jobsbean.java:211) - Function exit getDataRecord 5
-2015-02-13 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:84) - Function entry initTable
-2015-02-13 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:58) - Function entry countrybean
-2015-02-13 DEBUG [JavaFX Application Thread] (JobJobschedulerbean.java:84) - Function entry billbean
-2015-02-13 DEBUG [JavaFX Application Thread] (DaycloseguiController.java:161) - Function exit initTable
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 11.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 11.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 12.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 12.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 13.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 13.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 14.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 14.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 15.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 15.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 16.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 16.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 17.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 17.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:731) - Function entry createInvoice
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:739) - Function exit createInvoice
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:837) - Function entry MovePosition
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:902) - Function exit MovePosition
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:984) - Function entry Save
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:956) - Function entry setTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:958) - Function exit setTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:98) - Function entry createNewEmptyRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:167) - Function entry RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:177) - Function exit RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:584) - Function entry setBillchange
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:592) - Function exit setBillchange
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:119) - Function exit createNewEmptyRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:213) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:215) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:213) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:215) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:968) - Function entry setTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:970) - Function exit setTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:942) - Function entry getIterator
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:943) - Function exit getIterator [org.jahap.gui.acc.viewAccountPositionsProperty@22c279fe, org.jahap.gui.acc.viewAccountPositionsProperty@3549f766, org.jahap.gui.acc.viewAccountPositionsProperty@17ae81e5, org.jahap.gui.acc.viewAccountPositionsProperty@1d7fc936, org.jahap.gui.acc.viewAccountPositionsProperty@2cc34eee, org.jahap.gui.acc.viewAccountPositionsProperty@564b6ed7, org.jahap.gui.acc.viewAccountPositionsProperty@35897c52, org.jahap.gui.acc.viewAccountPositionsProperty@565c25ac, org.jahap.gui.acc.viewAccountPositionsProperty@605ea5b7, org.jahap.gui.acc.viewAccountPositionsProperty@6dee52bd, org.jahap.gui.acc.viewAccountPositionsProperty@137bd8be, org.jahap.gui.acc.viewAccountPositionsProperty@24bdfe38, org.jahap.gui.acc.viewAccountPositionsProperty@31db9405, org.jahap.gui.acc.viewAccountPositionsProperty@2ebf5339, org.jahap.gui.acc.viewAccountPositionsProperty@634cc078, org.jahap.gui.acc.viewAccountPositionsProperty@28cbbe17, org.jahap.gui.acc.viewAccountPositionsProperty@455d6cb7, org.jahap.gui.acc.viewAccountPositionsProperty@11afd9be, org.jahap.gui.acc.viewAccountPositionsProperty@14e584f3, org.jahap.gui.acc.viewAccountPositionsProperty@612bab7e, org.jahap.gui.acc.viewAccountPositionsProperty@4fbd4b38, org.jahap.gui.acc.viewAccountPositionsProperty@20301958, org.jahap.gui.acc.viewAccountPositionsProperty@184ac3b1, org.jahap.gui.acc.viewAccountPositionsProperty@2406fb9d, org.jahap.gui.acc.viewAccountPositionsProperty@1c780ae, org.jahap.gui.acc.viewAccountPositionsProperty@219db317, org.jahap.gui.acc.viewAccountPositionsProperty@6f04abde]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:151) - Function entry saveRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:224) - Function entry saveNewRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:167) - Function entry RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:177) - Function exit RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:297) - Function entry saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:306) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:162) - Function exit saveRecord 
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1031) - Function exit Save
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:725) - Function entry printOverview
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:726) - Function exit printOverview
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:984) - Function entry Save
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:956) - Function entry setTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:958) - Function exit setTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:935) - Function entry addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:938) - Function exit addPos
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:98) - Function entry createNewEmptyRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:167) - Function entry RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:177) - Function exit RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:584) - Function entry setBillchange
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:592) - Function exit setBillchange
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:119) - Function exit createNewEmptyRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:213) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:215) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:213) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:215) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:968) - Function entry setTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:970) - Function exit setTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:949) - Function entry getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:951) - Function exit getTempbillname
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:942) - Function entry getIterator
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:943) - Function exit getIterator [org.jahap.gui.acc.viewAccountPositionsProperty@22c279fe, org.jahap.gui.acc.viewAccountPositionsProperty@3549f766, org.jahap.gui.acc.viewAccountPositionsProperty@17ae81e5, org.jahap.gui.acc.viewAccountPositionsProperty@1d7fc936, org.jahap.gui.acc.viewAccountPositionsProperty@2cc34eee, org.jahap.gui.acc.viewAccountPositionsProperty@564b6ed7, org.jahap.gui.acc.viewAccountPositionsProperty@35897c52, org.jahap.gui.acc.viewAccountPositionsProperty@565c25ac, org.jahap.gui.acc.viewAccountPositionsProperty@605ea5b7, org.jahap.gui.acc.viewAccountPositionsProperty@6dee52bd, org.jahap.gui.acc.viewAccountPositionsProperty@137bd8be, org.jahap.gui.acc.viewAccountPositionsProperty@24bdfe38, org.jahap.gui.acc.viewAccountPositionsProperty@31db9405, org.jahap.gui.acc.viewAccountPositionsProperty@2ebf5339, org.jahap.gui.acc.viewAccountPositionsProperty@634cc078, org.jahap.gui.acc.viewAccountPositionsProperty@28cbbe17, org.jahap.gui.acc.viewAccountPositionsProperty@455d6cb7, org.jahap.gui.acc.viewAccountPositionsProperty@11afd9be, org.jahap.gui.acc.viewAccountPositionsProperty@14e584f3, org.jahap.gui.acc.viewAccountPositionsProperty@612bab7e, org.jahap.gui.acc.viewAccountPositionsProperty@4fbd4b38, org.jahap.gui.acc.viewAccountPositionsProperty@20301958, org.jahap.gui.acc.viewAccountPositionsProperty@184ac3b1, org.jahap.gui.acc.viewAccountPositionsProperty@2406fb9d, org.jahap.gui.acc.viewAccountPositionsProperty@1c780ae, org.jahap.gui.acc.viewAccountPositionsProperty@219db317, org.jahap.gui.acc.viewAccountPositionsProperty@6f04abde]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:962) - Function entry getTempbill
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:963) - Function exit getTempbillorg.arnea.jahap.standalone.entities.Bill[ id=null ]
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:151) - Function entry saveRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:224) - Function entry saveNewRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:167) - Function entry RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:177) - Function exit RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:297) - Function entry saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:306) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:162) - Function exit saveRecord 
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1031) - Function exit Save
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1083) - Function entry addPayment
+2015-02-18 TRACE [JavaFX Application Thread] (Paymenttypesbean.java:71) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:757) - Function entry idinfo
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:761) - Action reaction - add payment -
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:45) - Function entry payedbean
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:71) - Function entry  payedbean
+2015-02-18 TRACE [JavaFX Application Thread] (Paymenttypesbean.java:71) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:91) - Function entry createNewEmptyRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:161) - Function entry RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:171) - Function exit RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:112) - Function exit createNewEmptyRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:145) - Function entry saveRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:210) - Function entry saveNewRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:161) - Function entry RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:171) - Function exit RefreshAllRecords
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:239) - Function entry saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:248) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:156) - Function exit saveRecord 
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revenuebean.java:75) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vattypesbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (vatbean.java:73) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (viewAccountPositionsProperty.java:298) - Function setDprice 509.2199999999999
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:199) - Function entry getLastPosition(
+2015-02-18 DEBUG [JavaFX Application Thread] (payedbean.java:201) - Function exit getLastPosition
+2015-02-18 DEBUG [JavaFX Application Thread] (accountsbean.java:636) - Function entry addPayment
+2015-02-18 TRACE [JavaFX Application Thread] (accountspositionbean.java:78) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:128) - Function entry -createNewEmptyRecord -
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:146) - New Record Number null
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:149) - Function exit -createNewEmptyRecord - 
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:362) - Function entry savenewrecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:367) - Function entry 58  --  null
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:382) - Function exit saveNewRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:387) - Function entry saveoldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountspositionbean.java:395) - Function exit saveOldRecord
+2015-02-18 DEBUG [JavaFX Application Thread] (accountsbean.java:648) - Function exit addPayment
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:832) - Function exit idinfo
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:1120) - Function exit addPayment
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 17.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 17.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 16.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 16.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 15.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 15.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 14.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 14.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 13.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 13.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 12.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 12.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 11.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 11.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 10.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 10.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 09.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 09.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 08.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 08.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 07.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 07.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 06.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 06.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 05.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 05.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 04.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 04.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 03.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 03.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 02.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 02.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (AccListController.java:199) - Function exit MouseClicked
+2015-02-18 DEBUG [JavaFX Application Thread] (AccListController.java:162) - Function enter initialize
+2015-02-18 DEBUG [JavaFX Application Thread] (AccListController.java:84) - Function entry initTable
+2015-02-18 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-18 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (AccListController.java:151) - Function exit initTabel
+2015-02-18 DEBUG [JavaFX Application Thread] (AccListController.java:169) - Function exit initialize
+2015-02-18 DEBUG [JavaFX Application Thread] (AccListController.java:178) - Function enter MouseClicked
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:192) - Function entry
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:193) - Function exit
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:197) - Function entry: init
+2015-02-18 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-18 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:227) - Function entry testinittable
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2354
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2304
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2254
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2204
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2154
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2104
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2010
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2004
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1954
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1904
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1854
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1804
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1754
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1704
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1654
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1604
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1560
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1554
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1504
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1454
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1404
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1354
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1304
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1254
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1204
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1154
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1104
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:425) - Function entry buildTable
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:589) - Function exit
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:420) - Function exit testinittable
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:216) - Function exit: init
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 17.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 17.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 16.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 15.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 14.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 13.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 12.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 11.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 10.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 09.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 08.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 07.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 06.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 05.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 04.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 03.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 02.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (AccListController.java:199) - Function exit MouseClicked
+2015-02-18 DEBUG [JavaFX Application Thread] (AccListController.java:178) - Function enter MouseClicked
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:192) - Function entry
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:193) - Function exit
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:197) - Function entry: init
+2015-02-18 DEBUG [JavaFX Application Thread] (Hotelbean.java:61) - Function entry countrybean
+2015-02-18 DEBUG [JavaFX Application Thread] (Hotelbean.java:87) - Function entry billbean
+2015-02-18 TRACE [JavaFX Application Thread] (revaccountsbean.java:70) - DB connected
+2015-02-18 TRACE [JavaFX Application Thread] (ratesbean.java:80) - DB connected
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:227) - Function entry testinittable
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:41) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (billbean.java:67) - Function entry billbean
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2354
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2304
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2254
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2204
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2154
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2104
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2010
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 2004
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1954
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1904
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1854
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1804
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1754
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1704
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1654
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1604
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1560
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1554
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1504
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1454
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1404
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1354
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1304
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1254
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1204
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1154
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:246) - testinittable 1104
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:425) - Function entry buildTable
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:589) - Function exit
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:420) - Function exit testinittable
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:216) - Function exit: init
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 17.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 17.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 16.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 15.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 14.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 13.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 12.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 11.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 10.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 09.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 08.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 07.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 06.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 05.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 04.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 03.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 02.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 01.02.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 31.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 30.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 29.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 29.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 28.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 28.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 27.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 26.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 26.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 26.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 26.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 26.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 26.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 26.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 26.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 26.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row 26.01.2015
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (SimpelAccountingController.java:444) - Function entry updateItem Table Format row null
+2015-02-18 DEBUG [JavaFX Application Thread] (AccListController.java:199) - Function exit MouseClicked

@@ -23,6 +23,7 @@
  */
 package org.jahap.jobs;
 
+import org.jahap.business.base.roomsbean;
 import org.jahap.entities.jobs.Jobs;
 
 /**
@@ -33,7 +34,8 @@ public class ChangeroomstateJob implements JobProcessor{
 
 	@Override
 	public void execute(Jobs job) {
-		
+		roomsbean rbean = new roomsbean();
+		rbean.setCheckedinRoomsDirty();
 	}
 	
 }

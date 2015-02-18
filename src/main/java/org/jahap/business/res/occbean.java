@@ -127,10 +127,25 @@ public class occbean extends  DatabaseOperations implements occ_i{
     
     public List<Occ>SearchForOcc(Date fromDate, Date toDate){
         SimpleDateFormat dt = new SimpleDateFormat("yyyy-MM-dd"); 
-        log.debug("Function entry" + fromDate.toString() + "   // " + toDate.toString());
+        
+	log.debug("Function entry" + fromDate.toString() + "   // " + toDate.toString());
        List<Occ> date;
+       List<Occ> zwdate;
         query_AllDbRecords=dbhook.getEntity().createQuery("select t from Occ t where t.arrivaldate>='" + dt.format(fromDate) + "' AND t.departuredate<='"+ dt.format(toDate) + "' ORDER BY t.id");
+	
         date=query_AllDbRecords.getResultList();
+	
+	query_AllDbRecords=dbhook.getEntity().createQuery("select t from Occ t where t.arrivaldate<='" + dt.format(fromDate) + "' AND t.departuredate>='"+ dt.format(fromDate) + "' AND t.departuredate<='"+ dt.format(toDate) + "' ORDER BY t.id");
+	date.addAll(query_AllDbRecords.getResultList());
+	
+	query_AllDbRecords=dbhook.getEntity().createQuery("select t from Occ t where t.arrivaldate>='" + dt.format(fromDate) + "' AND t.arrivaldate<='"+ dt.format(toDate) + "' AND t.departuredate>='"+ dt.format(toDate) + "' ORDER BY t.id");
+	date.addAll(query_AllDbRecords.getResultList());
+	
+	
+	query_AllDbRecords=dbhook.getEntity().createQuery("select t from Occ t where t.arrivaldate<='" + dt.format(fromDate) + "' AND t.departuredate>='"+ dt.format(toDate) +  "' ORDER BY t.id");
+	date.addAll(query_AllDbRecords.getResultList());
+	
+	
         date.forEach(i -> System.out.println(i.getArrivaldate().toString()+ " // " + i.getDeparturedate().toString() ));
                 
                 
