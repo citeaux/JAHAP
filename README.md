@@ -1,3 +1,6 @@
+# End of life
+this Version of JAHAP is not anymore maintained. Please use JAPAP2. 
+
 # JAHAP
 Simple java hotel program.
 
